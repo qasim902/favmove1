@@ -8,7 +8,8 @@
                 </div>
             </div>
             <div class="box-body">
-                <table class="table table-responsive  table-striped">
+            <div class="table-responsive">
+                <table class="table table-striped">
                     <tr>
 						<th>ID</th>
 						<th>Password</th>
@@ -29,7 +30,8 @@
                     </tr>
                     <?php } ?>
                 </table>
-                                
+                           
+                    </div>
             </div>
         </div>
     </div>
