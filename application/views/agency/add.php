@@ -32,6 +32,7 @@
 									</span>
 								</div>
 							</div>
+							
 							<div class="col-md-6">
 								<label for="name" class="control-label">
 									<span class="text-danger">*</span>Email</label>
