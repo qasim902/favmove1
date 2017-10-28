@@ -1,0 +1,265 @@
+/* Search Pages */
+.sal_area tr td{
+  cursor: pointer;
+}
+.abt_us p{
+   text-align: justify;
+}
+.rad_btns .radio-inline{
+  margin-left:10px; 
+}
+.rad_btns .fchld{
+  margin-left:70px; 
+}
+.ag_name label{
+  margin-top: 15px;
+}
+.image-preview-input {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;    
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;    
+}
+.image-preview-input input[type=file] {
+position: absolute;
+top: 0;
+right: 0;
+margin: 0;
+padding: 0;
+font-size: 20px;
+cursor: pointer;
+opacity: 0;
+filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+  margin-left:2px;
+}
+.image-preview .form-control{
+  height: 34px !important;
+}
+.rmbr_me .checkbox{
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 1px;
+}
+.rmbr_me .checkbox label{
+  color: #fff;
+ }
+ #login .agent-login {
+  background: #1f3f81;
+  margin: auto;
+  width: 500px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* User */
+.usr_nam h3{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+.user_img {
+border-radius: 10px;
+box-shadow: 0px 2px 1px 2px rgba(0,0,0,0.2);
+}
+.tabs-left{
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+.tabs-left>li{
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-left>li>a {
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  display:block;
+}
+.my-group .form-control{
+  width:60%;
+}
+.my-group .selct_bx{
+  width:40%;
+}
+
+/* Updated Property Valuation 16-Oct */
+.pro_valua .keyword-input {
+  height: 38px !important;
+  border-radius: 2px !important;
+  width: 30%;
+}
+.pro_valua .btn{
+  padding: 7px 28px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+.pro_valua .h4{
+  padding: 7px 28px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+.chk_bx{
+  display: inline-block;
+  width: 5%;
+}
+.chk_bx .checkbox-inline {
+  margin-bottom: 40px;
+  margin-top: 17px;
+}
+.brnd_nam{
+  display: inline-block;
+  text-align: center;
+  width: 35%;
+}
+.brnd_nam .thumbnail{
+  display: inline-block;
+  margin-top: 15px;
+}
+.brnd_dtl{
+  display: inline-block;
+  width: 55%;
+}
+.brnd_dtl p{
+  margin-bottom: 20px;
+}
+.bdr_tp {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+.pro_valua .col-md-9{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Updated Mortgage 17-Oct */
+
+.mortgage{
+ border: 2px solid #ccc;
+ padding-top:35px;
+ padding-bottom:10px; 
+ background: #F9F9F9;
+ box-shadow:2px 4px 7px 0px rgba(0,0,0,0.4);
+}
+.mortgage .mortgage_hdng h4{
+  background: #1f3f81; 
+padding-right: 35px;
+padding-top:20px; 
+padding-left:35px;
+padding-bottom:20px; 
+color: #fff;
+box-shadow:2px 2px 5px 0px rgba(0,0,0,0.4);
+display: inline-block;
+ } 
+.mortgage_cal {
+  padding: 35px 35px 10px 30px;
+}
+.mortgage_cal .mortgage_input {
+  /*border: 1px solid #aebcc1;*/
+  border-radius: 3px;
+  font-family: 'Droid Sans',sans-serif;
+  font-size: 14px;
+  padding: 3px 2px;
+  text-align: center;
+  width: 5em;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+   background: #d3d3d3; 
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50 !important;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #1F3F81 !important;
+  cursor: pointer;
+}
+.xs-collapse {
+  display: none;
+}
+.pro_nav li{
+  padding-left: 15px;
+} 
+.agent_wrap .img_dtl {
+  background: rgba(0,222,182, 0.9);
+}
+.agent_wrap:hover .img_dtl {
+  background: rgba(0,222,182, 0.9);
+  top: 0 !important;
+  z-index: 3;
+}
+.agnt_img {
+  border: 4px solid rgba(0,0,0, 0.9);
+}
+.agent_wrap .img_dtl h3, .agent_wrap .img_dtl p, .agent_wrap .img_dtl span{
+  color: #000;
+}
+.img_dtl .agent_contact td {
+  color: #000;
+}
+.img_tag img{
+  position: relative;
+}
+.img_icon{
+ position: relative;
+ width: 0; 
+ height: 0; 
+ border-top: 50px solid rgba(0,222,182, 0.9); 
+ border-right: 50px solid transparent;
+}
+.img_tag .img_icon i{
+  position: absolute;
+  left: 7px;
+  top: -43px;
+  z-index: 1;
+}
+.img_tag .img_icon{
+  position: absolute;
+  left:0px; 
+  top: 0px;
+  z-index: 1;
+}
+.agn_btn{
+  cursor: pointer;
+}

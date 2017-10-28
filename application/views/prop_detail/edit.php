@@ -1,0 +1,78 @@
+<div class="row">
+    <div class="col-md-12">
+      	<div class="box box-info">
+            <div class="box-header with-border">
+              	<h3 class="box-title">Prop Detail Edit</h3>
+            </div>
+			<?php echo form_open('prop_detail/edit/'.$prop_detail['prop_id']); ?>
+			<div class="box-body">
+				<div class="row clearfix">
+					<div class="col-md-6">
+						<label for="prop_id" class="control-label">Property</label>
+						<div class="form-group">
+							<select name="prop_id" class="form-control">
+								<option value="">select property</option>
+								<?php 
+								foreach($all_property as $property)
+								{
+									$selected = ($property['prop_id'] == $this->input->post('prop_id')) ? ' selected="selected"' : "";
+
+									echo '<option value="'.$property['prop_id'].'" '.$selected.'>'.$property['prop_id'].'</option>';
+								} 
+								?>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="bathrooms" class="control-label">Bathrooms</label>
+						<div class="form-group">
+							<input type="text" name="bathrooms" value="<?php echo ($this->input->post('bathrooms') ? $this->input->post('bathrooms') : $prop_detail['bathrooms']); ?>" class="form-control" id="bathrooms" />
+							<span class="text-danger"><?php echo form_error('bathrooms');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="garage" class="control-label">Garage</label>
+						<div class="form-group">
+							<input type="text" name="garage" value="<?php echo ($this->input->post('garage') ? $this->input->post('garage') : $prop_detail['garage']); ?>" class="form-control" id="garage" />
+							<span class="text-danger"><?php echo form_error('garage');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="bedrooms" class="control-label">Bedrooms</label>
+						<div class="form-group">
+							<input type="text" name="bedrooms" value="<?php echo ($this->input->post('bedrooms') ? $this->input->post('bedrooms') : $prop_detail['bedrooms']); ?>" class="form-control" id="bedrooms" />
+							<span class="text-danger"><?php echo form_error('bedrooms');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="area" class="control-label">Area</label>
+						<div class="form-group">
+							<input type="text" name="area" value="<?php echo ($this->input->post('area') ? $this->input->post('area') : $prop_detail['area']); ?>" class="form-control" id="area" />
+							<span class="text-danger"><?php echo form_error('area');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="lounge" class="control-label">Lounge</label>
+						<div class="form-group">
+							<input type="text" name="lounge" value="<?php echo ($this->input->post('lounge') ? $this->input->post('lounge') : $prop_detail['lounge']); ?>" class="form-control" id="lounge" />
+							<span class="text-danger"><?php echo form_error('lounge');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="price" class="control-label">Price</label>
+						<div class="form-group">
+							<input type="text" name="price" value="<?php echo ($this->input->post('price') ? $this->input->post('price') : $prop_detail['price']); ?>" class="form-control" id="price" />
+							<span class="text-danger"><?php echo form_error('price');?></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-footer">
+            	<button type="submit" class="btn btn-success">
+					<i class="fa fa-check"></i> Save
+				</button>
+	        </div>				
+			<?php echo form_close(); ?>
+		</div>
+    </div>
+</div>
