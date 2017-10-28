@@ -452,6 +452,12 @@ class Main extends CI_Controller
         $id = $this->input->get('id');
         $agent = $this->Agent_model->get_agent($id);
         $agency = $this->Agency_model->get_agency($agent['agency_id']);
+//        $fb = $this->Agency_model->get_agency($agent['agency_id']);
+//        $tw = $this->Agency_model->get_agency($agent['agency_id']);
+//        $gplus = $this->Agency_model->get_agency($agent['agency_id']);
+//        $lnkdin = $this->Agency_model->get_agency($agent['agency_id']);
+//        $pntrst = $this->Agency_model->get_agency($agent['agency_id']);
+
         $properties = $this->Property_model->get_propertyag($id);
         foreach ($properties as &$property)
         {
