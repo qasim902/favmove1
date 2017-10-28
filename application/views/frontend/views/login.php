@@ -208,30 +208,58 @@ echo "<script>
                     <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                       
                         <div class="query-submit-button">
-                            <a href="allpackages" value="Next" class="btn-slide">NEXT</a>
+                            <div class="btn-slide" id="show" >NEXT</div>
                         </div>
                      
                     </div>  
-                    
+                    <br >
                   <!-- here -->
                   <?php 
                     $num = count($easy['allpackages']);
-                  for($i = 0; $i< $num; $i++ )
-                  {
-                    
-                  }
-                  var_dump($easy['allpackages'][1]['package_name']); 
+                  // for($i = 0; $i< $num; $i++ )
+                  // {
+                  //   for($j = 0; $j< 1; $j++ ){
+                  //   var_dump($easy['allpackages'][$i]['package_name']);
+                  //   var_dump($easy['allpackages'][$i]['package_price']);
+                  //   var_dump($easy['allpackages'][$i]['num_listing_limit']);
+                  //   var_dump($easy['allpackages'][$i]['num_images_limit']);
+                  //   var_dump($easy['allpackages'][$i]['num_featured_limit']);
+                  //   var_dump($easy['allpackages'][$i]['id']);
+                  //   }
+                  // }
 
-                  var_dump(count($easy['allpackages'])); 
-
-                  // $i = 1;
-                  // foreach($easy['allpackages'][0] as $pkgval)
-                //   { $i++;
-                 //  echo $pkgval['package_name'] . "<br>";
-                  //   echo $i . "<br>";
-                 //  }
-                  
+                  $i = 1;
                   ?>
+                  <div class="" id="packagedeal" style="display:none;">
+                    <?php
+                  foreach($easy['allpackages'] as $val)
+                  { ?>
+                  <br >
+                  
+
+                    
+                    <input type="radio" name="package" >
+                   <?php echo $val['package_name'];
+                   echo $val['package_price'];
+                   echo $val['package_name'];
+                   echo $val['num_listing_limit'];
+                   echo $val['num_images_limit'];
+                   echo $val['num_featured_limit'];
+
+                   ?>
+                 
+                   
+                    
+                   <?php } ?>
+                   </div>
+
+
+
+
+
+                 
+                  
+                  
 
 
                                      

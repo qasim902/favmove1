@@ -396,6 +396,14 @@
 <script src="<?= $assets;?>js/revolution.extension.video.min.js"></script>
 <script src="<?= $assets;?>js/custom.js"></script>
 <script src="<?= $assets;?>js/functions.js"></script>
+  <script>
+      $(document).ready(function(){
+          
+          $("#show").click(function(){
+              $("#packagedeal").show();
+          });
+        });
+  </script>
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script> -->
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U&libraries=places"></script>  -->
