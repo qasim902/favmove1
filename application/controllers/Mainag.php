@@ -225,6 +225,7 @@ class Mainag extends CI_Controller{
             
             $config['upload_path'] = "./resources/img/properties/".$property_id."/";
             $config['allowed_types'] = 'jpg|jpeg|png';
+			$config['overwrite'] = false;
 
             $this->load->library('upload');
             $files           = $_FILES;

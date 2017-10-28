@@ -104,7 +104,7 @@
               <i class="fa fa-plus-circle">&nbsp;&nbsp;Detailed Images</i>
               <br>
               <br>
-              <input type="file" multiple name="pic[]" id="file">
+              <input type="file" multiple="multiple" name="pic[]" id="file">
             </div>
 
             <!-- </span>
