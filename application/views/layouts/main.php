@@ -114,9 +114,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
-                                <i class="fa fa-picture-o "></i> <span>Ads</span>
+                                < class="fa fa-picture-o "></i> <span>Ads</span>
                             </a>
                             <ul class="treeview-menu">
                                 <li class="active">
@@ -126,7 +126,7 @@
                                     <a href="<?php echo site_url('ad/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#">
                                 <i class="fa fa-building-o "></i> <span>Agency</span>
