@@ -6,8 +6,63 @@
             </div>
             <?php echo form_open('package/add'); ?>
           	<div class="box-body">
+					<div class="col-sm-1 col-md-2"></div>
+					<div class="col-sm-10 col-md-8">
+						<div class="callus clearfix border_radius submit_property">
           		<div class="row clearfix">
 
+					
+					<!-- <div class="col-md-6">
+						<label for="date_modified" class="control-label">Date Modified</label>
+						<div class="form-group">
+							<input type="text" name="date_modified" placeholder="Date should be automatically picked" value="<?php echo $this->input->post('date_modified'); ?>" class="has-datetimepicker form-control" id="date_modified" />
+						</div>
+					</div> -->
+					<div class="col-md-6">
+						<label for="package_name" class="control-label">Enter Name</label>
+						<div class="form-group">
+							<input type="text" name="package_name" placeholder="Package Name" autofocus value="<?php echo $this->input->post('package_name'); ?>" class="form-control" id="package_name" />
+							<span class="text-danger"><?php echo form_error('package_name');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="package_price" class="control-label">Enter Price</label>
+						<div class="form-group">
+							<input type="text" name="package_price" placeholder="Package Price" autofocus  value="<?php echo $this->input->post('package_price'); ?>" class="form-control" id="package_price" />
+							<span class="text-danger"><?php echo form_error('package_price');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="package_days" class="control-label">Package Duration</label>
+						
+						<!-- <input type="text" name="package_days" placeholder="Make me dropdown rizwan" value="<?php echo $this->input->post('package_days'); ?>" class="form-control" id="package_days" /> -->
+						<div class="single-query">
+							<div class="intro">
+								<select id="packges_d" name="package_id" class="form-control">
+									<option value="">Select package</option>
+									<option value="yearly">Yearly</option>
+									<option value="monthly">Monthly</option>
+									<option value="weekly">Weekly</option>
+									<option value="days">Days</option>
+									<!-- <?php 
+										foreach($package_days as $package)
+										{
+											$selected = ($package['id'] == $this->input->post('package_id')) ? ' selected="selected"' : "";
+
+											echo '<option value="'.$package['id'].'" '.$selected.'>'.$package['package_name'].'</option>';
+										} 
+									?> -->
+								</select>
+							</div>
+							<span class="text-danger"><?php echo form_error('package_days');?></span>
+						</div>		
+					</div>
+					<div id="daily_pac" class="col-md-6" style="display:none">
+						<label for="date_created" class="control-label">Days Package</label>
+						<div class="form-group">
+							<input type="text" name="package_days" placeholder="Enter Days" value="" class="form-control" id="package_days" />
+						</div>
+					</div>
 					<div class="col-md-6">
 						<label for="date_created" class="control-label">Date Created</label>
 						<div class="form-group">
@@ -15,36 +70,9 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="date_modified" class="control-label">Date Modified</label>
-						<div class="form-group">
-							<input type="text" name="date_modified" placeholder="Date should be automatically picked" value="<?php echo $this->input->post('date_modified'); ?>" class="has-datetimepicker form-control" id="date_modified" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="package_name" class="control-label">Package Name</label>
-						<div class="form-group">
-							<input type="text" name="package_name" value="<?php echo $this->input->post('package_name'); ?>" class="form-control" id="package_name" />
-							<span class="text-danger"><?php echo form_error('package_name');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="package_price" class="control-label">Package Price</label>
-						<div class="form-group">
-							<input type="text" name="package_price" value="<?php echo $this->input->post('package_price'); ?>" class="form-control" id="package_price" />
-							<span class="text-danger"><?php echo form_error('package_price');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="package_days" class="control-label">Package Duration</label>
-						<div class="form-group">
-							<input type="text" name="package_days" placeholder="Make me dropdown rizwan" value="<?php echo $this->input->post('package_days'); ?>" class="form-control" id="package_days" />
-							<span class="text-danger"><?php echo form_error('package_days');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
 						<label for="num_listing_limit" class="control-label">Listing Limit</label>
 						<div class="form-group">
-							<input type="text" name="num_listing_limit" value="<?php echo $this->input->post('num_listing_limit'); ?>" class="form-control" id="num_listing_limit" />
+							<input type="text" placeholder="Listing" name="num_listing_limit" value="<?php echo $this->input->post('num_listing_limit'); ?>" class="form-control" id="num_listing_limit" />
 							<span class="text-danger"><?php echo form_error('num_listing_limit');?></span>
 						</div>
 					</div>
@@ -55,13 +83,7 @@
 <!--							<span class="text-danger">--><?php //echo form_error('currency_code');?><!--</span>-->
 <!--						</div>-->
 <!--					</div>-->
-					<div class="col-md-6">
-						<label for="user_type" class="control-label">User Type</label>
-						<div class="form-group">
-							<input type="text" name="user_type" placeholder="Make me dropdown rizwan" value="<?php echo $this->input->post('user_type'); ?>" class="form-control" id="user_type" />
-							<span class="text-danger"><?php echo form_error('user_type');?></span>
-						</div>
-					</div>
+					
 <!--					<div class="col-md-6">-->
 <!--						<label for="num_images_limit" class="control-label">Num Images Limit</label>-->
 <!--						<div class="form-group">-->
@@ -79,8 +101,23 @@
 					<div class="col-md-6">
 						<label for="num_featured_limit" class="control-label">Featured allowed</label>
 						<div class="form-group">
-							<input type="number" name="num_featured_limit" value="<?php echo $this->input->post('num_featured_limit'); ?>" class="form-control" id="num_featured_limit" />
+							<input type="number" min="0"  name="num_featured_limit" value="<?php echo $this->input->post('num_featured_limit'); ?>" class="form-control" id="num_featured_limit" />
 							<span class="text-danger"><?php echo form_error('num_featured_limit');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="user_type" class="control-label">User Type</label>
+						<div class="form-group">
+							<div class="single-query">
+								<div class="intro">
+									<select name="user_type" class="form-control">
+										<option value="" selected="" disabled="">Select User Type</option>
+										<option value="agent">Agent</option>
+										<option value="user">User</option>
+									</select>
+								</div>
+								<span class="text-danger"><?php echo form_error('user_type');?></span>
+							</div>
 						</div>
 					</div>
 <!--					<div class="col-md-6">-->
@@ -90,25 +127,34 @@
 <!--							<span class="text-danger">--><?php //echo form_error('forarea');?><!--</span>-->
 <!--						</div>-->
 <!--					</div>-->
-				</div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="checkbox" name="show_private_listings" value="1"  id="show_private_listings" />
-                        <label for="show_private_listings" class="control-label">Show Private Listings</label>
-                    </div>
+				
+                <div class="col-md-6 top30">
+                    <div class="form-group top10">
+                        <label for="show_private_listings" class="checkbox-inline"><input name="show_private_listings" type="checkbox" value="1" id="show_private_listings">Show Private Listings</label>
+						<label for="auto_activation" class="checkbox-inline"><input name="auto_activation"  type="checkbox" value="1" id="auto_activation">Auto Re-activation</label>
+					</div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="form-group">
                         <input type="checkbox" name="auto_activation" value="1"  id="auto_activation" />
                         <label for="auto_activation" class="control-label">Auto Re-activation</label>
                     </div>
-                </div>
+				</div> -->
 			</div>
-          	<div class="box-footer">
-            	<button type="submit" class="btn btn-success">
-            		<i class="fa fa-check"></i> Save
-            	</button>
-          	</div>
+
+			<div class="box-footer">
+				<div class="col-md-6 col-md-offset-3">
+					<button type="submit" class="btn btn-block btn-success">
+						<i class="fa fa-check"></i> Save
+					</button>
+				</div>
+			</div>
+			</div>
+			</div>
+			<div class="col-sm-1 col-md-2"></div>
+			<div class="col-sm-4"></div>
+			</div>
+          	
             <?php echo form_close(); ?>
       	</div>
     </div>

@@ -336,7 +336,17 @@
         <script src="<?php echo site_url('resources/js/global.js');?>"></script>
 
         <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
-
+    <script>
+    jQuery(document).ready(function() {
+        jQuery("#packges_d").change(function() {
+            if (jQuery(this).val() === 'days'){ 
+                jQuery('#daily_pac').show();   
+            } else {
+                jQuery('#daily_pac').hide(); 
+            }
+        });
+    });
+    </script>
 
     </body>
 </html>
