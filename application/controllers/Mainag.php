@@ -300,4 +300,8 @@ class Mainag extends CI_Controller{
             
         }
     }
+    function addnewagent()
+    {
+        echo "working";
+    }
 }

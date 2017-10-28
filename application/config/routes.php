@@ -35,6 +35,7 @@ $route['updateuser'] = 'main/upuser';
 $route['agentquery'] = 'main/agent_query';
 $route['contactag'] = 'main/contactagent';
 $route['allpackages'] = 'package/showpakage';
+$route['addagent'] = 'mainag/addnewagent';
 
 /*
 $route['addtofav'] will write in form or anchor tag.

@@ -68,16 +68,16 @@ echo "<script>
             <div class="agent-p-form" id="#user_form">
               <form class="callus clearfix" action="" method="POST">
                 <div class="single-query col-sm-12 form-group">
-                  <input type="text" class="keyword-input" placeholder="username" name="username" required>
+                  <input type="text" class="keyword-input" placeholder="username" name="username" >
                 </div>
                 <div class="single-query col-sm-12 form-group">
-                  <input type="text" class="keyword-input" name="email" placeholder="Email Address" required >
+                  <input type="text" class="keyword-input" name="email" placeholder="Email Address"  >
                 </div>
                 <div class="single-query col-sm-12 form-group">
-                  <input type="password" class="keyword-input" name="password" placeholder="Password" required>
+                  <input type="password" class="keyword-input" name="password" placeholder="Password" >
                 </div>
                 <div class="single-query col-sm-12 form-group">
-                  <input type="password" class="keyword-input" name="cpassword" placeholder="Confirm  Password" required>
+                  <input type="password" class="keyword-input" name="cpassword" placeholder="Confirm  Password" >
                 </div>
                 <div class="search-form-group white col-sm-12 form-group text-left">
                   <div class="check-box-2"><i><input type="checkbox" name="check-box"></i></div>
@@ -99,7 +99,7 @@ echo "<script>
 
           <div role="tabpanel" class="tab-pane fade" id="register">
             <div class="agent-p-form">
-              <form class="callus clearfix" method="post" id="agregform" action="" enctype="multipart/form-data">
+              <form class="callus clearfix" method="post" id="agregform" action="addagent" enctype="multipart/form-data">
                 <div class="col-md-12">
                   <div class=" col-sm-3 col-md-4">
                     <div class="form-group">
@@ -112,32 +112,32 @@ echo "<script>
                   </div>
                   <div class="col-sm-3 col-md-4">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="First Name" id="usr" name="fname" required>
+                      <input type="text" class="form-control" placeholder="First Name" id="usr" name="fname" >
                     </div>
                   </div>
                   <div class="col-sm-3 col-md-4">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Last Name" id="usr" name="lname" required>
+                      <input type="text" class="form-control" placeholder="Last Name" id="usr" name="lname" >
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required name="username">
+                        <input type="text" class="form-control" placeholder="Username"  name="username">
                       </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Email Address" name="email" required>
+                      <input type="text" class="form-control" placeholder="Email Address" name="email" >
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" name="password" required>
+                      <input type="password" class="form-control" placeholder="Password" name="password" >
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-12 ">
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Confirm  Password" name="cpassword" required>
+                      <input type="password" class="form-control" placeholder="Confirm  Password" name="cpassword" >
                     </div>
 
                   </div>
@@ -212,32 +212,12 @@ echo "<script>
                         </div>
                      
                     </div>  
-                    <br >
-                  <!-- here -->
-                  <?php 
-                    $num = count($easy['allpackages']);
-                  // for($i = 0; $i< $num; $i++ )
-                  // {
-                  //   for($j = 0; $j< 1; $j++ ){
-                  //   var_dump($easy['allpackages'][$i]['package_name']);
-                  //   var_dump($easy['allpackages'][$i]['package_price']);
-                  //   var_dump($easy['allpackages'][$i]['num_listing_limit']);
-                  //   var_dump($easy['allpackages'][$i]['num_images_limit']);
-                  //   var_dump($easy['allpackages'][$i]['num_featured_limit']);
-                  //   var_dump($easy['allpackages'][$i]['id']);
-                  //   }
-                  // }
-
-                  $i = 1;
-                  ?>
+                  
                   <div class="" id="packagedeal" style="display:none;">
                     <?php
                   foreach($easy['allpackages'] as $val)
                   { ?>
                   <br >
-                  
-
-                    
                     <input type="radio" name="package" >
                    <?php echo $val['package_name'];
                    echo $val['package_price'];
@@ -253,16 +233,11 @@ echo "<script>
                    <?php } ?>
                    </div>
 
-
-
-
-
-                 
-                  
-                  
-
-
-                                     
+                   <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                      
+                        <div class="query-submit-button top30">
+                            <button type="submit" class="btn-slide">Submit</button>
+                        </div>                   
                 </div>
               </form>
             </div>
