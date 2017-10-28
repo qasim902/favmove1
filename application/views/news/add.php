@@ -17,7 +17,7 @@
 					<div class="col-md-6">
 						<label for="added_on" class="control-label"><span class="text-danger">*</span>Added On</label>
 						<div class="form-group">
-							<input type="text" name="added_on" value="<?php echo $this->input->post('added_on'); ?>" class="form-control" id="added_on" />
+							<input type="text" name="added_on" placeholder="Make me a date picker rizwan, tell danish isko carbon->now sy time pick krwao" value="<?php echo $this->input->post('added_on'); ?>" class="form-control" id="added_on" />
 							<span class="text-danger"><?php echo form_error('added_on');?></span>
 						</div>
 					</div>
@@ -28,20 +28,20 @@
 							<span class="text-danger"><?php echo form_error('author');?></span>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="comment_id" class="control-label"><span class="text-danger">*</span>Comment Id</label>
-						<div class="form-group">
-							<input type="text" name="comment_id" value="<?php echo $this->input->post('comment_id'); ?>" class="form-control" id="comment_id" />
-							<span class="text-danger"><?php echo form_error('comment_id');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="excerpt" class="control-label"><span class="text-danger">*</span>Excerpt</label>
-						<div class="form-group">
-							<textarea name="excerpt" class="form-control" id="excerpt"><?php echo $this->input->post('excerpt'); ?></textarea>
-							<span class="text-danger"><?php echo form_error('excerpt');?></span>
-						</div>
-					</div>
+<!--					<div class="col-md-6">-->
+<!--						<label for="comment_id" class="control-label"><span class="text-danger">*</span>Comment Id</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="comment_id" value="--><?php //echo $this->input->post('comment_id'); ?><!--" class="form-control" id="comment_id" />-->
+<!--							<span class="text-danger">--><?php //echo form_error('comment_id');?><!--</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-6">-->
+<!--						<label for="excerpt" class="control-label"><span class="text-danger">*</span>Excerpt</label>-->
+<!--						<div class="form-group">-->
+<!--							<textarea name="excerpt" class="form-control" id="excerpt">--><?php //echo $this->input->post('excerpt'); ?><!--</textarea>-->
+<!--							<span class="text-danger">--><?php //echo form_error('excerpt');?><!--</span>-->
+<!--						</div>-->
+<!--					</div>-->
 					<div class="col-md-6">
 						<label for="detail" class="control-label"><span class="text-danger">*</span>Detail</label>
 						<div class="form-group">
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="img_path" class="control-label"><span class="text-danger">*</span>Img Path</label>
+						<label for="img_path" class="control-label"><span class="text-danger">*</span>Image Path</label>
 						<div class="form-group">
 							<textarea name="img_path" class="form-control" id="img_path"><?php echo $this->input->post('img_path'); ?></textarea>
 							<span class="text-danger"><?php echo form_error('img_path');?></span>

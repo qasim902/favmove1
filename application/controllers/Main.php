@@ -811,6 +811,8 @@ class Main extends CI_Controller
     }
     function home ()
     {
+//        var_dump('here');
+//        die();
         $userid = $this->session->userdata['userData']['userData']['dataa']['userid'];
         $this->load->model('User_model');
         $data = $this->User_model->showfav($userid); 
