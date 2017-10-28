@@ -891,6 +891,7 @@ function agent_query()
 function inboxag()
 {
     $id = $this->input->get('id');
+    
 }
 
 }
