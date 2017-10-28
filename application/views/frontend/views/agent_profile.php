@@ -56,20 +56,36 @@
           </ul>
         </div>
       </div> 
+      <?php
+if($this->session->flashdata('successsub'))
+{
+    echo "<br>
+    <div class='col-md-offset-3 col-md-6'>
+    <div  id='alert-pop' class='text-center alert alert-danger'>";
+    
+echo $this->session->flashdata('successsub');
+  echo "</div> 
+  </div>";
+echo "<script>
+    window.location.hash = '#alert-pop';
+    
+</script>";
+}
+?>
       <?php $id = $viewdata['agency']['id']; ?>
       <div class="col-sm-4 bottom40">
         <form class="callus" action="inboxagent?id=<?php echo $id; ?>" method="POST">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" placeholder="Name" name="name">
           </div>
           <div class="form-group">
-            <input type="tel" class="form-control" placeholder="Phone Number">
+            <input type="tel" class="form-control" placeholder="Phone Number" name="phone">
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" class="form-control" placeholder="Email" name="email">
           </div>
           <div class="form-group">
-            <textarea class="form-control" placeholder="Message"></textarea>
+            <textarea class="form-control" placeholder="Message" name="message"></textarea>
           </div>
           <input type="submit" class="btn-blue uppercase border_radius" value="submit now">
         </form>

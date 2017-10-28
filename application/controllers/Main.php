@@ -891,7 +891,19 @@ function agent_query()
 function inboxag()
 {
     $id = $this->input->get('id');
-    
+    $name = $this->input->post('name');
+    $phone = $this->input->post('phone');
+    $email = $this->input->post('email');
+    $message = $this->input->post('message');
+    $data = array('agentid'=>$id, 'name'=>$name, 'phone'=>$phone, 'email'=>$email, 'message'=>$message,);
+    $this->load->model('Agent_model');
+    $msg = $this->Agent_model->aginbox($id, $data);
+    if($msg)
+    {
+        $this->session->set_flashdata('successsub', "Your message is successfully send to the agent");
+        redirect($this->agent->referrer());
+
+    }
 }
 
 }

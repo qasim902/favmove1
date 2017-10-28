@@ -64,4 +64,8 @@ class Agent_model extends CI_Model
     {
         return $this->db->get_where('inquiries', array('id'=>$data))->result_array();
     }
+    function aginbox($id, $data)
+    {
+        $this->db->insert('agentnbox', $data);
+    }
 }
