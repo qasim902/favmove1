@@ -5,6 +5,7 @@ $route['default_controller'] = 'main';
 $route['properties'] = 'main/properties';
 $route['agents'] = 'main/agents';
 $route['agent_detail'] = 'main/agent_detail';
+$route['inboxagent'] = 'main/inboxag';
 $route['admin'] = 'admin/index';
 $route['admin_login'] = 'main/adlogin';
 $route['user_login'] = 'main/uslogin';

@@ -83,12 +83,12 @@ class Main extends CI_Controller
         if ($id)
         {
             $this->session->set_flashdata('inquiry', 'true');
-            redirect($SERVER['HTTP_REFERER']);
+            redirect($this->agent->referrer());
         }
         else 
         {
              $this->session->set_flashdata('inquiry', 'false');
-            redirect($SERVER['HTTP_REFERER']);
+             redirect($this->agent->referrer());
         }
         
         
@@ -887,6 +887,10 @@ function agent_query()
     $this->load->view('agent/agquery', $data);
     // var_dump($query); die();
     // echo "woking";
+}
+function inboxag()
+{
+    $id = $this->input->get('id');
 }
 
 }

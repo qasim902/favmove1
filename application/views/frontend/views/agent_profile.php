@@ -55,9 +55,10 @@
             <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i></a></li>
           </ul>
         </div>
-      </div>
+      </div> 
+      <?php $id = $viewdata['agency']['id']; ?>
       <div class="col-sm-4 bottom40">
-        <form class="callus">
+        <form class="callus" action="inboxagent?id=<?php echo $id; ?>" method="POST">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Name">
           </div>
