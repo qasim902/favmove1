@@ -2,15 +2,26 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Agency Edit</h3>
+              	<h3 class="box-title">Edit Agency</h3>
             </div>
 			<?php echo form_open('agency/edit/'.$agency['id']); ?>
 			<div class="box-body">
+					<div class="col-sm-1 col-md-2"></div>
+					<div class="col-sm-10 col-md-8">
+						<div class="callus clearfix border_radius submit_property">
 				<div class="row clearfix">
 					<div class="col-md-6">
-						<label for="name" class="control-label"><span class="text-danger">*</span>Name</label>
+						<label for="name" class="control-label"><span class="text-danger">*</span>Agency Name</label>
 						<div class="form-group">
-							<input type="text" name="name" value="<?php echo ($this->input->post('name') ? $this->input->post('name') : $agency['name']); ?>" class="form-control" id="name" />
+							<input type="text" name="name" autofocus placeholder="Agency Name" value="<?php echo ($this->input->post('name') ? $this->input->post('name') : $agency['name']); ?>" class="form-control" id="name" />
+							<span class="text-danger"><?php echo form_error('name');?></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="name" class="control-label">
+							<span class="text-danger">*</span>Ceo Name</label>
+						<div class="form-group">
+							<input type="text" name="ceo_name" autofocus placeholder="Ceo Name" value="" class="form-control" id="name" />
 							<span class="text-danger"><?php echo form_error('name');?></span>
 						</div>
 					</div>
@@ -71,12 +82,20 @@
 						</div>
 					</div>
 				</div>
+					<div class="box-footer">
+						<div class="col-md-6 col-md-offset-3">
+							<button type="submit" class="btn btn-block btn-success">
+								<i class="fa fa-check"></i> Save
+							</button>
+						</div>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-sm-1 col-md-2"></div>
+				<div class="col-sm-4"></div>
 			</div>
-			<div class="box-footer">
-            	<button type="submit" class="btn btn-success">
-					<i class="fa fa-check"></i> Save
-				</button>
-	        </div>				
+						
 			<?php echo form_close(); ?>
 		</div>
     </div>

@@ -5,6 +5,7 @@
 				<h3 class="box-title">Add Agency </h3>
 			</div>
 			<?php echo form_open('agency/add'); ?>
+
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -51,12 +52,11 @@
 									</span>
 								</div>
 							</div>
-							<div class="col-md-12">
+							<div class="col-lg-12">
 								<label for="address" class="control-label">
 									<span class="text-danger">*</span>Address</label>
 								<div class="form-group">
-									<textarea type="text" name="address" placeholder="Address"  autofocus value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"
-									/></textarea>
+									<textarea type="text" name="address" placeholder="Address"  autofocus value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
 									<span class="text-danger">
 										<?php echo form_error('address');?>
 									</span>
@@ -162,7 +162,6 @@
 									<textarea name="property_list" class="form-control" id="property_list"><?php echo $this->input->post('property_list'); ?></textarea>
 								</div>
 							</div> -->
-						</div>
 						<div class="box-footer">
 							<div class="col-md-6 col-md-offset-3">
 								<button type="submit" class="btn btn-block btn-success">
@@ -170,12 +169,15 @@
 								</button>
 							</div>
 						</div>
+						</div>
+						
 					</div>
+
 				</div>
-			</div>
 			<div class="col-sm-1 col-md-2"></div>
 			<div class="col-sm-4"></div>
 			<?php echo form_close(); ?>
+			</div>
 		</div>
 	</div>
 </div>
