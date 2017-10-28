@@ -546,17 +546,18 @@ class Main extends CI_Controller
         {
             //added by Danish sunday 12:47 am
             $this->load->model('package_model');
-            $viewdata['allpackages'] = $this->package_model->get_all_packages(); 
+            $viewmydata['allpackages'] = $this->package_model->get_all_packages(); //var_dump($viewdata); die();
             //$pkg = array('pkg'=>$allpkg);
 
              $viewdata['all_agency'] = $this->Agency_model->get_all_agency();
             $data = $this->data;
         $data += array(
-            
+            'easy' => $viewmydata,
            'viewdata' => $viewdata,
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/login'
         );
+    //    var_dump($data['easy']['allpackages']); die();
         $this->load->view('frontend/layouts/main', $data);
         }
     }
