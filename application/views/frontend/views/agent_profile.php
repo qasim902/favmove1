@@ -111,7 +111,8 @@
       <div class="col-sm-6">
         <div class="listing_full">
           <div class="image">
-            <img alt="image" src="<?= $assets?>img/b-d-property.jpg">
+            
+            <a href="property_detail?id=<?php echo $prop['prop_id']; ?>"><img alt="image" src="<?= $assets?>img/b-d-property.jpg"></a>
               <?php if ($prop['is_feat'] == "1")
               { 
                 echo " <span class=\"tag_l\">Featured</span>";
@@ -150,8 +151,8 @@
           </div>
           <div class="listing_full_bg">
             <div class="listing_inner_full">
-              <span><a href="#"><i class="icon-like"></i></a></span>
-              <a href="#.">
+              <span><a href="addtofav?id=<?php echo $prop['prop_id']; ?>"><i class="icon-like"></i></a></span>
+              <a href="property_detail?id=<?php echo $prop['prop_id']; ?>">
                 <h3><?= $prop['title'] ?></h3>
                 <p><?= $prop['address'] ?>, MR 21501</p>
               </a>

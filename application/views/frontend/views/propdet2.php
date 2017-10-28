@@ -78,7 +78,7 @@
               <p class="bottom10"><?= $viewdata['agency']['address'] ?></p>
               <div class="agnt_dtl">
                 <a href="#">View properties from this agent</a>
-                <a class="btn btn-default btn-block top10 bottom10"  onClick="window.print()">Request Details</a>
+                <a class="btn btn-default btn-block top10 bottom10"  onClick="window.location.hash = '#alert-pop'">Request Details</a>
               </div>
               <table class="agent_contact table">
                 <tbody>
@@ -352,7 +352,7 @@
         
         
 
-<div class="col-md-12  top20">
+<div id="alert-pop" class="col-md-12  top20">
          
           <!-- <div class="col-md-12  bottom20">
             <h2 class="uppercase">Monthly running costs</h2>
@@ -474,6 +474,7 @@ oninput = function() {
   
 }
 </script>
+            <div  class="">
           <div class="top10 col-md-7">
               <h3 class=" bottom20 uppercase"><b>Contact <?= $viewdata['agency']['name'] ?> about this property</b></h3>
               <form method="POST" action="userinquiry">
@@ -581,6 +582,8 @@ oninput = function() {
                 
               </div>
           </div>
+          <div class="clearfix"></div>
+        </div>
           <div class="clearfix"></div>
           
         </div>
