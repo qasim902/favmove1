@@ -419,11 +419,7 @@
             </div>
         </nav>
     </header>
-<<<<<<< HEAD
    
-=======
-
->>>>>>> de60571402b7463a15b20fca3bf73eb3ea523c36
 
     <section id="agents" class="padding_bottom_half padding_top">
         <div class="container-fluid">
@@ -476,21 +472,14 @@
                 </div>
             </div>
 
-<<<<<<< HEAD
            
 
 
-=======
->>>>>>> de60571402b7463a15b20fca3bf73eb3ea523c36
             <div class="col-md-10 col-xs-12">
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="profile">
                         <div id="deals" class="top30 bottom40">
-<<<<<<< HEAD
-=======
-
->>>>>>> de60571402b7463a15b20fca3bf73eb3ea523c36
                             <div class="row">
                                 <div class=" col-md-12">
                                     <ul class="nav nav-tabs">
