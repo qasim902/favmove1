@@ -15,7 +15,7 @@
 								<label for="title" class="control-label">
 									<span class="text-danger">*</span>Title</label>
 								<div class="form-group">
-									<input type="text" name="title" value="<?php echo $this->input->post('title'); ?>" class="form-control" id="title" />
+									<input type="text" name="title" placeholder="Title" autofocus value="<?php echo $this->input->post('title'); ?>" class="form-control" id="title" />
 									<span class="text-danger">
 										<?php echo form_error('title');?>
 									</span>
@@ -25,7 +25,7 @@
 								<label for="author" class="control-label">
 									<span class="text-danger">*</span>Author</label>
 								<div class="form-group">
-									<input type="text" name="author" value="<?php echo $this->input->post('author'); ?>" class="form-control" id="author" />
+									<input type="text" name="author" placeholder="Author" autofocus  value="<?php echo $this->input->post('author'); ?>" class="form-control" id="author" />
 									<span class="text-danger">
 										<?php echo form_error('author');?>
 									</span>
@@ -36,7 +36,7 @@
 									<span class="text-danger">*</span>Added On</label>
 									<div class="form-group">
 											<!-- DANISH isko carbon->now sy time pick krwao -->
-										<input type="text" name="added_on" placeholder="Date should be automatically picked" value="<?php echo $this->input->post('added_on'); ?>" class="has-datetimepicker form-control"  id="added_on"  />
+										<input type="text" name="added_on" placeholder="Date should be automatically picked" autofocus value="<?php echo $this->input->post('added_on'); ?>" class="has-datetimepicker form-control"  id="added_on"  />
 										
 										<span class="text-danger">
 											<?php echo form_error('added_on');?>
@@ -87,7 +87,7 @@
 								<label for="detail" class="control-label">
 									<span class="text-danger">*</span>Detail</label>
 								<div class="form-group">
-									<textarea name="detail" class="form-control" id="detail"><?php echo $this->input->post('detail'); ?></textarea>
+									<textarea name="detail" placeholder="Add your Details" autofocus class="form-control" id="detail"><?php echo $this->input->post('detail'); ?></textarea>
 									<span class="text-danger">
 										<?php echo form_error('detail');?>
 									</span>
@@ -97,7 +97,7 @@
 								<label for="tags" class="control-label">
 									<span class="text-danger">*</span>Tags</label>
 								<div class="form-group">
-									<textarea name="tags" class="form-control" id="tags"><?php echo $this->input->post('tags'); ?></textarea>
+									<textarea  placeholder="eg. tag, demo, uk, house" autofocus  name="tags" class="form-control" id="tags"><?php echo $this->input->post('tags'); ?></textarea>
 									<span class="text-danger">
 										<?php echo form_error('tags');?>
 									</span>
