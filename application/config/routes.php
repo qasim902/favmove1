@@ -34,6 +34,7 @@ $route['prop_eval'] = 'main/property_eval';
 $route['updateuser'] = 'main/upuser';
 $route['agentquery'] = 'main/agent_query';
 $route['contactag'] = 'main/contactagent';
+$route['allpackages'] = 'package/showpakage';
 
 /*
 $route['addtofav'] will write in form or anchor tag.

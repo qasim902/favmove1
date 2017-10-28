@@ -63,7 +63,7 @@ echo "<script>
 
             <div role="tabpanel" class="tab-pane fade" id="profile">
               <div class="agent-p-form" id="#user_form">
-                <form class="callus clearfix" action="user_reg" method="POST">
+                <form class="callus clearfix" action="" method="POST">
                   <div class="single-query col-sm-12 form-group">
                     <input type="text" class="keyword-input" placeholder="username" name="username" required>
                   </div>
@@ -96,7 +96,7 @@ echo "<script>
 
             <div role="tabpanel" class="tab-pane fade" id="register">
               <div class="agent-p-form">
-                <form class="callus clearfix" method="post" id="agregform" action="ag_signup" enctype="multipart/form-data">
+                <form class="callus clearfix" method="post" id="agregform" action="" enctype="multipart/form-data">
                   <div class="col-md-12">
                     <div class=" col-sm-3 col-md-4">
                       <div class="form-group">
@@ -203,10 +203,13 @@ echo "<script>
                           </div>
                       </div>
                       <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        
                           <div class="query-submit-button">
-                            <input type="submit" value="Next" class="btn-slide">
+                              <a href="allpackages" value="Next" class="btn-slide">NEXT</a>
                           </div>
-                      </div>                    
+                       
+                      </div>   
+                      <?php ?>                 
                   </div>
                 </form>
               </div>

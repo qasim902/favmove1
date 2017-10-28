@@ -137,5 +137,14 @@ class Package extends CI_Controller{
         else
             show_error('The package you are trying to delete does not exist.');
     }
+    function showpakage()
+    {
+        $this->load->model('package_model');
+        $allpkg = $this->package_model->get_all_packages();
+        $data = array('pkg'=>$allpkg);
+        $this->load->view('frontend/views/login', $data);
+        
+
+    }
     
 }

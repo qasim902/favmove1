@@ -594,121 +594,121 @@ class Main extends CI_Controller
     }
 
 
-     function agent_reg()
-    {
-        $this->load->library('user_agent');
-         $this->load->library('form_validation');
-         $this->load->model('User_model');
-        $this->form_validation->set_rules('password','Password','required|max_length[255]');
-        $this->form_validation->set_rules('username','Username','required|max_length[255]');
-        $this->form_validation->set_rules('fname','First Name','required|max_length[255]');
-        $this->form_validation->set_rules('lname','Last Name','required|max_length[255]');
-        $this->form_validation->set_rules('description','Description','required|max_length[255]');
-        $this->form_validation->set_rules('address','Address','required|max_length[255]');
-        $this->form_validation->set_rules('email','Email','required|max_length[255]|valid_email');
-        $this->form_validation->set_rules('cpassword','Confirm Password','required|max_length[255]|matches[password]');
-        $agency = array();
-        if (!empty($this->input->post('agency_id')))
-        {
-            $this->form_validation->set_rules('agency_id','Agency Id','required|max_length[255]');
-            $agency_id = $this->input->post('agency_id');
-            $agency = $this->Agency_model->get_agency($agency_id);
-        }
-        else 
-        {
+    //  function agent_reg()
+    // {
+    //     $this->load->library('user_agent');
+    //      $this->load->library('form_validation');
+    //      $this->load->model('User_model');
+    //     $this->form_validation->set_rules('password','Password','required|max_length[255]');
+    //     $this->form_validation->set_rules('username','Username','required|max_length[255]');
+    //     $this->form_validation->set_rules('fname','First Name','required|max_length[255]');
+    //     $this->form_validation->set_rules('lname','Last Name','required|max_length[255]');
+    //     $this->form_validation->set_rules('description','Description','required|max_length[255]');
+    //     $this->form_validation->set_rules('address','Address','required|max_length[255]');
+    //     $this->form_validation->set_rules('email','Email','required|max_length[255]|valid_email');
+    //     $this->form_validation->set_rules('cpassword','Confirm Password','required|max_length[255]|matches[password]');
+    //     $agency = array();
+    //     if (!empty($this->input->post('agency_id')))
+    //     {
+    //         $this->form_validation->set_rules('agency_id','Agency Id','required|max_length[255]');
+    //         $agency_id = $this->input->post('agency_id');
+    //         $agency = $this->Agency_model->get_agency($agency_id);
+    //     }
+    //     else 
+    //     {
 
-        $this->form_validation->set_rules('agencyname','Agency Name','required|max_length[255]');
-        $this->form_validation->set_rules('fb_link','Facebook Link','xss_clean|max_length[255]');
-        $this->form_validation->set_rules('twit_link','Twitter','xss_clean|max_length[255]');
-        $this->form_validation->set_rules('gplus_link','GPlus','xss_clean|max_length[255]');
-        $this->form_validation->set_rules('li_link','LinkedIn','xss_clean|max_length[255]');
-        $this->form_validation->set_rules('you_link','Youtube','xss_clean|max_length[255]');
-        $this->form_validation->set_rules('pin_link','Pinterest','xss_clean|max_length[255]');
-        $this->form_validation->set_rules('insta_link','Insta','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('agencyname','Agency Name','required|max_length[255]');
+    //     $this->form_validation->set_rules('fb_link','Facebook Link','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('twit_link','Twitter','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('gplus_link','GPlus','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('li_link','LinkedIn','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('you_link','Youtube','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('pin_link','Pinterest','xss_clean|max_length[255]');
+    //     $this->form_validation->set_rules('insta_link','Insta','xss_clean|max_length[255]');
            
-            $agency = array(
+    //         $agency = array(
                 
-                'name' => $this->input->post('agencyname'),
-                'agency_logo' => $_FILES['agencylogo']['name'],
-                'fb_link' => $this->input->post('fb_link'),
-                'linkedin_link' => $this->input->post('li_link'),
-                'gplus_link' => $this->input->post('gplus_link'),
-                'youtube_link' => $this->input->post('you_link'),
-                'pin_link' => $this->input->post('pin_link'),
-                'insta_link' => $this->input->post('insta_link'),
-                'address' => $this->input->post('ag_address'),
-                'phone' => $this->input->post('ag_phone')
+    //             'name' => $this->input->post('agencyname'),
+    //             'agency_logo' => $_FILES['agencylogo']['name'],
+    //             'fb_link' => $this->input->post('fb_link'),
+    //             'linkedin_link' => $this->input->post('li_link'),
+    //             'gplus_link' => $this->input->post('gplus_link'),
+    //             'youtube_link' => $this->input->post('you_link'),
+    //             'pin_link' => $this->input->post('pin_link'),
+    //             'insta_link' => $this->input->post('insta_link'),
+    //             'address' => $this->input->post('ag_address'),
+    //             'phone' => $this->input->post('ag_phone')
 
-            );
+    //         );
             
-        }
+    //     }
         
       
         
         
-        if($this->form_validation->run())     
-        {   
-            $user = array(
-                'password' => $this->input->post('password'),
-                'username' => $this->input->post('username'),
-                'email' => $this->input->post('email'),
-                'usertype' => 'agent',
-                'created_on' => date('Y-m-d h:i:s'),
-                'payment_details' => json_encode(array()),
-                'myfavorites' => json_encode(array())
-            );
+    //     if($this->form_validation->run())     
+    //     {   
+    //         $user = array(
+    //             'password' => $this->input->post('password'),
+    //             'username' => $this->input->post('username'),
+    //             'email' => $this->input->post('email'),
+    //             'usertype' => 'agent',
+    //             'created_on' => date('Y-m-d h:i:s'),
+    //             'payment_details' => json_encode(array()),
+    //             'myfavorites' => json_encode(array())
+    //         );
 
             
-            $agent = array(
-                'package_id' => "",
-                'agency_id' => "",
-                'password' => $this->input->post('password'),
-                'name' => $this->input->post('fname')." ".$this->input->post('lname'),
-                'username' => $this->input->post('username'),
-                'email' => $this->input->post('email'),
-                'agent_image' => $_FILES['agentimg']['name'],
-                // 'agent_image' => $_FILES['agentimg'],
-                'property_list' => json_encode(array()),
-                'last_logintime' => '',
-                'added_date' => date('Y-m-d h:i:s'),
-                'address' => $this->input->post('address'),
-                'activated' => 0,
-                'package_lastpayment' => "",
-                'last_editip' => $this->input->ip_address(),
-                'payment_details' => json_encode(array()),
-                'description' => $this->input->post('description'),
-                'phone' => $agency['phone']
+    //         $agent = array(
+    //             'package_id' => "",
+    //             'agency_id' => "",
+    //             'password' => $this->input->post('password'),
+    //             'name' => $this->input->post('fname')." ".$this->input->post('lname'),
+    //             'username' => $this->input->post('username'),
+    //             'email' => $this->input->post('email'),
+    //             'agent_image' => $_FILES['agentimg']['name'],
+    //             // 'agent_image' => $_FILES['agentimg'],
+    //             'property_list' => json_encode(array()),
+    //             'last_logintime' => '',
+    //             'added_date' => date('Y-m-d h:i:s'),
+    //             'address' => $this->input->post('address'),
+    //             'activated' => 0,
+    //             'package_lastpayment' => "",
+    //             'last_editip' => $this->input->ip_address(),
+    //             'payment_details' => json_encode(array()),
+    //             'description' => $this->input->post('description'),
+    //             'phone' => $agency['phone']
             
-            );
+    //         );
 
 
-            $formData['ag_su'] = array('agent'=> $agent,'agency'=> $agency,'user'=> $user);
-            $this->session->set_userdata('formData', $formData);
+    //         $formData['ag_su'] = array('agent'=> $agent,'agency'=> $agency,'user'=> $user);
+    //         $this->session->set_userdata('formData', $formData);
 
-            $this->selectpackage($agency,$agent,$user);
+    //         $this->selectpackage($agency,$agent,$user);
            
 
        
 
             
             
-        }
-        else
-        {        
+    //     }
+    //     else
+    //     {        
 
           
-           echo "<script>alert('". validation_errors('<div class=\"error\">', '</div>')."');</script>";
-            $viewdata['all_agency'] = $this->Agency_model->get_all_agency();
+    //        echo "<script>alert('". validation_errors('<div class=\"error\">', '</div>')."');</script>";
+    //         $viewdata['all_agency'] = $this->Agency_model->get_all_agency();
  
-            $data = $this->data;
-            $data += array(
-                'viewdata' => $viewdata,   
-            'assets' => base_url() . "resources/",
-            '_view' => 'frontend/views/login');
-            $this->load->view('frontend/layouts/main',$data);
-        }
+    //         $data = $this->data;
+    //         $data += array(
+    //             'viewdata' => $viewdata,   
+    //         'assets' => base_url() . "resources/",
+    //         '_view' => 'frontend/views/login');
+    //         $this->load->view('frontend/layouts/main',$data);
+    //     }
 
-        }
+    //     }
 
         function selectpackage($agency,$agent,$user)
         {
