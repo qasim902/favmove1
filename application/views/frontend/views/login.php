@@ -96,7 +96,7 @@ echo "<script>
           </div>
 
 
-
+          <!-- AGENT REGISTRATION -->
           <div role="tabpanel" class="tab-pane fade" id="register">
             <div class="agent-p-form">
               <form class="callus clearfix" method="post" id="agregform" action="addagent" enctype="multipart/form-data">
