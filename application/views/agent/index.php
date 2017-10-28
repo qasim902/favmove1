@@ -80,10 +80,10 @@
 							<?php echo $a['id']; ?>
 						</a>
 					</li>
-					<li class="list-group-item">
-						<b>User Type</b>
-						<a class="pull-right">Agent</a>
-					</li>
+<!--					<li class="list-group-item">-->
+<!--						<b>User Type</b>-->
+<!--						<a class="pull-right">Agent</a>-->
+<!--					</li>-->
 				</ul>
 
 			</div>
@@ -104,7 +104,7 @@
 							<li class="pull-right">
 
 								<a href="/favmove1/agentquery?id=<?php echo $a['id']; ?>" class="btn btn-primary link-white text-sm">
-									<i class="fa fa-pencil margin-r-5"></i>Show Queries</a>
+									<i class="fa fa-pencil margin-r-5"></i>Show Inquiries</a>
 							</li>
 							<li class="pull-right">
 								<a href="#" class="btn btn-primary link-white text-sm">

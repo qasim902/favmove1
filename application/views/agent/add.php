@@ -2,7 +2,7 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">Agent Add</h3>
+              	<h3 class="box-title">Add Agent "Rizwan mjhy seedha kro plisss mjhy chor do pliss"</h3>
             </div>
             <?php echo form_open('agent/add'); ?>
           	<div class="box-body">
@@ -63,24 +63,30 @@
 							<input type="text" name="email" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="email" />
 						</div>
 					</div>
+                    <div class="col-md-6">
+						<label for="contact" class="control-label">Contact</label>
+						<div class="form-group">
+							<input type="tel" name="contact" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="contact" />
+						</div>
+					</div>
 					<div class="col-md-6">
 						<label for="agent_image" class="control-label">Agent Image</label>
 						<div class="form-group">
-							<input type="text" name="agent_image" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="agent_image" />
+							<input type="text" name="agent_image" placeholder="Make me a fileUpload rizwan" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="agent_image" />
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="property_list" class="control-label">Property List</label>
-						<div class="form-group">
-							<input type="text" name="property_list" value="<?php echo $this->input->post('property_list'); ?>" class="form-control" id="property_list" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="last_logintime" class="control-label">Last Logintime</label>
-						<div class="form-group">
-							<input type="text" name="last_logintime" value="<?php echo $this->input->post('last_logintime'); ?>" class="has-datetimepicker form-control" id="last_logintime" />
-						</div>
-					</div>
+<!--					<div class="col-md-6">-->
+<!--						<label for="property_list" class="control-label">Property List</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="property_list" value="--><?php //echo $this->input->post('property_list'); ?><!--" class="form-control" id="property_list" />-->
+<!--						</div>-->
+<!-- 					</div>-->
+<!--					<div class="col-md-6">-->
+<!--						<label for="last_logintime" class="control-label">Last Logintime</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="last_logintime" value="--><?php //echo $this->input->post('last_logintime'); ?><!--" class="has-datetimepicker form-control" id="last_logintime" />-->
+<!--						</div>-->
+<!--					</div>-->
 					
 					<div class="col-md-6">
 						<label for="address" class="control-label">Address</label>
@@ -91,34 +97,34 @@
 					<div class="col-md-6">
 						<label for="activated" class="control-label">Activated</label>
 						<div class="form-group">
-							<input type="text" name="activated" value="<?php echo $this->input->post('activated'); ?>" class="form-control" id="activated" />
+							<input type="text" name="activated" placeholder="Make me a checkbox rizwan" value="<?php echo $this->input->post('activated'); ?>" class="form-control" id="activated" />
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="package_lastpayment" class="control-label">Package Lastpayment</label>
-						<div class="form-group">
-							<input type="text" name="package_lastpayment" value="<?php echo $this->input->post('package_lastpayment'); ?>" class="has-datetimepicker form-control" id="package_lastpayment" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="last_editip" class="control-label">Last Editip</label>
-						<div class="form-group">
-							<input type="text" name="last_editip" value="<?php echo $this->input->post('last_editip'); ?>" class="form-control" id="last_editip" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="payment_details" class="control-label">Payment Details</label>
-						<div class="form-group">
-							<input type="text" name="payment_details" value="<?php echo $this->input->post('payment_details'); ?>" class="form-control" id="payment_details" />
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="description" class="control-label">Description</label>
-						<div class="form-group">
-							<textarea name="description" class="form-control" id="description"><?php echo $this->input->post('description'); ?></textarea>
-						</div>
-					</div>
-				</div>
+<!--					<div class="col-md-6">-->
+<!--						<label for="package_lastpayment" class="control-label">Package Lastpayment</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="package_lastpayment" value="--><?php //echo $this->input->post('package_lastpayment'); ?><!--" class="has-datetimepicker form-control" id="package_lastpayment" />-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-6">-->
+<!--						<label for="last_editip" class="control-label">Last Editip</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="last_editip" value="--><?php //echo $this->input->post('last_editip'); ?><!--" class="form-control" id="last_editip" />-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-6">-->
+<!--						<label for="payment_details" class="control-label">Payment Details</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="payment_details" value="--><?php //echo $this->input->post('payment_details'); ?><!--" class="form-control" id="payment_details" />-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-6">-->
+<!--						<label for="description" class="control-label">Description</label>-->
+<!--						<div class="form-group">-->
+<!--							<textarea name="description" class="form-control" id="description">--><?php //echo $this->input->post('description'); ?><!--</textarea>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
 			</div>
           	<div class="box-footer">
             	<button type="submit" class="btn btn-success">
