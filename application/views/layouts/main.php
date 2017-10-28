@@ -167,7 +167,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fa fa-dot-circle-o "></i> <span>Property Positions</span>
                             </a>
@@ -179,7 +179,7 @@
                                     <a href="<?php echo site_url('prop_position/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- <li>
                             <a href="#">
                                 <i class="fa fa-desktop"></i> <span>Feature</span>
