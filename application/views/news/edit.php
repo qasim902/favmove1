@@ -6,19 +6,16 @@
             </div>
 			<?php echo form_open('news/edit/'.$news['id']); ?>
 			<div class="box-body">
+				<div class="col-sm-1 col-md-2"></div>
+				<div class="col-sm-10 col-md-8">
+					<div class="callus clearfix border_radius submit_property">
+				
 				<div class="row clearfix">
 					<div class="col-md-6">
 						<label for="title" class="control-label"><span class="text-danger">*</span>Title</label>
 						<div class="form-group">
 							<input type="text" name="title" value="<?php echo ($this->input->post('title') ? $this->input->post('title') : $news['title']); ?>" class="form-control" id="title" />
 							<span class="text-danger"><?php echo form_error('title');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="added_on" class="control-label"><span class="text-danger">*</span>Added On</label>
-						<div class="form-group">
-							<input type="text" name="added_on" value="<?php echo ($this->input->post('added_on') ? $this->input->post('added_on') : $news['added_on']); ?>" class="form-control" id="added_on" />
-							<span class="text-danger"><?php echo form_error('added_on');?></span>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -29,17 +26,26 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="comment_id" class="control-label"><span class="text-danger">*</span>Comment Id</label>
+						<label for="added_on" class="control-label"><span class="text-danger">*</span>Added On</label>
 						<div class="form-group">
-							<input type="text" name="comment_id" value="<?php echo ($this->input->post('comment_id') ? $this->input->post('comment_id') : $news['comment_id']); ?>" class="form-control" id="comment_id" />
-							<span class="text-danger"><?php echo form_error('comment_id');?></span>
+							<input type="text" name="added_on" value="<?php echo ($this->input->post('added_on') ? $this->input->post('added_on') : $news['added_on']); ?>" class="form-control" id="added_on" />
+							<span class="text-danger"><?php echo form_error('added_on');?></span>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="excerpt" class="control-label"><span class="text-danger">*</span>Excerpt</label>
+						<label for="img_path" class="control-label"><span class="text-danger">*</span>Edit Image</label>
 						<div class="form-group">
-							<textarea name="excerpt" class="form-control" id="excerpt"><?php echo ($this->input->post('excerpt') ? $this->input->post('excerpt') : $news['excerpt']); ?></textarea>
-							<span class="text-danger"><?php echo form_error('excerpt');?></span>
+							<div class="input-group agncy_btn">
+								<label class="input-group-btn">
+									<span class="btn btn-primary">
+										Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="img_path" style="display: none;" />
+									</span>
+								</label>
+								<input name="img_path" type="text" value="<?php echo ($this->input->post('img_path') ? $this->input->post('img_path') : $news['img_path']); ?>" class="form-control"  readonly>
+							</div>
+							<span class="text-danger">
+								<?php echo form_error('img_path');?>
+							</span>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -56,20 +62,21 @@
 							<span class="text-danger"><?php echo form_error('tags');?></span>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="img_path" class="control-label"><span class="text-danger">*</span>Img Path</label>
-						<div class="form-group">
-							<textarea name="img_path" class="form-control" id="img_path"><?php echo ($this->input->post('img_path') ? $this->input->post('img_path') : $news['img_path']); ?></textarea>
-							<span class="text-danger"><?php echo form_error('img_path');?></span>
-						</div>
+					
+				</div>
+				<div class="box-footer">
+					<div class="col-md-6 col-md-offset-3">
+						<button type="submit" class="btn btn-block btn-success">
+							<i class="fa fa-check"></i> Save
+						</button>
 					</div>
 				</div>
+				</div>
+				</div>
+				<div class="col-sm-1 col-md-2"></div>
+				<div class="col-sm-4"></div>
 			</div>
-			<div class="box-footer">
-            	<button type="submit" class="btn btn-success">
-					<i class="fa fa-check"></i> Save
-				</button>
-	        </div>				
+							
 			<?php echo form_close(); ?>
 		</div>
     </div>
