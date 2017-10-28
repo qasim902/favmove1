@@ -21,7 +21,24 @@
 <section id="agents" class="padding">
   <div class="container">
     <div class="row">
-      
+        <div class="col-md-12">
+      <?php
+      if($this->session->flashdata('successsub'))
+      {
+          echo "<br>
+          <div class='col-md-offset-3 col-md-6'>
+          <div  id='alert-pop' class='text-center alert alert-danger'>";
+          
+      echo $this->session->flashdata('successsub');
+        echo "</div> 
+        </div>";
+      echo "<script>
+          window.location.hash = '#alert-pop';
+          
+      </script>";
+      }
+      ?>
+        </div>
       <div class="col-sm-4 bottom40">
         <div class="agent_wrap">
           <h3><?= $viewdata['agent']['name'];?> </h3>
@@ -56,22 +73,7 @@
           </ul>
         </div>
       </div> 
-      <?php
-if($this->session->flashdata('successsub'))
-{
-    echo "<br>
-    <div class='col-md-offset-3 col-md-6'>
-    <div  id='alert-pop' class='text-center alert alert-danger'>";
-    
-echo $this->session->flashdata('successsub');
-  echo "</div> 
-  </div>";
-echo "<script>
-    window.location.hash = '#alert-pop';
-    
-</script>";
-}
-?>
+      
       <?php $id = $viewdata['agency']['id']; ?>
       <div class="col-sm-4 bottom40">
         <form class="callus" action="inboxagent?id=<?php echo $id; ?>" method="POST">

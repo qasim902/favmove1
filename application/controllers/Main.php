@@ -897,13 +897,12 @@ function inboxag()
     $message = $this->input->post('message');
     $data = array('agentid'=>$id, 'name'=>$name, 'phone'=>$phone, 'email'=>$email, 'message'=>$message,);
     $this->load->model('Agent_model');
-    $msg = $this->Agent_model->aginbox($id, $data);
-    if($msg)
+    $msg = $this->Agent_model->aginbox($id, $data); 
+    if($msg == true)
     {
         $this->session->set_flashdata('successsub', "Your message is successfully send to the agent");
-        redirect($this->agent->referrer());
-
     }
+    redirect($this->agent->referrer());
 }
 
 }

@@ -66,6 +66,6 @@ class Agent_model extends CI_Model
     }
     function aginbox($id, $data)
     {
-        $this->db->insert('agentnbox', $data);
+        return $this->db->insert('agentnbox', $data);
     }
 }
