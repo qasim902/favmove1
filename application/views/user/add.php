@@ -31,29 +31,29 @@
 					<div class="col-md-6">
 						<label for="usertype" class="control-label"><span class="text-danger">*</span>Usertype</label>
 						<div class="form-group">
-							<input type="text" name="usertype" value="<?php echo $this->input->post('usertype'); ?>" class="form-control" id="usertype" />
+							<input type="text" name="usertype" placeholder="Make me a drop down of two types user and agent" value="<?php echo $this->input->post('usertype'); ?>" class="form-control" id="usertype" />
 							<span class="text-danger"><?php echo form_error('usertype');?></span>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="created_on" class="control-label"><span class="text-danger">*</span>Created On</label>
-						<div class="form-group">
-							<input type="text" name="created_on" value="<?php echo $this->input->post('created_on'); ?>" class="form-control" id="created_on" />
-							<span class="text-danger"><?php echo form_error('created_on');?></span>
-						</div>
-					</div>
+<!--					<div class="col-md-6">-->
+<!--						<label for="created_on" class="control-label"><span class="text-danger">*</span>Created On</label>-->
+<!--						<div class="form-group">-->
+<!--							<input type="text" name="created_on" value="--><?php //echo $this->input->post('created_on'); ?><!--" class="form-control" id="created_on" />-->
+<!--							<span class="text-danger">--><?php //echo form_error('created_on');?><!--</span>-->
+<!--						</div>-->
+<!--					</div>-->
 					<div class="col-md-6">
 						<label for="payment_details" class="control-label">Payment Details</label>
 						<div class="form-group">
-							<textarea name="payment_details" class="form-control" id="payment_details"><?php echo $this->input->post('payment_details'); ?></textarea>
+							<textarea name="payment_details" placeholder="Make me a drop down of two types paypal and credit card" class="form-control" id="payment_details"><?php echo $this->input->post('payment_details'); ?></textarea>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="myfavorites" class="control-label">Myfavorites</label>
-						<div class="form-group">
-							<textarea name="myfavorites" class="form-control" id="myfavorites"><?php echo $this->input->post('myfavorites'); ?></textarea>
-						</div>
-					</div>
+<!--					<div class="col-md-6">-->
+<!--						<label for="myfavorites" class="control-label">Myfavorites</label>-->
+<!--						<div class="form-group">-->
+<!--							<textarea name="myfavorites" class="form-control" id="myfavorites">--><?php //echo $this->input->post('myfavorites'); ?><!--</textarea>-->
+<!--						</div>-->
+<!--					</div>-->
 				</div>
 			</div>
           	<div class="box-footer">
