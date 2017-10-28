@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="box-body">
-				<div class="table-hover">
+				<div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
 						<th>ID</th>
