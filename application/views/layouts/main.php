@@ -114,7 +114,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fa fa-picture-o "></i> <span>Ads</span>
                             </a>
@@ -126,7 +126,7 @@
                                     <a href="<?php echo site_url('ad/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#">
                                 <i class="fa fa-building-o "></i> <span>Agency</span>
