@@ -102,10 +102,9 @@ class User_model extends CI_Model
     {
         return $this->db->get_where('userfavprop', array('userid'=> $userid))->result_array();
     }
-    function userupdate($data)
+    function userupdate($userid, $data)
     {
-        // $this->db->where('userid', );
-        // var_dump($data); die();
-         return  $this->db->update('user', $data); 
+        $this->db->where('userid', $userid);
+        return  $this->db->update('user', $data); 
     }
 }

@@ -65,11 +65,11 @@
           </table>
           <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
           <ul class="social_share">
-            <li><a href="javascript:void(0)" class="facebook"><i class="icon-facebook-1"></i></a></li>
-            <li><a href="javascript:void(0)" class="twitter"><i class="icon-twitter-1"></i></a></li>
-            <li><a href="javascript:void(0)" class="google"><i class="icon-google4"></i></a></li>
-            <li><a href="javascript:void(0)" class="linkden"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="javascript:void(0)" class="vimo"><i class="icon-vimeo3"></i></a></li>
+            <li><a href="<?= $viewdata['agency']['fb_link'];?>" class="facebook"><i class="icon-facebook-1"></i></a></li>
+            <li><a href="<?= $viewdata['agency']['twit_link'];?>" class="twitter"><i class="icon-twitter-1"></i></a></li>
+            <li><a href="<?= $viewdata['agency']['gplus_link'];?>" class="google"><i class="icon-google4"></i></a></li>
+            <li><a href="<?= $viewdata['agency']['linkedin_link'];?>" class="linkden"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="<?= $viewdata['agency']['insta_link'];?>" class="vimo"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
       </div> 
