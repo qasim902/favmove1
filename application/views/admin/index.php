@@ -8,13 +8,12 @@
                 </div>
             </div>
             <div class="box-body">
-                <table class="table table-striped">
+                <table class="table table-responsive  table-striped">
                     <tr>
 						<th>ID</th>
 						<th>Password</th>
 						<th>Username</th>
 						<th>Email</th>
-						<th>Log</th>
 						<th>Actions</th>
                     </tr>
                     <?php foreach($admin as $a){ ?>
@@ -23,7 +22,6 @@
 						<td><?php echo $a['password']; ?></td>
 						<td><?php echo $a['username']; ?></td>
 						<td><?php echo $a['email']; ?></td>
-						<td><?php echo $a['log']; ?></td>
 						<td>
                             <a href="<?php echo site_url('admin/edit/'.$a['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
                             <a href="<?php echo site_url('admin/remove/'.$a['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>

@@ -6,14 +6,20 @@
             </div>
             <?php echo form_open('admin/add'); ?>
           	<div class="box-body">
+					<div class="col-sm-1 col-md-2"></div>
+					<div class="col-sm-10 col-md-8">
+			<div class="callus clearfix border_radius submit_property">
+								
           		<div class="row clearfix">
 					<div class="col-md-6">
 						<label for="password" class="control-label"><span class="text-danger">*</span>Password</label>
-						<div class="form-group">
-							<input type="password" name="password" value="<?php echo $this->input->post('password'); ?>" class="form-control" id="password" />
+						<div class="single-query form-group">
+							<input type="password" placeholder="Password" name="password" value="<?php echo $this->input->post('password'); ?>" class="form-control keyword-input" id="password" />
 							<span class="text-danger"><?php echo form_error('password');?></span>
 						</div>
+						
 					</div>
+					
 					<div class="col-md-6">
 						<label for="username" class="control-label"><span class="text-danger">*</span>Username</label>
 						<div class="form-group">
@@ -36,6 +42,11 @@
 					</div>
 				</div>
 			</div>
+
+			</div>
+			</div>
+			<div class="col-sm-1 col-md-2"></div>
+			<div class="col-sm-4"></div>
           	<div class="box-footer">
             	<button type="submit" class="btn btn-success">
             		<i class="fa fa-check"></i> Save
