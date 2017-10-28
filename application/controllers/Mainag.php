@@ -217,32 +217,22 @@ class Mainag extends CI_Controller{
             $property_id = $this->Property_model->add_propert($params);
             if ($property_id)
             {
-
                 // print_r($_FILES);die();
              if (!file_exists('./resources/img/properties/'.$property_id.'/')) {
                 mkdir('./resources/img/properties/'.$property_id.'/', 0777, true);
                 }
-            
             $config['upload_path'] = "./resources/img/properties/".$property_id."/";
             $config['allowed_types'] = 'jpg|jpeg|png';
-			$config['overwrite'] = false;
-               
-            $this->load->library('upload' , $config);
+            $config['overwrite'] = false;
+            $this->load->library('upload');
             $files           = $_FILES;
-
-            
             $number_of_files = count($_FILES['pic']['name']);
             $errors = 0;
-            
             $_FILES['listing']['name'] = "cover.jpg";
-           
-            var_dump($_FILES['listing']['name']);
-
             $this->upload->initialize($config);
-            
              if (! $this->upload->do_upload("listing")) {
                     $errors++;
-                    var_dump($this->upload->display_errors()); die();
+                   var_dump($this->upload->display_errors()); 
                 } 
             for ($i = 0; $i < $number_of_files; $i++)
             {

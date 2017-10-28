@@ -521,21 +521,18 @@ class Main extends CI_Controller
                     'role' => 'user'
                 );
             
-                $this->session->set_userdata('userData', $data);
-
-                $userid = $this->session->userdata['userData']['userData']['dataa']['userid'];
-                $this->load->model('User_model');
-                $data = $this->User_model->showfav($userid); 
-                $speciprop = array('myfav' =>$data); 
-                $speciprop;
-                $this->home($speciprop);
-               // redirect('user_home');  
+                $this->session->set_userdata('userData', $data);                           
+               // $this->home($speciprop);
+                redirect('user_home');  
 
             }
         }
         else {
-           $this->session->set_flashdata('successsub', 'Invalid credentials');
-           redirect('user_login');
+            
+            
+                $this->session->set_flashdata('successsub', "invalid credentials");
+                redirect('user_login');
+            
         }
 
         }
@@ -550,7 +547,6 @@ class Main extends CI_Controller
         );
         $this->load->view('frontend/layouts/main', $data);
         }
-
     }
 
      function user_reg()
@@ -813,10 +809,14 @@ class Main extends CI_Controller
             echo "error";
         }
     }
-function home ($speciprop)
-{
-    $this->load->view('frontend/views/us_profile', $speciprop);
-}
+    function home ()
+    {
+        $userid = $this->session->userdata['userData']['userData']['dataa']['userid'];
+        $this->load->model('User_model');
+        $data = $this->User_model->showfav($userid); 
+        $speciprop = array('myfav' =>$data); 
+        $this->load->view('frontend/views/us_profile', $speciprop);
+    }
 
 function userfav()
 {
