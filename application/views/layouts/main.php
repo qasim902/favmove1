@@ -116,7 +116,7 @@
                         </li>
                         <!-- <li>
                             <a href="#">
-                                <i class="fa fa-picture-o "></i> <span>Ads</span>
+                                <oiuhiuhkuhkubhkubhkubnki class="fa fa-picture-o "></i> <span>Ads</span>
                             </a>
                             <ul class="treeview-menu">
                                 <li class="active">
