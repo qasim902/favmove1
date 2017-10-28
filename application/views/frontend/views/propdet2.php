@@ -244,10 +244,7 @@
                           <strong data-to="<?= $viewdata['prop_detail']['area'] ?>"><?= $viewdata['prop_detail']['area'] ?></strong>
                         </div>
                       </div>
-                      <div class="text-center">
-                        <a href="contact_agent?id=<?= $viewdata['agentdata']['id'] ?>" class="btn-blue border_radius uppercase">Contact owner</a> 
-                        <a href="#." class="btn-dark border_radius uppercase">get directions</a>
-                      </div>
+        
                     </div>
                   </section>
           
@@ -354,35 +351,7 @@
         </div>
         
         
-        
 
-      <div class="col-md-12  top20">
-            <div class="alert alert-info">
-              <div class="col-md-12  bottom20">To view this property or request more details, contact:</div>
-              <div class="top10">
-                  <div class="col-md-2">
-                      <a href="#">
-                        <img src="<?php echo $assets."img/agency/".$viewdata['agentdata']['agency_id']?>/logo.png" alt="agency">
-                      </a>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="agent_wrap">
-                          <!-- <h3>Bohdan Kononets</h3> -->
-                          <div class="bottom10 agnt_dtl">
-                            <a href="#"><?= $viewdata['agency']['name'] ?></a>
-                          </div>
-                          <p class="bottom10"><?= $viewdata['agency']['address'] ?></p>
-                          <div class="agnt_dtl">
-                            <a href="properties?ag=<?= $viewdata['agentdata']['id'] ?>">View properties from this agent</a>
-                          </div>
-                          
-                        </div>
-                  </div>
-
-              </div>
-              <div class="clearfix"></div>
-            </div>
-      </div>
 <div class="col-md-12  top20">
          
           <!-- <div class="col-md-12  bottom20">
