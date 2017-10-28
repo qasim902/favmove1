@@ -98,7 +98,7 @@
               <i class="fa fa-plus-circle">&nbsp;&nbsp;Listing Image</i>
               <br>
               <br>
-              <input type="file" multiple="multiple" name="listing[]" id="file">
+              <input type="file" multiple="multiple" name="listing" id="file">
             </div>
             <div class="col-md-6">
               <i class="fa fa-plus-circle">&nbsp;&nbsp;Detailed Images</i>
