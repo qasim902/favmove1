@@ -32,7 +32,7 @@
 									</span>
 								</div>
 							</div>
-							
+
 							<div class="col-md-6">
 								<label for="name" class="control-label">
 									<span class="text-danger">*</span>Email</label>
@@ -79,7 +79,7 @@
 												Upload Logo&hellip; <input  type="file" name="agency_logo" value="<?php echo $this->input->post('agency_logo'); ?>" class="form-control" id="agency_logo" style="display: none;">
 											</span>
 										</label>
-										<input  type="text" class="form-control" readonly>
+										<input  type="text" value="<?php echo $this->input->post('agency_logo'); ?>" class="form-control" readonly>
 										<span class="text-danger">
 											<?php echo form_error('agency_logo');?>
 										</span>
@@ -163,6 +163,8 @@
 									<textarea name="property_list" class="form-control" id="property_list"><?php echo $this->input->post('property_list'); ?></textarea>
 								</div>
 							</div> -->
+						
+						</div>
 						<div class="box-footer">
 							<div class="col-md-6 col-md-offset-3">
 								<button type="submit" class="btn btn-block btn-success">
@@ -170,8 +172,6 @@
 								</button>
 							</div>
 						</div>
-						</div>
-						
 					</div>
 
 				</div>
