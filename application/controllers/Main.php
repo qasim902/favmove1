@@ -817,9 +817,7 @@ class Main extends CI_Controller
     }
     function home ()
     {
-//        var_dump('here');
-//        die();
-        $userid = $this->session->userdata['userData']['userData']['dataa']['userid'];
+        $userid = $this->session->userdata['userData']['userData']['dataa']['userid']; 
         $this->load->model('User_model');
         $data = $this->User_model->showfav($userid); 
         $speciprop = array('myfav' =>$data); 
@@ -878,12 +876,17 @@ function property_eval()
 
 function upuser()
 {
-    $userid = $this->input->post('userid');
+    $userid = $this->session->userdata['userData']['userData']['dataa']['userid'];
     $username = $this->input->post('usr');
     $email = $this->input->post('email');
-    $data = array('userid'=> $userid, 'username'=>$username , 'email'=>$email,);
+    $data = array('username'=>$username , 'email'=>$email,);
     $this->load->model('user_model');
-    $update = $this->user_model->userupdate($data);
+    $update = $this->user_model->userupdate($userid, $data);
+    if($updat)
+    {
+        $this->session->set_flashdata('successsub', 'Your prifile has been successfully updated');
+    }
+    redirect($this->agent->referrer());
 
 }
 function agent_query()

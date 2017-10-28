@@ -78,7 +78,7 @@
               <p class="bottom10"><?= $viewdata['agency']['address'] ?></p>
               <div class="agnt_dtl">
                 <a href="#">View properties from this agent</a>
-                <a class="btn btn-default btn-block top10 bottom10" href="#">Request Details</a>
+                <a class="btn btn-default btn-block top10 bottom10"  onClick="window.print()">Request Details</a>
               </div>
               <table class="agent_contact table">
                 <tbody>
@@ -95,7 +95,7 @@
               
                      <!-- <input type="hidden" name="propid" value="<?= $viewdata['property']['prop_id'] ?>"> -->
                     </a></strong></td>
-                    <td class="text-right"><strong><a href="#"> <i class="icon-file"></i>Print</a></strong></td>
+                    <td class="text-right"><strong><p onClick="window.print()" style="cursor: pointer;"> <i class="icon-file"></i>Print</p></strong></td>
                   </tr>
                   <tr>
                     <td><strong><a href="#"> <i class="icon-pencil"></i>Add notes</a></strong></td>
