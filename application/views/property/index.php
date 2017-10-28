@@ -10,20 +10,17 @@
             <div class="box-body">
                 <table class="table table-striped">
                     <tr>
-						<th>Prop Id</th>
-						<th>Prop Details</th>
+						<th>Property Id</th>
 						<th>Title</th>
-						<th>Features</th>
-						
-						<th>Agent Id</th>
-						<th>Town Id</th>
 						<th>Address</th>
+						<th>Features</th>
+						<th>Town Id</th>
+						<th>Agent Id</th>
 						<th>Status</th>
-						<th>Video Embed</th>
+						<th>Price</th>
 						<th>Created On</th>
 						<th>Sold On</th>
-						<th>Is Feat</th>
-						<th>Price</th>
+						<th>Is Featured</th>
 						<th>Description</th>
 						<th>Property Images</th>
 						<th>Actions</th>
@@ -31,18 +28,16 @@
                     <?php foreach($property as $p){ ?>
                     <tr>
 						<td><?php echo $p['prop_id']; ?></td>
-						<td><?php echo $p['prop_details']; ?></td>
 						<td><?php echo $p['title']; ?></td>
-						<td><?php echo $p['features']; ?></td>
-						<td><?php echo $p['agent_id']; ?></td>
-						<td><?php echo $p['town_id']; ?></td>
 						<td><?php echo $p['address']; ?></td>
+						<td><?php echo $p['features']; ?></td>
+						<td><?php echo $p['town_id']; ?></td>
+						<td><?php echo $p['agent_id']; ?></td>
 						<td><?php echo $p['status']; ?></td>
-						<td><?php echo $p['video_embed']; ?></td>
+						<td><?php echo $p['price']; ?></td>
 						<td><?php echo $p['created_on']; ?></td>
 						<td><?php echo $p['sold_on']; ?></td>
 						<td><?php echo $p['is_feat']; ?></td>
-						<td><?php echo $p['price']; ?></td>
 						<td><?php echo $p['description']; ?></td>
 						<td><?php echo $p['property_images']; ?></td>
 						<td>

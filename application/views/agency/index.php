@@ -8,6 +8,7 @@
                 </div>
             </div>
             <div class="box-body">
+				<div class="table-hover">
                 <table class="table table-striped">
                     <tr>
 						<th>ID</th>
@@ -19,8 +20,6 @@
 						<th>Gplus Link</th>
 						<th>Youtube Link</th>
 						<th>Address</th>
-						<th>Created On</th>
-						<th>Property List</th>
 						<th>Actions</th>
                     </tr>
                     <?php foreach($agency as $a){ ?>
@@ -28,14 +27,12 @@
 						<td><?php echo $a['id']; ?></td>
 						<td><?php echo $a['name']; ?></td>
 						<td><?php echo $a['agency_logo']; ?></td>
-						<td><?php echo $a['fb_link']; ?></td>
-						<td><?php echo $a['linkedin_link']; ?></td>
-						<td><?php echo $a['twit_link']; ?></td>
-						<td><?php echo $a['gplus_link']; ?></td>
-						<td><?php echo $a['youtube_link']; ?></td>
+						<td><a href="<?php echo $a['fb_link']; ?>"><?php echo $a['fb_link']; ?></a></td>
+						<td><a href="<?php echo $a['linkedin_link']; ?>"><?php echo $a['linkedin_link']; ?></a></td>
+						<td><a href="<?php echo $a['twit_link']; ?>"><?php echo $a['twit_link']; ?></a></td>
+						<td><a href="<?php echo $a['gplus_link']; ?>"><?php echo $a['gplus_link']; ?></a></td>
+						<td><a href="<?php echo $a['youtube_link']; ?>"><?php echo $a['youtube_link']; ?></a></td>
 						<td><?php echo $a['address']; ?></td>
-						<td><?php echo $a['created_on']; ?></td>
-						<td><?php echo $a['property_list']; ?></td>
 						<td>
                             <a href="<?php echo site_url('agency/edit/'.$a['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
                             <a href="<?php echo site_url('agency/remove/'.$a['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
@@ -43,7 +40,7 @@
                     </tr>
                     <?php } ?>
                 </table>
-                                
+            </div>         
             </div>
         </div>
     </div>
