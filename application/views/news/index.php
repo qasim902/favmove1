@@ -14,8 +14,6 @@
 						<th>Title</th>
 						<th>Added On</th>
 						<th>Author</th>
-						<th>Comment Id</th>
-						<th>Excerpt</th>
 						<th>Detail</th>
 						<th>Tags</th>
 						<th>Img Path</th>
@@ -27,8 +25,6 @@
 						<td><?php echo $n['title']; ?></td>
 						<td><?php echo $n['added_on']; ?></td>
 						<td><?php echo $n['author']; ?></td>
-						<td><?php echo $n['comment_id']; ?></td>
-						<td><?php echo $n['excerpt']; ?></td>
 						<td><?php echo $n['detail']; ?></td>
 						<td><?php echo $n['tags']; ?></td>
 						<td><?php echo $n['img_path']; ?></td>
