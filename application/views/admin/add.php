@@ -54,6 +54,7 @@
 					</div> -->
 						
 						</div>
+						
 						<div class="box-footer">
 							<div class="col-md-6 col-md-offset-3">
 								<button type="submit" class="btn btn-block btn-success">
