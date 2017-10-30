@@ -42,7 +42,7 @@
                 <div class="media-left">
                   <a href="property_detail?id=<?php echo $property['prop_id']; ?>">
 
-                  <img class="media-object" src="<?= $assets ?>img/properties/<?php echo $property['prop_id']."/cover.jpg"?>" alt="...">
+                  <img class="media-object" src="<?= $assets ?>img/properties/<?php echo $property['prop_id']."/cover.jpg"?>" alt="Property">
                   </a>
                 </div>
                 <div class="media-body">

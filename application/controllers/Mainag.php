@@ -75,7 +75,7 @@ class Mainag extends CI_Controller{
             $viewdata['my_prop'] = $my_props; 
 
             $viewdata['agentdata'] = $curr_login['agentData']['AgentData']; 
-            $viewdata['agentdata'] += array('phone' => "14124188923");
+            //$viewdata['agentdata'] += array('phone' => "14124188923");
 
             $data = $this->data;
             $data += array(
@@ -148,9 +148,8 @@ class Mainag extends CI_Controller{
 
 
 
-
-
-            $agent = $this->session->userData('userData');
+           
+            $agent = $this->session->userData('userData'); //var_dump($agent[ 'agentData']['UserData']['userid']); die();
             $this->form_validation->set_rules('town_id','Town Id','required');
         $this->form_validation->set_rules('title','Title','required|max_length[255]');
         
@@ -176,7 +175,7 @@ class Mainag extends CI_Controller{
                 'prop' =>   array(
 
                 'town_id' => $this->input->post('town_id'),
-                'agent_id' => $agent['agentData']['AgentData']['id'],
+                'agent_id' => $agent['agentData']['UserData']['userid'],
                 'prop_type' => $this->input->post('prop_type'),
                 'title' => $this->input->post('title'),
                 'excerpt' => substr($this->input->post('description'),0,50),
