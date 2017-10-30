@@ -14,7 +14,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> 
 <!-- Page Banner End -->
 
 
@@ -25,7 +25,7 @@
         
       </div>
       
-          <?php foreach($viewdata['my_prop'] as $property) {  ?>
+          <?php foreach($viewdata['my_prop'] as $property) { var_dump($viewdata); die(); ?>
     
       <div class="row" style="margin-top:50px;margin-bottom:50px;">
         <div class="col-sm-12">      
@@ -111,7 +111,7 @@
 
               ?> </small></h4>
                   </div>
-                  <div class="proerty_text pro_dtl">
+                  <div class="proerty_text pro_dtl"> 
                     <h3 class="bottom15"> <a href="property_detail?id=<?php echo $property['prop_id']; ?>"><?= $property['title'] ?></a></h3>
                     <p class="block-with-text">
                       <?= $property['description'] ?>
@@ -131,6 +131,7 @@
                       <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
                     </ul>
                   </div>
+                  
                   <div class="<?php if ($property['is_feat'] == "1")
               {
                 echo "fea_color";
