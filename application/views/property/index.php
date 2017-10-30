@@ -123,13 +123,12 @@
 								</span>
 							</div>
 							<ul class="list-inline">
-								
 								<li class="pull-right">
-									<a href="#" class="btn btn-primary link-white text-sm">
+									<a href="<?php echo site_url('property/edit/'.$p['prop_id']); ?>" class="btn btn-primary link-white text-sm">
 										<i class="fa fa-pencil margin-r-5"></i> Edit</a>
 								</li>
 								<li class="pull-right">
-									<a href="#" class="btn btn-danger link-white text-sm">
+									<a href="<?php echo site_url('property/remove/'.$p['prop_id']); ?>" class="btn btn-danger link-white text-sm">
 										<i class="fa fa-trash margin-r-5"></i> Delete</a>
 								</li>
 							</ul>
@@ -142,10 +141,12 @@
 							<p>
 								<?php echo $p['address']; ?>
 							</p>
-							<h4 class="box-title"><b>Description</b></h4>
-							<p>
-								<?php echo $p['description']; ?>
-							</p>
+							<div class="desc">
+								<h4 class="box-title"><b>Description</b></h4>
+								<p>
+									<?php echo $p['description']; ?>
+								</p>
+							</div>
 							<div class="prop_img">
 								<!-- <div><?php echo $p['property_images']; ?></div>
 								<div><?php echo $p['property_images']; ?></div>

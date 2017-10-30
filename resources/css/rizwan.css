@@ -315,7 +315,7 @@ display: inline-block;
     }
 
     .slick-slide {
-      margin: 0px 5px;
+      margin: 15px 5px;
     }
 
     .slick-slide img {
@@ -339,4 +339,8 @@ display: inline-block;
 
     .slick-current {
       opacity: 1;
+    }
+    .desc p{
+      word-break: break-all;
+      white-space: normal;
     }
