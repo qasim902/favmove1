@@ -8,6 +8,7 @@
                 </div>
             </div>
             <div class="box-body">
+                <div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
 						<th>Userid</th>
@@ -37,7 +38,7 @@
                     </tr>
                     <?php } ?>
                 </table>
-                                
+                    </div>           
             </div>
         </div>
     </div>
