@@ -29,12 +29,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6">
-            <div class="single-query form-group bottom20">
-              <label>Address</label>
-              <input type="text" class="keyword-input" name="address" placeholder="Enter Property Address">
-            </div>
-          </div>
+          
           <div class="col-sm-6">
             <div class="single-query bottom20">
               <label>Town</label>
@@ -58,7 +53,7 @@
 
             <div class="single-query form-group bottom20">
               <label>Year Built</label>
-              <input type="number" maxlength="4" required name="yearb" class="keyword-input" placeholder="Year the property was built">
+              <input type="number" min="0" maxlength="4" required name="yearb" class="keyword-input" placeholder="Year the property was built">
             </div>
           </div>
 
@@ -77,11 +72,17 @@
           <div class="col-sm-6">
             <div class="single-query form-group bottom20">
               <label>Price</label>
-              <input type="number" name="price" step="0.01" class="keyword-input" placeholder="£ 45,000">
+              <input type="number" name="price" min="0" step="0.01" class="keyword-input" placeholder="£ 45,000">
             </div>
           </div>
+          <div class="col-sm-12">
+              <div class="single-query form-group bottom20">
+                <label>Address</label>
+                <textarea type="text" class="keyword-input" name="address" placeholder="Enter Property Address" style="width: 100%"></textarea>
+              </div>
+            </div>
         </div>
-
+        
         <div class="row">
           <div class="col-sm-12">
             <h3 class="margin40 bottom15">Property Photos
@@ -95,16 +96,38 @@
         <div class="dz-default dz-message">
 <span> -->
             <div class="col-md-6">
+              
               <i class="fa fa-plus-circle">&nbsp;&nbsp;Listing Image</i>
               <br>
               <br>
-              <input type="file" multiple="multiple" name="listing" id="file">
+              <!-- <input type="file" multiple="multiple" name="listing" id="file">
+              <label for="agent_image" class="control-label">Agent Image</label> -->
+              <div class="form-group">
+                <div class="input-group agncy_btn">
+                  <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                      Upload Images&hellip; <input type="file" multiple="multiple" name="listing" id="file" style="display: none;" />
+                    </span>
+                  </label>
+                  <input  type="text" name="listing"  id="file" class="form-control" readonly>
+                </div>
+              </div>
             </div>
             <div class="col-md-6">
               <i class="fa fa-plus-circle">&nbsp;&nbsp;Detailed Images</i>
               <br>
               <br>
-              <input type="file" multiple="multiple" name="pic[]" id="file">
+              <div class="form-group">
+                  <div class="input-group agncy_btn">
+                    <label class="input-group-btn">
+                      <span class="btn btn-primary">
+                        Upload Image&hellip; <input type="file" multiple="multiple" name="pic[]" id="file" style="display: none;" />
+                      </span>
+                    </label>
+                    <input  type="text" name="pic[]"  id="file" class="form-control"  id="file" readonly>
+                  </div>
+                </div>
+              <!-- <input type="file" multiple="multiple" name="pic[]" id="file"> -->
             </div>
 
             <!-- </span>
@@ -285,6 +308,9 @@
                 <div class="container-2">
                   <div class="row">
                     <div class="col-md-4 col-sm-4">
+                        <div class="checkbox">
+                          <label><input type="checkbox" value="">Option 1</label>
+                        </div>
                       <div class=" white">
                         <input type="checkbox" value="1" value="1" name="AC" />
                         <span>Air Conditioning</span>
