@@ -63,7 +63,8 @@ class Admin extends CI_Controller{
             );
             
             $admin_id = $this->Admin_model->add_admin($params);
-            redirect('admin/index');
+            $this->session->set_flashdata('successsub', "You have successfully added a admin");
+            redirect('admin/add');
         }
         else
         {            
@@ -121,7 +122,9 @@ class Admin extends CI_Controller{
         if(isset($admin['id']))
         {
             $this->Admin_model->delete_admin($id);
-            redirect('admin/index');
+            $this->session->set_flashdata('successsub', "Admin deleted successfully");
+            redirect('admin/admin_list');
+            
         }
         else
             show_error('The admin you are trying to delete does not exist.');

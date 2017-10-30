@@ -10,9 +10,23 @@
 				<div class="col-sm-10 col-md-6">
 					<div class="callus clearfix border_radius submit_property">
 
+					<?php
+if($this->session->flashdata('successsub'))
+{
+    echo "<br>
+    <div class='col-md-offset-2 col-md-8'>
+    <div  id='alert-pop' class='text-center alert alert-success'>";
+    
+echo $this->session->flashdata('successsub');
+  echo "</div> 
+  </div>";
+echo "<script>
+    window.location.hash = '#alert-pop';
+    
+</script>";
+}
+?>
 						<div class="row clearfix">
-
-
 							<div class="col-md-12">
 								<label for="username" class="control-label">
 									<span class="text-danger">*</span>Username</label>
