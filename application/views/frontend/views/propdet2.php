@@ -95,7 +95,7 @@
               
                      <!-- <input type="hidden" name="propid" value="<?= $viewdata['property']['prop_id'] ?>"> -->
                     </a></strong></td>
-                    <td class="text-right"><strong><a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>"> <i class="icon-file"></i>Print</a></strong></td>
+                    <td class="text-right"><strong><a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a></strong></td>
                   </tr>
                   <tr>
                     <td><strong><a href="#"> <i class="icon-pencil"></i>Add notes</a></strong></td>

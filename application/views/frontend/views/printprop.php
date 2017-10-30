@@ -102,7 +102,13 @@
 
   </form>
 </div>
-<script>window.print();</script>
+<script>
+var winPrint = window.open('http://localhost/favmove1/printpro?id=4', 'left=0,top=0,width=800,height=600,toolbar=0,scrollbars=0,status=0');
+winPrint.document.close();
+winPrint.focus();
+winPrint.print();
+winPrint.close(); 
+</script>
 <?php //redirect($this->agent->referrer()); ?>
 </body>
 
