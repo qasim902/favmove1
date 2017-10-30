@@ -7,24 +7,24 @@
                     <a href="<?php echo site_url('admin/add'); ?>" class="btn btn-success btn-sm">Add</a>
                 </div>
             </div>
-
+            <div class='box-body'>
+                    <?php
+                    if($this->session->flashdata('successsub'))
+                    {
+                        echo "<br>
+                        <div class='col-md-offset-3 col-md-6'>
+                        <div  id='alert-pop' class='text-center alert alert-success'>";
+                        
+                    echo $this->session->flashdata('successsub');
+                    echo "</div> 
+                    </div>";
+                    
+                    }
+                    ?>
+                </div>
 
                 <div class="box-body">
-                        <div class='col-md-12'>
-                            <?php
-                            if($this->session->flashdata('successsub'))
-                            {
-                                echo "<br>
-                                <div class='col-md-offset-3 col-md-6'>
-                                <div  id='alert-pop' class='text-center alert alert-success'>";
-                                
-                            echo $this->session->flashdata('successsub');
-                            echo "</div> 
-                            </div>";
-                            
-                            }
-                            ?>
-                        </div>
+                       
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <tr>
