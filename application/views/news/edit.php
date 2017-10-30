@@ -41,7 +41,7 @@
 										Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="img_path" style="display: none;" />
 									</span>
 								</label>
-								<input name="img_path" type="text" value="<?php echo ($this->input->post('img_path') ? $this->input->post('img_path') : $news['img_path']); ?>" class="form-control"  readonly>
+								<input name="img_path" type="text" value="<?php echo ($this->input->post('image_path') ? $this->input->post('image_path') : $news['image_path']); ?>" class="form-control"  readonly>
 							</div>
 							<span class="text-danger">
 								<?php echo form_error('img_path');?>

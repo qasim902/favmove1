@@ -25,7 +25,7 @@ class News extends CI_Controller{
     /*
      * Adding a new news
      */
-    function add_news()
+    function add()
     {   
         
         $this->load->library('form_validation');
@@ -39,21 +39,20 @@ class News extends CI_Controller{
 		$this->form_validation->set_rules('tags','Tags','required');
 		$this->form_validation->set_rules('img_path','Img Path','required');
 		
-		if($this->form_validation->run())     
+		if($this->input->post())     
         {   
             $params = array(
-				'title' => $this->input->post('title'),
-				'added_on' => $this->input->post('added_on'),
-				'author' => $this->input->post('author'),
-				'comment_id' => $this->input->post('comment_id'),
-				'excerpt' => $this->input->post('excerpt'),
+				'title' => $this->input->post('title'),				
+                'author' => $this->input->post('author'),
+                'added_on' => $this->input->post('added_on'),
+				'image_path' => $this->input->post('img_path'),
 				'detail' => $this->input->post('detail'),
 				'tags' => $this->input->post('tags'),
-				'img_path' => $this->input->post('img_path'),
             );
-            var_dump($params); die();
+            
             $news_id = $this->News_model->add_news($params);
-            redirect('news/index');
+            $this->session->set_flashdata('successsub', "News successfully added");
+            redirect('news/add');
         }
         else
         {            
@@ -73,30 +72,29 @@ class News extends CI_Controller{
         if(isset($data['news']['id']))
         {
             $this->load->library('form_validation');
-
-			$this->form_validation->set_rules('title','Title','required|max_length[255]');
-			$this->form_validation->set_rules('added_on','Added On','required');
-			$this->form_validation->set_rules('author','Author','required|max_length[255]');
-			$this->form_validation->set_rules('comment_id','Comment Id','required|integer');
-			$this->form_validation->set_rules('excerpt','Excerpt','required');
-			$this->form_validation->set_rules('detail','Detail','required');
-			$this->form_validation->set_rules('tags','Tags','required');
-			$this->form_validation->set_rules('img_path','Img Path','required');
+            
+                    $this->form_validation->set_rules('title','Title','required|max_length[255]');
+                    $this->form_validation->set_rules('added_on','Added On','required');
+                    $this->form_validation->set_rules('author','Author','required|max_length[255]');
+                    $this->form_validation->set_rules('comment_id','Comment Id','required|integer');
+                    $this->form_validation->set_rules('excerpt','Excerpt','required');
+                    $this->form_validation->set_rules('detail','Detail','required');
+                    $this->form_validation->set_rules('tags','Tags','required');
+                    $this->form_validation->set_rules('img_path','Img Path','required');
 		
-			if($this->form_validation->run())     
+			if($this->input->post())     
             {   
                 $params = array(
-					'title' => $this->input->post('title'),
-					'added_on' => $this->input->post('added_on'),
-					'author' => $this->input->post('author'),
-					'comment_id' => $this->input->post('comment_id'),
-					'excerpt' => $this->input->post('excerpt'),
-					'detail' => $this->input->post('detail'),
-					'tags' => $this->input->post('tags'),
-					'img_path' => $this->input->post('img_path'),
+					'title' => $this->input->post('title'),				
+                    'author' => $this->input->post('author'),
+                    'added_on' => $this->input->post('added_on'),
+                    'image_path' => $this->input->post('img_path'),
+                    'detail' => $this->input->post('detail'),
+                    'tags' => $this->input->post('tags'),
                 );
 
-                $this->News_model->update_news($id,$params);            
+                $this->News_model->update_news($id,$params);  
+                $this->session->set_flashdata('successsub', "News updated successfully");                
                 redirect('news/index');
             }
             else

@@ -4,7 +4,25 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add News</h3>
 			</div>
-			<?php echo form_open('/addnews'); ?>
+			<?php echo form_open('news/add'); ?>
+			<div class="box-body">
+			<?php
+if($this->session->flashdata('successsub'))
+{
+    echo "<br>
+    <div class='col-md-offset-3 col-md-6'>
+    <div  id='alert-pop' class='text-center alert alert-success'>";
+    
+echo $this->session->flashdata('successsub');
+  echo "</div> 
+  </div>";
+echo "<script>
+    window.location.hash = '#alert-pop';
+    
+</script>";
+}
+?>
+			</div>
 			<div class="box-body">
 
 				<div class="col-sm-1 col-md-2"></div>
