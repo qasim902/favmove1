@@ -6,14 +6,16 @@
             </div>
 			<?php echo form_open('property/edit/'.$property['prop_id']); ?>
 			<div class="box-body">
+				<div class="col-sm-1 col-md-2"></div>
+				<div class="col-sm-10 col-md-8">
+					<div class="callus clearfix border_radius submit_property">
 				<div class="row clearfix">
 					<div class="col-md-6">
 						<label for="prop_details" class="control-label"><span class="text-danger">*</span>Prop Detail</label>
 						<div class="form-group">
 							<select name="prop_details" class="form-control">
 								<option value="">Select Property Detail</option>
-								<?php 
-								print_r($all_prop_details);die();
+								<?php
 								foreach($all_prop_details as $prop_detail)
 								{
 									$selected = ($prop_detail['property_id'] == $property['prop_details']) ? ' selected="selected"' : "";
@@ -62,6 +64,7 @@
 					<div class="col-md-6">
 						<label for="town_id" class="control-label">Uk Town</label>
 						<div class="form-group">
+
 							<select name="town_id" class="form-control">
 								<option value="">select uk_town</option>
 								<?php 
@@ -73,6 +76,7 @@
 								} 
 								?>
 							</select>
+							
 							<span class="text-danger"><?php echo form_error('town_id');?></span>
 						</div>
 					</div>
@@ -136,12 +140,20 @@
 						</div>
 					</div>
 				</div>
+				<div class="box-footer">
+					<div class="col-md-6 col-md-offset-3">
+						<button type="submit" class="btn btn-block btn-success">
+							<i class="fa fa-check"></i> Save
+						</button>
+					</div>
+				</div>
+
+				</div>
+				</div>
+				<div class="col-sm-1 col-md-2"></div>
+				<div class="col-sm-4"></div>
 			</div>
-			<div class="box-footer">
-            	<button type="submit" class="btn btn-success">
-					<i class="fa fa-check"></i> Save
-				</button>
-	        </div>				
+						
 			<?php echo form_close(); ?>
 		</div>
     </div>
