@@ -24,8 +24,9 @@ class News_model extends CI_Model
      */
     function get_all_news()
     {
-        $this->db->order_by('id', 'desc');
+       // $this->db->order_by('id', 'desc');
         return $this->db->get('news')->result_array();
+        
     }
         
     /*

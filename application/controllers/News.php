@@ -20,8 +20,9 @@ class News extends CI_Controller{
         
         $data['_view'] = 'news/index';
         $this->load->view('layouts/main',$data);
+        
     }
-
+            
     /*
      * Adding a new news
      */
