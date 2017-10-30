@@ -33,24 +33,6 @@
 							</div>
 						</div>
 						
-						<div class="col-md-6">
-							<label for="usertype" class="control-label"><span class="text-danger">*</span>Usertype</label>
-							<div class="form-group">
-								<div class="single-query">
-									<div class="intro">
-										<select name="usertype" class="form-control"  id="usertype">
-											<option value="" selected="" disabled="">Select User Type</option>
-											<option value="agent">Agent</option>
-											<option value="user">User</option>
-										</select>
-									</div>
-									<span class="text-danger">
-										<?php echo form_error('usertype');?>
-									</span>
-								</div>
-								
-							</div>
-						</div>
 	<!--					<div class="col-md-6">-->
 	<!--						<label for="created_on" class="control-label"><span class="text-danger">*</span>Created On</label>-->
 	<!--						<div class="form-group">-->
@@ -58,13 +40,13 @@
 	<!--							<span class="text-danger">--><?php //echo form_error('created_on');?><!--</span>-->
 	<!--						</div>-->
 	<!--					</div>-->
-						<div class="col-lg-12">
+						<div class="col-md-6">
 							<label for="payment_details" class="control-label">Payment Details</label>
 							<div class="form-group">
 								<div class="single-query">
 									<div class="intro">
 										<select name="payment_details" class="form-control"  id="payment_details">
-											<option value="" selected="" disabled="">Select Payment Type</option>
+											<option value="<?php echo $this->input->post('payment_details'); ?>" selected="" disabled="">Select Payment Type</option>
 											<option value="paypal">Paypal</option>
 											<option value="credit_card">Credit Card</option>
 										</select>
