@@ -353,6 +353,8 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
+            dots: true,
+            arrows: true,
             autoplaySpeed: 2000,
             responsive: [
               {
@@ -375,15 +377,7 @@
               }
             ]
         });
-        $(".vertical-center-4").slick({
-            dots: true,
-            vertical: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            centerMode: true,
-            slidesToShow: 4,
-            slidesToScroll: 2
-        });
+       
     });
     </script>
 
