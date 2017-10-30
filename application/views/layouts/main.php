@@ -25,6 +25,8 @@
              folder instead of downloading all of them to reduce the load. -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/_all-skins.min.css');?>">
         <link rel="stylesheet" href="<?php echo site_url('resources/css/rizwan.css');?>">
+        <link rel="stylesheet" href="<?php echo site_url('resources/css/slick.css');?>">
+        <link rel="stylesheet" href="<?php echo site_url('resources/css/slick-theme.css');?>">
     </head>
     
     <body class="hold-transition skin-blue sidebar-mini">
@@ -310,7 +312,7 @@
 
         <!-- jQuery 2.2.3 -->
         <script src="<?php echo site_url('resources/js/jquery-2.2.3.min.js');?>"></script>
-
+        <script src="<?php echo site_url('resources/js/slick.js');?>"></script>
         <!-- Agent Profile  -->
         <script src="<?php echo site_url('resources/js/masonry.pkgd.min.js');?>"></script>
         <script src="<?php echo site_url('resources/js/editor.js');?>"></script>
@@ -344,6 +346,43 @@
             } else {
                 jQuery('#daily_pac').hide(); 
             }
+        });
+        $('.prop_img').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+              {
+                breakpoint: 768,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+                }
+              }
+            ]
+        });
+        $(".vertical-center-4").slick({
+            dots: true,
+            vertical: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            centerMode: true,
+            slidesToShow: 4,
+            slidesToScroll: 2
         });
     });
     </script>

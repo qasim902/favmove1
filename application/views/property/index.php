@@ -146,7 +146,20 @@
 							<p>
 								<?php echo $p['description']; ?>
 							</p>
-							
+							<div class="prop_img">
+								<!-- <div><?php echo $p['property_images']; ?></div>
+								<div><?php echo $p['property_images']; ?></div>
+								<div><?php echo $p['property_images']; ?></div>
+								<div><?php echo $p['property_images']; ?></div>
+								<div><?php echo $p['property_images']; ?></div>
+								<div><?php echo $p['property_images']; ?></div> -->
+								<div><img class="img-thumbnail" src="http://localhost/favmove1/resources/img/properties/1/cover.jpg"></div>
+								<div><img class="img-thumbnail" src="http://localhost/favmove1/resources/img/properties/1/latest.jpg"></div>
+								<div><img class="img-thumbnail" src="http://localhost/favmove1/resources/img/properties/1/cover.jpg"></div>
+								<div><img class="img-thumbnail" src="http://localhost/favmove1/resources/img/properties/1/latest.jpg"></div>
+								<div><img class="img-thumbnail" src="http://localhost/favmove1/resources/img/properties/1/cover.jpg"></div>
+								<div><img class="img-thumbnail" src="http://localhost/favmove1/resources/img/properties/1/latest.jpg"></div>
+							</div>
 							
 						</div>
 						<!-- /.post -->
