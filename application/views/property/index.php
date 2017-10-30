@@ -8,6 +8,7 @@
                 </div>
             </div>
             <div class="box-body">
+					<div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
 						<th>Property Id</th>
@@ -46,7 +47,8 @@
                         </td>
                     </tr>
                     <?php } ?>
-                </table>
+				</table>
+			</div>
                                 
             </div>
         </div>
