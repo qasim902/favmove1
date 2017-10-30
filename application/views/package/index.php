@@ -29,7 +29,7 @@ echo "<script>
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<tr>
-							
+							 
 							<th>Package Name</th>
 							<th>Package Price</th>
 							<th>Date Created</th>
