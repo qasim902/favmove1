@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Package Edit</h3>
 			</div>
-			<?php echo form_open('package/edit/'.$package['id']); ?>
+			<?php echo form_open('package/edit/'.$package['packageid']); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -110,43 +110,12 @@
 									 class="form-control" id="user_type" /> -->
 							</div>
 							<div class="col-md-6">
-								<label for="num_images_limit" class="control-label">Num Images Limit</label>
-								<div class="form-group">
-									<input type="text" name="num_images_limit" value="<?php echo ($this->input->post('num_images_limit') ? $this->input->post('num_images_limit') : $package['num_images_limit']); ?>"
-									 class="form-control" id="num_images_limit" />
-									<span class="text-danger">
-										<?php echo form_error('num_images_limit');?>
-									</span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="num_amenities_limit" class="control-label">Num Amenities Limit</label>
-								<div class="form-group">
-									<input type="text" name="num_amenities_limit" value="<?php echo ($this->input->post('num_amenities_limit') ? $this->input->post('num_amenities_limit') : $package['num_amenities_limit']); ?>"
-									 class="form-control" id="num_amenities_limit" />
-									<span class="text-danger">
-										<?php echo form_error('num_amenities_limit');?>
-									</span>
-								</div>
-							</div>
-							<div class="col-md-6">
 								<label for="num_featured_limit" class="control-label">Num Featured Limit</label>
 								<div class="form-group">
 									<input type="text" name="num_featured_limit" value="<?php echo ($this->input->post('num_featured_limit') ? $this->input->post('num_featured_limit') : $package['num_featured_limit']); ?>"
 									 class="form-control" id="num_featured_limit" />
 									<span class="text-danger">
 										<?php echo form_error('num_featured_limit');?>
-									</span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="forarea" class="control-label">
-									<span class="text-danger">*</span>Forarea</label>
-								<div class="form-group">
-									<input type="text" name="forarea" value="<?php echo ($this->input->post('forarea') ? $this->input->post('forarea') : $package['forarea']); ?>"
-									 class="form-control" id="forarea" />
-									<span class="text-danger">
-										<?php echo form_error('forarea');?>
 									</span>
 								</div>
 							</div>

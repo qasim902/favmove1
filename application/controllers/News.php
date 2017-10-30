@@ -25,7 +25,7 @@ class News extends CI_Controller{
     /*
      * Adding a new news
      */
-    function add()
+    function add_news()
     {   
         
         $this->load->library('form_validation');

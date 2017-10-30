@@ -16,7 +16,7 @@ class Package_model extends CI_Model
      */
     function get_package($id)
     {
-        return $this->db->get_where('packages',array('id'=>$id))->row_array();
+        return $this->db->get_where('packages',array('packageid'=>$id))->row_array();
     }
         
     /*
@@ -24,7 +24,7 @@ class Package_model extends CI_Model
      */
     function get_all_packages()
     {
-        $this->db->order_by('id', 'desc');
+        //$this->db->order_by('id', 'desc');
         return $this->db->get('packages')->result_array();
     }
         
@@ -42,7 +42,7 @@ class Package_model extends CI_Model
      */
     function update_package($id,$params)
     {
-        $this->db->where('id',$id);
+        $this->db->where('packageid',$id);
         return $this->db->update('packages',$params);
     }
     

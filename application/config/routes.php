@@ -14,7 +14,7 @@ $route['property_detail'] = 'main/prop_detail';
 $route['logout'] = 'main/logout';
 $route['mail'] = 'main/sendemail';
 $route['news'] = 'main/news';
-$route['add'] = 'news/add';
+$route['addnews'] = 'news/add_news';
 $route['contactus'] = 'main/contact_us';
 $route['news_detail'] = 'main/news_detail';
 $route['agent_home'] = 'mainag/agenthome';
@@ -38,7 +38,7 @@ $route['contactag'] = 'main/contactagent';
 $route['allpackages'] = 'package/showpakage';
 $route['addagent'] = 'mainag/addnewagent';
 $route['printpro'] = 'property/printproperty';
-$route['added'] = 'package/mypkg';
+$route['add'] = 'package/add';
 
 /*
 $route['addtofav'] will write in form or anchor tag.

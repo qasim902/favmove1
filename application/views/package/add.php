@@ -4,14 +4,29 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add a Package</h3>
 			</div>
-			<form action="/favmove1/added" method="POST">
+			<form action="/favmove1/add" method="POST">
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
 					<div class="callus clearfix border_radius submit_property">
 						<div class="row clearfix">
 
-
+								<?php
+								if($this->session->flashdata('successsub'))
+								{
+									echo "<br>
+									<div class='col-md-offset-3 col-md-6'>
+									<div  id='alert-pop' class='text-center alert alert-success'>";
+									
+								echo $this->session->flashdata('successsub');
+								  echo "</div> 
+								  </div>";
+								echo "<script>
+									window.location.hash = '#alert-pop';
+									
+								</script>";
+								}
+								?>
 							<!-- <div class="col-md-6">
 						<label for="date_modified" class="control-label">Date Modified</label>
 						<div class="form-group">
@@ -38,39 +53,7 @@
 									</span>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<label for="package_days" class="control-label">Package Duration</label>
-
-								<!-- <input type="text" name="package_days" placeholder="Make me dropdown rizwan" value="<?php echo $this->input->post('package_days'); ?>" class="form-control" id="package_days" /> -->
-								<div class="single-query">
-									<div class="intro">
-										<select id="packges_d" name="package_id" class="form-control">
-											<option value="">Select package</option>
-											<option value="yearly">Yearly</option>
-											<option value="monthly">Monthly</option>
-											<option value="weekly">Weekly</option>
-											<option value="days">Days</option>
-											<!-- <?php 
-										foreach($package_days as $package)
-										{
-											$selected = ($package['id'] == $this->input->post('package_id')) ? ' selected="selected"' : "";
-
-											echo '<option value="'.$package['id'].'" '.$selected.'>'.$package['package_name'].'</option>';
-										} 
-									?> -->
-										</select>
-									</div>
-									<span class="text-danger">
-										<?php echo form_error('package_days');?>
-									</span>
-								</div>
-							</div>
-							<div id="daily_pac" class="col-md-6" style="display:none">
-								<label for="date_created" class="control-label">Days Package</label>
-								<div class="form-group">
-									<input type="text" name="package_days" placeholder="Enter Days" value="" class="form-control" id="package_days" />
-								</div>
-							</div>
+							
 							<div class="col-md-6">
 								<label for="date_created" class="control-label">Date Created</label>
 								<div class="form-group">
@@ -149,6 +132,34 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-6">
+									<label for="package_days" class="control-label">Package Duration</label>
+	
+									<!-- <input type="text" name="package_days" placeholder="Make me dropdown rizwan" value="<?php echo $this->input->post('package_days'); ?>" class="form-control" id="package_days" /> -->
+									<div class="single-query">
+										<div class="intro">
+											<select id="packges_d" name="package_durations" class="form-control">
+												<option value="">Select package</option>
+												<option value="yearly">Yearly</option>
+												<option value="monthly">Monthly</option>
+												<option value="weekly">Weekly</option>
+												<option value="days">Days</option>
+												<!-- <?php 
+											foreach($package_days as $package)
+											{
+												$selected = ($package['id'] == $this->input->post('package_id')) ? ' selected="selected"' : "";
+	
+												echo '<option value="'.$package['id'].'" '.$selected.'>'.$package['package_name'].'</option>';
+											} 
+										?> -->
+											</select>
+										</div>
+										<span class="text-danger">
+											<?php echo form_error('package_days');?>
+										</span>
+									</div>
+								</div>
+								
 							<!--					<div class="col-md-6">-->
 							<!--						<label for="forarea" class="control-label"><span class="text-danger">*</span>Forarea</label>-->
 							<!--						<div class="form-group">-->
@@ -169,6 +180,12 @@
 										<input name="auto_activation" type="checkbox" value="1" id="auto_activation">Auto Re-activation</label>
 								</div>
 							</div>
+							<div id="daily_pac" class="col-md-6" style="display:none">
+									<label for="date_created" class="control-label">Days Package</label>
+									<div class="form-group">
+										<input type="text" name="package_days" placeholder="Enter Days" value="" class="form-control" id="package_days" />
+									</div>
+								</div>
 							<!-- <div class="col-md-6">
                     <div class="form-group">
                         <input type="checkbox" name="auto_activation" value="1"  id="auto_activation" />

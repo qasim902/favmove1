@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add News</h3>
 			</div>
-			<?php echo form_open('news/add'); ?>
+			<?php echo form_open('/addnews'); ?>
 			<div class="box-body">
 
 				<div class="col-sm-1 col-md-2"></div>
