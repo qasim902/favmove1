@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-12">
         <div class="box">
             <div class="box-header">
@@ -7,7 +7,7 @@
                     <a href="<?php echo site_url('news/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
             </div>
-            <!-- <div class="box-body">
+            <div class="box-body">
                 <table class="table table-striped">
                     <tr>
 						<th>ID</th>
@@ -23,11 +23,11 @@
                     <tr>
 						<td><?php echo $n['id']; ?></td>
 						<td><?php echo $n['title']; ?></td>
-						<td><?php echo $n['added_on']; ?></td>
 						<td><?php echo $n['author']; ?></td>
+						<td><?php echo $n['added_on']; ?></td>
+						<td><?php echo $n['image_path']; ?></td>
 						<td><?php echo $n['detail']; ?></td>
 						<td><?php echo $n['tags']; ?></td>
-						<td><?php echo $n['img_path']; ?></td>
 						<td>
                             <a href="<?php echo site_url('news/edit/'.$n['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
                             <a href="<?php echo site_url('news/remove/'.$n['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
@@ -36,11 +36,11 @@
                     <?php } ?>
                 </table>
                                 
-            </div> -->
+            </div> 
         </div>
     </div>
 </div>
-
+ -->
 
 
 <?php foreach($news as $n){ ?>
@@ -49,7 +49,7 @@
         <div class="box box-primary">
             <div class="box-body box-profile">
                 <div class="col-md-3">
-                    <img class="img-thumbnail" src="<?php echo base_url('resources/img/agents/'.$n['id']. '/prof.jpg');?>">
+                    <img class="img-thumbnail" src="<?php echo base_url('resources/img/news/'.$n['image_path']);?>">
     
                     <h3 class="profile-username text-center">
                         <?php echo $n['author']; ?>
@@ -57,7 +57,7 @@
     
                     <ul class="list-group list-group-unbordered">
                         <li class="list-group-item">
-                            <b>Agent Id:</b>
+                            <b>News Id:</b>
                             <a class="pull-right">
                                 <?php echo $n['id']; ?>
                             </a>
@@ -78,12 +78,6 @@
                         <!-- Post -->
                         <div class="post">
     
-                            <!-- <div class="pull-left text-center">
-                                <img class="img-responsive" src="http://media.rightmove.co.uk/8k/7730/branch_rmchoice_logo_7730_0002_t.jpeg" alt="Uk">
-                                <span class="username">
-                                    <a href="#">Agency Name</a>
-                                </span>
-                            </div> -->
                             <ul class="list-inline">
                                 
                                 <li class="pull-right">
@@ -99,6 +93,10 @@
                             <h4 class="box-title"><b>Title</b></h4>
                             <p>
                                 <?php echo $n['title']; ?>
+                            </p>
+                            <h4 class="box-title"><b>Tags</b></h4>
+                            <p>
+                                <?php echo $n['tags']; ?>
                             </p>
                             <h4 class="box-title"><b>Description</b></h4>
                             <p>

@@ -3,7 +3,8 @@
       	<div class="box box-info">
             <div class="box-header with-border">
               	<h3 class="box-title">News Edit</h3>
-            </div>
+			</div>
+			
 			<?php echo form_open('news/edit/'.$news['id']); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>

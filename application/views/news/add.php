@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add News</h3>
 			</div>
-			<?php echo form_open('news/add'); ?>
+			<?php echo form_open_multipart('news/add'); ?>
 			<div class="box-body">
 			<?php
 if($this->session->flashdata('successsub'))
@@ -68,7 +68,7 @@ echo "<script>
 									<div class="input-group agncy_btn">
 										<label class="input-group-btn">
 											<span class="btn btn-primary">
-												Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="img_path" style="display: block;" />
+												Upload Image&hellip; <input type="file" name="user_file" value="" class="form-control" id="img_path" style="display: block;" />
 											</span>
 										</label>
 										<!-- <input name="img_path" type="text" value="" class="form-control"  readonly> -->

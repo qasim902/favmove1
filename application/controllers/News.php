@@ -45,14 +45,33 @@ class News extends CI_Controller{
 				'title' => $this->input->post('title'),				
                 'author' => $this->input->post('author'),
                 'added_on' => $this->input->post('added_on'),
-				'image_path' => $this->input->post('img_path'),
+				'image_path' => $this->input->post('user_file'),
 				'detail' => $this->input->post('detail'),
 				'tags' => $this->input->post('tags'),
             );
             
-            $news_id = $this->News_model->add_news($params);
-            $this->session->set_flashdata('successsub', "News successfully added");
-            redirect('news/add');
+            $path = realpath(APPPATH. '../resources/img/news/');
+            $config['upload_path'] = $path;
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['max_size']     = '5000';
+            $config['max_width'] = '5000';
+            $config['max_height'] = '5000';
+
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('user_file')) 
+            {
+                var_dump($this->upload->display_errors()); die();
+                redirect('news/add');
+            }
+            else
+            {
+                $filename = $this->upload->data();
+                $params['image_path'] = $filename['file_name'];
+                $news_id = $this->News_model->add_news($params);
+                $this->session->set_flashdata('successsub', "News successfully added");
+                redirect('news/add');
+            }    
         }
         else
         {            

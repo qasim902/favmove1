@@ -6,7 +6,7 @@
     <div class="col-sm-1 col-md-2"></div>
     <div class="col-sm-10 col-md-8">
       <h2 class="text-uppercase bottom40">Add Your Property</h2>
-      <form class="callus clearfix border_radius submit_property" method="post" action="ag_submit" enctype="multipart/form-data">
+      <form class="callus clearfix border_radius submit_property" method="post" action="/favmove/ag_submit" enctype="multipart/form-data">
         <div class="row">
           <div class="col-sm-6">
 
