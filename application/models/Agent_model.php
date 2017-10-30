@@ -38,10 +38,10 @@ class Agent_model extends CI_Model
     /*
      * function to add new agent
      */
-    function add_agent($params)
+    function add_agent($data)
     {
-        $this->db->insert('agents',$params);
-        return $this->db->insert_id();
+        return $this->db->insert('agents',$data);
+        //$this->db->insert_id();
     }
     
     /*

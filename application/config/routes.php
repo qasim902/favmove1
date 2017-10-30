@@ -36,6 +36,7 @@ $route['agentquery'] = 'main/agent_query';
 $route['contactag'] = 'main/contactagent';
 $route['allpackages'] = 'package/showpakage';
 $route['addagent'] = 'mainag/addnewagent';
+$route['printpro'] = 'property/printproperty';
 
 /*
 $route['addtofav'] will write in form or anchor tag.

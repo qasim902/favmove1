@@ -170,4 +170,12 @@ class Property_model extends CI_Model
     {
         return $this->db->delete('property',array('prop_id'=>$prop_id));
     }
+    function propprint($id)
+    {
+        return $this->db->get_where('property', array('prop_id' =>$id))->result_array();
+    }
+    function featureprint($id)
+    {
+        return $this->db->get_where('features', array('prop_id' =>$id))->result_array();
+    }
 }

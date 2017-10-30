@@ -231,5 +231,14 @@ class Property extends CI_Controller{
         else
             show_error('The property you are trying to delete does not exist.');
     }
+    function printproperty()
+    {
+        $id = $this->input->get('id');
+        $this->load->model('property_model');
+        $printdata = $this->property_model->propprint($id); 
+        $printfeature = $this->property_model->featureprint($id); 
+        $data = array('printme' =>$printdata , 'featurep'=> $printfeature);
+        $this->load->view('frontend/views/printprop' , $data);
+    }
     
 }
