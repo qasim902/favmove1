@@ -43,29 +43,6 @@
 										</span>
 									</div>
 							</div>
-							
-							<!--					<div class="col-md-6">-->
-							<!--						<label for="comment_id" class="control-label"><span class="text-danger">*</span>Comment Id</label>-->
-							<!--						<div class="form-group">-->
-							<!--							<input type="text" name="comment_id" value="-->
-							<?php //echo $this->input->post('comment_id'); ?>
-							<!--" class="form-control" id="comment_id" />-->
-							<!--							<span class="text-danger">-->
-							<?php //echo form_error('comment_id');?>
-							<!--</span>-->
-							<!--						</div>-->
-							<!--					</div>-->
-							<!--					<div class="col-md-6">-->
-							<!--						<label for="excerpt" class="control-label"><span class="text-danger">*</span>Excerpt</label>-->
-							<!--						<div class="form-group">-->
-							<!--							<textarea name="excerpt" class="form-control" id="excerpt">-->
-							<?php //echo $this->input->post('excerpt'); ?>
-							<!--</textarea>-->
-							<!--							<span class="text-danger">-->
-							<?php //echo form_error('excerpt');?>
-							<!--</span>-->
-							<!--						</div>-->
-							<!--					</div>-->
 							<div class="col-md-6">
 								<label for="img_path" class="control-label">
 									<span class="text-danger">*</span> Upload Image</label>
@@ -73,10 +50,10 @@
 									<div class="input-group agncy_btn">
 										<label class="input-group-btn">
 											<span class="btn btn-primary">
-												Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="img_path" style="display: none;" />
+												Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="img_path" style="display: block;" />
 											</span>
 										</label>
-										<input name="img_path" type="text" value="" class="form-control"  readonly>
+										<!-- <input name="img_path" type="text" value="" class="form-control"  readonly> -->
 									</div>
 									<span class="text-danger">
 										<?php echo form_error('img_path');?>

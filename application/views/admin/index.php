@@ -17,8 +17,7 @@
                         
                     echo $this->session->flashdata('successsub');
                     echo "</div> 
-                    </div>";
-                    
+                    </div>";       
                     }
                     ?>
                 </div>

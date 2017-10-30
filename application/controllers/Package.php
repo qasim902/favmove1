@@ -146,5 +146,10 @@ class Package extends CI_Controller{
         
 
     }
+    function mypkg ()
+    {
+       echo "hello";
+        var_dump('hello'); die();
+    }
     
 }

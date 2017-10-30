@@ -73,4 +73,8 @@ class Admin_model extends CI_Model
             return false;
         }
     }
+    function check_admin($username, $password)
+    {
+        return $this->db->get_where('admin', array('username' => $username, 'email' => $password))->num_rows();
+    }
 }

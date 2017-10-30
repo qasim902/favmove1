@@ -27,6 +27,7 @@ class News extends CI_Controller{
      */
     function add()
     {   
+        
         $this->load->library('form_validation');
 
 		$this->form_validation->set_rules('title','Title','required|max_length[255]');
@@ -50,7 +51,7 @@ class News extends CI_Controller{
 				'tags' => $this->input->post('tags'),
 				'img_path' => $this->input->post('img_path'),
             );
-            
+            var_dump($params); die();
             $news_id = $this->News_model->add_news($params);
             redirect('news/index');
         }

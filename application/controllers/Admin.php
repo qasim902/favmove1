@@ -61,10 +61,20 @@ class Admin extends CI_Controller{
 				'email' => $this->input->post('email'),
 				'log' => $this->input->post('log'),
             );
-            
-            $admin_id = $this->Admin_model->add_admin($params);
-            $this->session->set_flashdata('successsub', "You have successfully added a admin");
-            redirect('admin/add');
+            $username = $this->input->post('username');
+            $password = $this->input->post('email');
+            $check_admin = $this->Admin_model->check_admin($username, $password);
+            if($check_admin > 0)
+            {
+                $this->session->set_flashdata('successsub', "Username or email already exists");
+                redirect('admin/add');
+            }
+            else
+            {    
+                $admin_id = $this->Admin_model->add_admin($params);
+                $this->session->set_flashdata('successsub', "You have successfully added a admin");
+                redirect('admin/add');
+            }
         }
         else
         {            
@@ -97,9 +107,20 @@ class Admin extends CI_Controller{
 					'email' => $this->input->post('email'),
 					'log' => $this->input->post('log'),
                 );
-
-                $this->Admin_model->update_admin($id,$params);            
-                redirect('admin/index');
+                $username = $this->input->post('username');
+                $password = $this->input->post('email');
+                $check_admin = $this->Admin_model->check_admin($username, $password);
+                if($check_admin > 0)
+                {
+                    $this->session->set_flashdata('successsub', "Username or email already exists");
+                    redirect('admin/admin_list');
+                }
+                else
+                {    
+                    $this->Admin_model->update_admin($id,$params);            
+                    redirect('admin/admin_list');
+                }
+                
             }
             else
             {
