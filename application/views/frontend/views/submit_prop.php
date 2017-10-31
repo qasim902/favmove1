@@ -49,13 +49,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6">
-
-            <div class="single-query form-group bottom20">
-              <label>Year Built</label>
-              <input type="number" min="0" maxlength="4" required name="yearb" class="keyword-input" placeholder="Year the property was built">
-            </div>
-          </div>
+          
 
           <div class="col-sm-6">
             <div class="single-query bottom20">
@@ -73,6 +67,12 @@
             <div class="single-query form-group bottom20">
               <label>Price</label>
               <input type="number" name="price" min="0" step="0.01" class="keyword-input" placeholder="£ 45,000">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="single-query form-group bottom20">
+              <label>Year Built</label>
+              <input type="text" name="date" placeholder="Select Date" value="<?php echo $this->input->post('date_modified'); ?>" class="has-datetimepicker form-control" />
             </div>
           </div>
           <div class="col-sm-12">

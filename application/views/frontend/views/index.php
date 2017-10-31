@@ -650,8 +650,9 @@
                         <span><i class="icon-icons230"></i> by <?= $news['author']?></span>
                         <span><i class="icon-icons228"></i> <?php date('m ([ .\t-])* dd [,.stndrh\t ]+ y',strtotime($news['added_on']))?></span>
                      </div>
-                     <p class="p-font-15"><?= $news['detail']?></p>
-                     
+                      <div class="hom_news">
+                          <p class="p-font-15"><?= $news['detail']?></p>
+                      </div>
                   </div>
                </div>
                <?php }?>

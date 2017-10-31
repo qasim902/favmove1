@@ -346,6 +346,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
     <script>
     jQuery(document).ready(function() {
+       
         jQuery("#packges_d").change(function() {
             if (jQuery(this).val() === 'days'){ 
                 jQuery('#daily_pac').fadeIn();  
