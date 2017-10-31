@@ -16,8 +16,6 @@
   </section>
   <!-- Page Banner End -->
   
-
-
   <!-- User Profile -->
   <section id="agents" class="padding_bottom_half padding_top">
     <div class="container-fluid">
@@ -28,7 +26,7 @@
 
             <div class="agent_wrap">
               <div class="image user_img">
-                <img class="img-responsive" src="<?= $assets."img/agents/". $viewdata['agentdata']['id']."/prof.jpg"?>" alt="User">
+                <img class="img-responsive" src="<?= $assets.'img/agents/'. $viewdata['agentdata']['id'].'/prof.jpg'?>" alt="User">
               </div>
               <div class="usr_nam">
                 <h3><?= $viewdata['agentdata']['name']?></h3>
@@ -149,7 +147,8 @@
                       <?= $property['description'] ?>
                     </p>
                   </div>
-                  <div class="dealer clearfix">
+                  <div class="dealer clearfix"> 
+                  
                     <i class="author"><img width="70" src="<?php echo $assets."img/agency/".$viewdata['agentdata']['agency_id']?>/logo.png" alt="agency"></i>
                     <h4><?= $viewdata['agentdata']['name']?> &nbsp; <small>- Agent</small></h4>
                     <!-- <span><i class="icon-phone4"></i></span><i class="icon-mail-envelope-closed3"></i> -->
