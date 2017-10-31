@@ -27,6 +27,8 @@
         <link rel="stylesheet" href="<?php echo site_url('resources/css/rizwan.css');?>">
         <link rel="stylesheet" href="<?php echo site_url('resources/css/slick.css');?>">
         <link rel="stylesheet" href="<?php echo site_url('resources/css/slick-theme.css');?>">
+        <link href="<?php echo site_url('resources/css/typeahead.css');?>"  rel="stylesheet" />
+	    <link href="<?php echo site_url('resources/css/bootstrap-tagsinput.css');?>" rel="stylesheet">
     </head>
     
     <body class="hold-transition skin-blue sidebar-mini">
@@ -337,16 +339,31 @@
         <script src="<?php echo site_url('resources/js/bootstrap-datetimepicker.min.js');?>"></script>
         <script src="<?php echo site_url('resources/js/global.js');?>"></script>
 
+        <script src="<?php echo site_url('resources/js/typeahead.js');?>"></script>
+        <script src="<?php echo site_url('resources/js/bootstrap-tagsinput.js');?>"></script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
     <script>
     jQuery(document).ready(function() {
         jQuery("#packges_d").change(function() {
             if (jQuery(this).val() === 'days'){ 
-                jQuery('#daily_pac').show();   
+                jQuery('#daily_pac').fadeIn();  
+                $('#mar_chkbx').addClass( "top30" ) 
             } else {
                 jQuery('#daily_pac').hide(); 
+                $('#mar_chkbx').removeClass( "top30" ) 
             }
         });
+
+        $('#loc_form').hide();
+        //show it when the checkbox is clicked
+        $('input[name="set_location"]').on('click', function () {
+            if ($(this).prop('checked')) {
+                $('#loc_form').fadeIn();
+            } else {
+                $('#loc_form').hide();
+            }
+        });
+        
         $('.prop_img').slick({
             centerMode: true,
             centerPadding: '60px',
@@ -379,11 +396,6 @@
         });
        
     });
-    // $(document).ready(function() { 
-    //     $('#upload_image').change(function() {
-    //         $('#upload_image_sho').val($('#upload_image').val());
-    //     });
-    // });
     $('#upload_image').change(function() {
         var filename = $(this).val();
         var lastIndex = filename.lastIndexOf("\\");
@@ -401,6 +413,28 @@
         $('#sho_mlt_images').val(filename);
     });
     </script>
+<script>
+	var countries = new Bloodhound({
+	  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+	  queryTokenizer: Bloodhound.tokenizers.whitespace,
+	  prefetch: {
+		url: 'resources/data/countries.json',
+		filter: function(list) {
+		  return $.map(list, function(name) {
+			return { name: name }; });
+		}
+	  }
+	});
+	countries.initialize();
 
+	$('#tags-input').tagsinput({
+	  typeaheadjs: {
+		name: 'countries',
+		displayKey: 'name',
+		valueKey: 'name',
+		source: countries.ttAdapter()
+	  }
+	});
+</script>
     </body>
 </html>

@@ -37,9 +37,9 @@ echo "<script>
 							<th>Featured Limit</th>
 							<th>User Type</th>
 							<th>Duration</th>
-							<th>Show Private Listings</th>
-							<th>Auto Re-activate</th>
-							<th>Package Days</th>
+							<!-- <th>Show Private Listings</th>
+							<th>Auto Re-activate</th> -->
+							<th>Action</th>
 						</tr>
 						<?php foreach($packages as $p){ ?>
 						<tr>
@@ -64,15 +64,6 @@ echo "<script>
 							</td>
 							<td>
 								<?php echo $p['package_duration']; ?>
-							</td>
-							<td>
-								<?php echo $p['show_private_listings']; ?>
-							</td>
-							<td>
-								<?php?>
-							</td>
-							<td>
-								<?php ]?>
 							</td>
 							<td>
 								<a href="<?php echo site_url('package/edit/'.$p['packageid']); ?>" class="btn btn-info btn-xs">

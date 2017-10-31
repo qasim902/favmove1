@@ -130,6 +130,7 @@
 									<label for="package_days" class="control-label">Package Duration</label>
 	
 									<!-- <input type="text" name="package_days" placeholder="Make me dropdown rizwan" value="<?php echo $this->input->post('package_days'); ?>" class="form-control" id="package_days" /> -->
+									<div class="form-group">
 									<div class="single-query">
 										<div class="intro">
 											<select id="packges_d" name="package_durations" class="form-control">
@@ -152,6 +153,8 @@
 											<?php echo form_error('package_days');?>
 										</span>
 									</div>
+									</div>
+
 								</div>
 								
 							<!--					<div class="col-md-6">-->
@@ -173,19 +176,26 @@
 									<label for="auto_activation" class="checkbox-inline">
 										<input name="auto_activation" type="checkbox" value="1" id="auto_activation">Auto Re-activation</label>
 								</div>
-							</div>
+							</div> -->
 							<div id="daily_pac" class="col-md-6" style="display:none">
-									<label for="date_created" class="control-label">Days Package</label>
-									<div class="form-group">
-										<input type="text" name="package_days" placeholder="Enter Days" value="" class="form-control" id="package_days" />
-									</div>
-								</div> -->
-							<!-- <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="checkbox" name="auto_activation" value="1"  id="auto_activation" />
-                        <label for="auto_activation" class="control-label">Auto Re-activation</label>
-                    </div>
-				</div> -->
+								<label for="date_created" class="control-label">Days Package</label>
+								<div class="form-group">
+									<input type="text" name="package_days" placeholder="Enter Days" value="" class="form-control" id="package_days" />
+								</div>
+							</div>
+							
+							<div class="col-md-6 top10">
+								<div class="form-group " id="mar_chkbx">
+									<label for="set_location" class="checkbox-inline">
+									<input name="set_location" type="checkbox" value="1" id="set_location">Set Location</label>
+								</div>
+							</div>
+							<div id="loc_form" class="col-lg-6" >
+								<label for="add_locations" class="control-label">Add Locations</label>
+								<div class="form-group">
+									<input type="text" name="add_locations" placeholder="Enter Locations" value="" class="form-control" id="tags-input" data-role="tagsinput"  />
+								</div>
+							</div>
 						</div>
 
 						<div class="box-footer">
