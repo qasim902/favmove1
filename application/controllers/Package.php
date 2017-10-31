@@ -27,12 +27,12 @@ class Package extends CI_Controller{
         $this->load->library('form_validation');
 
        // $this->form_validation->set_rules('field[]', 'The field', 'numeric|xss_clean');
-		$this->form_validation->set_rules('package_name','Package Name','Text','max_length[60]');
-		$this->form_validation->set_rules('package_price','Package Price','numeric|xss_clean');
-       $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','numeric|xss_clean');
-        $this->form_validation->set_rules('num_featured_limit','num_featured_limit','numeric|xss_clean');
-		$this->form_validation->set_rules('user_type','Text','required|alpha','max_length[45]');
-		//$this->form_validation->set_rules('package_durations','User Type','max_length[45]');
+		$this->form_validation->set_rules('package_name','Package Name','alpha','max_length[60]', 'required' );
+		$this->form_validation->set_rules('package_price','Package Price','numeric|xss_clean' , 'required');
+       $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','numeric|xss_clean','required');
+        $this->form_validation->set_rules('num_featured_limit','num_featured_limit','numeric|xss_clean',  'required');
+		$this->form_validation->set_rules('user_type', 'User Type','required');
+		$this->form_validation->set_rules('package_durations','Package Duration','required');
 		//$this->form_validation->set_rules('show_private_listings','Num Images Limit','integer');
        // $this->form_validation->set_rules('auto_activation','auto_activation','integer');
 		//$this->form_validation->set_rules('package_days','package_days','integer');
@@ -81,8 +81,7 @@ class Package extends CI_Controller{
                 'user_type' => $this->input->post('user_type'),
                 'package_duration' => $this->input->post('package_durations'),
                 'show_private_listings' => $this->input->post('show_private_listings'),
-                'auto_activation' => $this->input->post('auto_activation'),
-                'package_days' => $this->input->post('package_days'),
+                
             );
            // var_dump($params); die();
             $package_id = $this->Package_model->add_package($params);

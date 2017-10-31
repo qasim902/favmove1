@@ -69,10 +69,10 @@ echo "<script>
 								<?php echo $p['show_private_listings']; ?>
 							</td>
 							<td>
-								<?php echo $p['auto_activation']; ?>
+								<?php?>
 							</td>
 							<td>
-								<?php echo $p['package_days']; ?>
+								<?php ]?>
 							</td>
 							<td>
 								<a href="<?php echo site_url('package/edit/'.$p['packageid']); ?>" class="btn btn-info btn-xs">

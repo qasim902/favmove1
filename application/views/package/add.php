@@ -166,7 +166,7 @@
 							<!--						</div>-->
 							<!--					</div>-->
 
-							<div class="col-md-6 top30">
+							<!-- <div class="col-md-6 top30">
 								<div class="form-group top10">
 									<label for="show_private_listings" class="checkbox-inline">
 										<input name="show_private_listings" type="checkbox" value="1" id="show_private_listings">Show Private Listings</label>
@@ -179,7 +179,7 @@
 									<div class="form-group">
 										<input type="text" name="package_days" placeholder="Enter Days" value="" class="form-control" id="package_days" />
 									</div>
-								</div>
+								</div> -->
 							<!-- <div class="col-md-6">
                     <div class="form-group">
                         <input type="checkbox" name="auto_activation" value="1"  id="auto_activation" />
