@@ -191,7 +191,47 @@ class Property_model extends CI_Model
         $max_area = $data['max_area'];
         $min_price = $data['min_price'];
         $max_price = $data['max_price'];
-
+        if($title == "")
+        {
+            $title = "";
+        }
+        if($protype == "")
+        {
+            $protype = "";
+        }
+        if($townid == "")
+        {
+            $townid = "";
+        }
+        if($bedrooms == 0)
+        {
+            $bedrooms = 0;
+        }
+        if($bathrooms == 0)
+        {
+            $bathrooms = 0;
+        }
+        if($min_area == 0)
+        {
+            $min_area = 0;
+        }
+        if($min_price == 0)
+        {
+            $min_price = 0;
+            
+        }
+        if($max_area == 0)
+        {
+            // $this->db->select_max('area');
+            // $this->db->from('prop_details');
+            // $max_area = $this->db->get(); 
+            $max_area = 100000000;
+        }
+        if($max_price == 0)
+        {
+           
+            $max_price = 10000000;   
+        }
         //var_dump($data['price']); die()
         $query = $this->db->query("SELECT * FROM property JOIN  prop_details as pd ON property.prop_id = pd.prop_id 
                                     JOIN features ON property.prop_id = features.prop_id
@@ -200,8 +240,8 @@ class Property_model extends CI_Model
                                     AND bathrooms  >= $bathrooms
                                     AND area  <= $max_area
                                     AND area  >= $min_area
-                                --    AND prop_details.price  <= $max_price
-                                    AND pd.price  >= 50000
+                                    AND pd.price  <= $max_price
+                                    AND pd.price  >= $min_price
                                     ;");
 
         // $this->db->select('*');

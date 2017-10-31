@@ -191,6 +191,8 @@ class Main extends CI_Controller
        $max_area = $this->input->post('max_area') ;
        $min_price = $this->input->post('min_price');
        $max_price =  $this->input->post('max_price'); 
+       
+       $max_price =  $this->input->post('max_price'); 
 
        $data = array(
         'title' =>$keyword, 
