@@ -198,6 +198,7 @@ class Property_model extends CI_Model
         $Theater = $data['theater'];
         $Lawn = $data['Lawn'];
         $Basement = $data['Basement'];
+        $Balcony = $data['Balcony'];
         
         if($title == "")
         {
@@ -238,7 +239,37 @@ class Property_model extends CI_Model
         {
             $max_price = 10000000;   
         }
-        //var_dump($data['price']); die()
+
+        if($AC == null)
+        {
+            $AC = 0;   
+        }
+        if($Barbeque == null)
+        {
+            $Barbeque = 0;   
+        }
+        if($Laundry == null)
+        {
+            $Laundry = 0;   
+        }
+        if($Theater == null)
+        {
+            $Theater = 0;   
+        }
+        if($Lawn == null)
+        {
+            $Lawn = 0;   
+        }
+        if($Basement == null)
+        {
+            $Basement = 0;   
+        }
+        if($Balcony == null)
+        {
+            $Balcony = 0;   
+        }
+        
+      //  var_dump($AC); die();
         $query = $this->db->query("SELECT * FROM property JOIN  prop_details as pd ON property.prop_id = pd.prop_id 
                                     JOIN features ON property.prop_id = features.prop_id
                                     AND title LIKE '%$title%' AND prop_type LIKE '%$protype%' AND town_id LIKE '%$townid%'
@@ -248,6 +279,26 @@ class Property_model extends CI_Model
                                     AND area  >= $min_area
                                     AND pd.price  <= $max_price
                                     AND pd.price  >= $min_price
+                                    AND (features.AC = 1
+                                    OR features.AC = $AC)
+
+                                    AND (features.Barbeque = 1
+                                    OR features.Barbeque = $Barbeque)
+
+                                    AND (features.Laundry = 1
+                                    OR features.Laundry = $Laundry)
+
+                                    AND (features.theater = 1
+                                    OR features.theater = $Theater)
+
+                                    AND (features.Lawn = 1
+                                    OR features.Lawn = $Lawn)
+
+                                    AND (features.Basement = 1
+                                    OR features.Basement = $Basement)
+
+                                    AND (features.Balcony = 1
+                                    OR features.Balcony = $Balcony)
                                     ;");
 
         // $this->db->select('*');
@@ -269,17 +320,18 @@ class Property_model extends CI_Model
         // $this->db->like('status', $data['status']);
         // $this->db->like('status', $data['status']);
 
-        foreach ($query->result_array() as $user)
-        {
-                echo $user['title'] . "<br>";
+        return $query->result_array();
+        // foreach ($query->result_array() as $user)
+        // {
+        //         //echo $user['title'] . "<br>";
+        //        // var_dump($query); die();
                 
                 
                 
                 
-                
-                // access attributes
-               // echo $user->reverse_name(); // or methods defined on the 'User' class
-        }
+        //         // access attributes
+        //        // echo $user->reverse_name(); // or methods defined on the 'User' class
+        // }
 
     
        // if (!empty($data['keyword']))

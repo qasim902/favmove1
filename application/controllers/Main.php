@@ -198,7 +198,8 @@ class Main extends CI_Controller
        $Theater =  $this->input->post('Theater');
        $Lawn =  $this->input->post('Lawn');
        $Basement =  $this->input->post('Basement');
-       var_dump($AC); die();
+       $Balcony =  $this->input->post('Balcony'); 
+       
 
        $data = array(
         'title' =>$keyword, 
@@ -217,12 +218,14 @@ class Main extends CI_Controller
       'theater' => $Theater,
       'Lawn' => $Lawn,
       'Basement' => $Basement,
+      'Balcony' => $Balcony,
 
      
     ); 
        //var_dump($data); die();
         $this->load->model('property_model');
-        var_dump($this->property_model->mysearch($data));
+        $search_result = $this->property_model->mysearch($data);
+        var_dump($search_result);
 
         die();
         if ($this->input->get('type') && $this->input->get('type') == "prop")
