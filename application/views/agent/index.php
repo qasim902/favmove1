@@ -4,7 +4,7 @@
 			<div class="box-header">
 				<h3 class="box-title">Agents Listing</h3>
 				<div class="box-tools">
-					<a href="<?php echo site_url('agent/add'); ?>" class="btn btn-success btn-sm">Add</a>
+					<a href="<?php echo site_url('agent/add'); ?>" class="btn btn-success btn-sm">Add Agents</a>
 				</div>
 			</div>
 			<!-- <div class="box-body">

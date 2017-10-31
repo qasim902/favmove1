@@ -106,10 +106,10 @@
                 <div class="input-group agncy_btn">
                   <label class="input-group-btn">
                     <span class="btn btn-primary">
-                      Upload Images&hellip; <input type="file" multiple="multiple" name="listing" id="file" style="display: none;" />
+                      Upload Images&hellip; <input type="file" multiple="multiple" name="listing" id="upload_image" style="display: none;" />
                     </span>
                   </label>
-                  <input  type="text" name="listing"  id="file" class="form-control" readonly>
+                  <input  type="text" name="listing"  id="upload_image_sho" class="form-control" readonly>
                 </div>
               </div>
             </div>
@@ -121,11 +121,12 @@
                   <div class="input-group agncy_btn">
                     <label class="input-group-btn">
                       <span class="btn btn-primary">
-                        Upload Image&hellip; <input type="file" multiple="multiple" name="pic[]" id="file" style="display: none;" />
+                        Upload Image&hellip; <input type="file" multiple="multiple" name="pic[]" id="upload_mlt_images" style="display: none;" />
                       </span>
                     </label>
-                    <input  type="text" name="pic[]"  id="file" class="form-control"  id="file" readonly>
+                    <input  type="text" name="pic[]"  id="sho_mlt_images" class="form-control"  id="file" readonly>
                   </div>
+                 
                 </div>
               <!-- <input type="file" multiple="multiple" name="pic[]" id="file"> -->
             </div>

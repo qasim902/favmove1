@@ -49,19 +49,7 @@ echo "<script>
 									</span>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<label for="added_on" class="control-label">
-									<span class="text-danger">*</span>Added On</label>
-									<div class="form-group">
-											<!-- DANISH isko carbon->now sy time pick krwao -->
-										<input type="text" name="added_on" placeholder="Date should be automatically picked" autofocus value="<?php echo $this->input->post('added_on'); ?>" class="has-datetimepicker form-control"  id="added_on"  />
-										
-										<span class="text-danger">
-											<?php echo form_error('added_on');?>
-										</span>
-									</div>
-							</div>
-							<div class="col-md-6">
+							<div class="col-lg-12">
 								<label for="img_path" class="control-label">
 									<span class="text-danger">*</span> Upload Image</label>
 								<div class="form-group">
@@ -71,30 +59,20 @@ echo "<script>
 												Upload Image&hellip; <input type="file" name="user_file" value="" class="form-control" id="upload_image" style="display: none;" />
 											</span>
 										</label>
-										<input name="upload_image_sho" type="text" value="" class="form-control"  readonly>
+										<input name="user_file" type="text" value="" id="upload_image_sho" class="form-control"  readonly>
 									</div>
 									<span class="text-danger">
 										<?php echo form_error('img_path');?>
 									</span>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-lg-12">
 								<label for="detail" class="control-label">
 									<span class="text-danger">*</span>Detail</label>
 								<div class="form-group">
 									<textarea name="detail" placeholder="Add your Details" autofocus class="form-control" id="detail"><?php echo $this->input->post('detail'); ?></textarea>
 									<span class="text-danger">
 										<?php echo form_error('detail');?>
-									</span>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="tags" class="control-label">
-									<span class="text-danger">*</span>Tags</label>
-								<div class="form-group">
-									<textarea  placeholder="eg. tag, demo, uk, house" autofocus  name="tags" class="form-control" id="tags"><?php echo $this->input->post('tags'); ?></textarea>
-									<span class="text-danger">
-										<?php echo form_error('tags');?>
 									</span>
 								</div>
 							</div>

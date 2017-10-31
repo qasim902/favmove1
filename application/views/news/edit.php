@@ -26,41 +26,27 @@
 							<span class="text-danger"><?php echo form_error('author');?></span>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<label for="added_on" class="control-label"><span class="text-danger">*</span>Added On</label>
-						<div class="form-group">
-							<input type="text" name="added_on" value="<?php echo ($this->input->post('added_on') ? $this->input->post('added_on') : $news['added_on']); ?>" class="form-control" id="added_on" />
-							<span class="text-danger"><?php echo form_error('added_on');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
+					<div class="col-lg-12">
 						<label for="img_path" class="control-label"><span class="text-danger">*</span>Edit Image</label>
 						<div class="form-group">
 							<div class="input-group agncy_btn">
 								<label class="input-group-btn">
 									<span class="btn btn-primary">
-										Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="img_path" style="display: none;" />
+										Upload Image&hellip; <input type="file" name="img_path" value="" class="form-control" id="upload_image" style="display: none;" />
 									</span>
 								</label>
-								<input name="img_path" type="text" value="<?php echo ($this->input->post('image_path') ? $this->input->post('image_path') : $news['image_path']); ?>" class="form-control"  readonly>
+								<input id="upload_image_sho" name="img_path" type="text" value="<?php echo ($this->input->post('image_path') ? $this->input->post('image_path') : $news['image_path']); ?>" class="form-control"  readonly>
 							</div>
 							<span class="text-danger">
 								<?php echo form_error('img_path');?>
 							</span>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-12">
 						<label for="detail" class="control-label"><span class="text-danger">*</span>Detail</label>
 						<div class="form-group">
 							<textarea name="detail" class="form-control" id="detail"><?php echo ($this->input->post('detail') ? $this->input->post('detail') : $news['detail']); ?></textarea>
 							<span class="text-danger"><?php echo form_error('detail');?></span>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<label for="tags" class="control-label"><span class="text-danger">*</span>Tags</label>
-						<div class="form-group">
-							<textarea name="tags" class="form-control" id="tags"><?php echo ($this->input->post('tags') ? $this->input->post('tags') : $news['tags']); ?></textarea>
-							<span class="text-danger"><?php echo form_error('tags');?></span>
 						</div>
 					</div>
 					
