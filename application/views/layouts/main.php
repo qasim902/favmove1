@@ -66,14 +66,14 @@
 
                                     <p>
                                         Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                        <!-- <small>Member since Nov. 2012</small> -->
                                     </p>
                                     </li>
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        <div class="pull-left">
+                                        <!-- <div class="pull-left">
                                             <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                        </div>
+                                        </div> -->
                                         <div class="pull-right">
                                             <a href="/favmove1/logout" class="btn btn-default btn-flat">Sign out</a>
                                         </div>
@@ -404,13 +404,12 @@
         }
         $('#upload_image_sho').val(filename);
     });
-    $('#upload_mlt_images').change(function() {
-        var filename = $(this).val();
-        var lastIndex = filename.lastIndexOf("\\");
-        if (lastIndex >= 0) {
-            filename = filename.substring(lastIndex + 1);
+    $("#upload_mlt_images").change(function() {
+        var names = [];
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+            names.push($(this).get(0).files[i].name);
         }
-        $('#sho_mlt_images').val(filename);
+        $("#sho_mlt_images").val(names);
     });
     </script>
 <script>
