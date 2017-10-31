@@ -193,15 +193,15 @@ class Property_model extends CI_Model
         $max_price = $data['max_price'];
 
         //var_dump($data['price']); die()
-        $query = $this->db->query("SELECT * FROM property JOIN  prop_details ON property.prop_id = prop_details.prop_id 
+        $query = $this->db->query("SELECT * FROM property JOIN  prop_details as pd ON property.prop_id = pd.prop_id 
                                     JOIN features ON property.prop_id = features.prop_id
                                     AND title LIKE '%$title%' AND prop_type LIKE '%$protype%' AND town_id LIKE '%$townid%'
                                     AND status LIKE '%$status%' AND bedrooms  >= $bedrooms
                                     AND bathrooms  >= $bathrooms
                                     AND area  <= $max_area
                                     AND area  >= $min_area
-                                    AND prop_details.price  <= $max_price
-                                    AND prop_details.price  >= $min_price
+                                --    AND prop_details.price  <= $max_price
+                                    AND pd.price  >= 50000
                                     ;");
 
         // $this->db->select('*');
