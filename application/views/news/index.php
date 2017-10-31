@@ -49,6 +49,7 @@
         <div class="box box-primary">
             <div class="box-body box-profile">
                 <div class="col-md-3">
+                    
                     <img class="img-thumbnail" src="<?php echo base_url('resources/img/news/'.$n['image_path']);?>">
     
                     <h3 class="profile-username text-center">

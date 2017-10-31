@@ -66,7 +66,7 @@ echo "<script>
 
           <div role="tabpanel" class="tab-pane fade" id="profile">
             <div class="agent-p-form" id="#user_form">
-              <form class="callus clearfix" action="" method="POST">
+              <form class="callus clearfix" action="user_reg" method="POST">
                 <div class="single-query col-sm-12 form-group">
                   <input type="text" class="keyword-input" placeholder="username" name="username" >
                 </div>
