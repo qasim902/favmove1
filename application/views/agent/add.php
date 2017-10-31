@@ -51,14 +51,14 @@
 							</div>
 							<div class="col-md-6">
 								<label for="agent_image" class="control-label">Agent Image</label>
-									<div class="input-group agncy_btn">
-										<label class="input-group-btn">
-											<span class="btn btn-primary">
-												Upload Logo&hellip; <input type="file" name="agent_image" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="agent_image" style="display: none;" />
-											</span>
-										</label>
-										<input  type="text" id="agent_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
-									</div>
+								<div class="input-group agncy_btn">
+									<label class="input-group-btn">
+										<span class="btn btn-primary">
+											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="upload_image" style="display: none;" />
+										</span>
+									</label>
+									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
+								</div>
 							</div>
 							<div class="col-md-6">
 								<label for="package_id" class="control-label">Package</label>
