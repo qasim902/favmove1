@@ -1,4 +1,4 @@
-<!-- <div class="row">
+<div class="row">
     <div class="col-md-12">
         <div class="box">
             <div class="box-header">
@@ -7,7 +7,7 @@
                     <a href="<?php echo site_url('news/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
             </div>
-            <div class="box-body">
+            <!-- <div class="box-body">
                 <table class="table table-striped">
                     <tr>
 						<th>ID</th>
@@ -36,17 +36,21 @@
                     <?php } ?>
                 </table>
                                 
-            </div> 
+            </div>  -->
         </div>
     </div>
 </div>
- -->
+
 
 
 <?php foreach($news as $n){ ?>
     <div class="col-md-12">
+
+        
+
         <!-- Profile Image -->
         <div class="box box-primary">
+            
             <div class="box-body box-profile">
                 <div class="col-md-3">
                     

@@ -130,7 +130,7 @@
                                 </li>
                             </ul>
                         </li> -->
-                        <li>
+                        <!-- <li>
                             <a href="#">
                                 <i class="fa fa-building-o "></i> <span>Agency</span>
                             </a>
@@ -142,7 +142,7 @@
                                     <a href="<?php echo site_url('agency/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="#">
                                 <i class="fa fa-user"></i> <span>Agent</span>
@@ -391,6 +391,14 @@
             filename = filename.substring(lastIndex + 1);
         }
         $('#upload_image_sho').val(filename);
+    });
+    $('#upload_mlt_images').change(function() {
+        var filename = $(this).val();
+        var lastIndex = filename.lastIndexOf("\\");
+        if (lastIndex >= 0) {
+            filename = filename.substring(lastIndex + 1);
+        }
+        $('#sho_mlt_images').val(filename);
     });
     </script>
 
