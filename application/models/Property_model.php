@@ -181,8 +181,28 @@ class Property_model extends CI_Model
 
     function mysearch($data)
     {
+        $title=$data['title'];
+        $protype = $data['prop_type'];
+        $townid = $data['town_id'];
+        $status = $data['status'];
+        $bedrooms = $data['bedrooms'];
+        $bathrooms = $data['bathrooms'];
+        $min_area = $data['min_area'];
+        $max_area = $data['max_area'];
+        $min_price = $data['min_price'];
+        $max_price = $data['max_price'];
+
         //var_dump($data['price']); die()
-        $query = $this->db->query("SELECT * FROM property JOIN  prop_details ON property.prop_id = prop_details.prop_id; ");
+        $query = $this->db->query("SELECT * FROM property JOIN  prop_details ON property.prop_id = prop_details.prop_id 
+                                    JOIN features ON property.prop_id = features.prop_id
+                                    AND title LIKE '%$title%' AND prop_type LIKE '%$protype%' AND town_id LIKE '%$townid%'
+                                    AND status LIKE '%$status%' AND bedrooms  >= $bedrooms
+                                    AND bathrooms  >= $bathrooms
+                                    AND area  <= $max_area
+                                    AND area  >= $min_area
+                                    AND prop_details.price  <= $max_price
+                                    AND prop_details.price  >= $min_price
+                                    ;");
 
         // $this->db->select('*');
         // $this->db->from('property');
@@ -206,7 +226,7 @@ class Property_model extends CI_Model
         foreach ($query->result_array() as $user)
         {
                 echo $user['title'] . "<br>";
-                var_dump($query);
+                
                 
                 
                 
@@ -215,7 +235,7 @@ class Property_model extends CI_Model
                // echo $user->reverse_name(); // or methods defined on the 'User' class
         }
 
-        die();
+    
        // if (!empty($data['keyword']))
       //  {
        // $this->db->like('title', $data['title']);
