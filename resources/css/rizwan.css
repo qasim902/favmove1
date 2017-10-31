@@ -368,3 +368,14 @@ display: inline-block;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .news_list p{
+      word-break: break-all;
+      white-space: normal;
+      height:106.2px;
+      /* Fallback for non-webkit */
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    

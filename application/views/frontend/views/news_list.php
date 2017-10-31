@@ -38,7 +38,9 @@
                         <span><i class="icon-icons230"></i> by <?=$news['author']?></span>
                         <span><i class="icon-icons228"></i> <?= $news['added_on']?></span>
                      </div>
-                     <p class="p-font-15"><p class="p-font-15"><?= $news['detail']?></p></p>
+                     <div class="news_list">
+                          <p class="p-font-15"><?= $news['detail']?></p></p>
+                     </div>
                      <div class="pro-3-link padding-t-20">
                         <a class="btn-more" href="news_detail?id=<?=$news['id']?>">
                         <i>
