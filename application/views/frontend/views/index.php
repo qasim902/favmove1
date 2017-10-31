@@ -647,7 +647,7 @@
                <div class="news-1-box clearfix">
                   <div class="col-md-4 col-sm-4 col-xs-12">
                      <div class="image-2">
-                        <a href="news_detail?id=<?= $news['id']?>"><img src="<?= $assets ?>img/news/<?= $news['id']?>/blog-1.jpg" alt="image" class="img-responsive"/></a>
+                        <a href="news_detail?id=<?= $news['id']?>"><img src="<?php echo base_url('resources/img/news/'.$news['image_path']);?>" alt="image" class="img-responsive"/></a>
                      </div>
                   </div>
                   <div class="col-md-7 col-sm-7 col-xs-12 padding-left-25">
@@ -656,7 +656,7 @@
                         <span><i class="icon-icons230"></i> by <?= $news['author']?></span>
                         <span><i class="icon-icons228"></i> <?php date('m ([ .\t-])* dd [,.stndrh\t ]+ y',strtotime($news['added_on']))?></span>
                      </div>
-                     <p class="p-font-15"><?= $news['excerpt']?></p>
+                     <p class="p-font-15"><?= $news['detail']?></p>
                      
                   </div>
                </div>
