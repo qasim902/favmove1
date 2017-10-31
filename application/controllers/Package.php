@@ -39,27 +39,31 @@ class Package extends CI_Controller{
 		
 		
 		if($this->input->post())     
-        {   
+        {   $addition = $this->input->post('package_durations');
+            $addition2 = $this->input->post('package_days');
+            if($addition == "yearly")
+            {    
+                $end_date = date('y-m-d', strtotime("+365 days"));
+            }
+            else if($addition == "monthly")
+            {    
+                $end_date = date('y-m-d', strtotime("+30 days"));
+            }
+            else if($addition == "weekly")
+            {    
+                $end_date = date('y-m-d', strtotime("+7 days"));
+            }
+            else
+            {    
+                $end_date = date('y-m-d', strtotime($addition2));
+            }
             $params = array(
-				// 'show_private_listings' => $this->input->post('show_private_listings'),
-				// 'auto_activation' => $this->input->post('auto_activation'),
-				// 'date_created' => $this->input->post('date_created'),
-				// 'date_modified' => $this->input->post('date_modified'),
-				// 'package_name' => $this->input->post('package_name'),
-				// 'package_price' => $this->input->post('package_price'),
-				// 'package_days' => $this->input->post('package_days'),
-				// 'num_listing_limit' => $this->input->post('num_listing_limit'),
-				// 'currency_code' => $this->input->post('package_days'),
-				// 'user_type' => $this->input->post('user_type'),
-				// 'num_images_limit' => $this->input->post('num_images_limit'),
-				// 'num_amenities_limit' => $this->input->post('num_amenities_limit'),
-				// 'num_featured_limit' => $this->input->post('num_featured_limit'),
-                // 'forarea' => $this->input->post('show_private_listings'),
-                
+
                 // my pkg detail
                 'package_name' => $this->input->post('package_name'),
                 'package_price' => $this->input->post('package_price'),
-                'date_created' => $this->input->post('date_created'),
+                'start_date' => date('y-m-d'),
+                'end_date' => $end_date,
                 'num_listing_limit' => $this->input->post('num_listing_limit'),
                 'num_featured_limit' => $this->input->post('num_featured_limit'),
                 'user_type' => $this->input->post('user_type'),
@@ -67,8 +71,6 @@ class Package extends CI_Controller{
                 'show_private_listings' => $this->input->post('show_private_listings'),
                 'auto_activation' => $this->input->post('auto_activation'),
                 'package_days' => $this->input->post('package_days'),
-
-
             );
            // var_dump($params); die();
             $package_id = $this->Package_model->add_package($params);
@@ -110,7 +112,7 @@ class Package extends CI_Controller{
                 $params = array(
                     'package_name' => $this->input->post('package_name'),
                     'package_price' => $this->input->post('package_price'),
-                    'date_created' => $this->input->post('date_created'),
+                    'start_date' => $this->input->post('date_created'),
                     'num_listing_limit' => $this->input->post('num_listing_limit'),
                     'num_featured_limit' => $this->input->post('num_featured_limit'),
                     'user_type' => $this->input->post('user_type'),

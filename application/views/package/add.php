@@ -54,13 +54,7 @@
 								</div>
 							</div>
 							
-							<div class="col-md-6">
-								<label for="date_created" class="control-label">Date Created</label>
-								<div class="form-group">
-									<input type="text" name="date_created" placeholder="Date should be automatically picked" value="<?php echo $this->input->post('date_created'); ?>"
-									 class="has-datetimepicker form-control" id="date_created" />
-								</div>
-							</div>
+						
 							<div class="col-md-6">
 								<label for="num_listing_limit" class="control-label">Listing Limit</label>
 								<div class="form-group">
