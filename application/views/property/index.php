@@ -4,7 +4,7 @@
             <div class="box-header">
                 <h3 class="box-title">Property Listing</h3>
             	<div class="box-tools">
-                    <a href="<?php echo site_url('property/add'); ?>" class="btn btn-success btn-sm">Add</a> 
+                    <a href="<?php echo site_url('property/add'); ?>" class="btn btn-success btn-sm">Add Property</a> 
                 </div>
             </div>
             <!-- <div class="box-body">

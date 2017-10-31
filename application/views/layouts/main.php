@@ -145,6 +145,7 @@
                                 </li>
                             </ul>
                         </li> -->
+                        
                         <li>
                             <a href="#">
                                 <i class="fa fa-user"></i> <span>Agent</span>
@@ -155,6 +156,19 @@
                                 </li>
                                 <li>
                                     <a href="<?php echo site_url('agent/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i> <span>User</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active">
+                                    <a href="<?php echo site_url('user/add');?>"><i class="fa fa-plus"></i> Add</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo site_url('user/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
                                 </li>
                             </ul>
                         </li>
@@ -249,19 +263,7 @@
                                 </li>
                             </ul>
                         </li> -->
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-user"></i> <span>User</span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li class="active">
-                                    <a href="<?php echo site_url('user/add');?>"><i class="fa fa-plus"></i> Add</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo site_url('user/index');?>"><i class="fa fa-list-ul"></i> Listing</a>
-                                </li>
-                            </ul>
-                        </li>
+                        
                     </ul>
                 </section>
                 <!-- /.sidebar -->

@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<div class="box box-info">
 			<div class="box-header with-border">
-				<h3 class="box-title">Package Edit</h3>
+				<h3 class="box-title"> Edit Package</h3>
 			</div>
 			<?php echo form_open('package/edit/'.$package['packageid']); ?>
 			<div class="box-body">
