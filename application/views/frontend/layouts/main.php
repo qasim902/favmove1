@@ -30,8 +30,10 @@
 
   gtag('config', 'UA-108823654-1');
 </script>
+<script>
+</script>
 </head>
-<body>
+<body onLoad="getLocation ();">
 
 <!--Loader-->
  <!--  <div class="loader">
@@ -404,6 +406,22 @@
           });
         });
   </script>
+  <script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script> -->
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U&libraries=places"></script>  -->
