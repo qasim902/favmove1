@@ -181,29 +181,41 @@ class Property_model extends CI_Model
 
     function mysearch($data)
     {
-        //var_dump($data['price']); die();
-        $this->db->select('*');
-        $this->db->from('property');
-        $this->db->join('prop_details', 'property.prop_id = prop_details.prop_id');
-        $this->db->join('features', 'property.prop_id = features.prop_id');
-        $this->db->like('title', $data['title']);
-        $this->db->like('prop_type', $data['prop_type']);
-        $this->db->like('town_id', $data['town_id']);
-        $this->db->where('bathrooms >=', $data['bathrooms']);
-        $this->db->where('bedrooms >=', $data['bedrooms']);
-        $this->db->where('area <=', $data['min_area']);
-        $this->db->where('area >', $data['max_area']);
-        $this->db->where('prop_details.price <=', $data['min_price']);
-        $this->db->where('prop_details.price >', $data['max_price']);
+        //var_dump($data['price']); die()
+        $query = $this->db->query("SELECT * FROM property JOIN  prop_details ON property.prop_id = prop_details.prop_id; ");
+
+        // $this->db->select('*');
+        // $this->db->from('property');
+        // $this->db->join('prop_details', 'property.prop_id = prop_details.prop_id');
+        // $this->db->join('features', 'property.prop_id = features.prop_id');
+        // $this->db->like('title', $data['title']);
+        // $this->db->like('prop_type', $data['prop_type']);
+        // $this->db->like('town_id', $data['town_id']);
+        // $this->db->where('bathrooms >=', $data['bathrooms']);
+        // $this->db->where('bedrooms >=', $data['bedrooms']);
+        // $this->db->where('area <=', $data['min_area']);
+        // $this->db->where('area >', $data['max_area']);
+        // $this->db->where('prop_details.price <=', $data['min_price']);
+        // $this->db->where('prop_details.price >', $data['max_price']);
 
 
         // $this->db->like('status', $data['status']);
         // $this->db->like('status', $data['status']);
         // $this->db->like('status', $data['status']);
 
-        
+        foreach ($query->result_array() as $user)
+        {
+                echo $user['title'] . "<br>";
+                var_dump($query);
+                
+                
+                
+                
+                // access attributes
+               // echo $user->reverse_name(); // or methods defined on the 'User' class
+        }
 
-        var_dump($this->db->get()->result_array()) ; die();
+        die();
        // if (!empty($data['keyword']))
       //  {
        // $this->db->like('title', $data['title']);
