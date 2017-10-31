@@ -343,6 +343,12 @@ display: inline-block;
     .desc p{
       word-break: break-all;
       white-space: normal;
+      height: 46.2px;
+      /* Fallback for non-webkit */
+      /* -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; */
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .small-box p{
       color: #fff;

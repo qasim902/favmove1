@@ -103,10 +103,12 @@
                             <p>
                                 <?php echo $n['tags']; ?>
                             </p>
-                            <h4 class="box-title"><b>Description</b></h4>
-                            <p>
-                                <?php echo $n['detail']; ?>
-                            </p>
+                            <div class="desc">
+                                <h4 class="box-title"><b>Description</b></h4>
+                                <p>
+                                    <?php echo $n['detail']; ?>
+                                </p>
+                            </div>
                         </div>
                         <!-- /.post -->
     
