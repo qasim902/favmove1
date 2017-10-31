@@ -181,7 +181,31 @@ class Main extends CI_Controller
     }
     function search()
     {
-
+       $keyword  = $this->input->post('keyword') . "<br>";
+       $town_id =  $this->input->post('town_id') . "<br>";
+       
+       $prop_type =  $this->input->post('prop_type') . "<br>";
+       $prop_stat = $this->input->post('prop_stat') . "<br>";
+       $bed = $this->input->post('bed') . "<br>";
+       $bath =   $this->input->post('bath') . "<br>";
+       $min_area = $this->input->post('min_area') . "<br>";
+       $max_area = $this->input->post('max_area') . "<br>";
+       $min_price = $this->input->post('min_price') . "<br>";
+       $max_price =  $this->input->post('max_price') . "<br>"; 
+       $data = array($keyword, 
+       $town_id, 
+       $prop_type, 
+       $prop_stat, 
+       $bed, 
+       $bath, 
+       $min_area,
+       $max_area, 
+       $min_price, 
+       $max_price); 
+        $this->load->model('property_model');
+        $this->property_model->mysearch($data);
+        
+        die();
         if ($this->input->get('type') && $this->input->get('type') == "prop")
         {
 

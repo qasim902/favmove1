@@ -178,4 +178,9 @@ class Property_model extends CI_Model
     {
         return $this->db->get_where('features', array('prop_id' =>$id))->result_array();
     }
+
+    function mysearch($data)
+    {
+
+    }
 }
