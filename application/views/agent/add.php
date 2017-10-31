@@ -12,9 +12,15 @@
 						<div class="row clearfix">
 							
 							<div class="col-md-6">
-								<label for="name" class="control-label">Name</label>
+								<label for="name" class="control-label">First Name</label>
 								<div class="form-group">
-									<input type="text"  placeholder="Enter Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
+									<input type="text"  placeholder="Enter First Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="name" class="control-label">Last Name</label>
+								<div class="form-group">
+									<input type="text"  placeholder="Enter Last Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -27,7 +33,7 @@
 							<div class="col-md-6">
 								<label for="email" class="control-label">Email</label>
 								<div class="form-group">
-									<input type="text" name="email" placeholder="Email Id" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="email" />
+									<input type="text" name="email" placeholder="example@email.com" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="email" />
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -45,7 +51,6 @@
 							</div>
 							<div class="col-md-6">
 								<label for="agent_image" class="control-label">Agent Image</label>
-								<div class="form-group">
 									<div class="input-group agncy_btn">
 										<label class="input-group-btn">
 											<span class="btn btn-primary">
@@ -54,7 +59,6 @@
 										</label>
 										<input  type="text" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
 									</div>
-								</div>
 							</div>
 							<div class="col-md-6">
 								<label for="package_id" class="control-label">Package</label>
@@ -74,7 +78,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<!-- <div class="col-md-6">
 								<label for="agency_id" class="control-label">Agency</label>
 								<div class="single-query">
 									<div class="intro">
@@ -91,7 +95,7 @@
 										</select>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							
 							<!--					<div class="col-md-6">-->
 							<!--						<label for="property_list" class="control-label">Property List</label>-->
@@ -109,19 +113,88 @@
 							<!--" class="has-datetimepicker form-control" id="last_logintime" />-->
 							<!--						</div>-->
 							<!--					</div>-->
-
-							<div class="col-lg-12">
-								<label for="address" class="control-label">Address</label>
+							<div class="col-md-6">
+								<label for="contact" class="control-label">Title</label>
 								<div class="form-group">
-									<textarea type="text" placeholder="Address" name="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
+									<input type="tel" placeholder="Title"  name="contact" value="<?php echo $this->input->post('email'); ?>" class="form-control" />
 								</div>
 							</div>
 							<div class="col-md-6">
-								<!-- <label for="activated" class="control-label">Activated</label> -->
+								<label for="fb_link" class="control-label">Facebook Link</label>
 								<div class="form-group">
-									<div class="checkbox">
-										<label><input type="checkbox" value="<?php echo $this->input->post('activated'); ?>" id="activated">Activated</label>
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+										<input type="text" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+										/>
 									</div>
+									<span class="text-danger">
+										<?php echo form_error('fb_link');?>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="linkedin_link" class="control-label">Linkedin Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+										<input type="text" autofocus name="linkedin_link" value="<?php echo $this->input->post('linkedin_link'); ?>" class="form-control" id="linkedin_link"
+										/>
+									</div>
+									<span class="text-danger">
+										<?php echo form_error('linkedin_link');?>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="twit_link" class="control-label">Twitter Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+										<input type="text" autofocus name="twit_link" value="<?php echo $this->input->post('twit_link'); ?>" class="form-control" id="twit_link"
+										/>
+									</div>
+									
+									<span class="text-danger">
+										<?php echo form_error('twit_link');?>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="gplus_link" class="control-label">Google plus Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+										<input type="text" autofocus name="gplus_link" value="<?php echo $this->input->post('gplus_link'); ?>" class="form-control" id="gplus_link"
+										/>
+									</div>
+									<span class="text-danger">
+										<?php echo form_error('gplus_link');?>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="youtube_link" class="control-label">Youtube Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></span>
+										<input type="text" autofocus name="youtube_link" value="<?php echo $this->input->post('youtube_link'); ?>" class="form-control" id="youtube_link"
+										/>
+									</div>
+									<span class="text-danger">
+										<?php echo form_error('youtube_link');?>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="address" class="control-label">Description</label>
+								<div class="form-group">
+									<textarea type="text" placeholder="Description" name="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="address" class="control-label">Address</label>
+								<div class="form-group">
+									<textarea type="text" placeholder="Address" name="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
 								</div>
 							</div>
 							<!--					<div class="col-md-6">-->

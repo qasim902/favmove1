@@ -347,3 +347,8 @@ display: inline-block;
     .small-box p{
       color: #fff;
     }
+
+    /* 31 Oct */
+    .input-group .form-control {
+      z-index: 0;
+    }
