@@ -2,7 +2,7 @@
     <div class="col-md-12">
       	<div class="box box-info">
             <div class="box-header with-border">
-              	<h3 class="box-title">News Edit</h3>
+              	<h3 class="box-title"> Edit News</h3>
 			</div>
 			
 			<?php echo form_open('news/edit/'.$news['id']); ?>

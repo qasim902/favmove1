@@ -4,7 +4,7 @@
 			<div class="box-header">
 				<h3 class="box-title">Packages Listing</h3>
 				<div class="box-tools">
-					<a href="<?php echo site_url('package/add'); ?>" class="btn btn-success btn-sm">Add</a>
+					<a href="<?php echo site_url('package/add'); ?>" class="btn btn-success btn-sm">Add Packages</a>
 				</div>
 			</div>
 			<div class="box-body">

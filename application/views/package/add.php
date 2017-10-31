@@ -135,10 +135,10 @@
 										<div class="intro">
 											<select id="packges_d" name="package_durations" class="form-control">
 												<option value="">Select package</option>
-												<option value="yearly">Yearly</option>
-												<option value="monthly">Monthly</option>
-												<option value="weekly">Weekly</option>
 												<option value="days">Days</option>
+												<option value="weekly">Weekly</option>
+												<option value="monthly">Monthly</option>
+												<option value="yearly">Yearly</option>
 												<!-- <?php 
 											foreach($package_days as $package)
 											{
