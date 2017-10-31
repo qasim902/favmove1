@@ -26,21 +26,33 @@ class Package extends CI_Controller{
     {   
         $this->load->library('form_validation');
 
-		$this->form_validation->set_rules('package_name','Package Name','max_length[60]');
-		$this->form_validation->set_rules('package_price','Package Price','numeric');
-		$this->form_validation->set_rules('date_created','date_created','integer');
-        $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','integer');
-        $this->form_validation->set_rules('num_featured_limit','num_featured_limit','integer');
-		$this->form_validation->set_rules('user_type','user_type','max_length[45]');
-		$this->form_validation->set_rules('package_durations','User Type','max_length[45]');
-		$this->form_validation->set_rules('show_private_listings','Num Images Limit','integer');
-        $this->form_validation->set_rules('auto_activation','auto_activation','integer');
-		$this->form_validation->set_rules('package_days','package_days','integer');
+       // $this->form_validation->set_rules('field[]', 'The field', 'numeric|xss_clean');
+		$this->form_validation->set_rules('package_name','Package Name','Text','max_length[60]');
+		$this->form_validation->set_rules('package_price','Package Price','numeric|xss_clean');
+       $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','numeric|xss_clean');
+        $this->form_validation->set_rules('num_featured_limit','num_featured_limit','numeric|xss_clean');
+		$this->form_validation->set_rules('user_type','Text','required|alpha','max_length[45]');
+		//$this->form_validation->set_rules('package_durations','User Type','max_length[45]');
+		//$this->form_validation->set_rules('show_private_listings','Num Images Limit','integer');
+       // $this->form_validation->set_rules('auto_activation','auto_activation','integer');
+		//$this->form_validation->set_rules('package_days','package_days','integer');
 		
 		
-		if($this->input->post())     
-        {   $addition = $this->input->post('package_durations');
+        if($this->input->post() && $this->form_validation->run() == TRUE)     
+        
+        {   
+            $addition = $this->input->post('package_durations');
             $addition2 = $this->input->post('package_days');
+            $listing  = $this->input->post('num_listing_limit');
+
+           if($listing == 0)
+           {
+               $listing = 100000;
+           }
+           else
+           {
+                $listing  = $this->input->post('num_listing_limit');
+           }
             if($addition == "yearly")
             {    
                 $end_date = date('y-m-d', strtotime("+365 days"));
@@ -55,7 +67,7 @@ class Package extends CI_Controller{
             }
             else
             {    
-                $end_date = date('y-m-d', strtotime($addition2));
+                $end_date = date('y-m-d', strtotime("+" .$addition2 . "days"));
             }
             $params = array(
 
@@ -64,7 +76,7 @@ class Package extends CI_Controller{
                 'package_price' => $this->input->post('package_price'),
                 'start_date' => date('y-m-d'),
                 'end_date' => $end_date,
-                'num_listing_limit' => $this->input->post('num_listing_limit'),
+                'num_listing_limit' => $listing,
                 'num_featured_limit' => $this->input->post('num_featured_limit'),
                 'user_type' => $this->input->post('user_type'),
                 'package_duration' => $this->input->post('package_durations'),
@@ -82,6 +94,7 @@ class Package extends CI_Controller{
             $data['_view'] = 'package/add';
             $this->load->view('layouts/main',$data);
         }
+    
     }  
 
     /*
