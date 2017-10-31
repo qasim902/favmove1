@@ -281,7 +281,7 @@ display: inline-block;
   
 }
 #deals .deal_media .price {
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin: 0px 0;
 }
 .proerty_content .proerty_text {
@@ -357,4 +357,14 @@ display: inline-block;
     /* 31 Oct */
     .input-group .form-control {
       z-index: 0;
+    }
+    .hom_news p{
+      word-break: break-all;
+      white-space: normal;
+      height: 66.2px;
+      /* Fallback for non-webkit */
+      /* -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; */
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
