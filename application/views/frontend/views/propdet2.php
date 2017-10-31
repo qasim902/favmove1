@@ -62,7 +62,7 @@
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
                 <div class="text-center">
-                     <img src="<?php echo $assets."img/agency/".$viewdata['agentdata']['agency_id']?>/logo.png" alt="agency">
+                     <img src="<?php echo $assets."img/agency/1".$viewdata['agentdata']['agency_id']?>/logo.png" alt="agency">
                 </div>
               <!-- <div class="image">
                 <img src="<?= $assets;?>img/agent-one.jpg" alt="Agents">
@@ -98,12 +98,43 @@
                     <td class="text-right"><strong><a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a></strong></td>
                   </tr>
                   <tr>
-                    <td><strong><a href="#"> <i class="icon-pencil"></i>Add notes</a></strong></td>
+                    <td><strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong></td>
                     <td class="text-right"><strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong></td>
                   </tr>
-                  
+                  <tr>
+                    <!-- <td>
+                      <div class="col-md-12">
+                          <div class="form-group">
+                            <textarea class="form-control" type="text" value=""></textarea>
+                          </div> 
+                      </div>
+                    </td> -->
+                  </tr>
                 </tbody>
               </table>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Add Note</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="message-text" class="control-label">Note:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
               <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
               <ul class="social_share">
                 <li><a href="https://www.facebook.com/sharer.php?u=<?php echo current_url();?>" class="facebook"><i class="icon-facebook-1"></i></a></li>
@@ -114,7 +145,7 @@
               </ul>
             </div>
             <div class="image top20">
-              <img class="img-responsive" src="<?php echo $assets."img/agency/".$viewdata['agentdata']['agency_id']?>/ad.jpg" alt="agency">
+              <img class="img-responsive" src="<?php echo $assets."img/agency/1".$viewdata['agentdata']['agency_id']?>/ad.jpg" alt="agency">
                 <!-- <img class="img-responsive" src="http://media.rightmove.co.uk/46k/45383/1491465779150_bp_mpu_r.jpg" alt="Roffeys Residential, Sales logo"> -->
             </div>
             
