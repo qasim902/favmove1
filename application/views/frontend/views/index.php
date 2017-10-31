@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <!--Slider-->
 <div class="rev_slider_wrapper">
   <div id="rev_eight" class="rev_slider"  data-version="5.0">
@@ -149,6 +142,7 @@
               <select name="town_id">
                 <option value="">Select Town</option>
                 <?php 
+                
                 foreach($defdata['all_uk_towns'] as $uk_town)
                 {
                   $selected = ($uk_town['postcode'] == $this->input->post('town_id')) ? ' selected="selected"' : "";

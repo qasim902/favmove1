@@ -25,7 +25,7 @@ class Main extends CI_Controller
         $this->data['dropdown_props'] = $this->Property_model->get_all_property();
         $this->data['dropdown_agent'] = $this->Agent_model->get_all_agents();
         $this->data['defdata'] = array('all_uk_towns' => $this->Uk_town_model->get_all_uk_towns());
-
+        $this->data['towns'] = array('all_towns' => $this->Uk_town_model->get_towns());
 
 
     }
