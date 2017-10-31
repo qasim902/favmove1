@@ -512,7 +512,7 @@ class Main extends CI_Controller
                     'role' => 'agent'
                 );
                 $this->session->set_userdata('userData', $sdata);
-                var_dump($data['userid']); die();
+            //  var_dump($sdata['agentData']['UserData']['userid']); die();
                 redirect('agent_home');
             } else if ($success['usertype'] == 'user') {
 

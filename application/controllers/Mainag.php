@@ -69,9 +69,11 @@ class Mainag extends CI_Controller{
         if ($this->role == 'agent')
         {
             $curr_login = $this->session->userData('userData');
-            
 
-            $my_props = $this->Property_model->get_prop_where('agent_id', $curr_login['agentData']['AgentData']['id']);
+           // var_dump($curr_login); 
+            //var_dump($curr_login['agentData']['UserData']['userid']); die();
+
+            $my_props = $this->Property_model->get_prop_where('agent_id', $curr_login['agentData']['UserData']['userid']);
             $viewdata['my_prop'] = $my_props; 
 
             $viewdata['agentdata'] = $curr_login['agentData']['AgentData']; 
