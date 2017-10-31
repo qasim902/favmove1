@@ -379,6 +379,19 @@
         });
        
     });
+    // $(document).ready(function() { 
+    //     $('#agent_image').change(function() {
+    //         $('#agent_image_sho').val($('#agent_image').val());
+    //     });
+    // });
+    $('#agent_image').change(function() {
+        var filename = $(this).val();
+        var lastIndex = filename.lastIndexOf("\\");
+        if (lastIndex >= 0) {
+            filename = filename.substring(lastIndex + 1);
+        }
+        $('#agent_image_sho').val(filename);
+    });
     </script>
 
     </body>

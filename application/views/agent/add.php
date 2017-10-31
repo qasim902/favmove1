@@ -57,7 +57,7 @@
 												Upload Logo&hellip; <input type="file" name="agent_image" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="agent_image" style="display: none;" />
 											</span>
 										</label>
-										<input  type="text" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
+										<input  type="text" id="agent_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
 									</div>
 							</div>
 							<div class="col-md-6">
