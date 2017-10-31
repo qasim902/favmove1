@@ -309,70 +309,60 @@
                 <div class="container-2">
                   <div class="row">
                     <div class="col-md-4 col-sm-4">
-                        <div class="checkbox">
-                          <label><input type="checkbox" value="">Option 1</label>
-                        </div>
-                      <div class=" white">
-                        <input type="checkbox" value="1" value="1" name="AC" />
-                        <span>Air Conditioning</span>
+                      <div class="checkbox">
+                          <label><input type="checkbox" value="1" value="1" name="AC" />Air Conditioning</label>
+                      </div>
+                      <div class=" checkbox">
+                          <label><input type="checkbox" value="1" name="Barbeque" />
+                        Barbeque Grill</label>
+                      </div>
+                      <div class=" checkbox">
+                          <label><input type="checkbox" value="1" name="Basement" />
+                        Basement</label>
                       </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                      <div class=" white">
-                        <input type="checkbox" value="1" name="Barbeque" />
-                        <span>Barbeque Grill</span>
+                      
+                      <div class=" checkbox">
+                          <label><input type="checkbox" value="1" name="Lawn" />
+                        Lawn</label>
+                      </div>
+                      <div class="checkbox">
+                          <label><input type="checkbox" value="1" name="Balcony" />
+                        Balcony</label>
                       </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                      <div class=" white">
-                        <input type="checkbox" value="1" name="Basement" />
-                        <span>Basement</span>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                      <div class=" white">
-                        <input type="checkbox" value="1" name="Lawn" />
-                        <span>Lawn</span>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                      <div class="white">
-                        <input type="checkbox" value="1" name="Balcony" />
-                        <span>Balcony</span>
-                      </div>
-                    </div>
-                    <!-- <div class="col-md-4 col-sm-4">
-                          <div class=" white">
+                      <!-- <div class="col-md-4 col-sm-4">
+                          <div class=" checkbox">
                               <input type="checkbox" value="1" name="Swimming Pool" />
                               <span>Swimming Pool</span>
                           </div>
                       </div> -->
-                    <div class="col-md-4 col-sm-4">
-                      <div class=" white">
-                        <input type="checkbox" value="1" name="Laundry" />
-                        <span>Laundry Room</span>
+                      <div class=" checkbox">
+                          <label><input type="checkbox" value="1" name="Laundry" />
+                        Laundry Room</label>
                       </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                      <div class=" white">
-                        <input type="checkbox" value="1" name="Home Theater" />
-                        <span>Home Theater</span>
+                    
+                      <div class=" checkbox">
+                          <label><input type="checkbox" value="1" name="Home Theater" />
+                        Home Theater</label>
                       </div>
                     </div>
                     <!--  <div class="col-md-4 col-sm-4">
-                          <div class=" white">
+                          <div class=" checkbox">
                               <input type="checkbox" name="Smoking allowed" />
                               <span>Smoking allowed</span>
                           </div>
                       </div> -->
                     <!--  <div class="col-md-4 col-sm-4">
-                          <div class=" white">
+                          <div class=" checkbox">
                               <input type="checkbox" name="Cable TV" />
                               <span>Cable TV</span>
                           </div>
                       </div> -->
                     <!--  <div class="col-md-4 col-sm-4">
-                          <div class=" white">
+                          <div class=" checkbox">
                               <input type="checkbox" name="Window Coverings" />
                               <span>Window Coverings</span>
                           </div>
