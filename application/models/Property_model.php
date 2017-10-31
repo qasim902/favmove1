@@ -189,7 +189,18 @@ class Property_model extends CI_Model
         $this->db->like('title', $data['title']);
         $this->db->like('prop_type', $data['prop_type']);
         $this->db->like('town_id', $data['town_id']);
-        $this->db->like('status', $data['status']);
+        $this->db->where('bathrooms >=', $data['bathrooms']);
+        $this->db->where('bedrooms >=', $data['bedrooms']);
+        $this->db->where('area <=', $data['min_area']);
+        $this->db->where('area >', $data['max_area']);
+        $this->db->where('prop_details.price <=', $data['min_price']);
+        $this->db->where('prop_details.price >', $data['max_price']);
+
+
+        // $this->db->like('status', $data['status']);
+        // $this->db->like('status', $data['status']);
+        // $this->db->like('status', $data['status']);
+
         
 
         var_dump($this->db->get()->result_array()) ; die();

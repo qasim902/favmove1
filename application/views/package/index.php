@@ -32,7 +32,6 @@ echo "<script>
 							 
 							<th>Package Name</th>
 							<th>Package Price</th>
-							<th>Date Created</th>
 							<th>Listing Limit</th>
 							<th>Featured Limit</th>
 							<th>User Type</th>
@@ -51,7 +50,7 @@ echo "<script>
 								<?php echo "£ ". $p['package_price']; ?>
 							</td>
 							<td>
-								<?php echo $p['date_created']; ?>
+								
 							</td>
 							<td>
 								<?php echo $p['num_listing_limit']; ?>

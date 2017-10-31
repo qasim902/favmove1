@@ -197,15 +197,15 @@ class Main extends CI_Controller
        'town_id'=>$town_id, 
        'prop_type'=>$prop_type, 
        'status'=>$prop_stat, 
-      'bed'=> $bed, 
-      'bath'=>$bath, 
+      'bedrooms'=> $bed, 
+      'bathrooms'=>$bath, 
       'min_area'=>$min_area,
        'max_area'=>$max_area, 
        'min_price'=>$min_price, 
       'max_price'=>$max_price,
      
     ); 
-       
+       //var_dump($data); die();
         $this->load->model('property_model');
         var_dump($this->property_model->mysearch($data));
 
