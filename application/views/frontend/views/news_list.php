@@ -29,7 +29,7 @@
                <div class="news-1-box clearfix">
                   <div class="col-md-5 col-sm-5 col-xs-12">
                      <div class="image-2">
-                        <a href="news_detail?id=<?= $news['id']?>"><img src="resources/img/news/<?=$news['id']?>/blog-1.jpg" alt="image" class="img-responsive"/></a>
+                        <a href="news_detail?id=<?= $news['id']?>"><img src="<?php echo base_url('resources/img/news/'.$news['image_path']);?>" alt="image" class="img-responsive"/></a>
                      </div>
                   </div>
                   <div class="col-md-7 col-sm-7 col-xs-12 padding-left-25">
