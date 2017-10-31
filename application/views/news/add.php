@@ -68,10 +68,10 @@ echo "<script>
 									<div class="input-group agncy_btn">
 										<label class="input-group-btn">
 											<span class="btn btn-primary">
-												Upload Image&hellip; <input type="file" name="user_file" value="" class="form-control" id="img_path" style="display: block;" />
+												Upload Image&hellip; <input type="file" name="user_file" value="" class="form-control" id="upload_image" style="display: none;" />
 											</span>
 										</label>
-										<!-- <input name="img_path" type="text" value="" class="form-control"  readonly> -->
+										<input name="upload_image_sho" type="text" value="" class="form-control"  readonly>
 									</div>
 									<span class="text-danger">
 										<?php echo form_error('img_path');?>

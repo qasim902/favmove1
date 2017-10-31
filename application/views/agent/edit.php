@@ -11,46 +11,14 @@
 					<div class="callus clearfix border_radius submit_property">
 						<div class="row clearfix">
 							<div class="col-md-6">
-								<label for="package_id" class="control-label">Package</label>
+								<label for="name" class="control-label">First Name</label>
 								<div class="form-group">
-									<select name="package_id" class="form-control">
-										<option value="">select package</option>
-										<?php 
-								foreach($all_packages as $package)
-								{
-									$selected = ($package['id'] == $agent['package_id']) ? ' selected="selected"' : "";
-
-									echo '<option value="'.$package['id'].'" '.$selected.'>'.$package['package_name'].'</option>';
-								} 
-								?>
-									</select>
+									<input type="text" name="name" value="<?php echo ($this->input->post('name') ? $this->input->post('name') : $agent['name']); ?>"
+									 class="form-control" id="name" />
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label for="agency_id" class="control-label">Agency</label>
-								<div class="form-group">
-									<select name="agency_id" class="form-control">
-										<option value="">select agency</option>
-										<?php 
-								foreach($all_agency as $agency)
-								{
-									$selected = ($agency['id'] == $agent['agency_id']) ? ' selected="selected"' : "";
-
-									echo '<option value="'.$agency['id'].'" '.$selected.'>'.$agency['name'].'</option>';
-								} 
-								?>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="password" class="control-label">Password</label>
-								<div class="form-group">
-									<input type="text" name="password" value="<?php echo ($this->input->post('password') ? $this->input->post('password') : $agent['password']); ?>"
-									 class="form-control" id="password" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="name" class="control-label">Name</label>
+								<label for="name" class="control-label">Last Name</label>
 								<div class="form-group">
 									<input type="text" name="name" value="<?php echo ($this->input->post('name') ? $this->input->post('name') : $agent['name']); ?>"
 									 class="form-control" id="name" />
@@ -71,31 +39,108 @@
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label for="agent_image" class="control-label">Agent Image</label>
+								<label for="password" class="control-label">Password</label>
 								<div class="form-group">
-									<input type="text" name="agent_image" value="<?php echo ($this->input->post('agent_image') ? $this->input->post('agent_image') : $agent['agent_image']); ?>"
-									 class="form-control" id="agent_image" />
+									<input type="text" name="password" value="<?php echo ($this->input->post('password') ? $this->input->post('password') : $agent['password']); ?>"
+									 class="form-control" id="password" />
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label for="property_list" class="control-label">Property List</label>
+								<label for="email" class="control-label">Contact</label>
 								<div class="form-group">
-									<input type="text" name="property_list" value="<?php echo ($this->input->post('property_list') ? $this->input->post('property_list') : $agent['property_list']); ?>"
-									 class="form-control" id="property_list" />
+									<input type="text" name="contact" value="<?php echo ($this->input->post('contact') ? $this->input->post('contact') : $agent['contact']); ?>"
+									 class="form-control" id="contact" />
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label for="last_logintime" class="control-label">Last Logintime</label>
-								<div class="form-group">
-									<input type="text" name="last_logintime" value="<?php echo ($this->input->post('last_logintime') ? $this->input->post('last_logintime') : $agent['last_logintime']); ?>"
-									 class="has-datetimepicker form-control" id="last_logintime" />
+								<label for="agent_image" class="control-label">Edit Agent Image</label>
+								<div class="input-group agncy_btn">
+									<label class="input-group-btn">
+										<span class="btn btn-primary">
+											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo ($this->input->post('agent_image') ? $this->input->post('agent_image') : $agent['agent_image']); ?>" class="form-control" id="upload_image" style="display: none;" />
+										</span>
+									</label>
+									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
 								</div>
 							</div>
 							<div class="col-md-6">
-								<label for="added_date" class="control-label">Added Date</label>
+								<label for="package_id" class="control-label">Package</label>
 								<div class="form-group">
-									<input type="text" name="added_date" value="<?php echo ($this->input->post('added_date') ? $this->input->post('added_date') : $agent['added_date']); ?>"
-									 class="form-control" id="added_date" />
+									<select name="package_id" class="form-control">
+										<option value="">select package</option>
+										<?php 
+								foreach($all_packages as $package)
+								{
+									$selected = ($package['id'] == $agent['package_id']) ? ' selected="selected"' : "";
+
+									echo '<option value="'.$package['id'].'" '.$selected.'>'.$package['package_name'].'</option>';
+								} 
+								?>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="email" class="control-label">Title</label>
+								<div class="form-group">
+									<input type="text" name="title" value="<?php echo ($this->input->post('title') ? $this->input->post('title') : $agent['title']); ?>"
+										class="form-control" id="title" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="fb_link" class="control-label">Facebook Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+										<input type="text" name="fb_link" value="<?php echo ($this->input->post('fb_link') ? $this->input->post('fb_link') : $agency['fb_link']); ?>" class="form-control" id="fb_link" />
+										<span class="text-danger"><?php echo form_error('fb_link');?></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="linkedin_link" class="control-label">Linkedin Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+										<input type="text" name="linkedin_link" value="<?php echo ($this->input->post('linkedin_link') ? $this->input->post('linkedin_link') : $agency['linkedin_link']); ?>" class="form-control" id="linkedin_link" />
+										<span class="text-danger"><?php echo form_error('linkedin_link');?></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="twit_link" class="control-label">Twitter Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+										<input type="text" name="twit_link" value="<?php echo ($this->input->post('twit_link') ? $this->input->post('twit_link') : $agency['twit_link']); ?>" class="form-control" id="twit_link" />
+										<span class="text-danger"><?php echo form_error('twit_link');?></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="gplus_link" class="control-label">Google plus Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
+										<input type="text" name="gplus_link" value="<?php echo ($this->input->post('gplus_link') ? $this->input->post('gplus_link') : $agency['gplus_link']); ?>" class="form-control" id="gplus_link" />
+										<span class="text-danger"><?php echo form_error('gplus_link');?></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="youtube_link" class="control-label">Youtube Link</label>
+								<div class="form-group">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></span>
+										<input type="text" name="youtube_link" value="<?php echo ($this->input->post('youtube_link') ? $this->input->post('youtube_link') : $agency['youtube_link']); ?>" class="form-control" id="youtube_link" />
+										<span class="text-danger"><?php echo form_error('youtube_link');?></span>
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-md-6">
+								<label for="description" class="control-label">Description</label>
+								<div class="form-group">
+									<textarea name="description" class="form-control" id="description"><?php echo ($this->input->post('description') ? $this->input->post('description') : $agent['description']); ?></textarea>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -103,40 +148,6 @@
 								<div class="form-group">
 									<input type="text" name="address" value="<?php echo ($this->input->post('address') ? $this->input->post('address') : $agent['address']); ?>"
 									 class="form-control" id="address" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="activated" class="control-label">Activated</label>
-								<div class="form-group">
-									<input type="text" name="activated" value="<?php echo ($this->input->post('activated') ? $this->input->post('activated') : $agent['activated']); ?>"
-									 class="form-control" id="activated" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="package_lastpayment" class="control-label">Package Lastpayment</label>
-								<div class="form-group">
-									<input type="text" name="package_lastpayment" value="<?php echo ($this->input->post('package_lastpayment') ? $this->input->post('package_lastpayment') : $agent['package_lastpayment']); ?>"
-									 class="has-datetimepicker form-control" id="package_lastpayment" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="last_editip" class="control-label">Last Editip</label>
-								<div class="form-group">
-									<input type="text" name="last_editip" value="<?php echo ($this->input->post('last_editip') ? $this->input->post('last_editip') : $agent['last_editip']); ?>"
-									 class="form-control" id="last_editip" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="payment_details" class="control-label">Payment Details</label>
-								<div class="form-group">
-									<input type="text" name="payment_details" value="<?php echo ($this->input->post('payment_details') ? $this->input->post('payment_details') : $agent['payment_details']); ?>"
-									 class="form-control" id="payment_details" />
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label for="description" class="control-label">Description</label>
-								<div class="form-group">
-									<textarea name="description" class="form-control" id="description"><?php echo ($this->input->post('description') ? $this->input->post('description') : $agent['description']); ?></textarea>
 								</div>
 							</div>
 						</div>
