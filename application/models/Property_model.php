@@ -181,6 +181,96 @@ class Property_model extends CI_Model
 
     function mysearch($data)
     {
+        //var_dump($data['price']); die();
+        $this->db->select('*');
+        $this->db->from('property');
+        $this->db->join('prop_details', 'property.prop_id = prop_details.prop_id');
+        $this->db->join('features', 'property.prop_id = features.prop_id');
+        $this->db->like('title', $data['title']);
+        $this->db->like('prop_type', $data['prop_type']);
+        $this->db->like('town_id', $data['town_id']);
+        $this->db->like('status', $data['status']);
+        
 
+        var_dump($this->db->get()->result_array()) ; die();
+       // if (!empty($data['keyword']))
+      //  {
+       // $this->db->like('title', $data['title']);
+        //$this->db->like('description',$data['title']);
+        //$this->db->like('town_id', $data['town_id']);
+      //  $this->db->like('prop_type', $data['prop_type']);
+        
+        //$this->db->like('bedrooms', $data['bed']);
+        //$this->db->like('bathrooms', $data['bath']);
+      //  $this->db->or_like('area', $data['min_area']);
+       // $this->db->or_like('area', $data['max_area']);
+      // $this->db->or_like('price', $data['min_price']);
+       //$this->db->or_like('price', $data['max_price']);
+      
+     //   }
+        
+        $conditions = "";
+
+    //     if (!empty($data['town_id']))
+    //     {
+    //         $conditions .= 'town_id = "'.$data['town_id'].'" AND';
+    //         //var_dump($conditions) ; die();
+    //     }
+    //     if (!empty($data['prop_type']))
+    //     {
+    //         $conditions .= ' prop_type = "'.$data['prop_type'].'"';
+    //     }
+    //      if (!empty($data['prop_stat']))
+    //     {
+    //         $conditions .= ' status = "'.$data['prop_stat'].'" AND';
+    //     }
+
+    //     if (!empty($data['bath']))
+    //     {
+    //          $conditions .= ' bathrooms = "'.$data['bath'].'" AND';
+    //     }
+
+    //     if (!empty($data['bed']))
+    //     {
+    //         $conditions .= ' bedrooms = "'.$data['bed'].'" AND';
+    //     }
+
+    //     if (!empty($data['min_area']))
+    //     {
+    //         $conditions .= ' prop_details.area >= "'.$data['min_area'].'" AND';
+    //     }
+    //     if (!empty($data['max_area']))
+    //     {
+    //         $conditions .= ' prop_details.area <= "'.$data['max_area'].'" AND';
+    //     }
+
+    //   if (!empty($data['min_price']))
+    //     {
+    //         $conditions .= ' price >= "'.$data['min_price'].'" AND';
+    //     }
+
+    //    if (!empty($data['max_price']))
+    //     {
+    //         $conditions .= ' price <= "'.$data['max_price'].'" AND';   
+    //     }
+        //$conditions .= ' published = "1"';
+        //$this->db->where($data);
+        // print_r($conditions);
+        //$query = $this->db->get();        
+
+       // return $query->result_array();
+
+       
     }
+        // $this->db->like('title',$data['title']);
+        // $this->db->like('town_id',$data['town_id']);
+        // $this->db->like('status',$data['status']);
+        // $this->db->like('price',$data['price']);
+        // $this->db->like('prop_type',$data['prop_type']);
+        // $this->db->like('prop_type',$data['prop_type']);
+        // $this->db->like('prop_type',$data['prop_type']);
+        // $this->db->like('prop_type',$data['prop_type']);
+        // $this->db->like('prop_type',$data['prop_type']);
+        
+    
 }
