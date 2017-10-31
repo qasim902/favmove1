@@ -88,7 +88,18 @@ function get_regionpostcodes($region, $ukr)
         {
             $this->db->limit($params['limit'], $params['offset']);
         }
+        $countries=json_encode($this->db->get('uk_towns')->result_array());
+        //var_dump($countries); die();
         return $this->db->get('uk_towns')->result_array();
+        
+    }
+    function get_towns()
+    {
+        $this->db->distinct();
+        $this->db->select('town');
+        $ass=$this->db->get('uk_towns')->result_array();
+        $countries=json_encode($ass);
+        
     }
         
     /*
