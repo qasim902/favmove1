@@ -8,7 +8,7 @@
 				</div>
 			</div>
 			<div class="box-body">
-			<?php
+				<?php
 if($this->session->flashdata('successsub'))
 {
     echo "<br>
@@ -19,17 +19,17 @@ echo $this->session->flashdata('successsub');
   echo "</div> 
   </div>";
 echo "<script>
-    window.location.hash = '#alert-pop';
-    
+	window.location.hash = '#alert-pop';
+
 </script>";
 }
 ?>
-</div>
-<div class="box-body">
+			</div>
+			<div class="box-body">
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<tr>
-							 
+
 							<th>Package Name</th>
 							<th>Package Price</th>
 							<th>Listing Limit</th>
@@ -42,15 +42,12 @@ echo "<script>
 						</tr>
 						<?php foreach($packages as $p){ ?>
 						<tr>
-						
+
 							<td>
 								<?php echo $p['package_name']; ?>
 							</td>
 							<td>
 								<?php echo "£ ". $p['package_price']; ?>
-							</td>
-							<td>
-								
 							</td>
 							<td>
 								<?php echo $p['num_listing_limit']; ?>
