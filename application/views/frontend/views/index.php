@@ -335,25 +335,25 @@
           </div> -->
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class=" white">
-              <input type="checkbox" name="AC" />
+              <input type="checkbox" name="AC" value="1">
               <span>Air Conditioning</span>
             </div>
           </div> 
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class=" white">
-              <input type="checkbox" name="bbq" />
+              <input type="checkbox" name="bbq" value="1">
               <span>Barbeque Grill</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class=" white">
-              <input type="checkbox" name="dryer" />
-              <span>Dryer</span>
+              <input type="checkbox" name="Balcony" value="1">
+              <span>Balcony</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class="white">
-              <input type="checkbox" name="Laundry" />
+              <input type="checkbox" name="Laundry" value="1">
               <span>Laundry</span>
             </div>
           </div>
@@ -362,20 +362,20 @@
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class="white">
               
-                <input name="oven" type="checkbox"> Oven
-                <span>Oven</span>
+                <input name="Theater" type="checkbox" value="1"> 
+                <span>Theater</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class="white">
-              <input type="checkbox" name="shower" />
-              <span>Outdoor Shower</span>
+              <input type="checkbox" name="Lawn" value="1">
+              <span>Lawn</span>
             </div>
           </div>
           <div class="col-md-3 col-sm-3 col-xs-4">
             <div class="white">
-              <input type="checkbox" name="spool" />
-              <span>Swimming Pool</span>
+              <input type="checkbox" name="Basement" value="1">
+              <span>Basement</span>
             </div>
           </div>
           

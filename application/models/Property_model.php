@@ -191,6 +191,14 @@ class Property_model extends CI_Model
         $max_area = $data['max_area'];
         $min_price = $data['min_price'];
         $max_price = $data['max_price'];
+
+        $AC = $data['AC'];
+        $Barbeque = $data['Barbeque'];
+        $Laundry = $data['Laundry'];
+        $Theater = $data['theater'];
+        $Lawn = $data['Lawn'];
+        $Basement = $data['Basement'];
+        
         if($title == "")
         {
             $title = "";
@@ -217,8 +225,7 @@ class Property_model extends CI_Model
         }
         if($min_price == 0)
         {
-            $min_price = 0;
-            
+            $min_price = 0;   
         }
         if($max_area == 0)
         {
@@ -229,7 +236,6 @@ class Property_model extends CI_Model
         }
         if($max_price == 0)
         {
-           
             $max_price = 10000000;   
         }
         //var_dump($data['price']); die()

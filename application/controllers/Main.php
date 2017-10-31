@@ -191,8 +191,14 @@ class Main extends CI_Controller
        $max_area = $this->input->post('max_area') ;
        $min_price = $this->input->post('min_price');
        $max_price =  $this->input->post('max_price'); 
-       
-       $max_price =  $this->input->post('max_price'); 
+
+       $AC =  $this->input->post('AC');
+       $Barbeque =  $this->input->post('bbq');
+       $Laundry =  $this->input->post('Laundry');
+       $Theater =  $this->input->post('Theater');
+       $Lawn =  $this->input->post('Lawn');
+       $Basement =  $this->input->post('Basement');
+       var_dump($AC); die();
 
        $data = array(
         'title' =>$keyword, 
@@ -205,6 +211,13 @@ class Main extends CI_Controller
        'max_area'=>$max_area, 
        'min_price'=>$min_price, 
       'max_price'=>$max_price,
+      'AC' => $AC,
+      'Barbeque' => $Barbeque,
+      'Laundry' => $Laundry,
+      'theater' => $Theater,
+      'Lawn' => $Lawn,
+      'Basement' => $Basement,
+
      
     ); 
        //var_dump($data); die();
