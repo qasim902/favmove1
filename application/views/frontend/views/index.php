@@ -138,7 +138,7 @@
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="single-query form-group">
-            <div class="intro">
+            <div class="intro town_dtl">
               <select name="town_id">
                 <option value="">Select Town</option>
                 <?php 

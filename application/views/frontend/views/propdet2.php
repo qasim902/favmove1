@@ -24,7 +24,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 listing1 property-details">
-        <h2 class="text-uppercase"><?= $viewdata['property']['title'] ?></h2>
+        <h3 class="text-uppercase"><?= $viewdata['property']['title'] ?></h3>
         <p class="bottom10"><?= $viewdata['property']['address'] ?></p>
         <div id="property-d-1" class="owl-carousel big single">
           <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg' );?>" alt="image"/></div>
