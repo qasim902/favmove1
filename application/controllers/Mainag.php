@@ -298,7 +298,7 @@ class Mainag extends CI_Controller{
             
         }
     }
-    function addnewagent()
+    function add_agent()
     {
         $data = array(
         'title' => $this->input->post('title'),

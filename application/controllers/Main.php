@@ -969,6 +969,62 @@ function inboxag()
     }
     redirect($this->agent->referrer());
 }
+function add_new_agent()
+{
+    {
+        $data = array(
+        'title' => $this->input->post('title'),
+        'fname' => $this->input->post('fname'),
+        'lname' => $this->input->post('lname'),
+        'username' => $this->input->post('username'),
+        'email' => $this->input->post('email'),
+        'password' => $this->input->post('password'),
+        'description' => $this->input->post('description'),
+        'image' => $this->input->post('user_file'),
+        'address' => $this->input->post('address'),
+        'phone' => $this->input->post('ag_phone'),
+        'fblink' => $this->input->post('fb_link'),
+        'twiterlink' => $this->input->post('twit_link'),
+        'gpluslink' => $this->input->post('gplus_link'),
+        'linkedin' => $this->input->post('li_link'),
+        'youtubelink' => $this->input->post('you_link'),
+        'pintrestlink' => $this->input->post('pin_link'),
+        'instagramlink' => $this->input->post('insta_link'),
+        'package' => $this->input->post('package'),
+        );
+
+        $path = realpath(APPPATH. '../resources/img/agents/');
+        $config['upload_path'] = $path;
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']     = '5000';
+        $config['max_width'] = '5000';
+        $config['max_height'] = '5000';
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if (!$this->upload->do_upload('user_file')) 
+        {
+            var_dump($this->upload->display_errors()); die();
+            redirect('/');
+        }
+        else
+        {
+            $filename = $this->upload->data();
+            $data['image'] = $filename['file_name'];
+            $this->load->model('agent_model');
+            $ag_added = $this->agent_model->add_agent($data);
+            $this->session->set_flashdata('successsub', "News successfully added");
+            redirect('/');
+        }    
+
+
+        
+        if(ag_added)
+        {
+            $this->session->set_flashdata('successsub', "This property is already added into your favourite list");
+        }
+    }
+}
 
 
 }

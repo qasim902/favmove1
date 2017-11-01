@@ -150,7 +150,7 @@ echo "<script>
                   <div class="col-sm-12">
                     <div class="input-group form-group image-preview">
                       <label style="color:white;" class="input-group form-group">Upload Profile Picture</label>
-                        <input type="file" name="agentimg" placeholder="Upload Agent Image" > 
+                        <input type="file" name="user_file" placeholder="Upload Agent Image" > 
                     </div>
                   </div>
                   <div class="col-md-12 col-sm-12">
@@ -221,10 +221,14 @@ echo "<script>
                     <input type="radio" name="package" >
                    <?php echo $val['package_name'];
                    echo $val['package_price'];
-                   echo $val['package_name'];
+                   echo $val['start_date'];
+                   echo $val['end_date'];
                    echo $val['num_listing_limit'];
-                   echo $val['num_images_limit'];
                    echo $val['num_featured_limit'];
+                   echo $val['user_type'];
+                   echo $val['package_duration'];
+                   echo $val['package_days'];
+                   
 
                    ?>
                  

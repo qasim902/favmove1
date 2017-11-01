@@ -25,7 +25,7 @@ $route['aboutus'] = 'main/aboutus';
 $route['contact_submit'] = 'main/contact_submit';
 $route['subscribe'] = 'main/subscribe';
 $route['user_reg'] = 'main/user_reg';
-$route['ag_signup'] = 'main/agent_reg';
+$route['ag_signup'] = 'mainag/agent_reg';
 $route['selectpackage'] = 'main/makepayments';
 $route['userinquiry'] = 'main/makeinquiry';
 $route['agmyfavs'] = 'mainag/myfavs';
@@ -36,9 +36,10 @@ $route['updateuser'] = 'main/upuser';
 $route['agentquery'] = 'main/agent_query';
 $route['contactag'] = 'main/contactagent';
 $route['allpackages'] = 'package/showpakage';
-$route['addagent'] = 'mainag/addnewagent';
+
 $route['printpro'] = 'property/printproperty';
 $route['add'] = 'package/add';
+$route['addagent'] = 'main/add_new_agent';
 
 /*
 $route['addtofav'] will write in form or anchor tag.
