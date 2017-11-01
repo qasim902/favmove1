@@ -430,7 +430,7 @@
              <h3 class="captlize"><a href="property_detail?id=<?= $prop['prop_id'] ?>"><?= $prop['title'] ?></a></h3>
              <p><?= $prop['address'] ?></p>
           </div>
-          <div class="image"> 
+          <div class="image proprties_images"> 
             <a href="property_detail?id=<?= $prop['prop_id'] ?>"><img src="<?= $assets."img/properties/".$prop['prop_id'] ?>/latest.jpg" alt="property1" class="img-responsive"></a>
             <div class="price clearfix"> 
             <span class="tag pull-right"><?php
@@ -492,7 +492,7 @@
               <p><?= $prop['excerpt'] ?>…</p>
             </div>
             <div class="favroute clearfix">
-              <p class="pull-md-left">£ <?= $prop['price'] ?> Per Month</p>
+              <p class="pull-md-left">£ <?= $prop['price'] ?></p>
               <ul class="pull-right">
                 <li><a href="#."><i class="icon-like"></i></a></li>
                 <li><a href="#one" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
@@ -530,11 +530,11 @@
 
 
 <!--Deals-->
-<section id="deal" class="padding_bottom_half padding_top">
+<section id="deal" class="featu_pro padding_top">
   <div class="container">
     <div class="row">
       <div class="col-sm-10">
-        <h2 class="uppercase">Best Deal Properties</h2>
+        <h2 class="uppercase">Featured Properties</h2>
         <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
       </div>
     </div>
@@ -635,7 +635,7 @@
          <div class="col-md-9">
             <div class="row">
                 <div class="col-sm-10 bottom20 news_pro">
-                  <h3 class="uppercase">Property news</h3>
+                  <h2 class="uppercase">Property news</h2>
                 </div>
               </div>
             <div class="row">
@@ -647,7 +647,7 @@
                      </div>
                   </div>
                   <div class="col-md-7 col-sm-7 col-xs-12 padding-left-25">
-                     <h3><a href="news_detail?id=<?= $news['id']?>"><?= $news['title']?></a></h3>
+                     <h4><a href="news_detail?id=<?= $news['id']?>"><?= $news['title']?></a></h4>
                      <div class="news-details padding-b-10 margin-t-5">
                         <span><i class="icon-icons230"></i> by <?= $news['author']?></span>
                         <span><i class="icon-icons228"></i> <?php date('m ([ .\t-])* dd [,.stndrh\t ]+ y',strtotime($news['added_on']))?></span>

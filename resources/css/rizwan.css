@@ -423,3 +423,15 @@ display: inline-block;
   word-break: break-all; */
   height: 30px;
 }
+.proprties_images { height: 199px; width: 360px; overflow: hidden; }
+h2{
+  font-weight: 300;
+}
+.featu_pro {
+  padding-top: 60px;
+}
+.pro_lis{
+  padding-left: 0px;
+  padding-right: 0px;
+  
+}
