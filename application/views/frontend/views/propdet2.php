@@ -81,20 +81,61 @@
                 <a href="#">View properties from this agent</a>
                 <a class="btn btn-default btn-block top10 bottom10"  onClick="window.location.hash = '#alert-pop'">Request Details</a>
               </div>
+              <div class="agent_contact agnt_dtls">
+                <div class="col-md-12 bottom10">
+                    <div class=" pull-left"><strong>Phone:</strong></div>
+                    <div class="  pull-right"><?= $viewdata['agentdata']['phone'] ?></div>
+                </div>
+                <div class="col-md-12 bottom10">
+                    <div class="pull-left  "><strong>Email Adress:</strong></div>
+                    <div class="pull-right "><?= $viewdata['agentdata']['email'] ?></div>
+                </div>
+                <div class="col-md-12 bottom10">
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong>
+                            <a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
+                          </a>
+                        </strong>
+                      </div>
+                    </div>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong>
+                            <a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a>
+                          </strong>
+                      </div>
+                    </div>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong>
+                      </div>
+                      
+                      <div class="bottom10 top10">
+                         <p>This place is for Text</p>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong><a href="send_to_friend?id=<?php echo $viewdata['property']['prop_id'];?>"> <i class="icon-mail"></i>Send to Friend</a></strong>
+                      </div>
+                    </div>
+                </div>
+              </div>
               <table class="agent_contact table">
                 <tbody>
-                  <tr class="bottom10">
+                  <!-- <tr class="bottom10">
                     <td><strong>Phone:</strong></td>
                     <td class="text-right"><?= $viewdata['agentdata']['phone'] ?></td>
                   </tr>
                   <tr>
                     <td><strong>Email Adress:</strong></td>
                     <td class="text-right"><a href="#."><?= $viewdata['agentdata']['email'] ?></a></td>
-                  </tr>
-                  <tr>
+                  </tr> -->
+                  <!-- <tr>
                     <td><strong><a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
-              
-                     <!-- <input type="hidden" name="propid" value="<?= $viewdata['property']['prop_id'] ?>"> -->
+
                     </a></strong></td>
                     <td class="text-right"><strong><a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a></strong></td>
                   </tr>
@@ -113,7 +154,7 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+              <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -134,7 +175,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               
               <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
               <ul class="social_share">
