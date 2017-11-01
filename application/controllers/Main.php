@@ -969,8 +969,30 @@ function inboxag()
     }
     redirect($this->agent->referrer());
 }
+
+
 function add_new_agent()
 {
+    $this->load->library('form_validation');
+    $this->form_validation->set_rules('title','Title','alpha', 'required' );
+    $this->form_validation->set_rules('fname','First Name','alpha', 'max_length[60]','required' );
+    $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
+    $this->form_validation->set_rules('username','User Name','alpha' ,'max_length[60]', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
+    $this->form_validation->set_rules('password','Password','max_length[60]','required');
+    $this->form_validation->set_rules('description', 'Description','required');
+    $this->form_validation->set_rules('address','Address','required');
+    $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
+    $this->form_validation->set_rules('fb_link','Facebook Link','required');
+    $this->form_validation->set_rules('twit_link','Twiter Link','required');
+    $this->form_validation->set_rules('gplus_link','Google Plus Link','required');
+    $this->form_validation->set_rules('li_link','LinkedIn Link','required');
+    $this->form_validation->set_rules('you_link','Youtube Link','required');
+    $this->form_validation->set_rules('pin_link','Pintrest Link','required');
+    $this->form_validation->set_rules('insta_link','Instagram Link','required');
+    $this->form_validation->set_rules('package','Package', 'numeric|xss_clean');
+
+    if($this->input->post() && $this->form_validation->run() == TRUE)
     {
         $data = array(
         'title' => $this->input->post('title'),
@@ -1017,12 +1039,14 @@ function add_new_agent()
             redirect('/');
         }    
 
-
-        
         if(ag_added)
         {
             $this->session->set_flashdata('successsub', "This property is already added into your favourite list");
         }
+    }
+    else
+    {
+        redirect('agent/add');
     }
 }
 

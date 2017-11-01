@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add Agent</h3>
 			</div>
-			<?php echo form_open('ag_signup'); ?>
+			<?php echo form_open('addagent'); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -16,6 +16,9 @@
 								<div class="form-group">
 									<input type="text"  placeholder="Enter First Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
 								</div>
+								<span class="text-danger">
+										<?php echo form_error('name');?>
+									</span>
 							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">Last Name</label>

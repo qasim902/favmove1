@@ -29,7 +29,7 @@ class Package extends CI_Controller{
        // $this->form_validation->set_rules('field[]', 'The field', 'numeric|xss_clean');
 		$this->form_validation->set_rules('package_name','Package Name','alpha','max_length[60]', 'required' );
 		$this->form_validation->set_rules('package_price','Package Price','numeric|xss_clean' , 'required');
-       $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','numeric|xss_clean','required');
+        $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','numeric|xss_clean','required');
         $this->form_validation->set_rules('num_featured_limit','num_featured_limit','numeric|xss_clean',  'required');
 		$this->form_validation->set_rules('user_type', 'User Type','required');
 		$this->form_validation->set_rules('package_durations','Package Duration','required');
