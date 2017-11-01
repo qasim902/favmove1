@@ -224,76 +224,91 @@ class Main extends CI_Controller
     ); 
        //var_dump($data); die();
         $this->load->model('property_model');
-        $search_result = $this->property_model->mysearch($data);
-        var_dump($search_result);
+        $this->load->model('agent_model');
+        $search_result = $this->property_model->mysearch($data); 
+        $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
+        $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
+        
+        $data = $this->data;
+             $data += array(
+         'assets' => base_url() . "resources/",
+              '_view' => 'frontend/views/search_results',
+              'viewdata' => $search_result,
+            'agdata'=> $agdata,
+            );
 
-        die();
-        if ($this->input->get('type') && $this->input->get('type') == "prop")
-        {
-
-            $params = $this->input->post();
-            $this->load->model('Property_model');
-            $properties = $this->Property_model->search_property($params);
-            
-            $viewdata = array('property'=> array(),'agentdata'=> array());
-            foreach($properties as &$prop)
-            {
-                
-                $prop['agent_id'] = $this->Agent_model->get_agent($prop['agent_id']);
-                $prop['agent_id']['agencydata'] = $this->Agency_model->get_agency($prop['agent_id']['agency_id']);
-            }
-            // print_r($this->input->post());
-            $data = $this->data;
-            $data += array(
-            'assets' => base_url() . "resources/",
-            '_view' => 'frontend/views/search_results',
-            'viewdata' => $properties);
-
+        // $this->load->view('frontend/layouts/main', $data);
         $this->load->view('frontend/layouts/main', $data);
+       // $this->load->view('frontend/views/search_results', $data);
+        // var_dump($search_result);
+
+        // die();
+        // if ($this->input->get('type') && $this->input->get('type') == "prop")
+        // {
+
+        //     $params = $this->input->post();
+        //     $this->load->model('Property_model');
+           //  $properties = $this->Property_model->search_property($params); 
+            
+        //     $viewdata = array('property'=> array(),'agentdata'=> array());
+        //     foreach($properties as &$prop)
+        //     {
+                
+        //         $prop['agent_id'] = $this->Agent_model->get_agent($prop['agent_id']);
+        //         // $prop['agent_id']['agencydata'] = $this->Agency_model->get_agency($prop['agent_id']['agency_id']);
+        //     }
+        //     // print_r($this->input->post());
+        //     $data = $this->data;
+        //     $data += array(
+        // 'assets' => base_url() . "resources/",
+        //      '_view' => 'frontend/views/search_results',
+        //      'viewdata' => $properties);
+
+        // $this->load->view('frontend/layouts/main', $data);
 
                    
-        }
-        else if ($this->input->get('type') && $this->input->get('type') == "ag")
-        {
-            $params = $this->input->post();
-            $this->load->model('Agent_model');
-            $agents = $this->Agency_model->search_agent($params);
+        // }
+        // else if ($this->input->get('type') && $this->input->get('type') == "ag")
+        // {
+        //     $params = $this->input->post();
+        //     $this->load->model('Agent_model');
+        //     $agents = $this->Agency_model->search_agent($params);
 
-        }
-        else
-        {
+        // }
+        // else
+        // {
 
-            $all_uk_regions = $this->Uk_town_model->get_ukregions();
+        //     $all_uk_regions = $this->Uk_town_model->get_ukregions();
 
-            // $uk_town = array();
-            foreach ($all_uk_regions as &$region)
-            {
+        //     // $uk_town = array();
+        //     foreach ($all_uk_regions as &$region)
+        //     {
 
-                 $region['subregions'] = $this->Uk_town_model->get_regions($region['uk_region']);
-                 $region['prop_count'] = 0;
-                 foreach ($region['subregions'] as &$region1)
-                 {
-                    $region1['postcodes'] = $this->Uk_town_model->get_regionpostcodes($region1['region'], $region['uk_region']);
-                    $region1['prop_count'] = $this->Property_model->get_propcount($region1['postcodes']);
-                    $region['prop_count']+= $region1['prop_count'];
-                 }
-                 // echo $region['uk_region'];echo "<br><br><br>";
-                 // echo $region['prop_count'];echo "<br><br><br>";
-                 // print_r($region['subregions']); echo "<br><br><br>";
-                 // print_r($region);
-                 //  echo "<br><br><br>";
+        //          $region['subregions'] = $this->Uk_town_model->get_regions($region['uk_region']);
+        //          $region['prop_count'] = 0;
+        //          foreach ($region['subregions'] as &$region1)
+        //          {
+        //             $region1['postcodes'] = $this->Uk_town_model->get_regionpostcodes($region1['region'], $region['uk_region']);
+        //             $region1['prop_count'] = $this->Property_model->get_propcount($region1['postcodes']);
+        //             $region['prop_count']+= $region1['prop_count'];
+        //          }
+        //          // echo $region['uk_region'];echo "<br><br><br>";
+        //          // echo $region['prop_count'];echo "<br><br><br>";
+        //          // print_r($region['subregions']); echo "<br><br><br>";
+        //          // print_r($region);
+        //          //  echo "<br><br><br>";
 
-            }
+        //     }
             
-            $viewdata['all_regions'] = $all_uk_regions;
-            $data = $this->data;
-            $data += array(
-                'viewdata' => $viewdata,
-            'assets' => base_url() . "resources/",
-            '_view' => 'frontend/views/search_page');
+        //     $viewdata['all_regions'] = $all_uk_regions;
+        //     $data = $this->data;
+        //     $data += array(
+        //         'viewdata' => $viewdata,
+        //     'assets' => base_url() . "resources/",
+        //     '_view' => 'frontend/views/search_page');
 
-        $this->load->view('frontend/layouts/main', $data);
-        }
+        // $this->load->view('frontend/layouts/main', $data);
+        // }
     }
 
 
@@ -972,15 +987,15 @@ function inboxag()
 function add_new_agent()
 {
     $this->load->library('form_validation');
-    $this->form_validation->set_rules('select_one','Select One', 'required' );
-    $this->form_validation->set_rules('fname','First Name','', 'max_length[60]','required' );
-    $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
-    $this->form_validation->set_rules('username','User Name','alpha' ,'max_length[60]', 'required');
-    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
-    $this->form_validation->set_rules('password','Password','max_length[60]','required');
-    $this->form_validation->set_rules('description', 'Description','required');
-    $this->form_validation->set_rules('address','Address','required');
-    $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
+    //$this->form_validation->set_rules('select_one','Select One', 'required' );
+   // $this->form_validation->set_rules('fname','First Name', 'max_length[60]','required' );
+    // $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
+    // $this->form_validation->set_rules('username','User Name','alpha' ,'max_length[60]', 'required');
+    // $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
+    // $this->form_validation->set_rules('password','Password','max_length[60]','required');
+    // $this->form_validation->set_rules('description', 'Description','required');
+    // $this->form_validation->set_rules('address','Address','required');
+    // $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
     //$this->form_validation->set_rules('fb_link','Facebook Link','required');
     //$this->form_validation->set_rules('twit_link','Twiter Link','required');
     //$this->form_validation->set_rules('gplus_link','Google Plus Link','required');
@@ -990,7 +1005,7 @@ function add_new_agent()
     //$this->form_validation->set_rules('insta_link','Instagram Link','required');
     $this->form_validation->set_rules('package','Package', 'numeric|xss_clean');
 
-    if($this->input->post() && $this->form_validation->run() == TRUE)
+    if($this->input->post())
     {
         $data = array(
         'title' => $this->input->post('select_one'),

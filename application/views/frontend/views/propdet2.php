@@ -27,22 +27,23 @@
         <h2 class="text-uppercase"><?= $viewdata['property']['title'] ?></h2>
         <p class="bottom10"><?= $viewdata['property']['address'] ?></p>
         <div id="property-d-1" class="owl-carousel single">
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item"><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg' );?>" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg' );?>" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg' );?>" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details3.jpg' );?>" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details4.jpg' );?>" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details5.jpg' );?>" alt="image"/></div>
+          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg' );?>" alt="image"/></div>
+
         </div>
         <div id="property-d-1-2" class="owl-carousel single">
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-1-1.jpg" alt="image"/></div>
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-s-1-2.jpg" alt="image"/></div>
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-s-1-3.jpg" alt="image"/></div>
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-s-1-4.jpg" alt="image"/></div>
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-s-1-5.jpg" alt="image"/></div>
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-s-1-1.jpg" alt="image"/></div>
-          <div class="item" ><img src="<?= $assets;?>img/property-details/property-d-s-1-2.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-1.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-2.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-3.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-4.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-5.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-1.jpg" alt="image"/></div>
+          <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-2.jpg" alt="image"/></div>
         </div>
         <div class="property_meta bg-black bottom40">
           <span><i class="icon-select-an-objecto-tool"></i><?= $viewdata['prop_detail']['area'] ?> sq ft</span>
@@ -62,7 +63,7 @@
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
                 <div class="text-center"> <?php //var_dump($viewdata); die(); ?>
-                     <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency">
+                     <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail">
                 </div>
               <!-- <div class="image">
                 <img src="<?= $assets;?>img/agent-one.jpg" alt="Agents">
