@@ -41,13 +41,13 @@
         </div>
       <div class="col-sm-4 bottom40">
         <div class="agent_wrap">
-          <h3><?= $viewdata['agent']['name'];?> </h3>
+          <h3><?= $viewdata['agent']['fname'] ." ". $viewdata['agent']['lname'];?> </h3>
           <p class="bottom30"><?= $viewdata['agent']['description'];?> </p>
           <table class="agent_contact table">
             <tbody>
               <tr class="bottom10">
                 <td><strong>Phone:</strong></td>
-                <td class="text-right"><?= $viewdata['agency']['phone'];?> </td>
+                <td class="text-right"><?= $viewdata['agent']['phone'];?> </td>
               </tr>
               <!-- <tr class="bottom10">
                 <td><strong>Mobile:</strong></td>
@@ -65,18 +65,18 @@
           </table>
           <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
           <ul class="social_share">
-            <li><a href="<?= $viewdata['agency']['fb_link'];?>" class="facebook"><i class="icon-facebook-1"></i></a></li>
-            <li><a href="<?= $viewdata['agency']['twit_link'];?>" class="twitter"><i class="icon-twitter-1"></i></a></li>
-            <li><a href="<?= $viewdata['agency']['gplus_link'];?>" class="google"><i class="icon-google4"></i></a></li>
-            <li><a href="<?= $viewdata['agency']['linkedin_link'];?>" class="linkden"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="<?= $viewdata['agency']['insta_link'];?>" class="vimo"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="<?= $viewdata['agent']['fblink'];?>" class="facebook"><i class="icon-facebook-1"></i></a></li>
+            <li><a href="<?= $viewdata['agent']['twiterlink'];?>" class="twitter"><i class="icon-twitter-1"></i></a></li>
+            <li><a href="<?= $viewdata['agent']['gpluslink'];?>" class="google"><i class="icon-google4"></i></a></li>
+            <li><a href="<?= $viewdata['agent']['linkedin'];?>" class="linkden"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="<?= $viewdata['agent']['instagramlink'];?>" class="vimo"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
       </div> 
       
-      <?php $id = $viewdata['agency']['id']; ?>
+      <?php  ?>
       <div class="col-sm-4 bottom40">
-        <form class="callus" action="inboxagent?id=<?php echo $id; ?>" method="POST">
+        <form class="callus" action="inboxagent?id=<?php $viewdata['agent']['id']?>" method="POST">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" name="name">
           </div>

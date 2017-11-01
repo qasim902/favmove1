@@ -36,7 +36,7 @@
                 <tbody>
                   <tr class="bottom10">
                     <td><strong>Phone:</strong></td>
-                    <td class="text-right"><?= $agent['agency']['phone'] ?></td>
+                    <td class="text-right"><?= $agent['agent']['phone'] ?></td>
                   </tr>
                   <tr>
                     <td><strong>Email Adress:</strong></td>

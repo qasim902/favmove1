@@ -497,7 +497,7 @@ class Main extends CI_Controller
         $this->load->model('Prop_detail_model');
         $id = $this->input->get('id');
         $agent = $this->Agent_model->get_agent($id);
-        $agency = $this->Agency_model->get_agency($agent['agency_id']);
+        //$agency = $this->Agency_model->get_agency($agent['agency_id']);
 //        $fb = $this->Agency_model->get_agency($agent['agency_id']);
 //        $tw = $this->Agency_model->get_agency($agent['agency_id']);
 //        $gplus = $this->Agency_model->get_agency($agent['agency_id']);
@@ -511,7 +511,7 @@ class Main extends CI_Controller
         }
 
         $viewdata = array('agent' => $agent,
-            'agency' => $agency, 'properties' => $properties);
+             'properties' => $properties);
 
     $data = $this->data;
         $data += array(
