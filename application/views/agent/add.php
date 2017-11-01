@@ -32,12 +32,10 @@
 								<div class="form-group">
 									<input type="text"  placeholder="Enter First Name" name="fname" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
 
-								<div class="form-group">
-									<input type="text"  placeholder="Enter First Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
  
 								</div>
 								<span class="text-danger">
-									<?php echo validation_errors('fname'); ?>
+									<?php echo form_error('fname'); ?>
 								</span>
 							</div>
 							<div class="col-md-6">

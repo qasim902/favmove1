@@ -974,8 +974,8 @@ function inboxag()
 function add_new_agent()
 {
     $this->load->library('form_validation');
-    $this->form_validation->set_rules('select_one','Select One','alpha', 'required' );
-    $this->form_validation->set_rules('fname','First Name','alpha', 'max_length[60]','required' );
+    $this->form_validation->set_rules('select_one','Select One', 'required' );
+    $this->form_validation->set_rules('fname','First Name','', 'max_length[60]','required' );
     $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
     $this->form_validation->set_rules('username','User Name','alpha' ,'max_length[60]', 'required');
     $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
@@ -1026,7 +1026,7 @@ function add_new_agent()
         $this->upload->initialize($config);
         if (!$this->upload->do_upload('user_file')) 
         {
-            echo $this->upload->display_errors()); 
+            echo $this->upload->display_errors(); 
             redirect('agent/add');
         }
         else
@@ -1049,6 +1049,10 @@ function add_new_agent()
         $data['_view'] = 'agent/add';
         $this->load->view('layouts/main',$data);
     } 
+    
+}
+function agent_new_phone()
+{
     
 }
 
