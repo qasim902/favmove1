@@ -378,4 +378,17 @@ display: inline-block;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    
+    body{
+      font-family: "Work Sans", sans-serif !important;
+    }
+  lead {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+  }

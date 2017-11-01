@@ -1026,7 +1026,7 @@ function add_new_agent()
         $this->upload->initialize($config);
         if (!$this->upload->do_upload('user_file')) 
         {
-            echo $this->upload->display_errors()); 
+            echo $this->upload->display_errors(); 
             redirect('agent/add');
         }
         else
