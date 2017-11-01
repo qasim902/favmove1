@@ -73,4 +73,5 @@ class Agent_model extends CI_Model
     {
         return $this->db->insert('agphone', $phone);
     }
+    
 }
