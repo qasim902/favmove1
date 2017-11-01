@@ -665,20 +665,20 @@
          </div>
          <aside class="col-md-3 col-xs-12">
             <div class="row">
-              <div class="col-sm-12 bottom20 news_pro">
-                <h3 class="uppercase">Property guides & tools</h3>
+              <div class="col-sm-12 bottom10 news_pro">
+                <h4 class="uppercase">Property guides & tools</h4>
               </div>
             </div>
             
             
             <div class="row">
                <div class="news-1-box">
-                  <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="col-md-12 news_pro col-sm-12 col-xs-12">
                     <a href="#">
                      <div class="image-2">
                        <img src="<?= $assets ?>img/blog-6.jpg" alt="image" class="img-responsive"/>
                      </div>
-                     <h3 class="top10 bottom10">Buying property guides</h3>
+                     <h4 class="top10 bottom10">Buying property guides</h4>
                      <p>Get the latest advice and tips on buying property</p>
                     </a>
                     <a class="btn btn-success btn-block" href="#">Browse more guides and tools</a>
@@ -688,7 +688,7 @@
             
             <div class="row">
                <div class="col-md-12 news_pro">
-                  <h3 class="top20 bottom10">Featured Properties</h3>
+                  <h4 class="top20 bottom10">Featured Properties</h4>
                </div>
                <div class="col-md-12 padding-t-30">
                   <div id="agent-2-slider" class="owl-carousel">
@@ -697,7 +697,7 @@
                            <div class="image">
                               <a href="#."><img src="<?= $assets ?>img/slider-list2.jpg" alt="listin" class="img-responsive"></a>
                               <div class="feature"><span class="tag-2">For Rent</span></div>
-                              <div class="price clearfix">
+                              <div class="price sid_b clearfix">
                                 <span class="tag fmly_hm pull-right">$8,600 Per Month - <small>Family Home</small></span>
                               </div>
                            </div>
