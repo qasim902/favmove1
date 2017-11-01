@@ -413,5 +413,32 @@ class Property_model extends CI_Model
         // $this->db->like('prop_type',$data['prop_type']);
         // $this->db->like('prop_type',$data['prop_type']);
         
+        function allproperties()
+        {
+             $query = $this->db->query("SELECT * from property");
+             return $query->num_rows();
+
+        }
+
+        function getallpropertiesies($limit, $start)
+        {
+            $this->db->limit($limit, $start);
+            $this->db->order_by('prop_id', 'desc');
+            $query = $this->db->select('*')
+            ->from('property')
+            ->get();
+            if($query->num_rows() > 0)
+            {
+                foreach ($query->result() as $row) 
+                {
+                    $data[] = $row;
+                }
+                return $data;
+            }
+            else
+            {
+                return false;
+            }
+        }
     
 }

@@ -54,7 +54,50 @@ class Main extends CI_Controller
             '_view' => 'frontend/views/index'
         );
 
-        
+        //PAGINATION START
+
+        $config['full_tag_open'] = '<div class="pagination gmpg">';
+        $config['full_tag_close'] = '</ul>';
+             
+        $config['first_link'] = FALSE;
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+             
+        $config['last_link'] = FALSE;
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+             
+        $config['next_link'] = '&raquo';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+ 
+        $config['prev_link'] = '&laquo';
+        $config['prev_tag_open'] = '<li class="pre">';
+        $config['prev_tag_close'] = '</li>';
+ 
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a></li>';
+ 
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+
+        $config['base_url'] = site_url('frontend/views/index');
+
+        $this->load->model('property_model');
+        $properties = $this->property_model->allproperties(); 
+
+        $config['total_rows'] = $properties;
+        $config['per_page'] = 5;
+        $config['uri_segment'] = 3;
+        $this->load->library('pagination');
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(0)) ? $this->uri->segment(0) : 0;
+        $data['allproperties'] = $this->property_model->getallpropertiesies($config["per_page"], $page);
+        $data['links'] = $this->pagination->create_links(); //var_dump($this->uri->segment(0)); die();
+
+        //PAGINATION END HERE
+
+
         $this->load->view('frontend/layouts/main', $data);
     }
 
@@ -223,19 +266,72 @@ class Main extends CI_Controller
      
     ); 
        //var_dump($data); die();
-        $this->load->model('property_model');
-        $this->load->model('agent_model');
-        $search_result = $this->property_model->mysearch($data); 
-        $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
-        $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
+
+
+       $config['full_tag_open'] = '<div class="pagination gmpg">';
+       $config['full_tag_close'] = '</ul>';
+            
+       $config['first_link'] = FALSE;
+       $config['first_tag_open'] = '<li>';
+       $config['first_tag_close'] = '</li>';
+            
+       $config['last_link'] = FALSE;
+       $config['last_tag_open'] = '<li>';
+       $config['last_tag_close'] = '</li>';
+            
+       $config['next_link'] = '&raquo';
+       $config['next_tag_open'] = '<li>';
+       $config['next_tag_close'] = '</li>';
+
+       $config['prev_link'] = '&laquo';
+       $config['prev_tag_open'] = '<li class="pre">';
+       $config['prev_tag_close'] = '</li>';
+
+       $config['cur_tag_open'] = '<li class="active"><a href="#">';
+       $config['cur_tag_close'] = '</a></li>';
+
+       $config['num_tag_open'] = '<li>';
+       $config['num_tag_close'] = '</li>';
+
+       $config['base_url'] = site_url('frontend/views/index');
+
+       $this->load->model('property_model');
+       $this->load->model('agent_model');
+       
+       $search_result = $this->property_model->mysearch($data); 
+       $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
+       $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
+       
+       $data = $this->data;
+            $data += array(
+        'assets' => base_url() . "resources/",
+             '_view' => 'frontend/views/search_results',
+             'viewdata' => $search_result,
+           'agdata'=> $agdata,
+           );
+       $config['total_rows'] = $search_result;
+       $config['per_page'] = 5;
+       $config['uri_segment'] = 3;
+       $this->load->library('pagination');
+       $this->pagination->initialize($config);
+       $page = ($this->uri->segment(0)) ? $this->uri->segment(0) : 0;
+       $data['allproperties'] = $this->property_model->getallpropertiesies($config["per_page"], $page);
+       $data['links'] = $this->pagination->create_links();  var_dump($this->uri->segment(1)); die();
+
+
+        // $this->load->model('property_model');
+        // $this->load->model('agent_model');
+        // $search_result = $this->property_model->mysearch($data); 
+        // $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
+        // $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
         
-        $data = $this->data;
-             $data += array(
-         'assets' => base_url() . "resources/",
-              '_view' => 'frontend/views/search_results',
-              'viewdata' => $search_result,
-            'agdata'=> $agdata,
-            );
+        // $data = $this->data;
+        //      $data += array(
+        //  'assets' => base_url() . "resources/",
+        //       '_view' => 'frontend/views/search_results',
+        //       'viewdata' => $search_result,
+        //     'agdata'=> $agdata,
+        //     );
 
         // $this->load->view('frontend/layouts/main', $data);
         $this->load->view('frontend/layouts/main', $data);
