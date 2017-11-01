@@ -10,6 +10,22 @@
 				<div class="col-sm-10 col-md-8">
 					<div class="callus clearfix border_radius submit_property">
 						<div class="row clearfix">
+							<div class="col-sm-6">
+								<label class="control-label">Title</label>
+								<div class="single-query ">
+									
+									<div class="intro">
+									<select name="select_one">
+										<option class="active">Title</option>
+										<option value="1">Mr</option>
+										<option value="2">Mrs</option>
+									</select>
+									</div>
+								</div>
+								<span class="text-danger">
+										<?php echo form_error('select_one');?>
+									</span>
+							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">First Name</label>
 								<div class="form-group">
@@ -79,13 +95,7 @@
 									</select>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<label for="email" class="control-label">Title</label>
-								<div class="form-group">
-									<input type="text" name="title" value="<?php echo ($this->input->post('title') ? $this->input->post('title') : $agent['title']); ?>"
-										class="form-control" id="title" />
-								</div>
-							</div>
+							
 							<div class="col-md-6">
 								<label for="fb_link" class="control-label">Facebook Link</label>
 								<div class="form-group">
