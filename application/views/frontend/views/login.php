@@ -108,7 +108,7 @@ echo "<script>
                   <div class=" col-sm-3 col-md-4">
                     <div class="form-group">
                       <select  class="form-control" name="title" required>
-                        <option class="active">Title</option>
+                        <option class="active" selected disabled>Title</option>
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                       </select>
@@ -117,44 +117,44 @@ echo "<script>
                   </div>
                   <div class="col-sm-3 col-md-4">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="First Name" id="usr" name="fname" >
+                      <input type="text" class="form-control" placeholder="First Name" id="usr" name="fname" value="Danish">
                     </div>
                     <span class="text-danger"><?php echo form_error('fname');?></span>
                   </div>
                   <div class="col-sm-3 col-md-4">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Last Name" id="usr" name="lname" >
+                      <input type="text" class="form-control" placeholder="Last Name" id="usr" name="lname" value="Ali">
                     </div>
                     <span class="text-danger"><?php echo form_error('lname');?></span>
                   </div>
                   <div class="col-md-6 col-sm-12">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username"  name="username">
+                        <input type="text" class="form-control" placeholder="Username"  name="username" value="DanishAli">
                       </div>
                       <span class="text-danger"><?php echo form_error('username');?></span>
                   </div>
                   <div class="col-md-6 col-sm-12">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Email Address" name="email" >
+                      <input type="text" class="form-control" placeholder="Email Address" name="email" value="Danish@gmail.com">
                     </div>
                     <span class="text-danger"><?php echo form_error('email');?></span>
                   </div>
                   <div class="col-md-6 col-sm-12">
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" name="password" >
+                      <input type="password" class="form-control" placeholder="Password" name="password" value="Danish">
                     </div>
                     <span class="text-danger"><?php echo form_error('password');?></span>
                   </div>
                   <div class="col-md-6 col-sm-12 ">
                     <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Confirm  Password" name="cpassword" >
+                      <input type="password" class="form-control" placeholder="Confirm  Password" name="cpassword"value="Danish" >
                     </div>
                     <span class="text-danger"><?php echo form_error('cpassword');?></span>
                   </div>
 
                   <div class="col-sm-12">
                       <div class="form-group">
-                        <textarea class="form-control" name="description" placeholder="Description" rows="3"></textarea>
+                        <textarea class="form-control" name="description" placeholder="Description" rows="3" >Danish ali</textarea>
                       </div> 
                       <span class="text-danger"><?php echo form_error('description');?></span>
                   </div>
@@ -177,62 +177,62 @@ echo "<script>
                   </div>
                   <div class="col-md-6 col-sm-12">
                       <div class="form-group">
-                        <input type="text"  name="ag_phone"  class="form-control" placeholder="Phone">
+                        <input type="text"  name="ag_phone"  class="form-control" placeholder="Phone" value="9309835">
                       </div>
                       <span class="text-danger"><?php echo form_error('ag_phone');?></span>
                     </div>
                   <div class="col-md-12 col-sm-12">
                     <div class="form-group">
-                      <input type="text" name="address" class="form-control" placeholder="Address">
+                      <input type="text" name="address" class="form-control" placeholder="Address" value="LAhore, Pakistan">
                     </div>
                   </div>
                   
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="icon-facebook-1"></i></span>
-                          <input  type="text" class="form-control" name="fb_link" placeholder="Facebook">
+                          <input  type="text" class="form-control" name="fb_link" placeholder="Facebook" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('fb_link');?></span>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="icon-twitter-1"></i></span>
-                          <input  type="text" class="form-control" name="twit_link" placeholder="Twitter">
+                          <input  type="text" class="form-control" name="twit_link" placeholder="Twitter" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('twit_link');?></span>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="icon-google4"></i></span>
-                          <input  type="text" class="form-control" name="gplus_link" placeholder="Google+">
+                          <input  type="text" class="form-control" name="gplus_link" placeholder="Google+" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('gplus_link');?></span>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="fa fa-linkedin"></i></span>
-                          <input  type="text" class="form-control" name="li_link" placeholder="LinkedIn">
+                          <input  type="text" class="form-control" name="li_link" placeholder="LinkedIn" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('li_link');?></span>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="fa fa-youtube"></i></span>
-                          <input  type="text" class="form-control" name="you_link" placeholder="Youtube">
+                          <input  type="text" class="form-control" name="you_link" placeholder="Youtube" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('you_link');?></span>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="fa fa-pinterest"></i></span>
-                          <input  type="text" class="form-control" name="pin_link" placeholder="Pinterest">
+                          <input  type="text" class="form-control" name="pin_link" placeholder="Pinterest" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('pin_link');?></span>
                     </div>
                     <div class="col-sm-12">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
-                          <input type="text" class="form-control" name="insta_link" placeholder="Instagram">
+                          <input type="text" class="form-control" name="insta_link" placeholder="Instagram" value="Danish">
                         </div>
                         <span class="text-danger"><?php echo form_error('insta_link');?></span>
                     </div>
