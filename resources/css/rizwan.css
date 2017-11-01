@@ -403,3 +403,7 @@ display: inline-block;
   /* .sidbar_data{
     display: inline;
   } */
+  .sidbar_data p{
+    word-break: break-all;
+    white-space: normal;
+  }

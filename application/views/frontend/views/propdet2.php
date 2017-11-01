@@ -84,29 +84,42 @@
               <div class="agent_contact agnt_dtls">
                 <div class="col-md-12 bottom10">
                     <div class=" pull-left"><strong>Phone:</strong></div>
-                    <div class="  pull-right"><?= $viewdata['agency']['phone'] ?></div>
+                    <div class="  pull-right"><?= $viewdata['agentdata']['phone'] ?></div>
                 </div>
                 <div class="col-md-12 bottom10">
                     <div class="pull-left  "><strong>Email Adress:</strong></div>
-                    <div class="pull-right "><?= $viewdata['agency']['email'] ?></div>
+                    <div class="pull-right "><?= $viewdata['agentdata']['email'] ?></div>
                 </div>
                 <div class="col-md-12 bottom10">
-                    <div class="bottom10 sidbar_data">
-                        <strong>
-                          <a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
-                        </a>
-                      </strong>
-                    </div>
-                    <div class="bottom10 sidbar_data">
-                        <strong>
-                          <a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong>
+                            <a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
+                          </a>
                         </strong>
+                      </div>
                     </div>
-                    <div class="bottom10 sidbar_data">
-                        <strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong>
+                            <a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a>
+                          </strong>
+                      </div>
                     </div>
-                    <div class="bottom10 sidbar_data">
-                        <strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong>
+                      </div>
+                      
+                      <div class="bottom10 top10">
+                         <p>This place is for Textjipoijpoijoijpoijoijoijjoijniujnihbuhibhbuhibuhbuhbuhibuhbhbuhbuhbuohbuohbuhbuhbbbuobuoh</p>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="sidbar_data">
+                      <div class="bottom10 top10">
+                          <strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong>
+                      </div>
                     </div>
                 </div>
               </div>
@@ -120,17 +133,16 @@
                     <td><strong>Email Adress:</strong></td>
                     <td class="text-right"><a href="#."><?= $viewdata['agentdata']['email'] ?></a></td>
                   </tr> -->
-                  <tr>
+                  <!-- <tr>
                     <td><strong><a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
-              
-                     <!-- <input type="hidden" name="propid" value="<?= $viewdata['property']['prop_id'] ?>"> -->
+
                     </a></strong></td>
                     <td class="text-right"><strong><a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a></strong></td>
                   </tr>
                   <tr>
                     <td><strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong></td>
                     <td class="text-right"><strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong></td>
-                  </tr>
+                  </tr> -->
                   <tr>
                     <!-- <td>
                       <div class="col-md-12">
