@@ -80,16 +80,45 @@
                 <a href="#">View properties from this agent</a>
                 <a class="btn btn-default btn-block top10 bottom10"  onClick="window.location.hash = '#alert-pop'">Request Details</a>
               </div>
+              <div class="agent_contact agnt_dtls">
+                <div class="col-md-12 bottom10">
+                    <div class=" pull-left"><strong>Phone:</strong></div>
+                    <div class="  pull-right"><?= $viewdata['agency']['phone'] ?></div>
+                </div>
+                <div class="col-md-12 bottom10">
+                    <div class="pull-left  "><strong>Email Adress:</strong></div>
+                    <div class="pull-right "><?= $viewdata['agency']['email'] ?></div>
+                </div>
+                <div class="col-md-12 bottom10">
+                    <div class="bottom10 sidbar_data">
+                        <strong>
+                          <a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
+                        </a>
+                      </strong>
+                    </div>
+                    <div class="bottom10 sidbar_data">
+                        <strong>
+                          <a href="printpro?id=<?php echo $viewdata['property']['prop_id'];?>" Onclick="window.print();"> <i class="icon-file"></i>Print</a>
+                        </strong>
+                    </div>
+                    <div class="bottom10 sidbar_data">
+                        <strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong>
+                    </div>
+                    <div class="bottom10 sidbar_data">
+                        <strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong>
+                    </div>
+                </div>
+              </div>
               <table class="agent_contact table">
                 <tbody>
-                  <tr class="bottom10">
+                  <!-- <tr class="bottom10">
                     <td><strong>Phone:</strong></td>
                     <td class="text-right"><?= $viewdata['agency']['phone'] ?></td>
                   </tr>
                   <tr>
                     <td><strong>Email Adress:</strong></td>
                     <td class="text-right"><a href="#."><?= $viewdata['agentdata']['email'] ?></a></td>
-                  </tr>
+                  </tr> -->
                   <tr>
                     <td><strong><a href="addtofav?id=<?php echo $viewdata['property']['prop_id']; ?>"><i class="icon-heart"></i>Save Property
               

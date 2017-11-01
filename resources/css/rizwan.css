@@ -359,7 +359,7 @@ display: inline-block;
       z-index: 0;
     }
     .hom_news p{
-      word-break: break-all;
+      /* word-break: break-all; */
       white-space: normal;
       height: 66.2px;
       /* Fallback for non-webkit */
@@ -369,7 +369,7 @@ display: inline-block;
       text-overflow: ellipsis;
     }
     .news_list p{
-      word-break: break-all;
+      /* word-break: break-all; */
       white-space: normal;
       height:106.2px;
       /* Fallback for non-webkit */
@@ -392,3 +392,14 @@ display: inline-block;
     font-weight: 300;
     line-height: 1.4;
   }
+.agnt_dtls  i {
+  font-size: 17px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.sidbar_data{
+  border-bottom: 2px solid #ccc;
+}
+  /* .sidbar_data{
+    display: inline;
+  } */
