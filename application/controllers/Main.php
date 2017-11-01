@@ -974,7 +974,7 @@ function inboxag()
 function add_new_agent()
 {
     $this->load->library('form_validation');
-    $this->form_validation->set_rules('title','Title','alpha', 'required' );
+    $this->form_validation->set_rules('select_one','Select One','alpha', 'required' );
     $this->form_validation->set_rules('fname','First Name','alpha', 'max_length[60]','required' );
     $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
     $this->form_validation->set_rules('username','User Name','alpha' ,'max_length[60]', 'required');
@@ -995,7 +995,7 @@ function add_new_agent()
     if($this->input->post() && $this->form_validation->run() == TRUE)
     {
         $data = array(
-        'title' => $this->input->post('title'),
+        'title' => $this->input->post('select_one'),
         'fname' => $this->input->post('fname'),
         'lname' => $this->input->post('lname'),
         'username' => $this->input->post('username'),
@@ -1048,7 +1048,7 @@ function add_new_agent()
     {
         $data['_view'] = 'agent/add';
         $this->load->view('layouts/main',$data);
-    } //
+    } 
     
 }
 
