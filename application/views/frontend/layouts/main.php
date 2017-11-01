@@ -6,20 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>Favourite Move</title>
 
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/reality-icon.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/bootsnav.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/jquery.fancybox.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/owl.transitions.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/cubeportfolio.min.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/settings.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/range-Slider.min.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/search.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/style.css">
-<link rel="stylesheet" type="text/css" href="<?= $assets;?>css/rizwan.css">
-<link rel="icon" href="<?= $assets;?>img/fav_icon.png">
+<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/reality-icon.css">
+<link rel="stylesheet" type="text/css" href="resources/css/bootsnav.css">
+<link rel="stylesheet" type="text/css" href="resources/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="resources/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="resources/css/owl.transitions.css">
+<link rel="stylesheet" type="text/css" href="resources/css/cubeportfolio.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/settings.css">
+<link rel="stylesheet" type="text/css" href="resources/css/range-Slider.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/search.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/rizwan.css">
+<link rel="icon" href="resources/img/fav_icon.png">
 <!-- <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-classic.css" /> -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108823654-1"></script>

@@ -56,7 +56,7 @@
                 <div class="media-left">
                   <a href="property_detail?id=<?php echo $property['prop_id']; ?>">
 
-                  <img class="media-object" src="<?= $assets ?>img/properties/<?php echo $property['prop_id']."/cover.jpg"?>" alt="..."> <?php //var_dump($property['prop_id']); die();?>
+                  <img class="media-object" src="<?php echo base_url('resources/img/properties/' . $property['prop_id'] . '/cover.jpg')?>" alt="...">
                   </a>
                 </div>
                 <div class="media-body">
@@ -133,17 +133,18 @@
                       <?= $property['description'] ?>
                     </p>
                   </div>
-                  <div class="dealer clearfix">
-                    <a href="<?php echo base_url()."/agent_detail?id=".$property['agent_id']['id']?>">
-                    <i class="author"><img width="70" src="<?php echo $assets."img/agency/".$property['agent_id']['agency_id']?>/logo.png" alt="agency"></i>
-                    <h4><?= $property['agent_id']['name']?> &nbsp; <small>- Agent</small></h4>
+                  <div class="dealer clearfix"> <?php //var_dump($agdata['id']); die();?>
+                    <a href="agent_detail?id=<?php echo $agdata['id']; ?>">
+                    <i class="author">
+                      <img width="70" src="<?php echo base_url('resources/img/agents/' . $agdata['image']);?>" alt="agency"></i>
+                    <h4><?= $agdata['fname'] ." ".$agdata['lname']?> &nbsp; <small>- Agent</small></h4>
                     <!-- <span><i class="icon-phone4"></i></span><i class="icon-mail-envelope-closed3"></i> -->
-                  <span><i class="icon-phone4"></i><?= $property['agent_id']['agencydata']['phone']?></span> 
+                  <span><i class="icon-phone4"></i><?= $agdata['phone']?></span> 
                       <!-- <a href="mailtoagentcontactform"> --><i class="icon-mail-envelope-closed3"></i><!-- </a>  -->
                       </a>
                     </div>
                   <div class=" favroute clearfix">
-                    <p class="pull-md-left"<?= $property['agent_id']['name']?>></p>
+                    <p class="pull-md-left"<?= $agdata['fname'] ." ".$agdata['lname']?>></p>
                     <p class="pull-md-left"><?= $property['address']?> </small></p>
                     <ul class="pull-right">
                       <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
@@ -181,7 +182,7 @@
       </div>
             <?php 
             $i++;
-            if($i == 3)
+            if($i/3 == 0)
             {
               ?>
               <div class="creative">
