@@ -68,4 +68,9 @@ class Agent_model extends CI_Model
     {
         return $this->db->insert('agentnbox', $data);
     }
+
+    function addphone($id, $phone)
+    {
+        return $this->db->insert('agphone', $phone);
+    }
 }

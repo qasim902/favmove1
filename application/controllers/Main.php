@@ -476,7 +476,7 @@ class Main extends CI_Controller
             $viewdata[$agent['id']-1] = array(
                 'id' =>$agent['id'],
                 'agent'=>$agent,
-                'agency' =>$this->Agency_model->get_agency($agent['agency_id'])
+                
             );
         }
         $data = $this->data;
@@ -1053,7 +1053,19 @@ function add_new_agent()
 }
 function agent_new_phone()
 {
-    //
+   $id = $this->input->get('id');
+   $this->load->model('agent_model');
+   $phone  = $this->input->post('agphone');
+   $add_success = $this->agent_model->addphone($id, $phone);
+   if($add_success)
+   {
+        redirect($this->agent->referrer());
+   }
+   else
+   {
+       echo "There issome issue ";
+       redirect($this->agent->referrer());
+   }
 }
 
 

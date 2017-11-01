@@ -206,7 +206,7 @@
                             <span class="nav_tag yellow text-uppercase">Available</span>
                             </a>
                           </div>
-                          <h4><a href="agent_detail?id=<?= $agent['id']?>"><?= $agent['name']?> </a></h4>
+                          <h4><a href="agent_detail?id=<?= $agent['id']?>"><?= $agent['fname'] . $agent['lname']?> </a></h4>
                           <p><?= $agent['address']?></p>
                         </div>
 

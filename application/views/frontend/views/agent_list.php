@@ -23,14 +23,14 @@
 <section id="agent-2" class="padding_top padding_bottom_half">
   <div class="container">
     <div class="row">
-      <?php foreach($viewdata as $agent) {?>
+      <?php foreach($viewdata as $agent) { ?>
       <div class="col-sm-4 bottom40">
         <div class="agent_wrap">
           <div class="image">
-            <img src="<?= $assets."img/agents/".$agent['id']."/prof.jpg" ?>" alt="Agents">
+            <img src="<?php echo base_url('resources/img/agents/'. $agent['agent']['image']);?>" alt="Agents">
             <div class="img-info">
-              <h3><?= $agent['agent']['name']?></h3>
-              <span><?= $agent['agency']['name']?></span>
+              <h3><?= $agent['agent']['fname'] . $agent['agent']['lname']?></h3>
+              <span></span>
               <p class="top20 bottom30"><?= $agent['agent']['description'] ?></p>
               <table class="agent_contact table">
                 <tbody>
