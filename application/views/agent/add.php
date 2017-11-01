@@ -29,10 +29,6 @@
 
 								<div class="form-group">
 									<input type="text"  placeholder="Enter First Name" name="fname" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
-
-								<div class="form-group">
-									<input type="text"  placeholder="Enter First Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
- 
 								</div>
 								<span class="text-danger">
 									<?php echo validation_errors('fname'); ?>
@@ -161,11 +157,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-<<<<<<< HEAD
 										<input type="text" name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
-=======
-										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
->>>>>>> 2812f696dc4b8491e6ca9069ed061341850b8b8f
 										/>
 									</div>
 									<span class="text-danger">
