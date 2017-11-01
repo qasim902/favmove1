@@ -141,8 +141,8 @@
                   </tr>
                   <tr>
                     <td><strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong></td>
-                    <td class="text-right"><strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong></td>
-                  </tr> -->
+                    <td class="text-right"><strong><a href="send_to_friend?id=<?php echo $viewdata['property']['prop_id'];?>"> <i class="icon-mail"></i>Send to Friend</a></strong></td>
+                  </tr>
                   <tr>
                     <!-- <td>
                       <div class="col-md-12">

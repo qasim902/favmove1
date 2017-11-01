@@ -40,6 +40,7 @@ $route['printpro'] = 'property/printproperty';
 $route['add'] = 'package/add';
 $route['addagent'] = 'main/add_new_agent';
 $route['phone_to_agent'] = 'main/agent_new_phone';
+$route['send_to_friend'] = 'main/send_friend';
 
 
 /*

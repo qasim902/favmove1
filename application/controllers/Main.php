@@ -1081,5 +1081,13 @@ function agent_new_phone()
    }
 }
 
+function send_friend()
+{
+    $data = array(
+        'assets' => base_url() . "resources/",
+        '_view' => 'frontend/views/send_friend');
+        $this->load->view('frontend/layouts/main',$data);
+}
+
 
 }
