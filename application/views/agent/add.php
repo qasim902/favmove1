@@ -160,9 +160,21 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+<<<<<<< HEAD
 
 										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
 										/>
+=======
+
+
+									<input type="text" name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link">
+
+										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link">
+
+										<input type="text" name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link">
+
+										
+>>>>>>> 1fd5fe7e46c1a583cbf94c6d0c41696951772e42
 									</div>
 									<span class="text-danger">
 										<?php echo form_error('fb_link');?>
