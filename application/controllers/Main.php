@@ -314,9 +314,7 @@ class Main extends CI_Controller
                 'features' =>$this->Feature_model->get_feature($property['prop_id']),
                 'prop_detail' =>$this->Prop_detail_model->get_prop_detail($property['prop_id'])
             );
-         $viewdata += array(
-            'agency' => $this->Agency_model->get_agency($viewdata['agentdata']['agency_id'])
-         );
+        
 
          
          

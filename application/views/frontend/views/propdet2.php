@@ -61,8 +61,8 @@
         <div class="top15 bottom15">
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
-                <div class="text-center">
-                     <img src="<?php echo $assets."img/agency/1".$viewdata['agentdata']['agency_id']?>/logo.png" alt="agency">
+                <div class="text-center"> <?php //var_dump($viewdata); die(); ?>
+                     <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency">
                 </div>
               <!-- <div class="image">
                 <img src="<?= $assets;?>img/agent-one.jpg" alt="Agents">
@@ -73,9 +73,9 @@
             <div class="agent_wrap">
               <!-- <h3>Bohdan Kononets</h3> -->
               <div class="bottom10 agnt_dtl">
-                <a href="#"><?= $viewdata['agency']['name'] ?></a>
+                <a href="#"><?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?></a>
               </div>
-              <p class="bottom10"><?= $viewdata['agency']['address'] ?></p>
+              <p class="bottom10"><?= $viewdata['agentdata']['address'] ?></p>
               <div class="agnt_dtl">
                 <a href="#">View properties from this agent</a>
                 <a class="btn btn-default btn-block top10 bottom10"  onClick="window.location.hash = '#alert-pop'">Request Details</a>
@@ -84,7 +84,7 @@
                 <tbody>
                   <tr class="bottom10">
                     <td><strong>Phone:</strong></td>
-                    <td class="text-right"><?= $viewdata['agency']['phone'] ?></td>
+                    <td class="text-right"><?= $viewdata['agentdata']['phone'] ?></td>
                   </tr>
                   <tr>
                     <td><strong>Email Adress:</strong></td>
@@ -145,7 +145,7 @@
               </ul>
             </div>
             <div class="image top20">
-              <img class="img-responsive" src="<?php echo $assets."img/agency/1".$viewdata['agentdata']['agency_id']?>/ad.jpg" alt="agency">
+              <img class="img-responsive" src="ad.jpg" alt="agency">
                 <!-- <img class="img-responsive" src="http://media.rightmove.co.uk/46k/45383/1491465779150_bp_mpu_r.jpg" alt="Roffeys Residential, Sales logo"> -->
             </div>
             
@@ -400,8 +400,8 @@
                     <div class="pull-left">
                       <h4 class="uppercase">Total:</h4>
                     </div>
-                    <div class="pull-right">
-                      <input class="mortgage_input" type ="text" value="8600.00" name="total" id="total_amount"  disabled="" />
+                    <div class="pull-right"> 
+                      <input class="mortgage_input" type ="text" value="<?php echo $viewdata['property']['price'];?>" name="total" id="total_amount"  disabled="" />
                     </div>
                   </div>
 
@@ -505,9 +505,9 @@ oninput = function() {
   
 }
 </script>
-            <div  class="">
+            <div  class=""> 
           <div class="top10 col-md-7">
-              <h3 class=" bottom20 uppercase"><b>Contact <?= $viewdata['agency']['name'] ?> about this property</b></h3>
+              <h3 class=" bottom20 uppercase"><b>Contact <?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['fname']?> about this property</b></h3>
               <form method="POST" action="userinquiry">
               <div class="row top20">
                 <div class="col-md-3">
