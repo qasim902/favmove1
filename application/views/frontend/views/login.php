@@ -112,8 +112,8 @@ echo "<script>
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                       </select>
-                    </div>
-                    <span class="text-danger"><?php echo form_error('title');?></span>
+                      <span class="text-danger"><?php echo form_error('title');?></span>
+                    </div>         
                   </div>
                   <div class="col-sm-3 col-md-4">
                     <div class="form-group">
@@ -249,7 +249,7 @@ echo "<script>
                   foreach($easy['allpackages'] as $val)
                   { ?>
                   <br >
-                    <input type="radio" name="package" >
+                     <input type="radio" name="package" >
                    <?php echo $val['package_name'];
                    echo $val['package_price'];
                    echo $val['start_date'];
