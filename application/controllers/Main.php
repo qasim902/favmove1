@@ -61,8 +61,6 @@ class Main extends CI_Controller
     function logout()
     {
         $this->session->sess_destroy();
-        /*var_dump($this->session->userdata('userData', $data));
-        die();*/
         redirect(base_url());
         
     }
@@ -624,18 +622,15 @@ class Main extends CI_Controller
         {
             //added by Danish sunday 12:47 am
             $this->load->model('package_model');
-            $viewmydata['allpackages'] = $this->package_model->get_all_packages(); //var_dump($viewdata); die();
+            $viewmydata['allpackages'] = $this->package_model->get_all_packages(); 
             //$pkg = array('pkg'=>$allpkg);
-
-             $viewdata['all_agency'] = $this->Agency_model->get_all_agency();
             $data = $this->data;
         $data += array(
-            'easy' => $viewmydata,
-           'viewdata' => $viewdata,
+            'easy' => $viewmydata,    
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/login'
         );
-    //    var_dump($data['easy']['allpackages']); die();
+    //  var_dump($data['easy']['allpackages']); die();
         $this->load->view('frontend/layouts/main', $data);
         }
     }
@@ -1022,31 +1017,31 @@ function inboxag()
 }
 
 
-function add_new_agent()
+function add_agent()
 {
     $this->load->library('form_validation');
-    //$this->form_validation->set_rules('select_one','Select One', 'required' );
-   // $this->form_validation->set_rules('fname','First Name', 'max_length[60]','required' );
-    // $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
-    // $this->form_validation->set_rules('username','User Name','alpha' ,'max_length[60]', 'required');
-    // $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
-    // $this->form_validation->set_rules('password','Password','max_length[60]','required');
-    // $this->form_validation->set_rules('description', 'Description','required');
-    // $this->form_validation->set_rules('address','Address','required');
-    // $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
-    //$this->form_validation->set_rules('fb_link','Facebook Link','required');
-    //$this->form_validation->set_rules('twit_link','Twiter Link','required');
-    //$this->form_validation->set_rules('gplus_link','Google Plus Link','required');
-    //$this->form_validation->set_rules('li_link','LinkedIn Link','required');
-    //$this->form_validation->set_rules('you_link','Youtube Link','required');
-   // $this->form_validation->set_rules('pin_link','Pintrest Link','required');
-    //$this->form_validation->set_rules('insta_link','Instagram Link','required');
-    $this->form_validation->set_rules('package','Package', 'numeric|xss_clean');
-
-    if($this->input->post())
+     $this->form_validation->set_rules('title','Title', 'required' );
+  $this->form_validation->set_rules('fname','First Name', 'alpha','max_length[60]','required' );
+    $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
+   $this->form_validation->set_rules('username','User Name' ,'max_length[60]', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
+    $this->form_validation->set_rules('password','Password','max_length[60]','required');
+    $this->form_validation->set_rules('description', 'Description','required');
+    $this->form_validation->set_rules('address','Address','required');
+    $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
+    $this->form_validation->set_rules('fb_link','Facebook Link','required');
+    $this->form_validation->set_rules('twit_link','Twiter Link','required');
+    $this->form_validation->set_rules('gplus_link','Google Plus Link','required');
+    $this->form_validation->set_rules('li_link','LinkedIn Link','required');
+    $this->form_validation->set_rules('you_link','Youtube Link','required');
+   $this->form_validation->set_rules('pin_link','Pintrest Link','required');
+    $this->form_validation->set_rules('insta_link','Instagram Link','required');
+   $this->form_validation->set_rules('package','Package', 'numeric|xss_clean');
+//&& $this->form_validation->run()
+    if($this->input->post() && $this->form_validation->run())
     {
         $data = array(
-        'title' => $this->input->post('select_one'),
+        'title' => $this->input->post('title'),
         'fname' => $this->input->post('fname'),
         'lname' => $this->input->post('lname'),
         'username' => $this->input->post('username'),
@@ -1078,7 +1073,9 @@ function add_new_agent()
         if (!$this->upload->do_upload('user_file')) 
         {
             echo $this->upload->display_errors(); 
-            redirect('agent/add');
+            // $data['_view'] = 'user_login';
+            // $this->load->view('layout/main/', $data);
+            redirect('user_login');
         }
         else
         {
@@ -1086,22 +1083,25 @@ function add_new_agent()
             $data['image'] = $filename['file_name'];
             $this->load->model('agent_model');
             $ag_added = $this->agent_model->add_agent($data);
-            $this->session->set_flashdata('successsub', "News successfully added");
-            redirect('agent/add');
+            $this->session->set_flashdata('successsub', "Agent successfully added");
+            // $data['_view'] = 'user_reg';
+            // $data['_view'] = 'user_login';
+            // $this->load->view('layout/main/', $data);
+            redirect('user_login');
         }    
-
-        if(ag_added)
-        {
-            $this->session->set_flashdata('successsub', "New agent successfully added");
-        }
     }
     else
     {
-        $data['_view'] = 'agent/add';
-        $this->load->view('layouts/main',$data);
+        // $data['_view'] = 'user_reg';
+        // $this->load->view('layouts/main',$data);
+        // $data['_view'] = 'user_login';
+        // $this->load->view('layout/main/', $data);
+        $this->session->set_flashdata('successsub', "Please check the fields and try again");
+        redirect('user_login');
     } 
     
 }
+
 function agent_new_phone()
 {
    $id = $this->input->get('id');

@@ -167,7 +167,7 @@ class Package extends CI_Controller{
     function showpakage()
     {
         $this->load->model('package_model');
-        $allpkg = $this->package_model->get_all_packages();
+        $allpkg = $this->package_model->get_all_packages(); 
         $data = array('pkg'=>$allpkg);
         $this->load->view('frontend/views/login', $data);
         
