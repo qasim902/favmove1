@@ -146,7 +146,7 @@
 							<div class="col-md-6">
 								<label for="linkedin_link" class="control-label">Linkedin Link</label>
 								<div class="form-group">
-									<div class="input-group">
+									<div class="input-group"> 
 										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
 										<input type="text" placeholder="https://linkedin.com/favmove" autofocus name="linkedin_link" value="<?php echo $this->input->post('linkedin_link'); ?>" class="form-control" id="linkedin_link"
 										/>
