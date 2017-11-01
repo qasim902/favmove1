@@ -113,7 +113,9 @@ h3, h4{
 }
 .btn_common, h2, nav.bootsnav .megamenu-content .title,
 .fullscreen_inner h3, .fullscreen_inner h1{
-	font-family: 'roboto_condensedbold';
+  /* font-family: 'roboto_condensedbold'; */
+  font-family: "Work Sans", sans-serif !important;
+  
 }
 .white_header nav.navbar.bootsnav ul.nav > li > a,
 .rev_slider_wrapper .black-caption h2,
