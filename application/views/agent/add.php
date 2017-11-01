@@ -10,10 +10,23 @@
 				<div class="col-sm-10 col-md-8">
 					<div class="callus clearfix border_radius submit_property">
 						<div class="row clearfix">
-							
+							<div class="col-sm-6">
+								<label class="control-label">Title</label>
+								<div class="single-query ">
+									
+									<div class="intro">
+									<select name="Title">
+										<option class="active">Title</option>
+										<option value="1">Mr</option>
+										<option value="2">Mrs</option>
+									</select>
+									</div>
+								</div>
+
+							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">First Name</label>
-								<div class="form-group">
+								<div class="">
 									<input type="text"  placeholder="Enter First Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
 								</div>
 								<span class="text-danger">
@@ -54,7 +67,7 @@
 							</div>
 							<div class="col-md-6">
 								<label for="agent_image" class="control-label">Agent Image</label>
-								<div class="input-group agncy_btn">
+								<div class="input-group form-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
 											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="upload_image" style="display: none;" />
@@ -116,18 +129,13 @@
 							<!--" class="has-datetimepicker form-control" id="last_logintime" />-->
 							<!--						</div>-->
 							<!--					</div>-->
-							<div class="col-md-6">
-								<label for="contact" class="control-label">Title</label>
-								<div class="form-group">
-									<input type="tel" placeholder="Title"  name="contact" value="<?php echo $this->input->post('email'); ?>" class="form-control" />
-								</div>
-							</div>
+							
 							<div class="col-md-6">
 								<label for="fb_link" class="control-label">Facebook Link</label>
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-										<input type="text" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
 										/>
 									</div>
 									<span class="text-danger">
@@ -140,7 +148,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-										<input type="text" autofocus name="linkedin_link" value="<?php echo $this->input->post('linkedin_link'); ?>" class="form-control" id="linkedin_link"
+										<input type="text" placeholder="https://linkedin.com/favmove" autofocus name="linkedin_link" value="<?php echo $this->input->post('linkedin_link'); ?>" class="form-control" id="linkedin_link"
 										/>
 									</div>
 									<span class="text-danger">
@@ -153,7 +161,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-										<input type="text" autofocus name="twit_link" value="<?php echo $this->input->post('twit_link'); ?>" class="form-control" id="twit_link"
+										<input type="text" placeholder="https://twitter.com/favmove" autofocus name="twit_link" value="<?php echo $this->input->post('twit_link'); ?>" class="form-control" id="twit_link"
 										/>
 									</div>
 									
@@ -167,7 +175,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
-										<input type="text" autofocus name="gplus_link" value="<?php echo $this->input->post('gplus_link'); ?>" class="form-control" id="gplus_link"
+										<input type="text" placeholder="https://google.com/favmove" autofocus name="gplus_link" value="<?php echo $this->input->post('gplus_link'); ?>" class="form-control" id="gplus_link"
 										/>
 									</div>
 									<span class="text-danger">
@@ -180,7 +188,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></span>
-										<input type="text" autofocus name="youtube_link" value="<?php echo $this->input->post('youtube_link'); ?>" class="form-control" id="youtube_link"
+										<input type="text" placeholder="https://youtube.com/favmove" autofocus name="youtube_link" value="<?php echo $this->input->post('youtube_link'); ?>" class="form-control" id="youtube_link"
 										/>
 									</div>
 									<span class="text-danger">
