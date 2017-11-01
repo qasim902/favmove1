@@ -118,7 +118,7 @@
                     </div>
                     <div class="sidbar_data">
                       <div class="bottom10 top10">
-                          <strong><a href="#"> <i class="icon-mail"></i>Send to Friend</a></strong>
+                          <strong><a href="send_to_friend?id=<?php echo $viewdata['property']['prop_id'];?>"> <i class="icon-mail"></i>Send to Friend</a></strong>
                       </div>
                     </div>
                 </div>
