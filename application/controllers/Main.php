@@ -1048,7 +1048,7 @@ function add_new_agent()
     {
         $data['_view'] = 'agent/add';
         $this->load->view('layouts/main',$data);
-    }
+    } //
     
 }
 
