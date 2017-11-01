@@ -399,8 +399,10 @@
       </div>
     </div>
     
-    <div class="row">
-      <?php foreach($defdata['home_prop'] as $prop){?> 
+    <div class="row"> <?php ?>
+      <?php 
+      
+      foreach($defdata['home_prop'] as $prop){?> 
       <div class="col-sm-6 col-md-4">
         <div class="property_item heading_space">
           <div class="property_head
@@ -598,7 +600,7 @@
             </div>
           </div>
         </div>
-         <?php } ?>
+         <?php  }  ?>
         </div>
         
       </div>

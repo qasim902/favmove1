@@ -107,4 +107,9 @@ class User_model extends CI_Model
         $this->db->where('userid', $userid);
         return  $this->db->update('user', $data); 
     }
+
+    function check_user($user_data)
+    {
+        return $this->db->get_where('user' , $user_data)->num_rows();
+    }
 }

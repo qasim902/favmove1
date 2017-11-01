@@ -133,6 +133,7 @@ class Property_model extends CI_Model
     function get_all_property()
     {
         $this->db->order_by('prop_id', 'asc');
+        $this->db->limit(6);
         return $this->db->get('property')->result_array();
     }
    
@@ -301,6 +302,9 @@ class Property_model extends CI_Model
                                     OR features.Balcony = $Balcony)
                                     ;");
 
+                                    return $query->result_array();
+                                }
+
         // $this->db->select('*');
         // $this->db->from('property');
         // $this->db->join('prop_details', 'property.prop_id = prop_details.prop_id');
@@ -320,7 +324,8 @@ class Property_model extends CI_Model
         // $this->db->like('status', $data['status']);
         // $this->db->like('status', $data['status']);
 
-        return $query->result_array();
+        
+        
         // foreach ($query->result_array() as $user)
         // {
         //         //echo $user['title'] . "<br>";
@@ -350,7 +355,7 @@ class Property_model extends CI_Model
       
      //   }
         
-        $conditions = "";
+       
 
     //     if (!empty($data['town_id']))
     //     {
@@ -402,7 +407,7 @@ class Property_model extends CI_Model
        // return $query->result_array();
 
        
-    }
+    
         // $this->db->like('title',$data['title']);
         // $this->db->like('town_id',$data['town_id']);
         // $this->db->like('status',$data['status']);

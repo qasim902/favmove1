@@ -54,50 +54,6 @@ class Main extends CI_Controller
             '_view' => 'frontend/views/index'
         );
 
-        //PAGINATION START
-
-        $config['full_tag_open'] = '<div class="pagination gmpg">';
-        $config['full_tag_close'] = '</ul>';
-             
-        $config['first_link'] = FALSE;
-        $config['first_tag_open'] = '<li>';
-        $config['first_tag_close'] = '</li>';
-             
-        $config['last_link'] = FALSE;
-        $config['last_tag_open'] = '<li>';
-        $config['last_tag_close'] = '</li>';
-             
-        $config['next_link'] = '&raquo';
-        $config['next_tag_open'] = '<li>';
-        $config['next_tag_close'] = '</li>';
- 
-        $config['prev_link'] = '&laquo';
-        $config['prev_tag_open'] = '<li class="pre">';
-        $config['prev_tag_close'] = '</li>';
- 
-        $config['cur_tag_open'] = '<li class="active"><a href="#">';
-        $config['cur_tag_close'] = '</a></li>';
- 
-        $config['num_tag_open'] = '<li>';
-        $config['num_tag_close'] = '</li>';
-
-        $config['base_url'] = site_url('frontend/views/index');
-
-        $this->load->model('property_model');
-        $properties = $this->property_model->allproperties(); 
-
-        $config['total_rows'] = $properties;
-        $config['per_page'] = 5;
-        $config['uri_segment'] = 3;
-        $this->load->library('pagination');
-        $this->pagination->initialize($config);
-        $page = ($this->uri->segment(0)) ? $this->uri->segment(0) : 0;
-        $data['allproperties'] = $this->property_model->getallpropertiesies($config["per_page"], $page);
-        $data['links'] = $this->pagination->create_links(); //var_dump($this->uri->segment(0)); die();
-
-        //PAGINATION END HERE
-
-
         $this->load->view('frontend/layouts/main', $data);
     }
 
@@ -209,7 +165,7 @@ class Main extends CI_Controller
                 'prop_detail' =>$this->Prop_detail_model->get_prop_detail($property['prop_id']),
 
             );
-            $viewdata[$property['prop_id']-1] += array('agencydata' =>$this->Agency_model->get_agency($viewdata[$property['prop_id']-1]['agentdata']['agency_id'])); 
+           // $viewdata[$property['prop_id']-1] += array('agencydata' =>$this->Agency_model->get_agency($viewdata[$property['prop_id']-1]['agentdata']['agency_id'])); 
         }
        $data = $this->data;
         $data += array(
@@ -268,32 +224,7 @@ class Main extends CI_Controller
        //var_dump($data); die();
 
 
-       $config['full_tag_open'] = '<div class="pagination gmpg">';
-       $config['full_tag_close'] = '</ul>';
-            
-       $config['first_link'] = FALSE;
-       $config['first_tag_open'] = '<li>';
-       $config['first_tag_close'] = '</li>';
-            
-       $config['last_link'] = FALSE;
-       $config['last_tag_open'] = '<li>';
-       $config['last_tag_close'] = '</li>';
-            
-       $config['next_link'] = '&raquo';
-       $config['next_tag_open'] = '<li>';
-       $config['next_tag_close'] = '</li>';
-
-       $config['prev_link'] = '&laquo';
-       $config['prev_tag_open'] = '<li class="pre">';
-       $config['prev_tag_close'] = '</li>';
-
-       $config['cur_tag_open'] = '<li class="active"><a href="#">';
-       $config['cur_tag_close'] = '</a></li>';
-
-       $config['num_tag_open'] = '<li>';
-       $config['num_tag_close'] = '</li>';
-
-       $config['base_url'] = site_url('frontend/views/index');
+        
 
        $this->load->model('property_model');
        $this->load->model('agent_model');
@@ -309,15 +240,6 @@ class Main extends CI_Controller
              'viewdata' => $search_result,
            'agdata'=> $agdata,
            );
-       $config['total_rows'] = $search_result;
-       $config['per_page'] = 5;
-       $config['uri_segment'] = 3;
-       $this->load->library('pagination');
-       $this->pagination->initialize($config);
-       $page = ($this->uri->segment(0)) ? $this->uri->segment(0) : 0;
-       $data['allproperties'] = $this->property_model->getallpropertiesies($config["per_page"], $page);
-       $data['links'] = $this->pagination->create_links();  var_dump($this->uri->segment(1)); die();
-
 
         // $this->load->model('property_model');
         // $this->load->model('agent_model');
@@ -651,6 +573,9 @@ class Main extends CI_Controller
                 );
 
          
+
+               
+                
               $data = $this->data;
                 $data += array(
                     'agentData' => $agentData,
@@ -738,18 +663,38 @@ class Main extends CI_Controller
                 'payment_details' => json_encode(array()),
                 'myfavorites' => json_encode(array())
             );
-            
-            $user_id = $this->User_model->add_user($params);
-            redirect('user_home');
+            $user_data = array(
+                'username' => $this->input->post('username'),
+                'email' => $this->input->post('email'),
+            );
+            $check_user = $this->User_model->check_user($user_data); //var_dump($check_user); die();
+            if($check_user > 0)
+            {
+                $data = $this->data;
+                $data += array(
+                'assets' => base_url() . "resources/",
+                '_view' => 'frontend/views/login');
+                $this->load->view('frontend/layouts/main',$data);
+            }
+            else
+            {
+                $user_id = $this->User_model->add_user($params);
+                $data = $this->data;
+                $data += array(
+                'assets' => base_url() . "resources/",
+                '_view' => 'frontend/views/login');
+                $this->load->view('frontend/layouts/main',$data);
+            }
             
         }
         else
         {            
-            // $data = $this->data;
+            $data = $this->data;
             $data += array(
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/login');
             $this->load->view('frontend/layouts/main',$data);
+            //redirect('user_reg');
         }
     }
 

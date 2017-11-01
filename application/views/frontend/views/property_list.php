@@ -125,16 +125,16 @@
                     </p>
                   </div>
                   <div class="dealer clearfix">
-                    <a href="<?php echo base_url()."/agent_detail?id=".$property['agentdata']['id']?>">
-                    <i class="author"><img width="100%" src="<?php echo $assets."img/agency/".$property['agentdata']['agency_id']?>/logo.png" alt="agency"></i>
-                    <h4><?= $property['agentdata']['name']?> &nbsp; <small>- Agent</small></h4>
+                    <a href="<?php echo base_url()."agent_detail?id=".$property['agentdata']['id']?>">
+                    <i class="author"><img width="70px" src="<?php echo base_url('resources/img/agents/' . $property['agentdata']['image']);?>" alt="agency"></i>
+                    <h4><?= $property['agentdata']['fname'] ." ". $property['agentdata']['lname']?> &nbsp; <small>- Agent</small></h4>
                     <!-- <span><i class="icon-phone4"></i></span><i class="icon-mail-envelope-closed3"></i> -->
-                  <span><i class="icon-phone4"></i><?= $property['agencydata']['phone']?></span> 
+                  <span><i class="icon-phone4"></i><?= $property['agentdata']['phone']?></span> 
                       <!-- <a href="mailtoagentcontactform"> --><i class="icon-mail-envelope-closed3"></i><!-- </a>  -->
                       </a>
                     </div>
                   <div class=" favroute clearfix">
-                    <p class="pull-md-left"<?= $property['agentdata']['name']?></p>
+                    <p class="pull-md-left"<?= $property['agentdata']['fname'] ." ". $property['agentdata']['lname']?></p>
                     <p class="pull-md-left"><?= $property['property']['address']?> </p>
                     <ul class="pull-right">
                       <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
