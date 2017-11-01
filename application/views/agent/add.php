@@ -26,18 +26,26 @@
 							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">First Name</label>
-								<div class="">
+
+								<div class="form-group">
+									<input type="text"  placeholder="Enter First Name" name="fname" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
+
+								<div class="form-group">
 									<input type="text"  placeholder="Enter First Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
+ 
 								</div>
 								<span class="text-danger">
-										<?php echo form_error('name');?>
-									</span>
+									<?php echo validation_errors('fname'); ?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">Last Name</label>
 								<div class="form-group">
-									<input type="text"  placeholder="Enter Last Name" name="name" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
+									<input type="text"  placeholder="Enter Last Name" name="lname" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="username" class="control-label">Username</label>
@@ -45,12 +53,18 @@
 									<input type="text" name="username"  placeholder="Enter Username" value="<?php echo $this->input->post('username'); ?>" class="form-control" id="username"
 									/>
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="email" class="control-label">Email</label>
 								<div class="form-group">
 									<input type="text" name="email" placeholder="example@email.com" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="email" />
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="password" class="control-label">Password</label>
@@ -58,12 +72,18 @@
 									<input type="password" placeholder="Enter Password" name="password" value="<?php echo $this->input->post('password'); ?>" class="form-control" id="password"
 									/>
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="contact" class="control-label">Contact</label>
 								<div class="form-group">
 									<input type="tel" placeholder="Contact Number"  name="contact" value="<?php echo $this->input->post('email'); ?>" class="form-control" />
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="agent_image" class="control-label">Agent Image</label>
@@ -74,6 +94,9 @@
 										</span>
 									</label>
 									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
+									<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -93,6 +116,9 @@
 										</select>
 									</div>
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('lname');?>
+								</span>
 							</div>
 							<!-- <div class="col-md-6">
 								<label for="agency_id" class="control-label">Agency</label>
@@ -101,12 +127,12 @@
 										<select name="agency_id" class="form-control">
 											<option value="">Select agency</option>
 											<?php 
-									foreach($all_agency as $agency)
-									{
-										$selected = ($agency['id'] == $this->input->post('agency_id')) ? ' selected="selected"' : "";
+									// foreach($all_agency as $agency)
+									// {
+									// 	$selected = ($agency['id'] == $this->input->post('agency_id')) ? ' selected="selected"' : "";
 
-										echo '<option value="'.$agency['id'].'" '.$selected.'>'.$agency['name'].'</option>';
-									} 
+									// 	echo '<option value="'.$agency['id'].'" '.$selected.'>'.$agency['name'].'</option>';
+									// } 
 									?>
 										</select>
 									</div>
@@ -135,7 +161,11 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+<<<<<<< HEAD
+										<input type="text" name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+=======
 										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+>>>>>>> 2812f696dc4b8491e6ca9069ed061341850b8b8f
 										/>
 									</div>
 									<span class="text-danger">
@@ -199,14 +229,20 @@
 							<div class="col-md-6">
 								<label for="address" class="control-label">Description</label>
 								<div class="form-group">
-									<textarea type="text" placeholder="Description" name="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
+									<textarea type="text" placeholder="Description" name="description" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('description');?>
+								</span>
 							</div>
 							<div class="col-md-6">
 								<label for="address" class="control-label">Address</label>
 								<div class="form-group">
 									<textarea type="text" placeholder="Address" name="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
 								</div>
+								<span class="text-danger">
+									<?php echo form_error('address');?>
+								</span>
 							</div>
 							<!--					<div class="col-md-6">-->
 							<!--						<label for="package_lastpayment" class="control-label">Package Lastpayment</label>-->

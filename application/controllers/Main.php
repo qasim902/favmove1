@@ -1026,8 +1026,8 @@ function add_new_agent()
         $this->upload->initialize($config);
         if (!$this->upload->do_upload('user_file')) 
         {
-            var_dump($this->upload->display_errors()); die();
-            redirect('/');
+            echo $this->upload->display_errors()); 
+            redirect('agent/add');
         }
         else
         {
@@ -1036,18 +1036,20 @@ function add_new_agent()
             $this->load->model('agent_model');
             $ag_added = $this->agent_model->add_agent($data);
             $this->session->set_flashdata('successsub', "News successfully added");
-            redirect('/');
+            redirect('agent/add');
         }    
 
         if(ag_added)
         {
-            $this->session->set_flashdata('successsub', "This property is already added into your favourite list");
+            $this->session->set_flashdata('successsub', "New agent successfully added");
         }
     }
     else
     {
-        redirect('agent/add');
-    }
+        $data['_view'] = 'agent/add';
+        $this->load->view('layouts/main',$data);
+    } //
+    
 }
 
 
