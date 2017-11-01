@@ -96,7 +96,7 @@
       <div class="col-sm-4 bottom40">
         <div class="agent_wrap">
           <div class="image">
-            <img src="<?= $assets."img/agents/". $viewdata['agent']['id']."/prof.jpg"?>" alt="Agents">
+            <img src="<?php echo base_url('resources/img/agents/'. $viewdata['agent']['image']); ?>" alt="Agents">
           </div>
         </div>
       </div>

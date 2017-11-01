@@ -158,16 +158,20 @@ echo "<script>
                       </div> 
                       <span class="text-danger"><?php echo form_error('description');?></span>
                   </div>
-                  <div class="col-sm-12">
-                    <div class="input-group form-group image-preview">
+                  <div class="col-md-6 col-sm-12">
+                    <!-- <div class="input-group form-group image-preview">
                       <label style="color:white;" class="input-group form-group">Upload Profile Picture</label>
                         <input type="file" name="user_file" placeholder="Upload Agent Image" > 
-                    </div>
-                    <span class="text-danger"><?php echo form_error('user_file');?></span>
-                  </div>
-                  <div class="col-md-12 col-sm-12">
-                    <div class="form-group">
-                      <input type="text" name="address" class="form-control" placeholder="Address">
+                    </div> -->
+                    <div class="input-group form-group ">
+                      <div class="input-group agncy_btn">
+                        <label class="input-group-btn">
+                          <span class="btn btn-primary">
+                            Upload Image&hellip; <input type="file" multiple="multiple" name="user_file" id="upload_image" style="display: none;" />
+                          </span>
+                        </label>
+                        <input type="text" placeholder="Upload Profile Image" id="upload_image_sho" class="form-control" readonly>
+                      </div>
                     </div>
                     <span class="text-danger"><?php echo form_error('address');?></span>
                   </div>
@@ -177,6 +181,12 @@ echo "<script>
                       </div>
                       <span class="text-danger"><?php echo form_error('ag_phone');?></span>
                     </div>
+                  <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <input type="text" name="address" class="form-control" placeholder="Address">
+                    </div>
+                  </div>
+                  
                     <div class="col-sm-6">
                         <div class="input-group bottom10">
                           <span class="input-group-addon"><i class="icon-facebook-1"></i></span>
