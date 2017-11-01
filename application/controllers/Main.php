@@ -651,9 +651,6 @@ class Main extends CI_Controller
                 );
 
          
-
-               
-                
               $data = $this->data;
                 $data += array(
                     'agentData' => $agentData,
