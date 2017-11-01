@@ -36,10 +36,11 @@ $route['updateuser'] = 'main/upuser';
 $route['agentquery'] = 'main/agent_query';
 $route['contactag'] = 'main/contactagent';
 $route['allpackages'] = 'package/showpakage';
-
 $route['printpro'] = 'property/printproperty';
 $route['add'] = 'package/add';
 $route['addagent'] = 'main/add_new_agent';
+$route['phone_to_agent'] = 'main/agent_new_phone';
+
 
 /*
 $route['addtofav'] will write in form or anchor tag.

@@ -67,10 +67,10 @@
 	<div class="box box-primary">
 		<div class="box-body box-profile">
 			<div class="col-md-3">
-				<img class="img-thumbnail" src="<?php echo base_url('resources/img/agents/'.$a['id']. '/prof.jpg');?>">
+				<img class="img-thumbnail" src="<?php echo base_url('resources/img/agents/'.$a['image']);?>">
 
 				<h3 class="profile-username text-center">
-					<?php echo $a['name']; ?>
+					<?php echo $a['title'] . " " . $a['fname'] ." ". $a['lname']; ?>
 				</h3>
 
 				<ul class="list-group list-group-unbordered">
@@ -78,6 +78,24 @@
 						<b>Agent Id:</b>
 						<a class="pull-right">
 							<?php echo $a['id']; ?>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<b>Phone No:</b>
+						<a class="pull-right">
+							<?php echo $a['phone']; ?>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<b>Email:</b>
+						<a class="pull-right">
+							<?php echo $a['email']; ?>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<b>Address:</b>
+						<a class="pull-right">
+							<?php echo $a['address']; ?>
 						</a>
 					</li>
 <!--					<li class="list-group-item">-->
@@ -94,15 +112,18 @@
 					<!-- Post -->
 					<div class="post">
 
-						<div class="pull-left text-center">
+						<!-- <div class="pull-left text-center">
 							<img class="img-responsive" src="http://media.rightmove.co.uk/8k/7730/branch_rmchoice_logo_7730_0002_t.jpeg" alt="Uk">
 							<span class="username">
 								<a href="#">Agency Name</a>
 							</span>
-						</div>
+						</div> -->
 						<ul class="list-inline">
+						<li class="pull-right">
+								<a href="/favmove1/phone_to_agent?id=<?php echo $a['id']; ?>" class="btn btn-primary link-white text-sm">
+									<i class="fa fa-pencil margin-r-5"></i>Allow Phone No</a>
+							</li>
 							<li class="pull-right">
-
 								<a href="/favmove1/agentquery?id=<?php echo $a['id']; ?>" class="btn btn-primary link-white text-sm">
 									<i class="fa fa-pencil margin-r-5"></i>Show Inquiries</a>
 							</li>
@@ -114,6 +135,7 @@
 								<a href="#" class="btn btn-danger link-white text-sm">
 									<i class="fa fa-trash margin-r-5"></i> Delete</a>
 							</li>
+							
 						</ul>
 						<div class="clearfix"></div>
 
@@ -121,10 +143,7 @@
 						<p>
 							<?php echo $a['description']; ?>
 						</p>
-						<h4 class="box-title">Town:</h4>
-						<p>
-							Lorem ipsum represents a long-held tradition for designers,
-						</p>
+						
 						<div class="col-md-4">Empty Div</div>
 						<div class="col-md-4">Empty Div</div>
 						<div class="col-md-4">Empty Div</div>

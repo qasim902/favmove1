@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
 foreach($agquery as $val):
-    
+  
 echo "User Name" . $val['fullname'];
 echo $val['fullname'];
 echo $val['fullname'];
@@ -8,7 +8,7 @@ echo $val['fullname'];
 echo $val['fullname'];
 endforeach;
 
-?> -->
+?>
 <!DOCTYPE html>
 <html>
 
@@ -315,39 +315,6 @@ endforeach;
                     <div class="box box-primary">
                         <div class="box-body box-profile">
                             <div class="col-md-6">
-                                <div class=" text-center" style="margin-bottom:10px">
-                                    <img src="http://media.rightmove.co.uk/8k/7730/branch_rmchoice_logo_7730_0002_t.jpeg" alt="Uk">
-
-                                </div>
-                                <ul class="list-group list-group-unbordered">
-                                    <li class="list-group-item">
-                                        <b>Agent Name:</b>
-                                        <a class="pull-right">
-                                            Sarvar
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>Agent Id:</b>
-                                        <a class="pull-right">
-                                            231
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>Postcode</b>
-                                        <a class="pull-right">54000</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>Email</b>
-                                        <a class="pull-right">hamza.ahmad1990@gmail.com</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <b>Phone</b>
-                                        <a class="pull-right">+442389423982</a>
-                                    </li>
-                                </ul>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="col-md-6">
 
                                 <div class="tab-pane">
 
@@ -356,7 +323,7 @@ endforeach;
                                         <div class="col-md-12">
                                             <div class="col-md-12">
                                                 <h3 class="box-title">
-                                                    <b>User Details</b>
+                                                    <b>User Detail</b>
                                                 </h3>
                                             </div>
                                             <div class="col-md-6">
@@ -365,7 +332,7 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq">Mahmood</span>
+                                                <span class="ag_inq"><?php echo $val['fullname'];?></span>
                                             </div>
                                             <br>
                                             <div class="col-md-6">
@@ -374,7 +341,7 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq">Property to let</span>
+                                                <span class="ag_inq"><?php echo $val['useroption'];?></span>
                                             </div>
                                             <br>
                                             <div class="col-md-6">
@@ -383,7 +350,7 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq">hamza.ahmad1990@gmail.com</span>
+                                                <span class="ag_inq"><?php echo $val['email'];?></span>
                                             </div>
                                             <br>
                                             <div class="col-md-6">
@@ -392,7 +359,7 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq">+442389423982</span>
+                                                <span class="ag_inq"><?php echo $val['phone'];?></span>
                                             </div>
                                             <br>
 
@@ -401,7 +368,7 @@ endforeach;
                                                     <b>Description</b>
                                                 </h5>
                                                 <p>
-                                                    dsafdsagfadsgsdfgdfsgfdasfdsafadsfsad
+                                                <?php echo $val['message'];?>
                                                 </p>
                                             </div>
                                         </div>

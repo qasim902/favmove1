@@ -15,23 +15,26 @@
 								<div class="single-query ">
 									
 									<div class="intro">
-									<select name="Title">
+									<select name="select_one">
 										<option class="active">Title</option>
 										<option value="1">Mr</option>
 										<option value="2">Mrs</option>
 									</select>
 									</div>
 								</div>
-
+								<span class="text-danger">
+										<?php echo form_error('select_one');?>
+									</span>
 							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">First Name</label>
 
 								<div class="form-group">
 									<input type="text"  placeholder="Enter First Name" name="fname" value="<?php echo $this->input->post('name'); ?>" class="form-control" id="name" />
+
 								</div>
 								<span class="text-danger">
-									<?php echo validation_errors('fname'); ?>
+									<?php echo form_error('fname'); ?>
 								</span>
 							</div>
 							<div class="col-md-6">
@@ -157,7 +160,14 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+<<<<<<< HEAD
+
 										<input type="text" name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+
+										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+=======
+										<input type="text" name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link"
+>>>>>>> 7ec2935e6188f577ce160aabe40079f6654a93b0
 										/>
 									</div>
 									<span class="text-danger">
