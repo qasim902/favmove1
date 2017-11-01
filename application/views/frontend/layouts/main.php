@@ -405,6 +405,19 @@
           $("#show").click(function(){
               $("#packagedeal").show();
           });
+          // $('.single').owlCarousel({
+          //     items:1,
+          //     margin:10,
+          //     autoHeight:true
+          // });
+          $('#upload_image').change(function() {
+              var filename = $(this).val();
+              var lastIndex = filename.lastIndexOf("\\");
+              if (lastIndex >= 0) {
+                  filename = filename.substring(lastIndex + 1);
+              }
+              $('#upload_image_sho').val(filename);
+          });
         });
   </script>
   <script>

@@ -26,7 +26,7 @@
       <div class="col-md-8 listing1 property-details">
         <h2 class="text-uppercase"><?= $viewdata['property']['title'] ?></h2>
         <p class="bottom10"><?= $viewdata['property']['address'] ?></p>
-        <div id="property-d-1" class="owl-carousel single">
+        <div id="property-d-1" class="owl-carousel big single">
           <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg' );?>" alt="image"/></div>
           <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg' );?>" alt="image"/></div>
           <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg' );?>" alt="image"/></div>
@@ -36,7 +36,7 @@
           <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg' );?>" alt="image"/></div>
 
         </div>
-        <div id="property-d-1-2" class="owl-carousel single">
+        <div id="property-d-1-2" class="owl-carousel small single">
           <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-1.jpg" alt="image"/></div>
           <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-2.jpg" alt="image"/></div>
           <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-3.jpg" alt="image"/></div>

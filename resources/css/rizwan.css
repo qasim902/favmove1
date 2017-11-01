@@ -407,3 +407,12 @@ display: inline-block;
     word-break: break-all;
     white-space: normal;
   }
+.big img{
+  display:block; height:500px !important; margin:0 auto;
+}
+  .small img{
+    display:block; height:100px !important; margin:0 auto;
+  }
+#property-d-1.single .owl-prev, #property-d-1.single .owl-next {
+    top: 40px !important;
+}
