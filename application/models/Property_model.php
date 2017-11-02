@@ -155,7 +155,7 @@ class Property_model extends CI_Model
         $this->db->insert('prop_details',$params['prop_details']);
        return $id;
     }
-    
+ 
     /*
      * function to update property
      */

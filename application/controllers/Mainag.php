@@ -149,26 +149,63 @@ class Mainag extends CI_Controller{
 
            
             $agent = $this->session->userData('userData'); //var_dump($agent[ 'agentData']['UserData']['userid']); die();
-    //         $this->form_validation->set_rules('town_id','Town Id','required');
-    //     $this->form_validation->set_rules('title','Title','required|max_length[255]');
+            $this->form_validation->set_rules('town_id','Town Id','required');
+         $this->form_validation->set_rules('title','Title','required|max_length[255]');
         
          $this->form_validation->set_rules('address','Address','required|max_length[255]');
         
-    //     $this->form_validation->set_rules('status','Status','max_length[255]');
+        $this->form_validation->set_rules('status','Status','max_length[255]');
         
-    //  //   $this->form_validation->set_rules('video_embed','Video Embed','max_length[255]');
+     
         
-    //     $this->form_validation->set_rules('price','Price','required|numeric');
-    //     $this->form_validation->set_rules('prop_type','Prop Type','required|max_length[15]');
-    //     $this->form_validation->set_rules('description','Description','required');
-       // $this->form_validation->set_rules('yearb','Year Built','numeric|required|max_length[4]');
-            $this->db->select_max('prop_id');
+        $this->form_validation->set_rules('price','Price','required|numeric');
+        $this->form_validation->set_rules('prop_type','Prop Type','required|max_length[15]');
+        $this->form_validation->set_rules('description','Description','required');
+       $this->form_validation->set_rules('yearb','Year Built','numeric|required|max_length[4]');
+            //$this->form_validation->set_rules('video_embed','Video Embed','max_length[255]');
+       $this->db->select_max('prop_id');
             $result= $this->db->get('property')->row_array();
             $id = ++$result['prop_id'];
             // echo $id;
             
         if($this->form_validation->run())     
         {   
+            $AC = $this->input->post('AC');
+            $Barbeque = $this->input->post('Barbeque');
+            $Lawn = $this->input->post('Lawn');
+            $Laundry = $this->input->post('Laundry');
+            $Balcony = $this->input->post('Balcony');
+            $Theater = $this->input->post('Home_Theater');
+            $Basement = $this->input->post('Basement');
+            if($AC == null)
+            {
+                $AC = 0;   
+            }
+            if($Barbeque == null)
+            {
+                $Barbeque = 0;   
+            }
+            if($Laundry == null)
+            {
+                $Laundry = 0;   
+            }
+            if($Theater == null)
+            {
+                $Theater = 0;   
+            }
+            if($Lawn == null)
+            {
+                $Lawn = 0;   
+            }
+            if($Basement == null)
+            {
+                $Basement = 0;   
+            }
+            if($Balcony == null)
+            {
+                $Balcony = 0;   
+            }
+            
             $params = array(
                 'prop_id' => $id,
                 'prop' =>   array(
@@ -191,13 +228,13 @@ class Mainag extends CI_Controller{
                  ),
                 'feat' => array(
                     'prop_id' => $id,
-                'AC' => $this->input->post('AC'),
-                'Barbeque' => $this->input->post('Barbeque'),
-                'Lawn' => $this->input->post('Lawn'),
-                'Laundry' => $this->input->post('Laundry'),
-                'Balcony' => $this->input->post('Balcony'),
-                'theater' => $this->input->post('Home_Theater'),
-                'Basement' => $this->input->post('Basement')),
+                'AC' => $AC,
+                'Barbeque' => $Barbeque,
+                'Lawn' => $Lawn,
+                'Laundry' => $Laundry,
+                'Balcony' => $Balcony,
+                'theater' => $Theater,
+                'Basement' => $Basement),
 
                 'prop_details' => array (
                     'prop_id' => $id,
@@ -210,6 +247,15 @@ class Mainag extends CI_Controller{
                 )
             );
 
+            $AC = $this->input->post('AC');
+            $Barbeque = $this->input->post('Barbeque');
+            $Lawn = $this->input->post('Lawn');
+            $Laundry = $this->input->post('Laundry');
+            $Balcony = $this->input->post('Balcony');
+            $Theater = $this->input->post('theater');
+            $Balcony = $this->input->post('Balcony');
+
+            
             $property_id = $this->Property_model->add_propert($params);
             if ($property_id)
             {
@@ -255,7 +301,11 @@ class Mainag extends CI_Controller{
 
         }
         else {
-            echo validation_errors('<div class="error">', '</div>');
+            
+           $error =  validation_errors();
+        
+           echo  $this->session->set_flashdata('successsub', $error);
+            redirect('ag_submit');
         }
            
            

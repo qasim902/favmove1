@@ -227,7 +227,7 @@ class Main extends CI_Controller
        $this->load->model('property_model');
        $this->load->model('agent_model');
        
-       $search_result = $this->property_model->mysearch($data); 
+       $search_result = $this->property_model->mysearch($data); var_dump($search_result); die();
        $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
        $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
        
