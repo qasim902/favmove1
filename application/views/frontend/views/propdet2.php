@@ -154,7 +154,7 @@
                   </tr>
                 </tbody>
               </table>
-              <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -175,7 +175,7 @@
                       </div>
                     </div>
                   </div>
-                </div> -->
+                </div>
               
               <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
               <ul class="social_share">

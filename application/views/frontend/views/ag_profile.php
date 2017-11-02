@@ -169,8 +169,9 @@
                     <p class="pull-md-left"<?= $viewdata['agentdata']['name']?></p>
                     <p class="pull-md-left"><?= $property['address']?> </small></p>
                     <ul class="pull-right">
-                      <li><a href="javascript:void(0)" data-toggle="tooltip" title="Favourite"><i class="icon-like"></i></a></li>
+                      <!-- <li><a href="javascript:void(0)" data-toggle="tooltip" title="Favourite"><i class="icon-like"></i></a></li> -->
                       <li><a href="javascript:void(0)" data-toggle="tooltip" title="Edit"><i class="icon-edit"></i></a></li>
+                      <li><a href="javascript:void(0)" data-toggle="tooltip" title="Delete"><i class="icon-trash"></i></a></li>
                     </ul>
                   </div>
                   <div class="<?php if ($property['is_feat'] == "1")
