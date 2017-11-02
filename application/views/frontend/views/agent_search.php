@@ -50,7 +50,7 @@
                       <label for="name"><b>Agent Name:</b></label>
                   </div>
               </div>
-              <div class="col-md-6 col-sm-6">
+              <div class="col-md-10 col-sm-6">
                   <div class="form-group">
                       <input type="text" name="agname" placeholder="Agent Name" class="form-control" id="name">
                       <input type="hidden" name="type" value="ag">

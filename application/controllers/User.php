@@ -125,5 +125,15 @@ class User extends CI_Controller{
         else
             show_error('The user you are trying to delete does not exist.');
     }
+
+    function add_note()
+    {   
+        $user_note = array(
+            'usernote' => $this->input->post('usernote')
+        );
+        $this->User_model->add_note($user_note);            
+        
+            
+    } 
     
 }

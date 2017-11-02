@@ -174,16 +174,17 @@
                         <h4 class="modal-title" id="exampleModalLabel">Add Note</h4>
                       </div>
                       <div class="modal-body">
-                        <form>
+                        <form action="user_note" method="POST">
                           <div class="form-group">
                             <label for="message-text" class="control-label">Note:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
+                            <textarea class="form-control" name="usernote" id="message-text"></textarea>
                           </div>
-                        </form>
+                        
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        </form>
                       </div>
                     </div>
                   </div>

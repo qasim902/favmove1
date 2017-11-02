@@ -112,4 +112,12 @@ class User_model extends CI_Model
     {
         return $this->db->get_where('user' , $user_data)->num_rows();
     }
+    function add_note($user_note)
+    {
+        $user_note = array(
+            'note' => $user_note['usernote'],
+          );
+        $this->db->insert('user_note',$user_note);
+        return $this->db->insert();
+    }
 }
