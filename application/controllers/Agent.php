@@ -136,15 +136,15 @@ class Agent extends CI_Controller{
     {
         
             $this->load->library('form_validation');
-        //      $this->form_validation->set_rules('title','Title', 'required' );
-        //   $this->form_validation->set_rules('fname','First Name', 'alpha','max_length[60]','required' );
-        //     $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
-        //    $this->form_validation->set_rules('username','User Name' ,'max_length[60]', 'required');
-        //     $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
-        //     $this->form_validation->set_rules('password','Password','max_length[60]','required');
-        //     $this->form_validation->set_rules('description', 'Description','required');
-        //      $this->form_validation->set_rules('address','Address','required');
-        //     $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
+            // $this->form_validation->set_rules('title','Title', 'required' );
+          $this->form_validation->set_rules('fname','First Name', 'alpha','max_length[60]','required' );
+            $this->form_validation->set_rules('lname','Last Name','alpha', 'max_length[60]','required' );
+           $this->form_validation->set_rules('username','User Name' ,'max_length[60]', 'required');
+         //  $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[agents.email]');    
+            $this->form_validation->set_rules('password','Password','max_length[60]','required');
+            $this->form_validation->set_rules('description', 'Description','required');
+             $this->form_validation->set_rules('address','Address','required');
+           // $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
         //     $this->form_validation->set_rules('fb_link','Facebook Link','required');
         //     $this->form_validation->set_rules('twit_link','Twiter Link','required');
         //     $this->form_validation->set_rules('gplus_link','Google Plus Link','required');
@@ -152,9 +152,9 @@ class Agent extends CI_Controller{
         //     $this->form_validation->set_rules('you_link','Youtube Link','required');
         //    $this->form_validation->set_rules('pin_link','Pintrest Link','required');
         //     $this->form_validation->set_rules('insta_link','Instagram Link','required');
-        //    $this->form_validation->set_rules('package','Package', 'required');
+           //$this->form_validation->set_rules('package_id','Package', 'required');
         //&& $this->form_validation->run()
-            if($this->input->post())
+            if($this->input->post() && $this->form_validation->run())
             {
                 $data = array(
                 'title' => $this->input->post('title'),
@@ -189,7 +189,8 @@ class Agent extends CI_Controller{
                 if (!$this->upload->do_upload('user_file')) 
                 {
                     $error = $this->upload->display_errors(); 
-                    var_dump($error);
+                   echo  $this->session->set_flashdata('successsub', $error);
+                    //var_dump($error);
                     // $data['_view'] = 'user_login';
                     // $this->load->view('layout/main/', $data);
                     //var_dump('hello');  die();

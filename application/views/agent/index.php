@@ -145,17 +145,18 @@
 									<h4 class="modal-title" id="exampleModalLabel">Asign number to Id # <?php echo $a['id']; ?></h4>
 								</div>
 								<div class="modal-body">
-									<form>
+									<form method="POST" action="/favmove1/phone_to_agent?id=<?php echo $a['id']; ?>">
 									<div class="form-group">
 										<label for="recipient-name" class="control-label">Number:</label>
 										<input type="text" class="form-control" id="recipient-name">
 									</div>
-									</form>
+									
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Send message</button>
+									<button type="submit" class="btn btn-primary">Send message</button>
 								</div>
+							</form>
 								</div>
 							</div>
 						</div>

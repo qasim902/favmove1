@@ -16,10 +16,7 @@ if($this->session->flashdata('successsub'))
 echo $this->session->flashdata('successsub');
   echo "</div> 
   </div>";
-echo "<script>
-    window.location.hash = '#alert-pop';
-    
-</script>";
+
 }
 ?>
 			</div>

@@ -17,7 +17,7 @@ echo $this->session->flashdata('successsub');
   </div>";
 
 }
-?>
+?><?php echo form_error();?>
 			<?php echo form_open_multipart('addnewagent'); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
