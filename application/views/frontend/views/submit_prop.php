@@ -72,7 +72,7 @@
           <div class="col-sm-6">
             <div class="single-query form-group bottom20">
               <label>Year Built</label>
-              <input type="text" name="date" placeholder="Select Date" value="2010" class="has-datetimepicker form-control" />
+              <input type="text" name="yearb" placeholder="Select Date" value="2010" class="has-datetimepicker form-control" />
             </div>
           </div>
           <div class="col-sm-12">
@@ -345,7 +345,7 @@
                       </div>
                     
                       <div class=" checkbox">
-                          <label><input type="checkbox" value="1" name="Home Theater" />
+                          <label><input type="checkbox" value="1" name="Home_Theater" />
                         Home Theater</label>
                       </div>
                     </div>

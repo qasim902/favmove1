@@ -206,7 +206,7 @@ class Mainag extends CI_Controller{
                 'bedrooms' => $this->input->post('bedrooms'),
                 'area' => $this->input->post('area'),
                 'lounge' => $this->input->post('lounge'),
-                'price' => $this->input->post('price')
+                
                 )
             );
 
