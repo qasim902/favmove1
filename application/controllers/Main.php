@@ -688,7 +688,12 @@ class Main extends CI_Controller
             $data += array(
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/login');
+            
+           
+            
+            
             $this->load->view('frontend/layouts/main',$data);
+            //  anchor('#', 'register', array('class' => 'active'));
             //redirect('user_reg');
         }
     }
