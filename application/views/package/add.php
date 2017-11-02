@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add a Package</h3>
 			</div>
-			<form action="/favmove1/add" method="POST">
+			<form action="/favmove1/addpkg" method="POST">
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -21,10 +21,7 @@
 								echo $this->session->flashdata('successsub');
 								  echo "</div> 
 								  </div>";
-								echo "<script>
-									window.location.hash = '#alert-pop';
-									
-								</script>";
+								
 								}
 								?>
 							<!-- <div class="col-md-6">

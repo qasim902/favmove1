@@ -28,8 +28,8 @@ class User extends CI_Controller{
 		$this->form_validation->set_rules('password','Password','required|max_length[255]');
 		$this->form_validation->set_rules('username','Username','required|max_length[255]');
 		$this->form_validation->set_rules('email','Email','required|max_length[255]|valid_email');
-		$this->form_validation->set_rules('usertype','Usertype','required|max_length[255]');
-		$this->form_validation->set_rules('created_on','Created On','required');
+		//$this->form_validation->set_rules('usertype','Usertype','required|max_length[255]');
+		//$this->form_validation->set_rules('created_on','Created On','required');
 		
 		if($this->form_validation->run())     
         {   
@@ -37,14 +37,27 @@ class User extends CI_Controller{
 				'password' => $this->input->post('password'),
 				'username' => $this->input->post('username'),
 				'email' => $this->input->post('email'),
-				'usertype' => $this->input->post('usertype'),
-				'created_on' => $this->input->post('created_on'),
+				'usertype' => 'user',
+				'created_on' => date('Y-m-d h:i:s'),
 				'payment_details' => $this->input->post('payment_details'),
 				'myfavorites' => $this->input->post('myfavorites'),
             );
-            
-            $user_id = $this->User_model->add_user($params);
-            redirect('user/index');
+            $user_data = array(
+                'username' => $this->input->post('username'),
+                'email' => $this->input->post('email'),
+            );
+            $check_user = $this->User_model->check_user($user_data); //var_dump($check_user); die();
+            if($check_user > 0)
+            {
+                $this->session->set_flashdata('successsub', "Username or email already exists");
+                $data['_view'] = 'user/add';
+                $this->load->view('layouts/main',$data);
+            }
+            else
+            {
+                $user_id = $this->User_model->add_user($params);
+                redirect('user/index');
+            }
         }
         else
         {            

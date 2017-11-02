@@ -4,6 +4,19 @@
             <div class="box-header with-border">
               	<h3 class="box-title"> Add User</h3>
             </div>
+			<?php
+if($this->session->flashdata('successsub'))
+{
+    echo "<br>
+    <div class='col-md-offset-3 col-md-6'>
+    <div  id='alert-pop' class='text-center alert alert-warning'>";
+    
+echo $this->session->flashdata('successsub');
+  echo "</div> 
+  </div>";
+
+}
+?>
             <?php echo form_open('user/add'); ?>
           	<div class="box-body">
 			<div class="col-sm-1 col-md-2"></div>
@@ -14,21 +27,21 @@
 						<div class="col-md-6">
 							<label for="username" class="control-label"><span class="text-danger">*</span>Username</label>
 							<div class="form-group">
-								<input type="text" placeholder="Enter Name" autofocus name="username" value="<?php echo $this->input->post('username'); ?>" class="form-control" id="username" />
+								<input type="text" placeholder="Enter Name" autofocus name="username" value="" class="form-control" id="username" />
 								<span class="text-danger"><?php echo form_error('username');?></span>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<label for="email" class="control-label"><span class="text-danger">*</span>Email</label>
 							<div class="form-group">
-								<input type="text" placeholder="Enter Email" autofocus name="email" value="<?php echo $this->input->post('email'); ?>" class="form-control" id="email" />
+								<input type="text" placeholder="Enter Email" autofocus name="email" value="" class="form-control" id="email" />
 								<span class="text-danger"><?php echo form_error('email');?></span>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<label for="password"  class="control-label"><span class="text-danger">*</span>Password</label>
 							<div class="form-group">
-								<input type="password" placeholder="Enter Password" autofocus name="password" value="<?php echo $this->input->post('password'); ?>" class="form-control" id="password" />
+								<input type="password" placeholder="Enter Password" autofocus name="password" value="" class="form-control" id="password" />
 								<span class="text-danger"><?php echo form_error('password');?></span>
 							</div>
 						</div>

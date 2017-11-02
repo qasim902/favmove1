@@ -22,7 +22,7 @@ class Package extends CI_Controller{
     /*
      * Adding a new package
      */
-    function add()
+    function addpkg()
     {   
         $this->load->library('form_validation');
 
@@ -80,7 +80,7 @@ class Package extends CI_Controller{
                 'num_featured_limit' => $this->input->post('num_featured_limit'),
                 'user_type' => $this->input->post('user_type'),
                 'package_duration' => $this->input->post('package_durations'),
-                'show_private_listings' => $this->input->post('show_private_listings'),
+                'location' => $this->input->post('add_locations'),
                 
             );
            // var_dump($params); die();
