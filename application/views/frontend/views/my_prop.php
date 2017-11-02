@@ -17,7 +17,17 @@
 </section>
 <!-- Page Banner End -->
 
-
+<?php if (isset($curr_login)){ ?>
+  <div class="container-fluid">
+      <div class="row" style="margin-top: 25px">
+          <div class="col-md-12">
+          <div align="center">
+              <?php $this->load->view('frontend/layouts/usernav.php', $_view);?>
+          </div>
+          </div>
+      </div>  
+  </div>
+<?php } ?> 
     <!--Best Deal Properties-->
     <section id="deals" class="padding bg_light">
     <div class="container">
