@@ -33,6 +33,18 @@ class Property_model extends CI_Model
         
     }
  
+    function prop_avg()
+    {
+        $row = $this->db->get_where('property', array('town_id'=> 'AB10'))->num_rows();
+        $query =  $this->db->select('AVG(price) average')->from('property')->get();
+        $count = $query->row()->average;
+        $data['one'] = $row;
+        $data['two'] = $count;
+        
+       // $a = array('row'=> $row, 'count'=> $count);
+        return $data;
+    }
+
 
     function get_prop_where($key, $value)
     {

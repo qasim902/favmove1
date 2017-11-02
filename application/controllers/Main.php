@@ -157,7 +157,8 @@ class Main extends CI_Controller
             $all_property = $this->Property_model->get_prop_where('prop_type','com');
         }
         $viewdata = array();
-        
+        $this->load->model('property_model');
+        $avg = $this->property_model->prop_avg();
         foreach ($all_property as $property)
         {
             $viewdata[$property['prop_id']-1] = array(
@@ -172,6 +173,7 @@ class Main extends CI_Controller
         }
        $data = $this->data;
         $data += array(
+            'avg'=> $avg,
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/property_list',
             'viewdata' => $viewdata

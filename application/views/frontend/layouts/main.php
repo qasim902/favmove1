@@ -216,7 +216,7 @@
                         <div class="item">
                           <div class="image bottom15">
                             <a href="agent_detail?id=<?= $agent['id']?>">
-                            <img src="<?= $assets;?>img/agents/<?= $agent['id'];?>/prof.jpg" alt="Featured Property">
+                            <img src="<?php echo base_url('resources/img/agents/' .$agent['image'])?>" alt="Featured Property">
                             <span class="nav_tag yellow text-uppercase">Available</span>
                             </a>
                           </div>

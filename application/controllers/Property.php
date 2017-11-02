@@ -240,5 +240,20 @@ class Property extends CI_Controller{
         $data = array('printme' =>$printdata , 'featurep'=> $printfeature);
         $this->load->view('frontend/views/printprop' , $data);
     }
+
+    function prop_avg()
+    {
+        $id = $this->input->get('id');
+        $this->load->model('property_model');
+        $avg = $this->property_model->prop_avg($id); 
+
+        
+       // redirect($this->agent->referrer($avg));//var_dump($avg); die();
+        // $data = array(
+        //      'avg'=> $avg,
+        //      '_view' => 'frontend/views/property_list');
+        //      $this->load->view('frontend/layouts/main',$data);
+        //$this->load->view('frontend/views/property_list', $avg);
+    }
     
 }

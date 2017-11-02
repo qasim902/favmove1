@@ -416,7 +416,7 @@
                 } 
                 else
                 {
-                    echo "<h3>No query for this admin</h3>";
+                    echo "<h3>No query for this Agent.</h3>";
                 }
                 ?>
 
