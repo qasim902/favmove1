@@ -4,7 +4,8 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add a Package</h3>
 			</div>
-			<form action="/favmove1/addpkg" method="POST">
+			<?php echo form_error();?>
+			<form action="pkg_add" method="POST">
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -16,7 +17,7 @@
 								{
 									echo "<br>
 									<div class='col-md-offset-3 col-md-6'>
-									<div  id='alert-pop' class='text-center alert alert-success'>";
+									<div  id='alert-pop' class='text-center alert alert-warning'>";
 									
 								echo $this->session->flashdata('successsub');
 								  echo "</div> 

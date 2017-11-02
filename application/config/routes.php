@@ -37,11 +37,12 @@ $route['agentquery'] = 'main/agent_query';
 $route['contactag'] = 'main/contactagent';
 $route['allpackages'] = 'package/showpakage';
 $route['printpro'] = 'property/printproperty';
-$route['addpkg'] = 'package/addpkg';
+$route['pkg_add'] = 'package/pkgadd';
 $route['addagent'] = 'main/add_agent';
 $route['phone_to_agent'] = 'main/agent_new_phone';
 $route['send_to_friend'] = 'main/send_friend';
 $route['add'] = 'user/add';
+$route['showpkg'] = 'package/showpkg';
 
 
 /*
