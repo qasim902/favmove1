@@ -45,13 +45,10 @@ $route['send_to_friend'] = 'main/send_friend';
 $route['add'] = 'user/add';
 $route['showpkg'] = 'package/showpkg';
 $route['addnewagent'] = 'agent/addnewagent';
-<<<<<<< HEAD
 $route['user_note'] = 'user/add_note';
-=======
 $route['propavg'] = 'property/prop_avg';
 
 
->>>>>>> 0a8289bfd44a90da1d4a8268b49b5e9a871ce809
 
 
 /*
