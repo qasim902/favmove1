@@ -642,7 +642,7 @@
               <?php foreach ($defdata['news'] as $news){ ?>
                <div class="news-1-box clearfix">
                   <div class="col-md-4 col-sm-4 col-xs-12">
-                     <div class="image-2">
+                     <div class="news_imgs image-2">
                         <a href="news_detail?id=<?= $news['id']?>"><img src="<?php echo base_url('resources/img/news/'.$news['image_path']);?>" alt="image" class="img-responsive"/></a>
                      </div>
                   </div>

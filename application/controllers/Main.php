@@ -946,7 +946,11 @@ class Main extends CI_Controller
         $this->load->model('User_model');
         $data = $this->User_model->showfav($userid); 
         $speciprop = array('myfav' =>$data); 
-        $this->load->view('frontend/views/us_profile', $speciprop);
+        // $this->load->view('frontend/views/us_profile', $speciprop);
+        $data = array(
+            'assets' => base_url() . "resources/",
+            '_view' => 'frontend/views/us_profile');
+            $this->load->view('frontend/layouts/main',$data,  $speciprop);
     }
 
 function userfav()

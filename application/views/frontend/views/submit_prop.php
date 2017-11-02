@@ -1,3 +1,15 @@
+<!-- <?php if (isset($curr_login)){ ?>
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 25px">
+    <div align="center">
+      <?php $this->load->view('frontend/layouts/usernav.php', $_view);?>
+    </div>
+    </div>  
+    
+  
+  </div>
+  <?php } ?> -->
+
 <section id="property" class="content">
 
   <div class="row">
