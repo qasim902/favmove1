@@ -182,7 +182,7 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
-          <div class="row search-2">
+          <div class="row ">
             <div class="col-md-6 col-sm-6">
               <div class="single-query form-group">
                 <div class="intro">

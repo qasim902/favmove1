@@ -447,3 +447,9 @@ h2{
   height: 210px;
   overflow: hidden;
 }
+.listing_full_bg .property_meta > span {
+  font-size: 12px;
+}
+#news-section-1 .news-1-box {
+  padding-bottom: 20px;
+}
