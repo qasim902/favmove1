@@ -645,7 +645,7 @@ class Main extends CI_Controller
             $viewmydata['allpackages'] = $this->package_model->get_all_packages(); 
             //$pkg = array('pkg'=>$allpkg);
             $data = $this->data;
-        $data += array(
+            $data += array(
             'easy' => $viewmydata,    
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/login'

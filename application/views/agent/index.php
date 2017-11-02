@@ -45,7 +45,14 @@ echo $this->session->flashdata('successsub');
 					<li class="list-group-item">
 						<b>Phone No:</b>
 						<a class="pull-right">
-							<?php echo $a['phone']; ?>
+							<?php  if(!empty($a['agphone']))
+							{ 
+							  echo $a['agphone'];
+							} 
+							else
+							{
+								echo "";
+							} ?>
 						</a>
 					</li>
 					<li class="list-group-item">

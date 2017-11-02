@@ -55,6 +55,18 @@
         </div>
         <div class="col-md-7 text-right">
           <ul class="breadcrumb_top text-right">
+          <?php if($this->session->userdata('userData')['role'] == "agent"){ ?>
+          <li><a href="agprof" <?php if($_view == 'frontend/views/user_profile'){ ?>  <?php }?>><i class="icon-icons230"></i>User Settings</a></li>
+          <li><a href="agent_home" <?php if($_view == 'frontend/views/my_prop'){ ?>  <?php }?> ><i class="icon-icons215"></i> My Properties</a></li>
+          <li><a href="ag_submit" <?php if($_view == 'frontend/views/submit_prop'){ ?>  <?php }?> ><i class="icon-icons215"></i> Submit Property</a></li>
+          
+          <?php }
+          else if($this->session->userdata('userData')['role'] == "user")
+          { ?>
+            <li><a href="usprof" <?php if($_view == 'frontend/views/user_profile'){ ?> <?php }?>><i class="icon-icons230"></i>Profile</a></li>
+          <!-- <li><a href="ag_submit" <?php if($_view == 'frontend/views/submit_prop'){ ?> class="active" <?php }?> ><i class="icon-icons215"></i> Submit Property</a></li> -->
+          <li><a href="usmyfavs" <?php if($_view == 'frontend/views/fav_prop'){ ?>  <?php }?>><i class="icon-icons43"></i> Favorite Properties</a></li>
+          <?php }?>
           <?php if (isset($curr_login))
           { ?>
             <li class="colors"><a href="logout"><i class="icon-icons179"></i>Logout</a></li>
@@ -62,6 +74,7 @@
           { ?>
             <li class="colors"><a href="user_login"><i class="icon-icons179"></i>Login / Register</a></li>
             <?php } ?>
+            
           </ul>
         </div>
       </div>
@@ -433,7 +446,7 @@
           if (selectedTab != null) {
               $('a[data-toggle="tab"][href="' + selectedTab + '"]').tab('show');
           }
-
+          $('[data-toggle="tooltip"]').tooltip(); 
         });
   </script>
   <script>
