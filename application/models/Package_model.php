@@ -51,6 +51,6 @@ class Package_model extends CI_Model
      */
     function delete_package($id)
     {
-        return $this->db->delete('packages',array('id'=>$id));
+        return $this->db->delete('packages',array('packageid'=>$id));
     }
 }

@@ -217,7 +217,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li class="active">
-                                    <a href="<?php echo site_url('package/addpkg');?>"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="showpkg"><i class="fa fa-plus"></i> Add</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo site_url('package/index');?>"><i class="fa fa-list-ul"></i> Listing</a>

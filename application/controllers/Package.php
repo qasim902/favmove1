@@ -22,15 +22,15 @@ class Package extends CI_Controller{
     /*
      * Adding a new package
      */
-    function addpkg()
+    function pkg_add()
     {   
         $this->load->library('form_validation');
 
        // $this->form_validation->set_rules('field[]', 'The field', 'numeric|xss_clean');
-		$this->form_validation->set_rules('package_name','Package Name','alpha','max_length[60]', 'required' );
+		$this->form_validation->set_rules('package_name','Package Name','max_length[60]', 'required' );
 		$this->form_validation->set_rules('package_price','Package Price','numeric|xss_clean' , 'required');
         $this->form_validation->set_rules('num_listing_limit','Num Listing Limit','numeric|xss_clean','required');
-        $this->form_validation->set_rules('num_featured_limit','num_featured_limit','numeric|xss_clean',  'required');
+        $this->form_validation->set_rules('num_featured_limit','Num Feature Limit','numeric|xss_clean',  'required');
 		$this->form_validation->set_rules('user_type', 'User Type','required');
 		$this->form_validation->set_rules('package_durations','Package Duration','required');
 		//$this->form_validation->set_rules('show_private_listings','Num Images Limit','integer');
@@ -86,11 +86,13 @@ class Package extends CI_Controller{
            // var_dump($params); die();
             $package_id = $this->Package_model->add_package($params);
             $this->session->set_flashdata('successsub', "Package added successfully");
-            redirect('package/add');
+            redirect('package/showpkg');
         }
         else
-        {           
-            $data['_view'] = 'package/add';
+        {   
+            $error = validation_errors();
+            $this->session->set_flashdata('successsub',$error);        
+            $data['_view'] = 'package/showpkg';
             $this->load->view('layouts/main',$data);
         }
     
@@ -102,7 +104,7 @@ class Package extends CI_Controller{
     function edit($id)
     {   
         // check if the package exists before trying to edit it
-        $data['package'] = $this->Package_model->get_package($id);
+        $data['package'] = $this->Package_model->get_package($id); 
         
         if(isset($data['package']['packageid']))
         {
@@ -153,10 +155,10 @@ class Package extends CI_Controller{
      */
     function remove($id)
     {
-        $package = $this->Package_model->get_package($id);
+        $package = $this->Package_model->get_package($id); //var_dump($package); die();
 
         // check if the package exists before trying to delete it
-        if(isset($package['id']))
+        if(isset($package['packageid']))
         {
             $this->Package_model->delete_package($id);
             redirect('package/index');
@@ -172,6 +174,14 @@ class Package extends CI_Controller{
         $this->load->view('frontend/views/login', $data);
         
 
+    }
+
+    function showpkg ()
+    {
+        $data = array(
+            'assets' => base_url(),
+            '_view' => 'package/add');
+            $this->load->view('layouts/main',$data);
     }
     
     
