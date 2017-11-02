@@ -28,6 +28,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-8">
                 <div class="single-query form-group">
+                  <div class="intro">
                   <select name="town_id">
                 <option value="">Select Town</option>
                 <?php 
@@ -39,6 +40,7 @@
                 } 
                 ?>
               </select>
+              </div>
                 </div>
               </div>
               
