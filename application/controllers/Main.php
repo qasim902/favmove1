@@ -1113,9 +1113,11 @@ function agent_new_phone()
    $id = $this->input->get('id');
    $this->load->model('agent_model');
    $phone  = $this->input->post('agphone');
-   $add_success = $this->agent_model->addphone($id, $phone);
+   $data = array('agphone'=>$phone);
+   $add_success = $this->agent_model->addphone($id, $data);
    if($add_success)
    {
+    $this->session->set_flashdata('successsub', "Number added to agent successfully");
         redirect($this->agent->referrer());
    }
    else
