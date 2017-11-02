@@ -423,3 +423,23 @@ display: inline-block;
   word-break: break-all; */
   height: 30px;
 }
+.proprties_images { height: 199px; width: 360px; overflow: hidden; }
+h2{
+  font-weight: 300;
+}
+.featu_pro {
+  padding-top: 60px;
+}
+.pro_lis{
+  padding-left: 0px;
+  padding-right: 0px;
+  
+}
+.news_pro h4{
+  font-weight: 300 !important;
+  font-family: 'Work Sans", sans-serif' !important;
+  font-size: 16px;
+}
+.sid_b .tag{
+  font-size: 13px !important;
+}

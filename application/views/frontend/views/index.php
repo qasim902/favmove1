@@ -430,7 +430,7 @@
              <h3 class="captlize"><a href="property_detail?id=<?= $prop['prop_id'] ?>"><?= $prop['title'] ?></a></h3>
              <p><?= $prop['address'] ?></p>
           </div>
-          <div class="image"> 
+          <div class="image proprties_images"> 
             <a href="property_detail?id=<?= $prop['prop_id'] ?>"><img src="<?= $assets."img/properties/".$prop['prop_id'] ?>/latest.jpg" alt="property1" class="img-responsive"></a>
             <div class="price clearfix"> 
             <span class="tag pull-right"><?php
@@ -492,7 +492,7 @@
               <p><?= $prop['excerpt'] ?>…</p>
             </div>
             <div class="favroute clearfix">
-              <p class="pull-md-left">£ <?= $prop['price'] ?> Per Month</p>
+              <p class="pull-md-left">£ <?= $prop['price'] ?></p>
               <ul class="pull-right">
                 <li><a href="#."><i class="icon-like"></i></a></li>
                 <li><a href="#one" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
@@ -530,11 +530,11 @@
 
 
 <!--Deals-->
-<section id="deal" class="padding_bottom_half padding_top">
+<section id="deal" class="featu_pro padding_top">
   <div class="container">
     <div class="row">
       <div class="col-sm-10">
-        <h2 class="uppercase">Best Deal Properties</h2>
+        <h2 class="uppercase">Featured Properties</h2>
         <p class="heading_space">We have Properties in these Areas View a list of Featured Properties.</p>
       </div>
     </div>
@@ -635,7 +635,7 @@
          <div class="col-md-9">
             <div class="row">
                 <div class="col-sm-10 bottom20 news_pro">
-                  <h3 class="uppercase">Property news</h3>
+                  <h2 class="uppercase">Property news</h2>
                 </div>
               </div>
             <div class="row">
@@ -647,7 +647,7 @@
                      </div>
                   </div>
                   <div class="col-md-7 col-sm-7 col-xs-12 padding-left-25">
-                     <h3><a href="news_detail?id=<?= $news['id']?>"><?= $news['title']?></a></h3>
+                     <h4><a href="news_detail?id=<?= $news['id']?>"><?= $news['title']?></a></h4>
                      <div class="news-details padding-b-10 margin-t-5">
                         <span><i class="icon-icons230"></i> by <?= $news['author']?></span>
                         <span><i class="icon-icons228"></i> <?php date('m ([ .\t-])* dd [,.stndrh\t ]+ y',strtotime($news['added_on']))?></span>
@@ -665,20 +665,20 @@
          </div>
          <aside class="col-md-3 col-xs-12">
             <div class="row">
-              <div class="col-sm-12 bottom20 news_pro">
-                <h3 class="uppercase">Property guides & tools</h3>
+              <div class="col-sm-12 bottom10 news_pro">
+                <h4 class="uppercase">Property guides & tools</h4>
               </div>
             </div>
             
             
             <div class="row">
                <div class="news-1-box">
-                  <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="col-md-12 news_pro col-sm-12 col-xs-12">
                     <a href="#">
                      <div class="image-2">
                        <img src="<?= $assets ?>img/blog-6.jpg" alt="image" class="img-responsive"/>
                      </div>
-                     <h3 class="top10 bottom10">Buying property guides</h3>
+                     <h4 class="top10 bottom10">Buying property guides</h4>
                      <p>Get the latest advice and tips on buying property</p>
                     </a>
                     <a class="btn btn-success btn-block" href="#">Browse more guides and tools</a>
@@ -688,7 +688,7 @@
             
             <div class="row">
                <div class="col-md-12 news_pro">
-                  <h3 class="top20 bottom10">Featured Properties</h3>
+                  <h4 class="top20 bottom10">Featured Properties</h4>
                </div>
                <div class="col-md-12 padding-t-30">
                   <div id="agent-2-slider" class="owl-carousel">
@@ -697,7 +697,7 @@
                            <div class="image">
                               <a href="#."><img src="<?= $assets ?>img/slider-list2.jpg" alt="listin" class="img-responsive"></a>
                               <div class="feature"><span class="tag-2">For Rent</span></div>
-                              <div class="price clearfix">
+                              <div class="price sid_b clearfix">
                                 <span class="tag fmly_hm pull-right">$8,600 Per Month - <small>Family Home</small></span>
                               </div>
                            </div>
