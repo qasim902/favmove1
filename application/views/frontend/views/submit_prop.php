@@ -10,7 +10,7 @@
   </div>
   <?php } ?> -->
 
-<section id="property" class="content">
+<section id="property" class="content top30">
 
   <div class="row">
     <div class="box box-primary">
