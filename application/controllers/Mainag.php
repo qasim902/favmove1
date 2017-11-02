@@ -210,8 +210,6 @@ class Mainag extends CI_Controller{
                 )
             );
 
-            
-            
             $property_id = $this->Property_model->add_propert($params);
             if ($property_id)
             {

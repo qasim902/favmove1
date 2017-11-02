@@ -147,12 +147,13 @@ class Property_model extends CI_Model
     }
 
     function add_propert($params)
-    {
-        $this->db->insert('property',$params['prop']);
-        $id =  $this->db->insert_id();
+    { 
+        //var_dump($params['feat']); die();
+       $this->db->insert('property',$params['prop']);
+       $id =  $this->db->insert_id();
         $this->db->insert('features',$params['feat']);
         $this->db->insert('prop_details',$params['prop_details']);
-        return $id;
+       return $id;
     }
     
     /*
@@ -278,8 +279,8 @@ class Property_model extends CI_Model
                                     AND bathrooms  >= $bathrooms
                                     AND area  <= $max_area
                                     AND area  >= $min_area
-                                    AND pd.price  <= $max_price
-                                    AND pd.price  >= $min_price
+                                    AND price  <= $max_price
+                                    AND price  >= $min_price
                                     AND (features.AC = 1
                                     OR features.AC = $AC)
 
