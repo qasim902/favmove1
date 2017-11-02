@@ -190,6 +190,10 @@
                 </a>
               </div>
             <?php }
+            else if($i ==4)
+            { ?>
+              <img src="<?php echo base_url('resources/img/agentad/3/agbanner.jpg');?>" alt="agency">
+           <?php }
 
           } 
           ?>  

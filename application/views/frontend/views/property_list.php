@@ -171,14 +171,12 @@
             </div>
             </div>
       </div>
-            <?php 
-          // if(count($viewdata)/3 == 0)
-          // { ?>
-          <!-- //       <img src="resources/img/" > -->
-          // <?php }?>
+            
+         
+           <?php }?>
           
           
-          } ?>
+        
 
 
             <div class=" top20 bottom20">
@@ -194,24 +192,15 @@
                 </thead>
                 <tbody>
                     <tr class="accordion-toggle" data-toggle="collapse" data-target="#accordion">
-                        <td><b>West Midlands</b></td>
-                        <td width="30%">12,398</td>
-                        <td width="30%">£199,535</td>
+                        <td><b>Aberdeen City Scotland</b></td>
+                        <td width="30%"><?php echo $avg['one'];?></td>
+                        <td width="30%"><?php echo "£ ". (int)$avg['two'];?></td>
                     </tr>
                     <tr class="accordion-body collapse" id="accordion">
                       <td colspan='3' style="padding:0px">
                         <table class="table" style="margin: 0;" width="100%" cellspacing="0" cellpadding="0">
                           <tbody>
-                            <tr>
-                              <td>Herefordshire</td>
-                              <td width="30%">6,744</td>
-                              <td width="30%">£456,646</td>
-                            </tr>
-                            <tr>
-                              <td>Wiltshire</td>
-                              <td width="30%">6,744</td>
-                               <td width="30%">£456,646</td>
-                            </tr>
+                       
                           </tbody>
                         </table>
                       </td>

@@ -45,6 +45,7 @@ $route['send_to_friend'] = 'main/send_friend';
 $route['add'] = 'user/add';
 $route['showpkg'] = 'package/showpkg';
 $route['addnewagent'] = 'agent/addnewagent';
+$route['propavg'] = 'property/prop_avg';
 
 
 
