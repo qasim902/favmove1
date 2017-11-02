@@ -7,60 +7,22 @@
 					<a href="<?php echo site_url('agent/add'); ?>" class="btn btn-success btn-sm">Add Agents</a>
 				</div>
 			</div>
-			<!-- <div class="box-body">
-                <table class="table table-striped">
-                    <tr>
-						<th>ID</th>
-						<th>Package Id</th>
-						<th>Agency Id</th>
-						<th>Password</th>
-						<th>Name</th>
-						<th>Username</th>
-						<th>Email</th>
-						<th>Agent Image</th>
-						<th>Property List</th>
-						<th>Last Logintime</th>
-						<th>Added Date</th>
-						<th>Address</th>
-						<th>Activated</th>
-						<th>Package Lastpayment</th>
-						<th>Last Editip</th>
-						<th>Payment Details</th>
-						<th>Description</th>
-						<th>Actions</th>
-                    </tr>
-                    
-                    <tr>
-						<td><?php echo $a['id']; ?></td>
-						<td><?php echo $a['package_id']; ?></td>
-						<td><?php echo $a['agency_id']; ?></td>
-						<td><?php echo $a['password']; ?></td>
-						<td><?php echo $a['name']; ?></td>
-						<td><?php echo $a['username']; ?></td>
-						<td><?php echo $a['email']; ?></td>
-						<td><?php echo $a['agent_image']; ?></td>
-						<td><?php echo $a['property_list']; ?></td>
-						<td><?php echo $a['last_logintime']; ?></td>
-						<td><?php echo $a['added_date']; ?></td>
-						<td><?php echo $a['address']; ?></td>
-						<td><?php echo $a['activated']; ?></td>
-						<td><?php echo $a['package_lastpayment']; ?></td>
-						<td><?php echo $a['last_editip']; ?></td>
-						<td><?php echo $a['payment_details']; ?></td>
-						<td><?php echo $a['description']; ?></td>
-						<td>
-                            <a href="<?php echo site_url('agent/edit/'.$a['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                            <a href="<?php echo site_url('agent/remove/'.$a['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
-                        </td>
-                    </tr>
-                   
-                </table>
-                                
-            </div> -->
 		</div>
 	</div>
 </div>
+<?php
+if($this->session->flashdata('successsub'))
+{
+    echo "<br>
+    <div class='col-md-offset-3 col-md-6'>
+    <div  id='alert-pop' class='text-center alert alert-success'>";
+    
+echo $this->session->flashdata('successsub');
+  echo "</div> 
+  </div>";
 
+}
+?>
 <?php foreach($agents as $a){ ?>
 <div class="col-md-12">
 	<!-- Profile Image -->
@@ -83,7 +45,14 @@
 					<li class="list-group-item">
 						<b>Phone No:</b>
 						<a class="pull-right">
-							<?php echo $a['phone']; ?>
+							<?php  if(!empty($a['agphone']))
+							{ 
+							  echo $a['agphone'];
+							} 
+							else
+							{
+								echo "";
+							} ?>
 						</a>
 					</li>
 					<li class="list-group-item">
@@ -148,7 +117,7 @@
 									<form method="POST" action="/favmove1/phone_to_agent?id=<?php echo $a['id']; ?>">
 									<div class="form-group">
 										<label for="recipient-name" class="control-label">Number:</label>
-										<input type="text" class="form-control" id="recipient-name">
+										<input type="text" class="form-control" id="recipient-name" name="agphone">
 									</div>
 									
 								</div>

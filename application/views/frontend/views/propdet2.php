@@ -84,7 +84,19 @@
               <div class="agent_contact agnt_dtls">
                 <div class="col-md-12 bottom10">
                     <div class=" pull-left"><strong>Phone:</strong></div>
-                    <div class="  pull-right"><?= $viewdata['agentdata']['phone'] ?></div>
+                    <div class="  pull-right">
+                      <?php 
+                      if(!empty($viewdata['agentdata']['agphone']))
+                      { 
+                        echo $viewdata['agentdata']['agphone'];
+                      } 
+                      else
+                      {
+                          echo "";
+                      }
+                      ?>
+                        
+                      </div>
                 </div>
                 <div class="col-md-12 bottom10">
                     <div class="pull-left  "><strong>Email Adress:</strong></div>

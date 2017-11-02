@@ -82,7 +82,9 @@ echo "</div>
                 </div>
                 <div class="search-form-group white col-sm-12 form-group text-left">
                   <div class="check-box-2"><i><input type="checkbox" name="check-box"></i></div>
-                  <span>Receive Newsletter</span>
+                  <span>
+                  Favouritemove can contact me with relevant properties, offers and news
+</span>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 text-center">
                   <div class="query-submit-button">

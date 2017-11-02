@@ -217,10 +217,14 @@
           
           print_r($viewdata['agentdata']);?></div>
 
-          <div class="tab-pane" id="messages"><?php foreach ($viewdata['my_inq'] as $inq) {
+          <div class="tab-pane" id="messages">message here
+            <?php var_dump($viewdata); 
+            
+            foreach ($viewdata['my_inq'] as $inq) {
 
-            print_r($inq); echo "<br><br><br>";}
-            ?></div>
+            print_r('hello'); echo "<br><br><br>";}
+            ?>
+            </div>
           
           <div class="tab-pane" id="settings">Settings Tab.</div>
 

@@ -45,11 +45,10 @@ class Mainag extends CI_Controller{
             
             $my_props = $this->Property_model->get_prop_where('agent_id', $curr_login['agentData']['UserData']['userid']);
             $my_inqs = $this->Agent_model->getinquiries($curr_login['agentData']['AgentData']['email']);
-            $viewdata['my_inq'] = $my_inqs; 
-            
+            $viewdata['my_inq'] = $my_inqs; //var_dump($curr_login); die();
+            var_dump($curr_login[ 'agentData']['UserData']['userid']); die();
             $viewdata['my_prop'] = $my_props; 
             $viewdata['agentdata'] = $curr_login['agentData']['AgentData']; 
-            
             
          $data = $this->data;
             $data += array(
@@ -57,8 +56,7 @@ class Mainag extends CI_Controller{
 
             'curr_login' => $this->data['curr_login'],
             '_view' => 'frontend/views/ag_profile',
-            
-          
+
         );
         $this->load->view('frontend/layouts/main', $data);
 

@@ -1,5 +1,3 @@
-
-
 <!-- Page Banner Start-->
 <section class="page-banner padding">
   <div class="container">
@@ -36,7 +34,7 @@
       </div>
       
           <?php 
-          $i= 0;
+          $i=0;
           foreach($viewdata as $property) { 
 
           ?>
@@ -180,10 +178,11 @@
             </div>
             </div>
       </div>
+      <h1><?php //echo $i;?></h1>
             <?php 
+            
             $i++;
-            if($i/3 == 0)
-            {
+            if( $i == 2) {
               ?>
               <div class="creative">
                 <a href="" target="">
@@ -197,6 +196,10 @@
 
             
     </div>
+
+    <?php if (isset($links)) { ?>
+                <?php echo $links ?>
+            <?php } ?>
 
       <div class="col-sm-3 bottom10 top30">
             <div class="top30">

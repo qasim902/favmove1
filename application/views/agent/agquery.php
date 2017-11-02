@@ -1,14 +1,3 @@
-<?php
-foreach($agquery as $val):
-  
-echo "User Name" . $val['fullname'];
-echo $val['fullname'];
-echo $val['fullname'];
-echo $val['fullname'];
-echo $val['fullname'];
-endforeach;
-
-?>
 <!DOCTYPE html>
 <html>
 
@@ -306,12 +295,16 @@ endforeach;
         </aside>
 
 
+       
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Main content -->
             <section class="content">
                 <div class="col-md-12">
                     <!-- Profile Image -->
+                 <?php   
+                 if(!empty($agquery)){
+                 foreach($agquery as $val): ?>
                     <div class="box box-primary">
                         <div class="box-body box-profile">
                             <div class="col-md-6">
@@ -332,7 +325,14 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq"><?php echo $val['fullname'];?></span>
+                                                <span class="ag_inq">
+                                                    <?php 
+                                                   
+                                                        echo $val['fullname'];
+                                                    
+                                                    
+                                                    ?>
+                                                </span>
                                             </div>
                                             <br>
                                             <div class="col-md-6">
@@ -341,7 +341,14 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq"><?php echo $val['useroption'];?></span>
+                                            <span class="ag_inq">
+                                                    <?php 
+                                                    
+                                                        echo $val['useroption'];
+                                                    
+                                                   
+                                                    ?>
+                                                </span>
                                             </div>
                                             <br>
                                             <div class="col-md-6">
@@ -350,7 +357,13 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq"><?php echo $val['email'];?></span>
+                                            <span class="ag_inq">
+                                                   <?php
+                                                        echo $val['email'];
+                                                    
+                                                    
+                                                    ?>
+                                                </span>
                                             </div>
                                             <br>
                                             <div class="col-md-6">
@@ -359,7 +372,13 @@ endforeach;
                                                 </span>
                                             </div>
                                             <div class="col-md-6">
-                                                <span class="ag_inq"><?php echo $val['phone'];?></span>
+                                            <span class="ag_inq">
+                                                    <?php 
+                                                   
+                                                        echo $val['phone'];
+                                                   
+                                                    ?>
+                                                </span>
                                             </div>
                                             <br>
 
@@ -368,7 +387,14 @@ endforeach;
                                                     <b>Description</b>
                                                 </h5>
                                                 <p>
-                                                <?php echo $val['message'];?>
+                                                <span class="ag_inq">
+                                                    <?php 
+                                                   
+                                                        echo $val['message'];
+                                                    
+                                                
+                                                    ?>
+                                                </span>
                                                 </p>
                                             </div>
                                         </div>
@@ -385,10 +411,20 @@ endforeach;
                         <!-- /.box -->
                     </div>
                 </div>
+                <?php 
+                endforeach;
+                } 
+                else
+                {
+                    echo "<h3>No query for this admin</h3>";
+                }
+                ?>
 
             </section>
             <!-- /.content -->
         </div>
+       
+       
         <!-- /.content-wrapper -->
 
         <footer class="main-footer">

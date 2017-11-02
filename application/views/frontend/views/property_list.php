@@ -32,6 +32,7 @@
         </div>
       </div>
       
+     
           <?php foreach($viewdata as $property) {  ?>
     
       <div class="row" style="margin-top:10px;margin-bottom:50px;">
@@ -170,7 +171,14 @@
             </div>
             </div>
       </div>
-            <?php } ?>
+            <?php 
+          // if(count($viewdata)/3 == 0)
+          // { ?>
+          <!-- //       <img src="resources/img/" > -->
+          // <?php }?>
+          
+          
+          } ?>
 
 
             <div class=" top20 bottom20">
