@@ -32,12 +32,8 @@ class News extends CI_Controller{
         $this->load->library('form_validation');
 
 		$this->form_validation->set_rules('title','Title','required|max_length[255]');
-		$this->form_validation->set_rules('added_on','Added On','required');
 		$this->form_validation->set_rules('author','Author','required|max_length[255]');
-		$this->form_validation->set_rules('comment_id','Comment Id','required|integer');
-		$this->form_validation->set_rules('excerpt','Excerpt','required');
 		$this->form_validation->set_rules('detail','Detail','required');
-		$this->form_validation->set_rules('tags','Tags','required');
 		$this->form_validation->set_rules('img_path','Img Path','required');
 		
 		if($this->input->post())     
@@ -45,10 +41,10 @@ class News extends CI_Controller{
             $params = array(
 				'title' => $this->input->post('title'),				
                 'author' => $this->input->post('author'),
-                'added_on' => $this->input->post('added_on'),
+                'added_on' => date('y-m-d'),
 				'image_path' => $this->input->post('user_file'),
 				'detail' => $this->input->post('detail'),
-				'tags' => $this->input->post('tags'),
+				
             );
             
             $path = realpath(APPPATH. '../resources/img/news/');
@@ -94,12 +90,11 @@ class News extends CI_Controller{
             $this->load->library('form_validation');
             
                     $this->form_validation->set_rules('title','Title','required|max_length[255]');
-                    $this->form_validation->set_rules('added_on','Added On','required');
+                   
                     $this->form_validation->set_rules('author','Author','required|max_length[255]');
-                    $this->form_validation->set_rules('comment_id','Comment Id','required|integer');
-                    $this->form_validation->set_rules('excerpt','Excerpt','required');
+                   ;
                     $this->form_validation->set_rules('detail','Detail','required');
-                    $this->form_validation->set_rules('tags','Tags','required');
+                    
                     $this->form_validation->set_rules('img_path','Img Path','required');
 		
 			if($this->input->post())     
@@ -107,10 +102,10 @@ class News extends CI_Controller{
                 $params = array(
 					'title' => $this->input->post('title'),				
                     'author' => $this->input->post('author'),
-                    'added_on' => $this->input->post('added_on'),
+                    'added_on' => date('y-m-d'),
                     'image_path' => $this->input->post('img_path'),
                     'detail' => $this->input->post('detail'),
-                    'tags' => $this->input->post('tags'),
+                    
                 );
 
                 $this->News_model->update_news($id,$params);  
