@@ -1,6 +1,6 @@
 
    
-    <?php if (isset($curr_login)){ ?>
+    <!-- <?php if (isset($curr_login)){ ?>
         <div class="container-fluid">
             <div class="row" style="margin-top: 25px">
                 <div class="col-md-12">
@@ -10,7 +10,7 @@
                 </div>
             </div>  
         </div>
-      <?php } ?>
+      <?php } ?> -->
     <section id="agents" class="padding_bottom_half padding_top">
         <div class="container-fluid">
 
@@ -50,7 +50,7 @@
                                         <a href="#messages" data-toggle="tab">Inbox</a>
                                     </li>
                                     <li>
-                                        <a href="#settings" data-toggle="tab">Settings</a>
+                                        <a href="#Investment_detl" data-toggle="tab">Investment/Buying Details</a>
                                     </li>
                                     <li>
                                         <a href="#submit_pro" data-toggle="tab">Submit Property</a>
@@ -384,7 +384,7 @@
                     </div>
 
 
-                    <div class="tab-pane" id="settings">
+                    <div class="tab-pane" id="Investment_detl">
                         <div id="deals" class="top30 bottom40">
                             <div class="row">
                                 <div class="col-sm-12">
