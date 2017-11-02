@@ -198,6 +198,10 @@
             
     </div>
 
+    <?php if (isset($links)) { ?>
+                <?php echo $links ?>
+            <?php } ?>
+
       <div class="col-sm-3 bottom10 top30">
             <div class="top30">
               <aside class="col-md-12 col-xs- top30">

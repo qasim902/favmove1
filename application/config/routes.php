@@ -10,6 +10,7 @@ $route['admin'] = 'admin/index';
 $route['admin_login'] = 'main/adlogin';
 $route['user_login'] = 'main/uslogin';
 $route['search'] = 'main/search';
+$route['search/(:num)'] = 'main/search';
 $route['property_detail'] = 'main/prop_detail';
 $route['logout'] = 'main/logout';
 $route['mail'] = 'main/sendemail';

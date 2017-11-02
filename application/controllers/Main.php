@@ -21,6 +21,11 @@ class Main extends CI_Controller
         $this->load->model('Agent_model');
         $this->load->model('Agency_model');
         $this->load->model('Uk_town_model');
+
+        $this->load->library('pagination');
+        
+       // load URL helper
+       $this->load->helper('url');
         
         $this->data['dropdown_props'] = $this->Property_model->get_all_property();
         $this->data['dropdown_agent'] = $this->Agent_model->get_all_agents();
@@ -227,7 +232,22 @@ class Main extends CI_Controller
        $this->load->model('property_model');
        $this->load->model('agent_model');
        
-       $search_result = $this->property_model->mysearch($data); var_dump($search_result); die();
+       $params = array();
+       $limit_per_page = 5;
+       $start_index = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+
+       $search_result = $this->property_model->mysearch($data,$limit_per_page, $start_index);
+       $search_result_count = $this->property_model->mysearch_count($data); 
+        //echo count($search_result_count);exit;
+       $config['base_url'] = base_url() . 'search';
+       $config['total_rows'] = count($search_result);
+       $config['per_page'] = $limit_per_page;
+       $config["uri_segment"] = 3;
+        
+       $this->pagination->initialize($config);
+       $params["links"] = $this->pagination->create_links();
+
+
        $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
        $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
        

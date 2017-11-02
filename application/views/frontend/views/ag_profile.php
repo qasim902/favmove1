@@ -189,7 +189,7 @@
                             </a>
                           </div>
                           <div class=" favroute clearfix">
-                            <p class="pull-md-left" <?=$ viewdata[ 'agentdata'][ 'name']?></p>
+                            <p class="pull-md-left" <?=$viewdata[ 'agentdata'][ 'name']?></p>
                             <p class="pull-md-left">
                               <?= $property['address']?>
                                 </small>

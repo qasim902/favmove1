@@ -1,11 +1,7 @@
 <?php
+
 foreach($agquery as $val):
   
-echo "User Name" . $val['fullname'];
-echo $val['fullname'];
-echo $val['fullname'];
-echo $val['fullname'];
-echo $val['fullname'];
 endforeach;
 
 ?>
@@ -306,6 +302,7 @@ endforeach;
         </aside>
 
 
+       
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Main content -->
@@ -389,6 +386,8 @@ endforeach;
             </section>
             <!-- /.content -->
         </div>
+       
+       
         <!-- /.content-wrapper -->
 
         <footer class="main-footer">
