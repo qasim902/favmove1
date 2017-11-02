@@ -1027,7 +1027,7 @@ function add_agent()
     $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|xss_clean');    
     $this->form_validation->set_rules('password','Password','max_length[60]','required');
     $this->form_validation->set_rules('description', 'Description','required');
-    $this->form_validation->set_rules('address','Address','required');
+     $this->form_validation->set_rules('address','Address','required');
     $this->form_validation->set_rules('ag_phone','Phone','required','max_length[15]');
     $this->form_validation->set_rules('fb_link','Facebook Link','required');
     $this->form_validation->set_rules('twit_link','Twiter Link','required');
@@ -1036,7 +1036,7 @@ function add_agent()
     $this->form_validation->set_rules('you_link','Youtube Link','required');
    $this->form_validation->set_rules('pin_link','Pintrest Link','required');
     $this->form_validation->set_rules('insta_link','Instagram Link','required');
-   $this->form_validation->set_rules('package','Package', 'numeric|xss_clean');
+   $this->form_validation->set_rules('package','Package', 'required');
 //&& $this->form_validation->run()
     if($this->input->post() && $this->form_validation->run())
     {
@@ -1072,7 +1072,8 @@ function add_agent()
         $this->upload->initialize($config);
         if (!$this->upload->do_upload('user_file')) 
         {
-            echo $this->upload->display_errors(); 
+            $error = $this->upload->display_errors(); 
+           echo  $this->session->set_flashdata('successsub', $error);
             // $data['_view'] = 'user_login';
             // $this->load->view('layout/main/', $data);
             redirect('user_login');

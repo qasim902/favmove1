@@ -149,19 +149,19 @@ class Mainag extends CI_Controller{
 
            
             $agent = $this->session->userData('userData'); //var_dump($agent[ 'agentData']['UserData']['userid']); die();
-            $this->form_validation->set_rules('town_id','Town Id','required');
-        $this->form_validation->set_rules('title','Title','required|max_length[255]');
+    //         $this->form_validation->set_rules('town_id','Town Id','required');
+    //     $this->form_validation->set_rules('title','Title','required|max_length[255]');
         
-        $this->form_validation->set_rules('address','Address','required|max_length[255]');
+         $this->form_validation->set_rules('address','Address','required|max_length[255]');
         
-        $this->form_validation->set_rules('status','Status','max_length[255]');
+    //     $this->form_validation->set_rules('status','Status','max_length[255]');
         
-        $this->form_validation->set_rules('video_embed','Video Embed','max_length[255]');
+    //  //   $this->form_validation->set_rules('video_embed','Video Embed','max_length[255]');
         
-        $this->form_validation->set_rules('price','Price','required|numeric');
-        $this->form_validation->set_rules('prop_type','Prop Type','required|max_length[15]');
-        $this->form_validation->set_rules('description','Description','required');
-        $this->form_validation->set_rules('yearb','Year Built','numeric|required|max_length[4]');
+    //     $this->form_validation->set_rules('price','Price','required|numeric');
+    //     $this->form_validation->set_rules('prop_type','Prop Type','required|max_length[15]');
+    //     $this->form_validation->set_rules('description','Description','required');
+       // $this->form_validation->set_rules('yearb','Year Built','numeric|required|max_length[4]');
             $this->db->select_max('prop_id');
             $result= $this->db->get('property')->row_array();
             $id = ++$result['prop_id'];
@@ -174,20 +174,20 @@ class Mainag extends CI_Controller{
                 'prop' =>   array(
 
                 'town_id' => $this->input->post('town_id'),
-                'agent_id' => $agent['agentData']['UserData']['userid'],
-                'prop_type' => $this->input->post('prop_type'),
                 'title' => $this->input->post('title'),
                 'excerpt' => substr($this->input->post('description'),0,50),
+                'description' => $this->input->post('description'),
                 'address' => $this->input->post('address'),
+                'prop_details' => $id,
                 'status' => $this->input->post('status'),
-                'video_embed' => $this->input->post('video_embed'),
+                'features' => $id,
+                'video_embed' => $this->input->post('video_embed'),              
+                'agent_id' => $agent['agentData']['UserData']['userid'],
                 'is_feat' => $this->input->post('is_feat'),
                 'price' => $this->input->post('price'),
-                'description' => $this->input->post('description'),
-                'new_build' => $this->input->post('new_build'),
-                'features' => $id,
-                'prop_details' => $id,
-                'yearb' =>  $this->input->post('yearb')
+                'prop_type' => $this->input->post('prop_type'),                             
+                'new_build' => $this->input->post('new_build'),              
+                'yearb' =>  $this->input->post('yearb'),
                  ),
                 'feat' => array(
                     'prop_id' => $id,
@@ -230,7 +230,7 @@ class Mainag extends CI_Controller{
             $this->upload->initialize($config);
              if (! $this->upload->do_upload("listing")) {
                     $errors++;
-                   var_dump($this->upload->display_errors()); 
+                  // var_dump($this->upload->display_errors()); 
                 } 
             for ($i = 0; $i < $number_of_files; $i++)
             {

@@ -108,7 +108,7 @@ echo "<script>
                   <div class=" col-sm-3 col-md-4">
                     <div class="form-group">
                       <select  class="form-control" name="title" required>
-                        <option class="active" selected disabled>Title</option>
+                        <option class="active">Title</option>
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                       </select>

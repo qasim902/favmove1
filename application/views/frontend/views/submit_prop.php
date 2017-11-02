@@ -12,7 +12,7 @@
 
             <div class="single-query form-group bottom20">
               <label>Title</label>
-              <input type="text" name="title" class="keyword-input" placeholder="Enter your property title">
+              <input type="text" name="title" class="keyword-input" placeholder="Enter your property title" value="Zameen.com property">
             </div>
           </div>
           <div class="col-sm-6">
@@ -21,7 +21,7 @@
               <div class="intro">
                 <select name="prop_type">
                   <option class="active">Select</option>
-                  <option value="bus">Business</option>
+                  <option value="bus" selected>Business</option>
                   <option value="com">Commercial</option>
                   <option value="res">Residential</option>
                 </select>
@@ -57,7 +57,7 @@
               <div class="intro">
                 <select name="status">
                   <option class="active">Select</option>
-                  <option value="sale">For Sale</option>
+                  <option value="sale" selected>For Sale</option>
                   <option value="rent">For Rent </option>
                 </select>
               </div>
@@ -66,19 +66,19 @@
           <div class="col-sm-6">
             <div class="single-query form-group bottom20">
               <label>Price</label>
-              <input type="number" name="price" min="0" step="0.01" class="keyword-input" placeholder="£ 45,000">
+              <input type="number" name="price" min="0" step="0.01" class="keyword-input" placeholder="£ 45,000" value="40000">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="single-query form-group bottom20">
               <label>Year Built</label>
-              <input type="text" name="date" placeholder="Select Date" value="<?php echo $this->input->post('date_modified'); ?>" class="has-datetimepicker form-control" />
+              <input type="text" name="date" placeholder="Select Date" value="2010" class="has-datetimepicker form-control" />
             </div>
           </div>
           <div class="col-sm-12">
               <div class="single-query form-group bottom20">
                 <label>Address</label>
-                <textarea type="text" class="keyword-input" name="address" placeholder="Enter Property Address" style="width: 100%"></textarea>
+                <textarea type="text" class="keyword-input" name="address" placeholder="Enter Property Address" style="width: 100%">Lahore, Pakistan</textarea>
               </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
               <div class="single-query form-group bottom20">
                 <label>Area in Sq. Ft</label>
                 <div class="intro">
-                  <input type="text" name="area" id="area" placeholder="5,543 sq ft.">
+                  <input type="text" name="area" id="area" placeholder="5,543 sq ft." value="1">
                 </div>
               </div>
 
@@ -163,7 +163,7 @@
                   <select name="bedrooms">
                     <option class="active">Number of Bedrooms</option>
                     <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="2" selected>2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -186,7 +186,7 @@
                   <select name="bathrooms">
                     <option class="active">Number of Bathrooms</option>
                     <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="2" selected>2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -210,7 +210,7 @@
                   <select name="lounge">
                     <option class="active">Number of TV Lounges</option>
                     <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="2" selected>2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -232,7 +232,7 @@
                   <select name="garage">
                     <option class="active">Number of Garages</option>
                     <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="2" selcted>2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
@@ -270,7 +270,7 @@
             </div>
             <div class="col-sm-12">
               <h3 class="bottom15 margin40">Property Description </h3>
-              <textarea id="txtEditor" style="width: 100%" name="description"></textarea>
+              <textarea id="txtEditor" style="width: 100%" name="description">it's zameen.com property for sale </textarea>
             </div>
             <!--  <div class="col-sm-12">
         <h3 class="bottom15 margin40">Quick Summary</h3>
