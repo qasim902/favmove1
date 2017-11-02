@@ -43,6 +43,9 @@ $route['phone_to_agent'] = 'main/agent_new_phone';
 $route['send_to_friend'] = 'main/send_friend';
 $route['add'] = 'user/add';
 $route['showpkg'] = 'package/showpkg';
+$route['addnewagent'] = 'agent/addnewagent';
+
+
 
 
 /*

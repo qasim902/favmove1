@@ -4,7 +4,21 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Add Agent</h3>
 			</div>
-			<?php echo form_open(''); ?>
+			<?php echo form_error();?>
+			<?php
+if($this->session->flashdata('successsub'))
+{
+    echo "<br>
+    <div class='col-md-offset-3 col-md-6'>
+    <div  id='alert-pop' class='text-center alert alert-success'>";
+    
+echo $this->session->flashdata('successsub');
+  echo "</div> 
+  </div>";
+
+}
+?>
+			<?php echo form_open_multipart('addnewagent'); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -89,10 +103,10 @@
 								<div class="input-group form-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
-											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" id="upload_image" style="display: none;" />
+											Upload Image&hellip; <input type="file" name="user_file" value="" class="form-control" id="upload_image" style="display: none;" />
 										</span>
 									</label>
-									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
+									<input  type="text" id="upload_image_sho" value="" class="form-control" readonly>
 									<span class="text-danger">
 									<?php echo form_error('lname');?>
 								</span>
@@ -160,7 +174,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-										<input type="text" placeholder="https://facebook.com/favmove" autofocus name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link">
+										<input type="text" placeholder="https://facebook.com/favmove"  name="fb_link" value="<?php echo $this->input->post('fb_link'); ?>" class="form-control" id="fb_link">
 									</div>
 									<span class="text-danger">
 										<?php echo form_error('fb_link');?>
@@ -172,7 +186,7 @@
 								<div class="form-group">
 									<div class="input-group"> 
 										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-										<input type="text" placeholder="https://linkedin.com/favmove" autofocus name="linkedin_link" value="<?php echo $this->input->post('linkedin_link'); ?>" class="form-control" id="linkedin_link"
+										<input type="text" placeholder="https://linkedin.com/favmove"  name="li_link" value="<?php echo $this->input->post('linkedin_link'); ?>" class="form-control" id="linkedin_link"
 										/>
 									</div>
 									<span class="text-danger">
@@ -185,7 +199,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-										<input type="text" placeholder="https://twitter.com/favmove" autofocus name="twit_link" value="<?php echo $this->input->post('twit_link'); ?>" class="form-control" id="twit_link"
+										<input type="text" placeholder="https://twitter.com/favmove"  name="twit_link" value="<?php echo $this->input->post('twit_link'); ?>" class="form-control" id="twit_link"
 										/>
 									</div>
 									
@@ -199,7 +213,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
-										<input type="text" placeholder="https://google.com/favmove" autofocus name="gplus_link" value="<?php echo $this->input->post('gplus_link'); ?>" class="form-control" id="gplus_link"
+										<input type="text" placeholder="https://google.com/favmove"  name="gplus_link" value="<?php echo $this->input->post('gplus_link'); ?>" class="form-control" id="gplus_link"
 										/>
 									</div>
 									<span class="text-danger">
@@ -212,7 +226,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></span>
-										<input type="text" placeholder="https://youtube.com/favmove" autofocus name="youtube_link" value="<?php echo $this->input->post('youtube_link'); ?>" class="form-control" id="youtube_link"
+										<input type="text" placeholder="https://youtube.com/favmove"  name="youtubelink" value="" class="form-control" id="youtube_link"
 										/>
 									</div>
 									<span class="text-danger">
@@ -223,7 +237,7 @@
 							<div class="col-md-6">
 								<label for="address" class="control-label">Description</label>
 								<div class="form-group">
-									<textarea type="text" placeholder="Description" name="description" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
+									<textarea type="text" placeholder="Description" name="description" value="" class="form-control" id="address"></textarea>
 								</div>
 								<span class="text-danger">
 									<?php echo form_error('description');?>
@@ -232,7 +246,7 @@
 							<div class="col-md-6">
 								<label for="address" class="control-label">Address</label>
 								<div class="form-group">
-									<textarea type="text" placeholder="Address" name="address" value="<?php echo $this->input->post('address'); ?>" class="form-control" id="address"></textarea>
+									<textarea type="text" placeholder="Address" name="address" value="" class="form-control" id="address"></textarea>
 								</div>
 								<span class="text-danger">
 									<?php echo form_error('address');?>
