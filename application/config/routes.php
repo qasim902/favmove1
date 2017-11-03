@@ -49,6 +49,8 @@ $route['user_note'] = 'user/add_note';
 $route['propavg'] = 'property/prop_avg';
 $route['searchag'] = 'agent/searchagent';
 $route['searchtype'] = 'main/search_type';
+$route['edit'] = 'agent/edit';
+$route['remove'] = 'agent/remove';
 
 
 

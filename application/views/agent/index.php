@@ -97,7 +97,7 @@ echo $this->session->flashdata('successsub');
 									<i class="fa fa-pencil margin-r-5"></i>Show Inquiries</a>
 							</li>
 							<li class="pull-right">
-								<a href="#" class="btn btn-primary link-white text-sm">
+								<a href="/favmove1/edit?id=<?php echo $a['id'];?>" class="btn btn-primary link-white text-sm">
 									<i class="fa fa-pencil margin-r-5"></i> Edit</a>
 							</li>
 							<li class="pull-right">

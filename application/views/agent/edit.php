@@ -29,14 +29,14 @@
 							<div class="col-md-6">
 								<label for="name" class="control-label">First Name</label>
 								<div class="form-group">
-									<input type="text" name="name" value="<?php echo ($this->input->post('name') ? $this->input->post('name') : $agent['name']); ?>"
+									<input type="text" name="fname" value="<?php echo ($this->input->post('fname') ? $this->input->post('fname') : $agent['fname']); ?>"
 									 class="form-control" id="name" />
 								</div>
 							</div>
 							<div class="col-md-6">
 								<label for="name" class="control-label">Last Name</label>
 								<div class="form-group">
-									<input type="text" name="name" value="<?php echo ($this->input->post('name') ? $this->input->post('name') : $agent['name']); ?>"
+									<input type="text" name="lname" value="<?php echo ($this->input->post('lname') ? $this->input->post('lname') : $agent['lname']); ?>"
 									 class="form-control" id="name" />
 								</div>
 							</div>
@@ -64,7 +64,7 @@
 							<div class="col-md-6">
 								<label for="email" class="control-label">Contact</label>
 								<div class="form-group">
-									<input type="text" name="contact" value="<?php echo ($this->input->post('contact') ? $this->input->post('contact') : $agent['contact']); ?>"
+									<input type="text" name="contact" value="<?php echo ($this->input->post('contact') ? $this->input->post('contact') : $agent['agphone']); ?>"
 									 class="form-control" id="contact" />
 								</div>
 							</div>
@@ -73,7 +73,7 @@
 								<div class="input-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
-											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo ($this->input->post('agent_image') ? $this->input->post('agent_image') : $agent['agent_image']); ?>" class="form-control" id="upload_image" style="display: none;" />
+											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo ($this->input->post('agent_image') ? $this->input->post('agent_image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: none;" />
 										</span>
 									</label>
 									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
@@ -101,7 +101,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-										<input type="text" name="fb_link" value="<?php echo ($this->input->post('fb_link') ? $this->input->post('fb_link') : $agency['fb_link']); ?>" class="form-control" id="fb_link" />
+										<input type="text" name="fb_link" value="<?php echo ($this->input->post('fb_link') ? $this->input->post('fblink') : $agent['fblink']); ?>" class="form-control" id="fb_link" />
 										<span class="text-danger"><?php echo form_error('fb_link');?></span>
 									</div>
 								</div>
@@ -111,7 +111,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-										<input type="text" name="linkedin_link" value="<?php echo ($this->input->post('linkedin_link') ? $this->input->post('linkedin_link') : $agency['linkedin_link']); ?>" class="form-control" id="linkedin_link" />
+											<input type="text" name="linkedin" value="<?php echo ($this->input->post('linkedin') ? $this->input->post('linkedin') : $agent['linkedin']); ?>" class="form-control" id="linkedin_link" />
 										<span class="text-danger"><?php echo form_error('linkedin_link');?></span>
 									</div>
 								</div>
@@ -121,8 +121,8 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-										<input type="text" name="twit_link" value="<?php echo ($this->input->post('twit_link') ? $this->input->post('twit_link') : $agency['twit_link']); ?>" class="form-control" id="twit_link" />
-										<span class="text-danger"><?php echo form_error('twit_link');?></span>
+										<input type="text" name="twit_link" value="<?php echo ($this->input->post('twiterlink') ? $this->input->post('twiterlink') : $agent['twiterlink']); ?>" class="form-control" id="twit_link" />
+										<span class="text-danger"><?php echo form_error('twiterlink');?></span>
 									</div>
 								</div>
 							</div>
@@ -131,7 +131,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
-										<input type="text" name="gplus_link" value="<?php echo ($this->input->post('gplus_link') ? $this->input->post('gplus_link') : $agency['gplus_link']); ?>" class="form-control" id="gplus_link" />
+										<input type="text" name="gplus_link" value="<?php echo ($this->input->post('gpluslink') ? $this->input->post('gplus_link') : $agent['gpluslink']); ?>" class="form-control" id="gplus_link" />
 										<span class="text-danger"><?php echo form_error('gplus_link');?></span>
 									</div>
 								</div>
@@ -141,7 +141,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></span>
-										<input type="text" name="youtube_link" value="<?php echo ($this->input->post('youtube_link') ? $this->input->post('youtube_link') : $agency['youtube_link']); ?>" class="form-control" id="youtube_link" />
+										<input type="text" name="youtube_link" value="<?php echo ($this->input->post('youtubelink') ? $this->input->post('youtubelink') : $agent['youtubelink']); ?>" class="form-control" id="youtube_link" />
 										<span class="text-danger"><?php echo form_error('youtube_link');?></span>
 									</div>
 									

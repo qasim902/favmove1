@@ -68,8 +68,9 @@ class Agent extends CI_Controller{
     /*
      * Editing a agent
      */
-    function edit($id)
+    function edit()
     {   
+        $id = $this->input->get('id');
         // check if the agent exists before trying to edit it
         $data['agent'] = $this->Agent_model->get_agent($id);
         
@@ -118,8 +119,9 @@ class Agent extends CI_Controller{
     /*
      * Deleting agent
      */
-    function remove($id)
+    function remove()
     {
+        $id = $this->input->get('id');
         $agent = $this->Agent_model->get_agent($id);
 
         // check if the agent exists before trying to delete it
