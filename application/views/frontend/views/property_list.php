@@ -18,6 +18,264 @@
 <!-- Page Banner End -->
 
 
+<!-- Property Search area Start -->
+<section class="property-query-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="uppercase">Advanced Search</h2>
+        <p class="heading_space"> We have Properties in these Areas View a list of Featured Properties.</p>
+      </div>
+    </div>
+    <form class="callus" action="search?type=prop" method="POST">
+    <div class="row">
+       <div class="col-md-3 col-sm-6">
+          <div class="single-query form-group">
+            <input type="text" class="keyword-input" name="keyword" placeholder="Keyword (e.g. 'office')">
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="single-query form-group">
+            <div class="intro town_dtl">
+              <select name="town_id">
+                <option value="">Select Town</option>
+                <?php 
+                
+                foreach($defdata['all_uk_towns'] as $uk_town)
+                {
+                  $selected = ($uk_town['postcode'] == $this->input->post('town_id')) ? ' selected="selected"' : "";
+
+                  echo '<option value="'.$uk_town['postcode'].'" '.$selected.'>'.$uk_town['postcode'].','.$uk_town['town'].', '.$uk_town['region'].', '.$uk_town['uk_region'].'.</option>';
+                } 
+                ?>
+              </select>
+            </div>
+          </div>
+        </div>
+   
+        <div class="col-md-3 col-sm-6">
+          <div class="single-query form-group">
+            <div class="intro">
+              <select name="prop_stat">
+                <option value="" class="active">Select Status</option>
+                <option value="sale">For Sale</option>
+                <option value="rent">For Rent</option>
+                <option value="salag">Sale Agreed</option>
+                <option value="renag">Rent Agreed</option>
+                <option value="sold">Sold</option>
+                <option value="rentd">Rented</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="row ">
+            <div class="col-md-6 col-sm-6">
+              <div class="single-query form-group">
+                <div class="intro">
+                  <select name="bed">
+                    <option value="" class="active">Min. Beds</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="single-query form-group">
+                <div class="intro">
+                  <select name="bath">
+                    <option value="" class="active">Min Baths</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="single-query form-group">
+                <input type="text" name="min_area" class="keyword-input" placeholder="Min Area (sq ft)">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="single-query form-group">
+                <input type="text" name="max_area" class="keyword-input" placeholder="Max Area (sq ft)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="col-md-6 col-sm-6">
+              <div class="single-query form-group">
+                <div class="intro">
+                  <select name="min_price">
+
+                    <option value="" class="active">Price (Min)</option>
+                    <option value="10000">£ 10000</option>
+                    <option value="20000">£ 20000</option>
+                    <option value="30000">£ 30000</option>
+                    <option value="40000">£ 40000</option>
+                    <option value="50000">£ 50000</option>
+                    <option value="60000">£ 60000</option>
+                    <option value="70000">£ 70000</option>
+                    <option value="80000">£ 80000</option>
+                    <option value="90000">£ 90000</option>
+                    <option value="100000">£ 100000</option>
+                    <option value="110000">£ 110000</option>
+                    <option value="120000">£ 120000</option>
+                    <option value="130000">£ 130000</option>
+                    <option value="140000">£ 140000</option>
+                    <option value="150000">£ 150000</option>
+                    <option value="175000">£ 175000</option>
+                    <option value="200000">£ 200000</option>
+                    <option value="250000">£ 250000</option>
+                    <option value="300000">£ 300000</option>
+                    <option value="350000">£ 350000</option>
+                    <option value="400000">£ 400000</option>
+                    <option value="450000">£ 450000</option>
+                    <option value="500000">£ 500000</option>
+                    <option value="600000">£ 600000</option>
+                    <option value="700000">£ 700000</option>
+                    <option value="800000">£ 800000</option>
+                    <option value="900000">£ 900000</option>
+                    <option value="1000000">£ 1000000</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <div class="single-query form-group">
+                <div class="intro">
+                  <select name="max_price">
+                    <option value="" class="active">Price (Max)</option>
+                    <option value="10000">£ 10000</option>
+                    <option value="20000">£ 20000</option>
+                    <option value="30000">£ 30000</option>
+                    <option value="40000">£ 40000</option>
+                    <option value="50000">£ 50000</option>
+                    <option value="60000">£ 60000</option>
+                    <option value="70000">£ 70000</option>
+                    <option value="80000">£ 80000</option>
+                    <option value="90000">£ 90000</option>
+                    <option value="100000">£ 100000</option>
+                    <option value="110000">£ 110000</option>
+                    <option value="120000">£ 120000</option>
+                    <option value="130000">£ 130000</option>
+                    <option value="140000">£ 140000</option>
+                    <option value="150000">£ 150000</option>
+                    <option value="175000">£ 175000</option>
+                    <option value="200000">£ 200000</option>
+                    <option value="250000">£ 250000</option>
+                    <option value="300000">£ 300000</option>
+                    <option value="350000">£ 350000</option>
+                    <option value="400000">£ 400000</option>
+                    <option value="450000">£ 450000</option>
+                    <option value="500000">£ 500000</option>
+                    <option value="600000">£ 600000</option>
+                    <option value="700000">£ 700000</option>
+                    <option value="800000">£ 800000</option>
+                    <option value="900000">£ 900000</option>
+                    <option value="1000000">£ 1000000</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4 text-right form-group">
+
+              <input name="type" type="hidden" value="prop">
+              <button type="submit" class="btn-blue border_radius ">Search</button>
+            </div>
+          </div>
+        </div>
+ 
+    </div>
+    <div class="group-button-search">
+      <a data-toggle="collapse" href=".search-propertie-filters" class="more-filter">
+        <i class="fa fa-plus text-1" aria-hidden="true"></i><i class="fa fa-minus text-2 hide" aria-hidden="true"></i>
+        <div class="text-1">Show more search options</div>
+        <div class="text-2 hide">less more search options</div>
+      </a>
+    </div>
+    <div class="search-propertie-filters collapse">
+      <div class="container-2">
+        <div class="row">
+          <!-- <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class="search-form-group white">
+              <input type="checkbox" name="check-box" />
+              <span>Air Conditioning</span>
+            </div>
+          </div> -->
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class=" white">
+              <input type="checkbox" name="AC" value="1">
+              <span>Air Conditioning</span>
+            </div>
+          </div> 
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class=" white">
+              <input type="checkbox" name="bbq" value="1">
+              <span>Barbeque Grill</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class=" white">
+              <input type="checkbox" name="Balcony" value="1">
+              <span>Balcony</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class="white">
+              <input type="checkbox" name="Laundry" value="1">
+              <span>Laundry</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class="white">
+              
+                <input name="Theater" type="checkbox" value="1"> 
+                <span>Theater</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class="white">
+              <input type="checkbox" name="Lawn" value="1">
+              <span>Lawn</span>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-4">
+            <div class="white">
+              <input type="checkbox" name="Basement" value="1">
+              <span>Basement</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+         </form>
+  </div>
+</section>
+<!-- Property Search area End -->
+
+
+
     <!--Best Deal Properties-->
     <section id="deals" class="padding bg_light">
     <div class="container">
