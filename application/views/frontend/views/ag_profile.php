@@ -46,8 +46,8 @@
               <ul class="nav nav-tabs tabs-left">
                 <li class="active"><a href="#home" data-toggle="tab">My Listings</a></li>
                 <li><a href="#profile" data-toggle="tab">Profile</a></li>
-                <li><a href="#messages" data-toggle="tab">Inbox</a></li>
-                <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                <li><a href="#messages" data-toggle="tab">Inquiries</a></li>
+                <li><a href="#settings" data-toggle="tab">Inbox</a></li>
               </ul>
 
             </div>
@@ -213,125 +213,228 @@
           </div>
           <div class="tab-pane" id="profile"></div>
 
-          <div class="tab-pane" id="messages">message here
+          <div class="tab-pane" id="messages">
             <?php  
-        //     if(!empty($viewdata['my_inq'])){
-        //     foreach ($viewdata['my_inq'] as $inq) {
-        //       <div class="box box-primary">
-        //       <div class="box-body box-profile">
-        //           <div class="col-md-6">
+            if(!empty($viewdata['my_inq'])){
+            foreach ($viewdata['my_inq'] as $inq) { ?>
+              <div class="box box-primary">
+              <div class="box-body box-profile">
+                  <div class="col-md-6">
 
-        //               <div class="tab-pane">
+                      <div class="tab-pane">
 
-        //                   <div class="invoice-col">
-        //                       <br>
-        //                       <div class="col-md-12">
-        //                           <div class="col-md-12">
-        //                               <h3 class="box-title">
-        //                                   <b>User Detail</b>
-        //                               </h3>
-        //                           </div>
-        //                           <div class="col-md-6">
-        //                               <span class="box-title">
-        //                                   <b>User Name:</b>
-        //                               </span>
-        //                           </div>
-        //                           <div class="col-md-6">
-        //                               <span class="ag_inq">
-        //                                   <?php 
+                          <div class="invoice-col">
+                              <br>
+                              <div class="col-md-12">
+                                  <div class="col-md-12">
+                                      <h3 class="box-title">
+                                          <b>User Detail</b>
+                                      </h3>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>User Name:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <span class="ag_inq">
+                                          <?php 
                                          
-        //                                       echo $inq['fullname'];
+                                              echo $inq['fullname'];
                                           
                                           
-        //                                   ?>
-        //                               </span>
-        //                           </div>
-        //                           <br>
-        //                           <div class="col-md-6">
-        //                               <span class="box-title">
-        //                                   <b>User Option:</b>
-        //                               </span>
-        //                           </div>
-        //                           <div class="col-md-6">
-        //                           <span class="ag_inq">
-        //                                   <?php 
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>User Option:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <span class="ag_inq">
+                                          <?php 
                                           
-        //                                       echo $inq['useroption'];
+                                              echo $inq['useroption'];
                                           
                                          
-        //                                   ?>
-        //                               </span>
-        //                           </div>
-        //                           <br>
-        //                           <div class="col-md-6">
-        //                               <span class="box-title">
-        //                                   <b>Email:</b>
-        //                               </span>
-        //                           </div>
-        //                           <div class="col-md-6">
-        //                           <span class="ag_inq">
-        //                                  <?php
-        //                                       echo $inq['email'];
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>Email:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <span class="ag_inq">
+                                         <?php
+                                              echo $inq['email'];
                                           
                                           
-        //                                   ?>
-        //                               </span>
-        //                           </div>
-        //                           <br>
-        //                           <div class="col-md-6">
-        //                               <span class="box-title">
-        //                                   <b>Phone:</b>
-        //                               </span>
-        //                           </div>
-        //                           <div class="col-md-6">
-        //                           <span class="ag_inq">
-        //                                   <?php 
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>Phone:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <span class="ag_inq">
+                                          <?php 
                                          
-        //                                       echo $inq['phone'];
+                                              echo $inq['phone'];
                                          
-        //                                   ?>
-        //                               </span>
-        //                           </div>
-        //                           <br>
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
 
-        //                           <div class="col-md-12">
-        //                               <h5 class="box-title">
-        //                                   <b>Description</b>
-        //                               </h5>
-        //                               <p>
-        //                               <span class="ag_inq">
-        //                                   <?php 
+                                  <div class="col-md-12">
+                                      <h5 class="box-title">
+                                          <b>Description</b>
+                                      </h5>
+                                      <p>
+                                      <span class="ag_inq">
+                                          <?php 
                                          
-        //                                       echo $inq['message'];
+                                              echo $inq['message'];
                                           
                                       
-        //                                   ?>
-        //                               </span>
-        //                               </p>
-        //                           </div>
-        //                       </div>
-        //                   </div>
+                                          ?>
+                                      </span>
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
 
 
-        //                   <div class="clearfix"></div>
-        //               </div>
+                          <div class="clearfix"></div>
+                      </div>
 
-        //           </div>
+                  </div>
 
-        //           <!-- /.box-body -->
-        //       </div>
-        //       <!-- /.box -->
-        //   </div>
-        // <?php  }
-        // }
-        // else
-        // {
-        //   echo "<h2>No inquiry for you.</h2>";
-        // }
+                  <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+          </div>
+        <?php  }
+        }
+        else
+        {
+          echo "<h2>No inquiry for you.</h2>";
+        }
             ?>
             </div>
           
-          <div class="tab-pane" id="settings">Settings Tab.</div>
+          <div class="tab-pane" id="settings">
+            <?php  
+            if(!empty($viewdata['my_inbox'])){
+            foreach ($viewdata['my_inbox'] as $inq) { ?>
+              <div class="box box-primary">
+              <div class="box-body box-profile">
+                  <div class="col-md-6">
+
+                      <div class="tab-pane">
+
+                          <div class="invoice-col">
+                              <br>
+                              <div class="col-md-12">
+                                  <div class="col-md-12">
+                                      <h3 class="box-title">
+                                          <b>User Detail</b>
+                                      </h3>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>User Name:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <span class="ag_inq">
+                                          <?php 
+                                         
+                                              echo $inq['name'];
+                                          
+                                          
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>User Option:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <span class="ag_inq">
+                                          <?php 
+                                          
+                                              echo $inq['phone'];
+                                          
+                                         
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>Email:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <span class="ag_inq">
+                                         <?php
+                                              echo $inq['email'];
+                                          
+                                          
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+                                  <div class="col-md-6">
+                                      <span class="box-title">
+                                          <b>Phone:</b>
+                                      </span>
+                                  </div>
+                                  <div class="col-md-6">
+                                  <span class="ag_inq">
+                                          <?php 
+                                         
+                                              echo $inq['message'];
+                                         
+                                          ?>
+                                      </span>
+                                  </div>
+                                  <br>
+
+                                  
+                              </div>
+                          </div>
+
+
+                          <div class="clearfix"></div>
+                      </div>
+
+                  </div>
+
+                  <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+          </div>
+        <?php  }
+        }
+        else
+        {
+          echo "<h2>No inbox for you.</h2>";
+        }
+            ?>
+
+          </div>
 
         </div>
       </div>

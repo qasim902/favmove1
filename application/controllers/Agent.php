@@ -222,6 +222,21 @@ class Agent extends CI_Controller{
             
             
         }
+
+        function searchagent()
+        {
+            $town_id = $this->input->post('town_id');
+            $agent_name = $this->input->post('agname');
+            $this->load->model('agent_model');
+            $result = $this->agent_model->searchagent($town_id, $agent_name);
+            $data = array(
+                'result' => $result,
+                'assets' => base_url() . "resources/",
+                '_view' => 'frontend/views/agent_search_result');
+                $this->load->view('frontend/layouts/main',$data);
+
+
+        }
     
     
 }
