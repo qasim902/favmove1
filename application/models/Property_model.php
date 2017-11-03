@@ -593,5 +593,153 @@ class Property_model extends CI_Model
                 return false;
             }
         }
+
+        function propsearch($type, $data)
+        {
+           
+            $title=$data['title'];
+            if($type == 'n')
+            {
+                $new = 1;
+                $protype = '';
+            }
+            else
+            {
+                $protype = $type;
+                $new = 0;
+            }
+            
+            $townid = $data['town_id'];
+            $status = $data['status'];
+            $bedrooms = $data['bedrooms'];
+            $bathrooms = $data['bathrooms'];
+            $min_area = $data['min_area'];
+            $max_area = $data['max_area'];
+            $min_price = $data['min_price'];
+            $max_price = $data['max_price'];
+    
+            $AC = $data['AC'];
+            $Barbeque = $data['Barbeque'];
+            $Laundry = $data['Laundry'];
+            $Theater = $data['theater'];
+            $Lawn = $data['Lawn'];
+            $Basement = $data['Basement'];
+            $Balcony = $data['Balcony'];
+            
+            if($title == "")
+            {
+                $title = "";
+            }
+            if($protype == "")
+            {
+                $protype = "";
+            }
+            if($townid == "")
+            {
+                $townid = "";
+            }
+            if($bedrooms == 0)
+            {
+                $bedrooms = 0;
+            }
+            if($bathrooms == 0)
+            {
+                $bathrooms = 0;
+            }
+            if($min_area == 0)
+            {
+                $min_area = 0;
+            }
+            if($min_price == 0)
+            {
+                $min_price = 0;   
+            }
+            if($max_area == 0)
+            {
+                // $this->db->select_max('area');
+                // $this->db->from('prop_details');
+                // $max_area = $this->db->get(); 
+                $max_area = 100000000;
+            }
+            if($max_price == 0)
+            {
+                $max_price = 10000000;   
+            }
+    
+            if($AC == null)
+            {
+                $AC = 0;   
+            }
+            if($Barbeque == null)
+            {
+                $Barbeque = 0;   
+            }
+            if($Laundry == null)
+            {
+                $Laundry = 0;   
+            }
+            if($Theater == null)
+            {
+                $Theater = 0;   
+            }
+            if($Lawn == null)
+            {
+                $Lawn = 0;   
+            }
+            if($Basement == null)
+            {
+                $Basement = 0;   
+            }
+            if($Balcony == null)
+            {
+                $Balcony = 0;   
+            }
+//var_dump($protype); die();
+            // $query = $this->db->query("SELECT * from property;");
+            // return $query->result_array();
+            $query = $this->db->query("SELECT * FROM property JOIN  prop_details as pd ON property.prop_id = pd.prop_id 
+                                        JOIN features ON property.prop_id = features.prop_id
+                                        JOIN agents ON property.agent_id = agents.id
+                                        AND property.title LIKE '%$title%'
+                                         AND property.prop_type LIKE '%$protype%'
+                                          AND town_id LIKE '%$townid%'
+                                        AND status LIKE '%$status%'
+                                         AND bedrooms  >= $bedrooms
+                                        AND bathrooms  >= $bathrooms
+                                        AND area  <= $max_area
+                                        AND area  >= $min_area
+                                        AND price  <= $max_price
+                                        AND price  >= $min_price
+                                        AND (features.AC = 1
+                                        OR features.AC = $AC)
+    
+                                        AND (features.Barbeque = 1
+                                        OR features.Barbeque = $Barbeque)
+    
+                                        AND (features.Laundry = 1
+                                        OR features.Laundry = $Laundry)
+    
+                                        AND (features.theater = 1
+                                        OR features.theater = $Theater)
+    
+                                        AND (features.Lawn = 1
+                                        OR features.Lawn = $Lawn)
+    
+                                        AND (features.Basement = 1
+                                        OR features.Basement = $Basement)
+    
+                                        AND (features.Balcony = 1
+                                        OR features.Balcony = $Balcony)
+                                       AND property.new_build >= $new  
+                                        ;");
+
+                                        return $query->result_array();
+            
+        }
+
+        function feature_property()
+        {
+            return $this->db->get_where('property', array('is_feat'=>1))->result_array();
+        }
     
 }

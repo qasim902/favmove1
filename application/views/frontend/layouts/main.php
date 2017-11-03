@@ -165,7 +165,7 @@
                     <h5 class="title bottom20">PROPERTIES LIST</h5>
                     <div class="row">
                       <div id="nav_slider" class="owl-carousel">
-                       
+                       <?php //var_dump($dropdown_props); ?>
                         <?php foreach ($dropdown_props as $prop){
 
                           ?>
