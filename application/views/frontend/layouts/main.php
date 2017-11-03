@@ -246,7 +246,7 @@
 </header>
 
 
-<!-- <?php if (isset($curr_login)){ ?>
+<?php if (isset($curr_login)){ ?>
 <div class="container-fluid">
   <div class="row" style="margin-top: 25px">
   <div align="center">
@@ -290,7 +290,7 @@
              show_404();
           }
     ?>
- -->
+
 
 
 <!--Footer-->
