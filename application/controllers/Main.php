@@ -1002,7 +1002,10 @@ function userfav()
 
 function property_eval()
 {
-        $this->load->view('frontend/views/property_evaluation');
+    $data = array(
+        'assets' => base_url() . "resources/",
+        '_view' => 'frontend/views/property_evaluation');
+        $this->load->view('frontend/views/property_evaluation',$data);
 }
 
 function upuser()
