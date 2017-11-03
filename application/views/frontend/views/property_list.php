@@ -30,12 +30,12 @@
     <?php $i = $this->input->get('o');?>
     <form class="callus" action="searchtype?id=<?php echo $i;?>" method="POST">
     <div class="row">
-       <div class="col-md-3 col-sm-6">
+       <div class="col-md-4 col-sm-6">
           <div class="single-query form-group">
             <input type="text" class="keyword-input" name="keyword" placeholder="Keyword (e.g. 'office')">
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="single-query form-group">
             <div class="intro town_dtl">
               <select name="town_id">
@@ -54,7 +54,7 @@
           </div>
         </div>
    
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="single-query form-group">
             <div class="intro">
               <select name="prop_stat">

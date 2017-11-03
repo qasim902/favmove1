@@ -19,7 +19,7 @@
             <div class="white_cont bottom10">
               <h3 class="bottom10 top15">Park Avenue Apartment</h3>
               <p class="bottom15">Lorem ipsum dolor sit amet, adipiscing elit, <br> sed diam power...</p>
-              <a class="btn-more" href="#.">
+              <a class="btn-more" href="contactus">
                 <i><img src="<?= $assets ?>img/arrowl.png" alt="arrow"></i>
                 <span>Contact Me</span>
                 <i><img src="<?= $assets ?>img/arrowr.png" alt="arrow"></i>
@@ -55,7 +55,7 @@
             <div class="white_cont bottom10">
               <h3 class="bottom10 top15">Park Avenue Apartment</h3>
               <p class="bottom15">Lorem ipsum dolor sit amet, adipiscing elit, <br> sed diam power...</p>
-              <a class="btn-more" href="#.">
+              <a class="btn-more" href="contactus">
                 <i><img src="<?= $assets ?>img/arrowl.png" alt="arrow"></i>
                 <span>Contact Me</span>
                 <i><img src="<?= $assets ?>img/arrowr.png" alt="arrow"></i>
@@ -91,7 +91,7 @@
             <div class="white_cont bottom10">
               <h3 class="bottom10 top15">Park Avenue Apartment</h3>
               <p class="bottom15">Lorem ipsum dolor sit amet, adipiscing elit, <br> sed diam power...</p>
-              <a class="btn-more" href="#.">
+              <a class="btn-more" href="contactus">
                 <i><img src="<?= $assets ?>img/arrowl.png" alt="arrow"></i>
                 <span>Contact Me</span>
                 <i><img src="<?= $assets ?>img/arrowr.png" alt="arrow"></i>
@@ -495,7 +495,7 @@
               <p class="pull-md-left">£ <?= $prop['price'] ?></p>
               <ul class="pull-right">
                 <li><a href="#."><i class="icon-like"></i></a></li>
-                <li><a href="#one" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li>
+                <!-- <li><a href="#one" class="share_expender" data-toggle="collapse"><i class="icon-share3"></i></a></li> -->
               </ul>
             </div>
             <div class="toggle_share collapse" id="one">

@@ -28,7 +28,7 @@
               <?php foreach($viewdata['news'] as $news){?> 
                <div class="news-1-box clearfix">
                   <div class="col-md-5 col-sm-5 col-xs-12">
-                     <div class="image-2">
+                     <div class="news_imgs image-2">
                         <a href="news_detail?id=<?= $news['id']?>"><img src="<?php echo base_url('resources/img/news/'.$news['image_path']);?>" alt="image" class="img-responsive"/></a>
                      </div>
                   </div>
@@ -39,7 +39,7 @@
                         <span><i class="icon-icons228"></i> <?= $news['added_on']?></span>
                      </div>
                      <div class="news_list">
-                          <p class="p-font-15"><?= $news['detail']?></p></p>
+                          <p class="p-font-15"><?= $news['detail']?></p>
                      </div>
                      <div class="pro-3-link padding-t-20">
                         <a class="btn-more" href="news_detail?id=<?=$news['id']?>">
@@ -58,7 +58,7 @@
               <?php } ?>
              
             </div>
-            <div class="row margin_bottom">
+            <!-- <div class="row margin_bottom">
                <div class="col-md-12">
                   <ul class="pager">
                      <li><a href="#.">1</a></li>
@@ -66,7 +66,7 @@
                      <li><a href="#.">3</a></li>
                   </ul>
                </div>
-            </div>
+            </div> -->
          </div>
          <aside class="col-md-4 col-xs-12">
             <div class="property-query-area clearfix">
@@ -247,47 +247,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="bottom40 margin40">Featured Properties</h3>
-              </div>
-            </div>
-            <div class="row bottom20">
-              <div class="col-md-4 col-sm-4 col-xs-6 p-image">
-                <img src="resources/img/f-p-1.png" alt="image"/>
-              </div>
-              <div class="col-md-8 col-sm-8 col-xs-6">
-                <div class="feature-p-text">
-                  <h4>Historic Town House</h4>
-                  <p class="bottom15">45 Regent Street, London, UK</p>
-                  <a href="#.">View</a>
-                </div>
-              </div>
-            </div>
-            <div class="row bottom20">
-              <div class="col-md-4 col-sm-4 col-xs-6 p-image">
-                <img src="resources/img/f-p-1.png" alt="image"/>
-              </div>
-              <div class="col-md-8 col-sm-8 col-xs-6">
-                <div class="feature-p-text">
-                  <h4>Historic Town House</h4>
-                  <p class="bottom15">45 Regent Street, London, UK</p>
-                  <a href="#.">View</a>
-                </div>
-              </div>
-            </div>
-            <div class="row bottom20">
-              <div class="col-md-4 col-sm-4 col-xs-6 p-image">
-                <img src="resources/img/f-p-1.png" alt="image"/>
-              </div>
-              <div class="col-md-8 col-sm-8 col-xs-6">
-                <div class="feature-p-text">
-                  <h4>Historic Town House</h4>
-                  <p class="bottom15">45 Regent Street, London, UK</p>
-                  <a href="#.">View</a>
                 </div>
               </div>
             </div>

@@ -30,17 +30,18 @@ $news = $viewdata['news'];
         
         	<div class="news-1-box clearfix">
             	<div class="col-md-12 col-sm-12 col-xs-12">
-                	<img src="resources/img/news-d-1.jpg" alt="image" class="img-responsive"/>
+                	<img src="resources/img/news/<?= $news['image_path']?>" alt="image" class="img-responsive"/>
                 </div>
                 
                 <div class="col-md-12 col-sm-12 col-xs-12 top30">
                 
-                	<div class="news-details bottom10">
+                	<div class="news-details bottom10"> 
+                  <h2><?= $news['title']?></h2>
                     	<span><i class="icon-icons230"></i> by <?= $news['author']?></span>
                 		<span><i class="icon-icons228"></i><?= $news['added_on']?></span>
                     </div>
                     
-                	<h3><?= $news['title']?></h3>
+                	
                     
                    <?= $news['detail']?>
                 </div>
@@ -48,7 +49,7 @@ $news = $viewdata['news'];
             
          </div>
          
-        <div class="row">
+        <!-- <div class="row">
             
             <div class="news-1-box clearfix">
             	<div class="col-md-6 col-sm-6 col-xs-12">
@@ -84,7 +85,7 @@ $news = $viewdata['news'];
                     consectetuer elit sed diam power nonummy</p>
                 </div>
             </div>
-            </div>
+            </div> -->
             
         <div class="row heading_space">
         
@@ -110,7 +111,7 @@ $news = $viewdata['news'];
                 
        </div>
        
-        <div class="row">
+        <!-- <div class="row">
         	<div class="col-md-12 bottom20">
             	<h2 class="text-uppercase">Similar News</h2>
             </div>
@@ -212,7 +213,7 @@ $news = $viewdata['news'];
                 	
             </div>
             
-         </div>
+         </div> -->
         
         <hr>
         
@@ -429,47 +430,6 @@ $news = $viewdata['news'];
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="bottom40 margin40">Featured Properties</h3>
-            </div>
-          </div>
-          <div class="row bottom20">
-            <div class="col-md-4 col-sm-4 col-xs-6 p-image">
-              <img src="resources/img/f-p-1.png" alt="image"/>
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-6">
-              <div class="feature-p-text">
-                <h4>Historic Town House</h4>
-                <p class="bottom15">45 Regent Street, London, UK</p>
-                <a href="#.">View</a>
-              </div>
-            </div>
-          </div>
-          <div class="row bottom20">
-            <div class="col-md-4 col-sm-4 col-xs-6 p-image">
-              <img src="resources/img/f-p-1.png" alt="image"/>
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-6">
-              <div class="feature-p-text">
-                <h4>Historic Town House</h4>
-                <p class="bottom15">45 Regent Street, London, UK</p>
-                <a href="#.">View</a>
-              </div>
-            </div>
-          </div>
-          <div class="row bottom20">
-            <div class="col-md-4 col-sm-4 col-xs-6 p-image">
-              <img src="resources/img/f-p-1.png" alt="image"/>
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-6">
-              <div class="feature-p-text">
-                <h4>Historic Town House</h4>
-                <p class="bottom15">45 Regent Street, London, UK</p>
-                <a href="#.">View</a>
               </div>
             </div>
           </div>

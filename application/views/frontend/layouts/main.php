@@ -156,7 +156,7 @@
                         <li><a href="properties?o=b">Business Properties</a></li>
                         <li><a href="properties?o=r">Residential Properties</a></li>
                         <li><a href="properties?o=c">Commercial Properties</a></li>
-                        <li><a href="properties?o=n"><b>Newly Built Properties</b></a></li>
+                        <li><a href="properties?o=n">Newly Built Properties</a></li>
                        
                       </ul>
                     </div>
@@ -412,9 +412,10 @@
 <script src="<?= $assets;?>js/revolution.extension.video.min.js"></script>
 <script src="<?= $assets;?>js/custom.js"></script>
 <script src="<?= $assets;?>js/functions.js"></script>
+<script src="<?= $assets;?>js/jquery.smoothscroll.min.js"></script>
   <script>
       $(document).ready(function(){
-          
+        $('html').smoothScroll(300);
           $("#show").click(function(){
               $("#packagedeal").show();
           });

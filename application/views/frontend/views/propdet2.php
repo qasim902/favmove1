@@ -58,12 +58,14 @@
 
       </div>
       <div class="col-md-4 listing1 property-details">  
-        <h2 class="text-uppercase top10">Property Description</h2>
+        <h4 class="text-uppercase top10">Property Description</h4>
         <div class="top15 bottom15">
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
-                <div class="text-center"> 
-                <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"> <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail"></a>
+                <div class="propert_des_logo text-center"> 
+                  <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"> 
+                    <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail">
+                  </a>
                 </div>
               <!-- <div class="image">
                 <img src="<?= $assets;?>img/agent-one.jpg" alt="Agents">
@@ -79,7 +81,7 @@
               <p class="bottom10"><?= $viewdata['agentdata']['address'] ?></p>
               <div class="agnt_dtl">
                 <a href="#">View properties from this agent</a>
-                <a class="btn btn-default btn-block top10 bottom10"  onClick="window.location.hash = '#alert-pop'">Request Details</a>
+                <a class="btn btn-default btn-block top10 bottom10"  href = "#alert-pop">Request Details</a>
               </div>
               <div class="agent_contact agnt_dtls">
                 <div class="col-md-12 bottom10">
@@ -173,8 +175,8 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="exampleModalLabel">Add Note</h4>
                       </div>
+                      <form action="user_note" method="POST">
                       <div class="modal-body">
-                        <form action="user_note" method="POST">
                           <div class="form-group">
                             <label for="message-text" class="control-label">Note:</label>
                             <textarea class="form-control" name="usernote" id="message-text"></textarea>
@@ -184,8 +186,9 @@
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save</button>
-                        </form>
+                        
                       </div>
+                     </form>
                     </div>
                   </div>
                 </div>
@@ -222,14 +225,14 @@
                 <a href="#tab_default_2" data-toggle="tab">
                 Features </a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="#tab_default_3" data-toggle="tab">
                  Video  </a>
               </li>
               <li>
                   <a href="#tab_default_4" data-toggle="tab">
                    Map  </a>
-              </li>
+              </li> -->
             </ul>
 
             <div class="tab-content">
@@ -296,7 +299,7 @@
                           <p class="heading_space"><?= $viewdata['property']['excerpt'] ?></p>
                         </div>
                       </div>
-                      <div class="row number-counters text-center">
+                      <div class="row number-counters prop_des_coun text-center">
                         <!-- first count item -->
                         <div class="col-md-2 col-sm-4 col-xs-6 counters-item heading_space">
                           <i class="icon-icons215"></i>
@@ -340,9 +343,9 @@
 
               <div class="tab-pane" id="tab_default_2">
                   <h2 class="text-uppercase bottom20">Features</h2>
-                  <div class="bottom40">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <ul class="pro-list">
+                  <div class="bottom20 clearfix">
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                      <ul class="pro-list pro_li">
                         <?php foreach($viewdata['features'] as $key => $feature){
                 if ($feature == "1" && $key != "prop_id")
                 {
@@ -353,11 +356,8 @@
               <?php }} ?>
                       </ul>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <!-- Empty Section -->
-                    </div>
+                    
                   </div>
-                  <h2 class="text-uppercase">Features</h2>
                   <p class="bottom20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, 
                     vulputate mauris. Ut adipiscing gravida tincidunt.
                   </p>
@@ -438,13 +438,13 @@
         
         
 
-<div id="alert-pop" class="col-md-12  top20">
+<div id="alert-pop" class="col-md-12  top30">
          
           <!-- <div class="col-md-12  bottom20">
             <h2 class="uppercase">Monthly running costs</h2>
           </div> -->
-          <div class="top10 col-md-5">
-              <h3 class=" bottom20 uppercase"><b>Monthly running costs</b></h3>
+          <div class="top20 col-md-5">
+              <h4 class=" bottom20 uppercase">Monthly running costs</h4>
             <div class="mortgage">
                 <div class="mortgage_hdng">
                   <h4>Mortgage</h4>
@@ -561,8 +561,8 @@ oninput = function() {
 }
 </script>
             <div  class=""> 
-          <div class="top10 col-md-7">
-              <h3 class=" bottom20 uppercase"><b>Contact <?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['fname']?> about this property</b></h3>
+          <div class="top20 col-md-7">
+              <h4 class=" bottom20 uppercase">Contact <?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?> about this property</h4>
               <form method="POST" action="mail">
               <div class="row top20">
                 <div class="col-md-3">
