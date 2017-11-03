@@ -454,6 +454,29 @@ h2{
   padding-bottom: 20px;
 }
 /* Agent Menu List Slider */
+.agnt_lst p{
+  font-size: 13px;
+
+}
+.ouragents .agnt_lst {
+  padding: 25px 20px !important;
+}
+.ouragents .agnt_lst_img{
+    background: #fff;
+}
+.ouragents .agnt_lst_img img{
+  margin:30px auto; width:200px;display:block
+}
+.ouragents .agnt_lst a{
+  color: #3275B2;
+}
+.ouragents .agnt_lst a:hover{
+  color: #3275B2;
+}
+.ouragents .agnt_lst span b{
+  font-size: 14px;
+  font-weight: 500
+}
 .agent_list_sldr img {
   max-width: 100%;
   max-height: 100%;
