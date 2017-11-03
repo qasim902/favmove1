@@ -244,7 +244,7 @@ $news = $viewdata['news'];
                 <div class="col-sm-12 row">
                   <div class="row">
                     <div class="col-sm-3">
-                      <input type="submit" class="btn-blue uppercase border_radius" value="submit now">
+                      <input type="button" class="btn-blue uppercase border_radius" value="submit now">
                     </div>
                   </div>
                 </div>
@@ -364,7 +364,7 @@ $news = $viewdata['news'];
                 </div>
               </div>
               <div class="col-sm-12 form-group">
-                <button type="submit" class="btn-blue border_radius">Search</button>
+                <button type="button" class="btn-blue border_radius">Search</button>
               </div>
             </form>
             <div class="col-sm-12">

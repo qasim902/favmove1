@@ -313,28 +313,29 @@
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="footer_panel bottom30">
-        <h4 class="bottom30">Search by Area</h4>
+        <h4 class="bottom30">Quick Links</h4>
         <table style="width:100%;">
           <tbody>
             <tr>
               <td>
                 <ul class="links">
                   <li><a href="aboutus"><i></i>About</a></li>
-                  <li class="active"><a href="#."><i></i>News</a></li>
-                  <li><a href="#."> <i></i>Contacts</a></li>
-                  <li><a href="#."><i></i>Testimonials</a></li>
-                  <li><a href="#."><i></i>Typography</a></li>
+                  <li class="active"><a href="news"><i></i>News</a></li>
+                  <li><a href="contactus"> <i></i>Contacts</a></li>
+                  
+                 
                 </ul>
               </td>
-              <td class="text-right">
+              <!-- <td class="text-right">
                 <ul class="links text-left">
                   <li><a href="#."><i></i>Services</a></li>
                   <li class="active"><a href="#."><i></i>Careers</a></li>
                   <li><a href="#."><i></i>Our team</a></li>
                   <li><a href="#."><i></i>Shop</a></li>
                   <li><a href="#."><i></i>Our approach</a></li>
+               
                 </ul>
-              </td>
+              </td> -->
             </tr>
           </tbody>
         </table>
@@ -342,15 +343,36 @@
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="footer_panel bottom30">
+        <h4 class="bottom30">Properties</h4>
+        <table style="width:100%;">
+          <tbody>
+            <tr>
+              <td>
+                <ul class="links">
+                  <li><a href="properties?o=b"><i></i>Business Properties</a></li>
+                  <li><a href="properties?o=r"><i></i>Residential Properties</a></li>
+                  <li><a href="properties?o=c"><i></i>Commercial Properties</a></li>
+                  <li><a href="properties?o=n"><i></i>Newly Built Properties</a></li>
+                 
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- <div class="col-md-3 col-sm-6">
+      <div class="footer_panel bottom30">
         <h4 class="bottom30">Get in Touch</h4>
         <ul class="getin_touch">
-        <!--   <li><i class="icon-telephone114"></i>01 900 234 567 - 68</li> -->
-         <!--  <li><a href="javascript:void(0)"><i class="icon-mail-envelope-open"></i>info@castle.com</a></li>
-          <li><a href="javascript:void(0)"><i class="icon-global"></i>www.castle.com</a></li> -->
+          <li><i class="icon-telephone114"></i>01 900 234 567 - 68</li>
+          <li><a href="javascript:void(0)"><i class="icon-mail-envelope-open"></i>info@castle.com</a></li>
+          <li><a href="javascript:void(0)"><i class="icon-global"></i>www.castle.com</a></li>
           <li><i class="icon-icons74"></i>London, UK</li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <div class="col-md-3 col-sm-6">
       <div class="footer_panel bottom30">
         <h4 class="bottom30">Subscribe</h4>
