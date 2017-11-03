@@ -128,12 +128,19 @@ class User extends CI_Controller{
 
     function add_note()
     {   
-       var_dump($userid = $this->session->userdata['userData']['userData']['dataa']['userid']);
+       $userid = $this->session->userdata['userData']['userData']['dataa']['userid'];
+       if(empty($userid))
+       {
+           redirect('user_login');
+           redirect($this->agent->referrer());
+       }
+       else
+       {
         $user_note = array(
-            'usernote' => $this->input->post('usernote')
-        );
-        $this->User_model->add_note($user_note);            
-        
+                'usernote' => $this->input->post('usernote')
+            );
+            $this->User_model->add_note($user_note);            
+        }
             
     } 
     

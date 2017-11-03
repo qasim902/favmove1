@@ -120,7 +120,7 @@
                     </div>
                     <div class="sidbar_data">
                       <div class="bottom10 top10">
-                          <strong><a href="#exampleModal" data-toggle="modal" > <i class="icon-pencil"></i>Add notes</a></strong>
+                          <strong><a href="#exampleModal" data-toggle="modal"> <i class="icon-pencil"></i>Add notes</a></strong>
                       </div>
                       
                       <div class="bottom10 top10">
@@ -563,7 +563,7 @@ oninput = function() {
             <div  class=""> 
           <div class="top10 col-md-7">
               <h3 class=" bottom20 uppercase"><b>Contact <?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['fname']?> about this property</b></h3>
-              <form method="POST" action="userinquiry">
+              <form method="POST" action="mail">
               <div class="row top20">
                 <div class="col-md-3">
                   <div class="ag_name">
