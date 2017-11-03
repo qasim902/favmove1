@@ -15,10 +15,9 @@ class Agent_model extends CI_Model
         return $this->db->get_where('agents',array('id'=>$id))->row_array();
     }
 
-    function getinquiries($email)
+    function getinquiries($id)
     {
-        
-        return $this->db->get_where('inquiries', array('agemail' => $email))->result_array();
+        return $this->db->get_where('inquiries', array('agid' => $id))->result_array();
     }
 
     function get_agent_where($key,$value)
