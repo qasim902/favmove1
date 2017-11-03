@@ -128,6 +128,7 @@ class User extends CI_Controller{
 
     function add_note()
     {   
+       var_dump($userid = $this->session->userdata['userData']['userData']['dataa']['userid']);
         $user_note = array(
             'usernote' => $this->input->post('usernote')
         );
