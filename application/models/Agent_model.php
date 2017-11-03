@@ -73,5 +73,10 @@ class Agent_model extends CI_Model
         $this->db->where('id', $id);
         return $this->db->update('agents', $data);
     }
+
+    function showainbox($id)
+    {
+        return $this->db->get_where('agentinbox', array('agentid'=>$id))->result_array();
+    }
     
 }

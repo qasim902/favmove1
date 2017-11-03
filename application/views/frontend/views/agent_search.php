@@ -56,12 +56,7 @@
                       <input type="hidden" name="type" value="ag">
                   </div>
               </div>
-              <div class="col-md-12 col-sm-6 rad_btns">
-                  <label for="radio"><b>Agent Type:</b></label>
-                  <label class="radio-inline fchld"><input type="radio" name="agtype" value="snl" checked="checked">Sales and Lettings</label>
-                  <label class="radio-inline"><input type="radio" value="sale" name="agtype">Sales</label>
-                  <label class="radio-inline"><input type="radio" value="let" name="agtype">Lettings</label> 
-              </div>
+
               <!-- <div class="col-md-9 col-sm-6">
                 <div class="single-query form-group">
                   <input type="text" name="Agent Name:" placeholder="Agent Name:">
