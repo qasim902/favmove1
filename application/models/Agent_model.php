@@ -81,7 +81,24 @@ class Agent_model extends CI_Model
 
     function searchagent($town_id, $agent_name)
     {
-        $this->db->get_where('agents', array('fname'=>$agent_name, 'lname'=>$agent_name, 'address'=>$town_id ))->result_array();
+       // $this->db->get_where('agents', array('fname'=>$agent_name, 'lname'=>$agent_name, 'address'=>$town_id ))->result_array();
+         if($town_id == null)
+         {
+             $town_id = "";
+         }
+         if($agent_name == "")
+         {
+             $agent_name = "";
+         }
+        //  $this->db->select('*');
+        //  $this->db->from('agents');
+        //  $this->db->like('address' , $town_id);
+        //  $this->db->like('fname' , $agent_name);
+        //  $this->db->or_like('lname' , $agent_name);
+        $query = $this->db->query("SELECT * FROM agents WHERE (fname LIKE '%$agent_name%' OR lname LIKE '%$agent_name%') 
+                                    AND address LIKE '%$town_id%' ;");
+        return $query->result_array();
+
     }
     
 }

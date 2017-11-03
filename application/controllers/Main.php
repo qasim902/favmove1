@@ -96,10 +96,7 @@ class Main extends CI_Controller
         
     }
 
-
-
-     
-     function sendemail($msg,$to,$from,$CC="",$sub)
+     function sendemail()
     {
         $config = Array(
             'useragent' => 'CodeIgniter',
@@ -112,11 +109,14 @@ class Main extends CI_Controller
             'charset' => 'iso-8859-1',
             'wordwrap' => TRUE);
 
+            $from = 'favouritemove@gmail.com';
+            $to = $this->input->post('email');
+            $sub = $this->input->post('message');
         $this->load->library('email', $config);
         $this->email->set_newline("\r\n");
         $this->email->from($from); // change it to yours
         $this->email->to($to);// change it to yours
-        $this->email->CC($CC);// change it to yours
+        //$this->email->CC($CC);// change it to yours
         $this->email->subject($sub);
         $this->email->message($msg);
         if($this->email->send())
@@ -1160,6 +1160,8 @@ function send_friend()
         '_view' => 'frontend/views/send_friend');
         $this->load->view('frontend/layouts/main',$data);
 }
+
+
 
 
 }

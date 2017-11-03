@@ -229,6 +229,7 @@ class Agent extends CI_Controller{
             $agent_name = $this->input->post('agname');
             $this->load->model('agent_model');
             $result = $this->agent_model->searchagent($town_id, $agent_name);
+            //var_dump($result); die();
             $data = array(
                 'result' => $result,
                 'assets' => base_url() . "resources/",
