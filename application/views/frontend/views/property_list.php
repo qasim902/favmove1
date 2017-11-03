@@ -27,7 +27,8 @@
         <p class="heading_space"> We have Properties in these Areas View a list of Featured Properties.</p>
       </div>
     </div>
-    <form class="callus" action="search?type=prop" method="POST">
+    <?php $i = $this->input->get('o');?>
+    <form class="callus" action="searchtype?id=<?php echo $i;?>" method="POST">
     <div class="row">
        <div class="col-md-3 col-sm-6">
           <div class="single-query form-group">

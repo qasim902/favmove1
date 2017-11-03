@@ -540,7 +540,10 @@
     </div>
     <div class="row">
       <div id="two-col-slider" class="owl-carousel">
-        <?php foreach ($defdata['home_prop'] as $prop){?>
+        <?php 
+       
+        foreach ($defdata['home_prop'] as $prop){
+          ?>
         <div class="item">
           <div class="listing_full">
           <div class="image">
@@ -639,7 +642,10 @@
                 </div>
               </div>
             <div class="row">
-              <?php foreach ($defdata['news'] as $news){ ?>
+              <?php 
+              //var_dump($feature_prop);
+              
+              foreach ($defdata['news'] as $news){ ?>
                <div class="news-1-box clearfix">
                   <div class="col-md-4 col-sm-4 col-xs-12">
                      <div class="news_imgs image-2">
@@ -690,6 +696,7 @@
                <div class="col-md-12 news_pro">
                   <h4 class="top20 bottom10">Featured Properties</h4>
                </div>
+               <?php foreach($feature_prop as $fetpro): ?>
                <div class="col-md-12 padding-t-30">
                   <div id="agent-2-slider" class="owl-carousel">
                      <div class="item">
@@ -714,6 +721,7 @@
                      </div>
                   </div>
                </div>
+               <?php endforeach; ?>
             </div>
          </aside>
       </div>

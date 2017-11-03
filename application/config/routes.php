@@ -48,6 +48,7 @@ $route['addnewagent'] = 'agent/addnewagent';
 $route['user_note'] = 'user/add_note';
 $route['propavg'] = 'property/prop_avg';
 $route['searchag'] = 'agent/searchagent';
+$route['searchtype'] = 'main/search_type';
 
 
 

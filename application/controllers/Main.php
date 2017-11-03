@@ -22,16 +22,13 @@ class Main extends CI_Controller
         $this->load->model('Agency_model');
         $this->load->model('Uk_town_model');
 
-        $this->load->library('pagination');
-        
-       // load URL helper
-       $this->load->helper('url');
+      
         
         $this->data['dropdown_props'] = $this->Property_model->get_all_property();
         $this->data['dropdown_agent'] = $this->Agent_model->get_all_agents();
         $this->data['defdata'] = array('all_uk_towns' => $this->Uk_town_model->get_all_uk_towns());
         $this->data['towns'] = array('all_towns' => $this->Uk_town_model->get_towns());
-
+        $this->data['feature_prop'] = $this->Property_model->feature_property();  
 
     }
 
@@ -180,7 +177,6 @@ class Main extends CI_Controller
 
         );
 
-        
         $this->load->view('frontend/layouts/main', $data);
     }
     function search()
@@ -1160,6 +1156,84 @@ function send_friend()
         '_view' => 'frontend/views/send_friend');
         $this->load->view('frontend/layouts/main',$data);
 }
+
+function search_type()
+{
+    $type = $this->input->get('id');
+    if($type == 'b')
+    {
+        $type = 'bus';
+    }
+    else if($type == 'c')
+    {
+        $type = 'com';
+    }
+    else if($type == 'r')
+    {
+        $type = 'res';
+    }
+    
+    $keyword  = $this->input->post('keyword');
+    $town_id =  $this->input->post('town_id') ;
+    //$prop_type =  $this->input->post('prop_type') ;
+    $prop_stat = $this->input->post('prop_stat');
+    $bed = $this->input->post('bed') ;
+    $bath =   $this->input->post('bath');
+    $min_area = $this->input->post('min_area');
+    $max_area = $this->input->post('max_area') ;
+    $min_price = $this->input->post('min_price');
+    $max_price =  $this->input->post('max_price'); 
+
+    $AC =  $this->input->post('AC');
+    $Barbeque =  $this->input->post('bbq');
+    $Laundry =  $this->input->post('Laundry');
+    $Theater =  $this->input->post('Theater');
+    $Lawn =  $this->input->post('Lawn');
+    $Basement =  $this->input->post('Basement');
+    $Balcony =  $this->input->post('Balcony'); 
+    
+
+    $data = array(
+     'title' =>$keyword, 
+    'town_id'=>$town_id, 
+   // 'prop_type'=>$prop_type, 
+    'status'=>$prop_stat, 
+   'bedrooms'=> $bed, 
+   'bathrooms'=>$bath, 
+   'min_area'=>$min_area,
+    'max_area'=>$max_area, 
+    'min_price'=>$min_price, 
+   'max_price'=>$max_price,
+   'AC' => $AC,
+   'Barbeque' => $Barbeque,
+   'Laundry' => $Laundry,
+   'theater' => $Theater,
+   'Lawn' => $Lawn,
+   'Basement' => $Basement,
+   'Balcony' => $Balcony,
+
+  
+ ); 
+   
+    $this->load->model('property_model');
+    $agent_id = $this->input->get('id');
+    $this->load->model('Agent_model');
+    $agent = $this->Agent_model->get_agent($agent_id);
+   $res =  $this->property_model->propsearch($type, $data); 
+    
+   $data = array(
+      
+       'viewdata' => $res,
+    'assets' => base_url() . "resources/",
+    '_view' => 'frontend/views/proptype_search');
+    $this->load->view('frontend/layouts/main',$data);
+  
+
+
+
+}
+
+
 
 
 
