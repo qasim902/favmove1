@@ -58,7 +58,7 @@
 
       </div>
       <div class="col-md-4 listing1 property-details">  
-        <h2 class="text-uppercase top10">Property Description</h2>
+        <h4 class="text-uppercase top10">Property Description</h4>
         <div class="top15 bottom15">
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
