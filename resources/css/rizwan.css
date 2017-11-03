@@ -453,3 +453,15 @@ h2{
 #news-section-1 .news-1-box {
   padding-bottom: 20px;
 }
+/* Agent Menu List Slider */
+.agent_list_sldr img {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  
+}
+.agent_list_sldr .image{
+  height: 200px;
+  width: 100%;
+  /* overflow: hidden; */
+}
