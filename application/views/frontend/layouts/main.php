@@ -412,9 +412,10 @@
 <script src="<?= $assets;?>js/revolution.extension.video.min.js"></script>
 <script src="<?= $assets;?>js/custom.js"></script>
 <script src="<?= $assets;?>js/functions.js"></script>
+<script src="<?= $assets;?>js/jquery.smoothscroll.min.js"></script>
   <script>
       $(document).ready(function(){
-          
+        $('html').smoothScroll(300);
           $("#show").click(function(){
               $("#packagedeal").show();
           });

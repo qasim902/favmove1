@@ -49,6 +49,13 @@
       }
       ?>
         </div>
+        <div class="col-sm-4 bottom40">
+          <div class="agent_wrap">
+            <div class="agency_logo image">
+              <img src="<?php echo base_url('resources/img/agents/'. $viewdata['agent']['image']); ?>" alt="Agents">
+            </div>
+          </div>
+        </div>
       <div class="col-sm-4 bottom40">
         <div class="agent_wrap">
           <h3><?= $viewdata['agent']['fname'] ." ". $viewdata['agent']['lname'];?> </h3>
@@ -103,13 +110,7 @@
         </form>
       </div>
 
-      <div class="col-sm-4 bottom40">
-        <div class="agent_wrap">
-          <div class="image">
-            <img src="<?php echo base_url('resources/img/agents/'. $viewdata['agent']['image']); ?>" alt="Agents">
-          </div>
-        </div>
-      </div>
+      
 
       
       <div class="col-md-12 bottom30 top20">
