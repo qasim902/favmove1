@@ -62,8 +62,10 @@
         <div class="top15 bottom15">
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
-                <div class="text-center"> 
-                <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"> <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail"></a>
+                <div class="propert_des_logo text-center"> 
+                  <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"> 
+                    <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail">
+                  </a>
                 </div>
               <!-- <div class="image">
                 <img src="<?= $assets;?>img/agent-one.jpg" alt="Agents">
@@ -296,7 +298,7 @@
                           <p class="heading_space"><?= $viewdata['property']['excerpt'] ?></p>
                         </div>
                       </div>
-                      <div class="row number-counters text-center">
+                      <div class="row number-counters prop_des_coun text-center">
                         <!-- first count item -->
                         <div class="col-md-2 col-sm-4 col-xs-6 counters-item heading_space">
                           <i class="icon-icons215"></i>
@@ -444,7 +446,7 @@
             <h2 class="uppercase">Monthly running costs</h2>
           </div> -->
           <div class="top10 col-md-5">
-              <h3 class=" bottom20 uppercase"><b>Monthly running costs</b></h3>
+              <h3 class=" bottom20 uppercase">Monthly running costs</h3>
             <div class="mortgage">
                 <div class="mortgage_hdng">
                   <h4>Mortgage</h4>
@@ -562,7 +564,7 @@ oninput = function() {
 </script>
             <div  class=""> 
           <div class="top10 col-md-7">
-              <h3 class=" bottom20 uppercase"><b>Contact <?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['fname']?> about this property</b></h3>
+              <h3 class=" bottom20 uppercase">Contact <?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?> about this property</h3>
               <form method="POST" action="mail">
               <div class="row top20">
                 <div class="col-md-3">

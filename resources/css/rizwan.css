@@ -488,3 +488,19 @@ h2{
   width: 100%;
   /* overflow: hidden; */
 }
+.propert_des_logo{
+  height: 150px;
+  width: 100%;
+}
+.propert_des_logo img{
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.prop_des_coun p{
+  font-size: 14px;
+}
+.number-prop_des_coun .counters-item strong {
+  font-size: 33px;
+  font-weight: 600;
+}

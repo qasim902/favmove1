@@ -1005,7 +1005,7 @@ function property_eval()
     $data = array(
         'assets' => base_url() . "resources/",
         '_view' => 'frontend/views/property_evaluation');
-        $this->load->view('frontend/views/property_evaluation',$data);
+    $this->load->view('frontend/layouts/main',$data);
 }
 
 function upuser()
