@@ -313,7 +313,7 @@
     </div>
     <div class="col-md-3 col-sm-6">
       <div class="footer_panel bottom30">
-        <h4 class="bottom30">Search by Area</h4>
+        <h4 class="bottom30">Quick Links</h4>
         <table style="width:100%;">
           <tbody>
             <tr>
