@@ -213,7 +213,7 @@
                         
 
                         <?php foreach($dropdown_agent as $agent){ ?> 
-                        <div class="item">
+                        <div class="item agent_list_sldr">
                           <div class="image bottom15">
                             <a href="agent_detail?id=<?= $agent['id']?>">
                             <img src="<?php echo base_url('resources/img/agents/' .$agent['image'])?>" alt="Featured Property">
