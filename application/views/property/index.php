@@ -102,10 +102,7 @@
 							<b>Price:</b>
 							<a class="pull-right"><?php echo  $p['price']; ?></a>
 						</li>
-						<li class="list-group-item">
-							<b>Sold On:</b>
-							<a class="pull-right"><?php echo  $p['sold_on']; ?></a>
-						</li>
+						
 					</ul>
 	
 				</div>

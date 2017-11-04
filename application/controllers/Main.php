@@ -231,7 +231,7 @@ class Main extends CI_Controller
        $this->load->model('agent_model');
        
        $params = array();
-       $limit_per_page = 5;
+       $limit_per_page = 1000;
        $start_index = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
 
        $search_result = $this->property_model->mysearch($data,$limit_per_page, $start_index);
@@ -578,6 +578,7 @@ class Main extends CI_Controller
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $success  = $this->User_model->login($username, $password); 
+        
         
         if ($success) {
             if ($success['usertype'] == 'agent') {

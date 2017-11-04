@@ -376,11 +376,11 @@ class Property_model extends CI_Model
                                         // $this->db->select_max('area');
                                         // $this->db->from('prop_details');
                                         // $max_area = $this->db->get(); 
-                                        $max_area = 100000000;
+                                        $max_area = 100000000000000000;
                                     }
                                     if($max_price == 0)
                                     {
-                                        $max_price = 10000000;   
+                                        $max_price = 100000000000000000;   
                                     }
                             
                                     if($AC == null)
@@ -447,7 +447,8 @@ class Property_model extends CI_Model
                             
                                                                 AND (features.Balcony = 1
                                                                 OR features.Balcony = $Balcony)
-                                                                LIMIT $limit_per_page OFFSET $start_index
+                                                                order by property.prop_id desc
+                                                               
                                                                 ;");
                                                                //   $query = $this->db->limit($limit_per_page, $start_index);
                             
@@ -731,6 +732,7 @@ class Property_model extends CI_Model
                                         AND (features.Balcony = 1
                                         OR features.Balcony = $Balcony)
                                        AND property.new_build >= $new  
+                                       order by property.prop_id desc
                                         ;");
 
                                         return $query->result_array();

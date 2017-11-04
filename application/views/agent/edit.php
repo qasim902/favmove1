@@ -70,7 +70,7 @@
 							</div>
 							<div class="col-md-6">
 								<label for="agent_image" class="control-label">Edit Agent Image</label>
-								<div class="input-group agncy_btn">
+								<div class="input-group form-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
 											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo ($this->input->post('agent_image') ? $this->input->post('agent_image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: none;" />
@@ -81,7 +81,9 @@
 							</div>
 							<div class="col-md-6">
 								<label for="package_id" class="control-label">Package</label>
-								<div class="form-group">
+								
+								<div class="single-query">
+								    	<div class="intro">
 									<select name="package_id" class="form-control">
 										<option value="">select package</option>
 										<?php 
@@ -93,6 +95,7 @@
 								} 
 								?>
 									</select>
+									</div>
 								</div>
 							</div>
 							
@@ -156,9 +159,9 @@
 							<div class="col-md-6">
 								<label for="address" class="control-label">Address</label>
 								<div class="form-group">
-									<input type="text" name="address" value="<?php echo ($this->input->post('address') ? $this->input->post('address') : $agent['address']); ?>"
+									<textarea type="text" name="address" value="<?php echo ($this->input->post('address') ? $this->input->post('address') : $agent['address']); ?>"
 									 class="form-control" id="address" />
-								</div>
+								</textarea>
 							</div>
 						</div>
 						<div class="box-footer">

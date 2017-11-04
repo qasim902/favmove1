@@ -25,6 +25,7 @@ class Agent_model extends CI_Model
         return $this->db->get_where('agents',array($key=>$value))->row_array();
     }
         
+        
     /*
      * Get all agents
      */
@@ -99,6 +100,28 @@ class Agent_model extends CI_Model
                                     AND address LIKE '%$town_id%' ;");
         return $query->result_array();
 
+    }
+
+    function login($uid, $password) //Danish
+    {
+
+        $this -> db -> select('*');
+        $this -> db -> from('agents');
+        $this -> db -> where('username', $uid);
+        $this -> db -> where('password', $password);
+        $this -> db -> limit(1);
+
+
+        $query = $this->db->get();
+
+        if($query->num_rows() == 1)
+        {
+            return $query->row_array();
+        }
+        else
+        {
+            return false;
+        }
     }
     
 }
