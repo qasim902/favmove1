@@ -44,8 +44,7 @@
         </div>";
       echo "<script>
           window.location.hash = '#alert-pop';
-          
-        lun   
+            
       </script>";
       }
       ?>
