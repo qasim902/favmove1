@@ -128,7 +128,7 @@
                     </p>
                   </div>
                   <div class="dealer clearfix">
-                    <a href="agent_detail?id=<?php echo $property['id'];?>">
+                    <a href="agent_detail?id=<?php echo $property['userid'];?>">
                     <i class="author"><img width="70px" src="<?php echo base_url('resources/img/agents/' . $property['image']);?>" alt="agency"></i>
                     <h4><?= $property['fname'] ." ". $property['lname']?> &nbsp; <small>- Agent</small></h4>
                     <!-- <span><i class="icon-phone4"></i></span><i class="icon-mail-envelope-closed3"></i> -->

@@ -110,7 +110,7 @@
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
                 <div class="propert_des_logo text-center"> 
-                  <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"> 
+                  <a href="agent_detail?id=<?php echo $viewdata['agentdata']['userid'];?>"> 
                     <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail">
                   </a>
                 </div>
@@ -123,7 +123,7 @@
             <div class="agent_wrap">
               <!-- <h3>Bohdan Kononets</h3> -->
               <div class="bottom10 agnt_dtl">
-                <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"><?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?></a>
+                <a href="agent_detail?id=<?php echo $viewdata['agentdata']['userid'];?>"><?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?></a>
               </div>
               <p class="bottom10"><?= $viewdata['agentdata']['address'] ?></p>
               <div class="agnt_dtl">

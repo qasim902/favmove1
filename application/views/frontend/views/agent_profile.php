@@ -93,7 +93,7 @@
       
       <?php  ?>
       <div class="col-sm-4 bottom40">
-        <form class="callus" action="inboxagent?id=<?php $viewdata['agent']['id']?>" method="POST">
+        <form class="callus" action="inboxagent?id=<?php $viewdata['agent']['userid']?>" method="POST">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" name="name">
           </div>

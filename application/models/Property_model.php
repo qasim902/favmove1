@@ -700,7 +700,7 @@ class Property_model extends CI_Model
             // return $query->result_array();
             $query = $this->db->query("SELECT * FROM property JOIN  prop_details as pd ON property.prop_id = pd.prop_id 
                                         JOIN features ON property.prop_id = features.prop_id
-                                        JOIN agents ON property.agent_id = agents.id
+                                        JOIN agents ON property.agent_id = agents.userid
                                         AND property.title LIKE '%$title%'
                                          AND property.prop_type LIKE '%$protype%'
                                           AND town_id LIKE '%$townid%'
