@@ -211,7 +211,7 @@
                                                         </div>
                                                         <div class="col-md-8">
                                                             <label>
-                                                               <p>Email@gmail.com</p>
+                                                               <p><?php echo  $this->session->userdata['userData']['userData']['dataa']['email'];?></p>
                                                             </label>
                                                         </div>
                                                         <div class="clearfix"></div>
