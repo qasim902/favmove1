@@ -49,9 +49,9 @@
 								<?php 
 								foreach($all_agents as $agent)
 								{
-									$selected = ($agent['id'] == $this->input->post('agent_id')) ? ' selected="selected"' : "";
+									$selected = ($agent['userid'] == $this->input->post('agent_id')) ? ' selected="selected"' : "";
 
-									echo '<option value="'.$agent['id'].'" '.$selected.'>'.$agent['id'].'</option>';
+									echo '<option value="'.$agent['userid'].'" '.$selected.'>'.$agent['userid'].'</option>';
 								} 
 								?>
 							</select>

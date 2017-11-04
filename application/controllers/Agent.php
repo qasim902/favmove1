@@ -125,7 +125,7 @@ class Agent extends CI_Controller{
         $agent = $this->Agent_model->get_agent($id);
 
         // check if the agent exists before trying to delete it
-        if(isset($agent['id']))
+        if(isset($agent['userid']))
         {
             $this->Agent_model->delete_agent($id);
             redirect('agent/index');

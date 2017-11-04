@@ -215,12 +215,12 @@
                         <?php foreach($dropdown_agent as $agent){ ?> 
                         <div class="item agent_list_sldr">
                           <div class="image bottom15">
-                            <a href="agent_detail?id=<?= $agent['id']?>">
+                            <a href="agent_detail?id=<?= $agent['userid']?>">
                             <img src="<?php echo base_url('resources/img/agents/' .$agent['image'])?>" alt="Featured Property">
                             <span class="nav_tag yellow text-uppercase">Available</span>
                             </a>
                           </div>
-                          <h4><a href="agent_detail?id=<?= $agent['id']?>"><?= $agent['fname'] . $agent['lname']?> </a></h4>
+                          <h4><a href="agent_detail?id=<?= $agent['userid']?>"><?= $agent['fname'] . $agent['lname']?> </a></h4>
                           <p><?= $agent['address']?></p>
                         </div>
 

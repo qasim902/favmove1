@@ -526,8 +526,8 @@ class Main extends CI_Controller
         foreach ($agents as $agent)
         {
 
-            $viewdata[$agent['id']-1] = array(
-                'id' =>$agent['id'],
+            $viewdata[$agent['userid']-1] = array(
+                'id' =>$agent['userid'],
                 'agent'=>$agent,
                 
             );
@@ -660,7 +660,7 @@ class Main extends CI_Controller
                 'role' => 'agent'
             );
             $this->session->set_userdata('userData', $sdata);
-            //  var_dump($sdata['agentData']['UserData']['userid']); die();
+              var_dump($sdata['agentData']['UserData']); die();
             redirect('agent_home');
 
         }

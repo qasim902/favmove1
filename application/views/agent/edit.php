@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Edit Agent </h3>
 			</div>
-			<?php echo form_open('agent/edit/'.$agent['id']); ?>
+			<?php echo form_open('agent/edit/'.$agent['userid']); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
