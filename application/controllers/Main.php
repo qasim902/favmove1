@@ -578,7 +578,7 @@ class Main extends CI_Controller
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $success  = $this->User_model->login($username, $password); 
-        
+        $success1= $this->Agent_model->login($username, $password);
         
         if ($success) {
             if ($success['usertype'] == 'agent') {
@@ -627,6 +627,36 @@ class Main extends CI_Controller
                 redirect('user_home');  
 
             }
+        }
+        else if($success1)
+        {
+            $agg = $this->Agent_model->get_agent_where('username',$success['username']);
+            $agentData = array(
+                'agentid' => $username,
+                'UserData' => $success,
+                'AgentData' => $agg
+            );
+
+
+
+
+
+            $data = $this->data;
+            $data += array(
+                'agentData' => $agentData,
+                'logged_in' => true,
+                'role' => 'agent'
+            );
+
+            $sdata = array(
+                'agentData' => $agentData,
+                'logged_in' => true,
+                'role' => 'agent'
+            );
+            $this->session->set_userdata('userData', $sdata);
+            //  var_dump($sdata['agentData']['UserData']['userid']); die();
+            redirect('agent_home');
+
         }
         else {
             
