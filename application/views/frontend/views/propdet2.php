@@ -37,14 +37,51 @@
         <h3 class="text-uppercase"><?= $viewdata['property']['title'] ?></h3>
         <p class="bottom10"><?= $viewdata['property']['address'] ?></p>
         <div id="property-d-1" class="owl-carousel big single">
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg' );?>" alt="image"/></div>
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg' );?>" alt="image"/></div>
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg' );?>" alt="image"/></div>
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details3.jpg' );?>" alt="image"/></div>
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details4.jpg' );?>" alt="image"/></div>
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details5.jpg' );?>" alt="image"/></div>
-          <div class="item"><img src="<?php echo base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg' );?>" alt="image"/></div>
+            <?php
 
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg' ).'" alt="image"/></div>';
+            }
+
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details3.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details3.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details4.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details4.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details5.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details5.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg' ).'" alt="image"/></div>';
+            }
+
+            ?>
         </div>
         <div id="property-d-1-2" class="owl-carousel small single">
           <div class="item" ><img src="<?= $assets;?>img/properties/property-d-s-1-1.jpg" alt="image"/></div>
