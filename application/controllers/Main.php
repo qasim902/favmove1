@@ -140,18 +140,23 @@ class Main extends CI_Controller
         if ($option == "n")
         {
             $all_property = $this->Property_model->get_prop_where('new_build','1');
+            $opt="New Properties";
         }
         if ($option == "b")
         {
         $all_property = $this->Property_model->get_prop_where('prop_type','bus');
+        $opt="Business Properties";
         }
         else if($option == "r")
         {
             $all_property = $this->Property_model->get_prop_where('prop_type','res');
+            $opt="Residential Properties";
+
         }
         else if($option == "c")
         {
             $all_property = $this->Property_model->get_prop_where('prop_type','com');
+            $opt="Commercial Properties";
         }
         $viewdata = array();
         $this->load->model('property_model');
@@ -173,7 +178,8 @@ class Main extends CI_Controller
             'avg'=> $avg,
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/property_list',
-            'viewdata' => $viewdata
+            'viewdata' => $viewdata,
+            'opt' => $opt
 
         );
 

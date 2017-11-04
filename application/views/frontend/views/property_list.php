@@ -285,7 +285,7 @@
             <div class="col-sm-9">  
       <div class="row">
         <div class="col-sm-12 ">
-          <h2 class="uppercase">Best Deal Properties</h2>
+          <h2 class="uppercase"><?php echo  $opt; ?></h2>
           <p class="pull-left pro_lis col-md-10">We are proud to present to you some of the best homes, apartments, offices e.g. across England for affordable prices.</p>
           <p class="pull-right"><?php echo count($viewdata); ?> Listings Found</p>
         </div>
@@ -317,7 +317,7 @@
               <?php 
               if ($property['property']['is_feat'] == "1")
               {?>
-                <img class="start_tag" src="http://localhost/favmove1/resources/img/favruite.png" alt="property">
+                <img class="start_tag" src="<?= $assets ?>img/favruite.png" alt="property">
               <?php }
 
 
@@ -394,7 +394,7 @@
                       </a>
                     </div>
                   <div class=" favroute clearfix">
-                    <p class="pull-md-left"<?= $property['agentdata']['fname'] ." ". $property['agentdata']['lname']?></p>
+                    <p class="pull-md-left"><?= $property['agentdata']['fname'] ." ". $property['agentdata']['lname']?></p>
                     <p class="pull-md-left"><?= $property['property']['address']?> </p>
                     <ul class="pull-right">
                       <li><a href="javascript:void(0)"><i class="icon-like"></i></a></li>
