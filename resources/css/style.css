@@ -3529,7 +3529,7 @@ aside .search-propertie-filters {
 	background:url(../img/page-benner-bg.jpg) no-repeat;
 	background-size:cover !important;
 	width:100%;
-	background-attachment:fixed;
+	/* background-attachment:fixed; */
 	background-position:center center;
 	position:relative;
 	z-index:1;
