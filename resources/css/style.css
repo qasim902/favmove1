@@ -325,8 +325,8 @@ p{
 	border:1px solid #1f1f1f;
 }
 .feature-p-text:hover h4, .p-image:hover{ cursor:pointer;}
-#loadMore-gallery {
-}
+/* #loadMore-gallery{
+} */
 #loadMore-gallery a{
 	display:block;
 	padding:0;
@@ -415,7 +415,7 @@ ul.area_search li a:hover, ul.area_search li a:focus{
 	color:#FFD119;
 }
 
-ul.getin_touch{}
+/* ul.getin_touch{} */
 ul.getin_touch li{
   display: block;
   margin-bottom: 15px;
@@ -703,7 +703,7 @@ header{
   /* background: #ffd119; */
   background: #f5f5f5;
   margin:-15px 0 -15px 5px;
-  padding: 10px 20px;
+  padding: 14px 20px;
   position: relative;
 }
 .topbar.dark ul.breadcrumb_top > li.colors > a{
@@ -1522,7 +1522,7 @@ button{
 
 
 /* ---------------------- Property Wraps ---------------------- */
-#property{}
+/* #property{} */
 .property_item{
 	border:1px solid #e5e5e5;
 	background:#fff; position:relative;
@@ -1919,7 +1919,7 @@ i.icon-safety-shower{font-size:16px !important;}
   top:75%;
   background:transparent;
 }
-#agent-slider{}
+/* #agent-slider{} */
 #agent-slider .owl-prev, #agent-slider .owl-next {
   top: 30%;
   margin-top: -21px;
@@ -1940,7 +1940,7 @@ i.icon-safety-shower{font-size:16px !important;}
 .layout_six .three-item .owl-prev, .layout_six .three-item .owl-next{
 	display:none;
 }
-.news_item .bottom{}
+/* .news_item .bottom{} */
 .news_item .bottom .info_comment span{
 	display:inline-block;
 	color:#7e7e7e;
@@ -2103,7 +2103,7 @@ i.icon-safety-shower{font-size:16px !important;}
 
 /* ---------------------- Best Deals ---------------------- */
 
-#deals .deal_media{}
+/* #deals .deal_media{} */
 .media-body, .media-left, .media-right {
   display: table-cell;
   vertical-align: bottom;
@@ -2120,8 +2120,8 @@ i.icon-safety-shower{font-size:16px !important;}
 	margin:0;
 	vertical-align: bottom;
 }
-#deals .deal_media .media-left a > img{
-}
+/* #deals .deal_media .media-left a > img{
+} */
 #deals .deal_media .price{
 	padding:15px;
 	display:inline-block;
@@ -2160,7 +2160,7 @@ i.icon-safety-shower{font-size:16px !important;}
   margin-right:15px;
 }
 
-#deal_property{}
+/* #deal_property{} */
 .deal_property {
   height: auto;
   min-height: 450px;
@@ -2177,7 +2177,7 @@ i.icon-safety-shower{font-size:16px !important;}
 .deal_property .bg_left, .deal_property .deal_decription{
 	min-height:inherit;
 }
-.deal_property .bg_left{}
+/* .deal_property .bg_left{} */
 .deal_property .dealer{
 	padding:20px 15px;
 	margin-top:10px;
@@ -2216,7 +2216,7 @@ i.icon-safety-shower{font-size:16px !important;}
 
 
 /* ---------------------- Featured Property ---------------------- */
-#feature_property{}
+/* #feature_property{} */
 #feature_property .feature_item{
 	border:1px solid #e5e5e5;
 }
@@ -2277,8 +2277,8 @@ i.icon-safety-shower{font-size:16px !important;}
 	color:#191919;
 	font-size:14px;
 }
-.feature_main .bottom h4{
-}
+/* .feature_main .bottom h4{
+} */
 #feature_property .property_meta > span{
 	text-align:left;
 }
@@ -2433,7 +2433,7 @@ i.icon-safety-shower{font-size:16px !important;}
 	font-size:12px;
 }
 
-#testinomialBg{}
+/* #testinomialBg{} */
 .testinomial_content span.smmery{
 	display:block;
 }
@@ -2443,7 +2443,7 @@ i.icon-safety-shower{font-size:16px !important;}
 	font-style:oblique;
 }
 /*Testinomial Page*/
-.testinomial_box{}
+/* .testinomial_box{} */
 .testinomial_box .testinomial_desc {
   border-radius: 5px;
   color: #fff;
@@ -2698,7 +2698,7 @@ i.icon-safety-shower{font-size:16px !important;}
 #agents_col .agent_box img{
 	display:inline-block;
 }
-#layouts{ }
+/* #layouts{ } */
 #layouts .news_media span {
   color: #7e7e7e;
   display: inline-block;
@@ -2736,7 +2736,7 @@ i.icon-safety-shower{font-size:16px !important;}
 	padding-left:10px;
 	padding-right:10px;
 }
-.agent_wrap{}
+/* .agent_wrap{} */
 .agent_wrap .agent_text{
   background: #fff;
   margin: 0 20px 0 20px;
@@ -3020,7 +3020,7 @@ i.icon-safety-shower{font-size:16px !important;}
   width: 100%;
 }
 
-#news_slider{}
+/* #news_slider{} */
 .news_hovered{
 	padding:25px 15px;
 	background:#fff;
