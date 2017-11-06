@@ -73,7 +73,7 @@
 								<div class="input-group form-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
-											Upload Image&hellip; <input type="file" name="image" value="<?php echo ($this->input->post('image') ? $this->input->post('image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: block;" />
+											Upload Image&hellip; <input type="file" name="image" value="<?php echo ($this->input->post('image') ? $this->input->post('image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: none;" />
 										</span>
 									</label>
 									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('image'); ?>" class="form-control" readonly>

@@ -104,6 +104,7 @@ class Agent extends CI_Controller{
                 $config['max_size']     = '5000';
                 $config['max_width'] = '5000';
                 $config['max_height'] = '5000';
+                $comfig['overwrite'] = FALSE;
         
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
@@ -117,7 +118,8 @@ class Agent extends CI_Controller{
                 else
                 {
                     $filename = $this->upload->data();
-                    $data['image'] = $filename['file_name'];
+                    $params['image'] = $filename['file_name'];
+                    $this->load->model('agent_model');
                     $this->Agent_model->update_agent($id,$params);            
                     redirect('agent/index');
                 }
