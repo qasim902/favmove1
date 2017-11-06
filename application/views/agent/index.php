@@ -23,7 +23,9 @@ echo $this->session->flashdata('successsub');
 
 }
 ?>
-<?php foreach($agents as $a){ ?>
+<?php 
+//var_dump($agents); die();
+foreach($agents as $a){ ?>
 <div class="col-md-12">
 	<!-- Profile Image -->
 	<div class="box box-primary">
@@ -93,16 +95,16 @@ echo $this->session->flashdata('successsub');
 									<i class="fa fa-pencil margin-r-5"></i>Allow Phone No</a>
 							</li>
 							<li class="pull-right">
-								<a href="/fmove/agentquery?id=<?php echo $a['userid']; ?>" class="btn btn-primary link-white text-sm">
+								<a href="/favmove1/agentquery?id=<?php echo $a['userid']; ?>" class="btn btn-primary link-white text-sm">
 									<i class="fa fa-pencil margin-r-5"></i>Show Inquiries</a>
 							</li>
 							<li class="pull-right">
-								<!--<a href="/fmove/edit?id=<?php echo $a['userid'];?>" class="btn btn-primary link-white text-sm">
+								<a href="<?php echo site_url('agent/edit/'.$a['userid']); ?>" class="btn btn-primary link-white text-sm">
 									<i class="fa fa-pencil margin-r-5"></i> Edit</a>
 							</li>
 							<li class="pull-right">
 								<a href="#" class="btn btn-danger link-white text-sm">
-									<i class="fa fa-trash margin-r-5"></i> Delete</a>-->
+									<i class="fa fa-trash margin-r-5"></i> Delete</a>
 							</li>
 							
 						</ul>

@@ -4,7 +4,7 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">Edit Agent </h3>
 			</div>
-			<?php echo form_open('agent/edit/'.$agent['userid']); ?>
+			<?php echo form_open_multipart('agent/edit/'.$agent['userid']); ?>
 			<div class="box-body">
 				<div class="col-sm-1 col-md-2"></div>
 				<div class="col-sm-10 col-md-8">
@@ -15,7 +15,7 @@
 								<div class="single-query ">
 									
 									<div class="intro">
-									<select name="select_one">
+									<select name="title">
 										<option class="active">Title</option>
 										<option value="1">Mr</option>
 										<option value="2">Mrs</option>
@@ -23,7 +23,7 @@
 									</div>
 								</div>
 								<span class="text-danger">
-										<?php echo form_error('select_one');?>
+										<?php echo form_error('title');?>
 									</span>
 							</div>
 							<div class="col-md-6">
@@ -64,7 +64,7 @@
 							<div class="col-md-6">
 								<label for="email" class="control-label">Contact</label>
 								<div class="form-group">
-									<input type="text" name="contact" value="<?php echo ($this->input->post('contact') ? $this->input->post('contact') : $agent['agphone']); ?>"
+									<input type="text" name="agphone" value="<?php echo ($this->input->post('contact') ? $this->input->post('contact') : $agent['agphone']); ?>"
 									 class="form-control" id="contact" />
 								</div>
 							</div>
@@ -73,10 +73,10 @@
 								<div class="input-group form-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
-											Upload Image&hellip; <input type="file" name="agent_image" value="<?php echo ($this->input->post('agent_image') ? $this->input->post('agent_image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: none;" />
+											Upload Image&hellip; <input type="file" name="image" value="<?php echo ($this->input->post('image') ? $this->input->post('image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: block;" />
 										</span>
 									</label>
-									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('agent_image'); ?>" class="form-control" readonly>
+									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('image'); ?>" class="form-control" readonly>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -84,12 +84,12 @@
 								
 								<div class="single-query">
 								    	<div class="intro">
-									<select name="package_id" class="form-control">
+									<select name="package" class="form-control">
 										<option value="">select package</option>
 										<?php 
 								foreach($all_packages as $package)
 								{
-									$selected = ($package['id'] == $agent['package_id']) ? ' selected="selected"' : "";
+									$selected = ($package['id'] == $agent['package']) ? ' selected="selected"' : "";
 
 									echo '<option value="'.$package['id'].'" '.$selected.'>'.$package['package_name'].'</option>';
 								} 
@@ -104,8 +104,8 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
-										<input type="text" name="fb_link" value="<?php echo ($this->input->post('fb_link') ? $this->input->post('fblink') : $agent['fblink']); ?>" class="form-control" id="fb_link" />
-										<span class="text-danger"><?php echo form_error('fb_link');?></span>
+										<input type="text" name="fblink" value="<?php echo ($this->input->post('fblink') ? $this->input->post('fblink') : $agent['fblink']); ?>" class="form-control" id="fb_link" />
+										<span class="text-danger"><?php echo form_error('fblink');?></span>
 									</div>
 								</div>
 							</div>
@@ -115,7 +115,7 @@
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
 											<input type="text" name="linkedin" value="<?php echo ($this->input->post('linkedin') ? $this->input->post('linkedin') : $agent['linkedin']); ?>" class="form-control" id="linkedin_link" />
-										<span class="text-danger"><?php echo form_error('linkedin_link');?></span>
+										<span class="text-danger"><?php echo form_error('linkedin');?></span>
 									</div>
 								</div>
 							</div>
@@ -124,7 +124,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-										<input type="text" name="twit_link" value="<?php echo ($this->input->post('twiterlink') ? $this->input->post('twiterlink') : $agent['twiterlink']); ?>" class="form-control" id="twit_link" />
+										<input type="text" name="twiterlink" value="<?php echo ($this->input->post('twiterlink') ? $this->input->post('twiterlink') : $agent['twiterlink']); ?>" class="form-control" id="twit_link" />
 										<span class="text-danger"><?php echo form_error('twiterlink');?></span>
 									</div>
 								</div>
@@ -135,7 +135,7 @@
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
 										<input type="text" name="gplus_link" value="<?php echo ($this->input->post('gpluslink') ? $this->input->post('gplus_link') : $agent['gpluslink']); ?>" class="form-control" id="gplus_link" />
-										<span class="text-danger"><?php echo form_error('gplus_link');?></span>
+										<span class="text-danger"><?php echo form_error('gpluslink');?></span>
 									</div>
 								</div>
 							</div>
@@ -144,8 +144,8 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-youtube" aria-hidden="true"></i></span>
-										<input type="text" name="youtube_link" value="<?php echo ($this->input->post('youtubelink') ? $this->input->post('youtubelink') : $agent['youtubelink']); ?>" class="form-control" id="youtube_link" />
-										<span class="text-danger"><?php echo form_error('youtube_link');?></span>
+										<input type="text" name="youtubelink" value="<?php echo ($this->input->post('youtubelink') ? $this->input->post('youtubelink') : $agent['youtubelink']); ?>" class="form-control" id="youtube_link" />
+										<span class="text-danger"><?php echo form_error('youtubelink');?></span>
 									</div>
 									
 								</div>
