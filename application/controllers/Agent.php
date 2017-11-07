@@ -74,7 +74,7 @@ class Agent extends CI_Controller{
         // check if the agent exists before trying to edit it
         $data['agent'] = $this->Agent_model->get_agent($id);
         
-        if(isset($data['agent']['userid']))
+        if(isset($data['agent']['id']))
         {
             if(isset($_POST) && count($_POST) > 0)     
             {   
@@ -121,7 +121,8 @@ class Agent extends CI_Controller{
                     $filename = $this->upload->data();
                     $params['image'] = $filename['file_name'];
                     $this->load->model('agent_model');
-                    $this->Agent_model->update_agent($id,$params);            
+                    $this->Agent_model->update_agent($id,$params); 
+                    echo  $this->session->set_flashdata('successsub', "Agent updates successfully");           
                     redirect('agent/index');
                 }
             }

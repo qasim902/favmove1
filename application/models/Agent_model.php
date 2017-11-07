@@ -12,13 +12,10 @@ class Agent_model extends CI_Model
      */
     function get_agent($id)
     {
-<<<<<<< HEAD
        
     return $this->db->get_where('agents',array('id'=>$id))->row_array();
 
-=======
-        return $this->db->get_where('agents',array('userid'=>$id))->row_array();
->>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
+        return $this->db->get_where('agents',array('id'=>$id))->row_array();
     }
 
     function getinquiries($id)
@@ -37,7 +34,7 @@ class Agent_model extends CI_Model
      */
     function get_all_agents()
     {
-        $this->db->order_by('userid', 'desc');
+        $this->db->order_by('id', 'desc');
         return $this->db->get('agents')->result_array();
     }
         
@@ -55,7 +52,7 @@ class Agent_model extends CI_Model
      */
     function update_agent($id,$params)
     {
-        $this->db->where('userid',$id);
+        $this->db->where('id',$id);
         return $this->db->update('agents',$params);
     }
     
@@ -64,7 +61,7 @@ class Agent_model extends CI_Model
      */
     function delete_agent($id)
     {
-        return $this->db->delete('agents',array('userid'=>$id));
+        return $this->db->delete('agents',array('id'=>$id));
     }
     function showagquery($data)
     {

@@ -146,11 +146,8 @@ class Main extends CI_Controller
         if ($option == "n")
         {
             $all_property = $this->Property_model->get_prop_where('new_build','1');
-<<<<<<< HEAD
              $opt="New Properties";
-=======
             $opt="New Properties";
->>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
         }
         if ($option == "b")
         {
@@ -161,10 +158,7 @@ class Main extends CI_Controller
         {
             $all_property = $this->Property_model->get_prop_where('prop_type','res');
             $opt="Residential Properties";
-<<<<<<< HEAD
-=======
 
->>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
         }
         else if($option == "c")
         {
