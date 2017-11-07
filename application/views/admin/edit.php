@@ -11,13 +11,7 @@
 						<div class="callus clearfix border_radius submit_property">
 	
 				<div class="row clearfix">
-					<div class="col-md-12">
-						<label for="password" class="control-label"><span class="text-danger">*</span>Password</label>
-						<div class="form-group">
-							<input type="text" name="password" value="<?php echo ($this->input->post('password') ? $this->input->post('password') : $admin['password']); ?>" class="form-control" id="password" />
-							<span class="text-danger"><?php echo form_error('password');?></span>
-						</div>
-					</div>
+					
 					<div class="col-md-12">
 						<label for="username" class="control-label"><span class="text-danger">*</span>Username</label>
 						<div class="form-group">
@@ -30,6 +24,13 @@
 						<div class="form-group">
 							<input type="text" name="email" value="<?php echo ($this->input->post('email') ? $this->input->post('email') : $admin['email']); ?>" class="form-control" id="email" />
 							<span class="text-danger"><?php echo form_error('email');?></span>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<label for="password" class="control-label"><span class="text-danger">*</span>Password</label>
+						<div class="form-group">
+							<input type="text" name="password" value="<?php echo ($this->input->post('password') ? $this->input->post('password') : $admin['password']); ?>" class="form-control" id="password" />
+							<span class="text-danger"><?php echo form_error('password');?></span>
 						</div>
 					</div>
 					<!-- <div class="col-md-6">

@@ -289,7 +289,7 @@ class Mainag extends CI_Controller{
                 }
             }
             if ($errors > 0) {
-                echo $errors . "File(s) cannot be uploaded";
+                echo $errors . "File(s) could not be uploaded";
             }
             redirect('agent_home','refresh');
            }

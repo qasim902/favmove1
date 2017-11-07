@@ -93,16 +93,16 @@ echo $this->session->flashdata('successsub');
 									<i class="fa fa-pencil margin-r-5"></i>Allow Phone No</a>
 							</li>
 							<li class="pull-right">
-								<a href="/favmove1/agentquery?id=<?php echo $a['id']; ?>" class="btn btn-primary link-white text-sm">
+								<a href="/fmove/agentquery?id=<?php echo $a['id']; ?>" class="btn btn-primary link-white text-sm">
 									<i class="fa fa-pencil margin-r-5"></i>Show Inquiries</a>
 							</li>
 							<li class="pull-right">
-								<a href="/favmove1/edit?id=<?php echo $a['id'];?>" class="btn btn-primary link-white text-sm">
+								<!--<a href="/fmove/edit?id=<?php echo $a['id'];?>" class="btn btn-primary link-white text-sm">
 									<i class="fa fa-pencil margin-r-5"></i> Edit</a>
 							</li>
 							<li class="pull-right">
 								<a href="#" class="btn btn-danger link-white text-sm">
-									<i class="fa fa-trash margin-r-5"></i> Delete</a>
+									<i class="fa fa-trash margin-r-5"></i> Delete</a>-->
 							</li>
 							
 						</ul>
@@ -114,7 +114,7 @@ echo $this->session->flashdata('successsub');
 									<h4 class="modal-title" id="exampleModalLabel">Asign number to Id # <?php echo $a['id']; ?></h4>
 								</div>
 								<div class="modal-body">
-									<form method="POST" action="/favmove1/phone_to_agent?id=<?php echo $a['id']; ?>">
+									<form method="POST" action="/fmove/phone_to_agent?id=<?php echo $a['id']; ?>">
 									<div class="form-group">
 										<label for="recipient-name" class="control-label">Number:</label>
 										<input type="text" class="form-control" id="recipient-name" name="agphone">

@@ -34,7 +34,7 @@
                   </div>
                   <div class="col-md-7 col-sm-7 col-xs-12 padding-left-25">
                      <h3><a href="news_detail?id=<?=$news['id']?>"><?=$news['title']?></a></h3>
-                     <div class="news-details padding-b-10 margin-t-5">
+                     <div class="news-details new_ico padding-b-10 margin-t-5">
                         <span><i class="icon-icons230"></i> by <?=$news['author']?></span>
                         <span><i class="icon-icons228"></i> <?= $news['added_on']?></span>
                      </div>

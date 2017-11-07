@@ -28,7 +28,8 @@ class Main extends CI_Controller
         $this->data['dropdown_agent'] = $this->Agent_model->get_all_agents();
         $this->data['defdata'] = array('all_uk_towns' => $this->Uk_town_model->get_all_uk_towns());
         $this->data['towns'] = array('all_towns' => $this->Uk_town_model->get_towns());
-        $this->data['feature_prop'] = $this->Property_model->feature_property();  
+        $this->data['feature_prop'] = $this->Property_model->feature_property(); 
+        
 
     }
 
@@ -41,16 +42,21 @@ class Main extends CI_Controller
         $this->load->model('News_model');
 
         $homeprops = $this->Property_model->get_all_property();
-
+        $homeprops1 = $this->Property_model->get_all_featured_property();
         foreach ($homeprops as &$prop)
         {
             $prop['prop_details'] = $this->Prop_detail_model->get_prop_detail($prop['prop_id']);
         }
-        $news = $this->News_model->get_all_news();
+        
+        foreach ($homeprops1 as &$prop1)
+        {
+            $prop1['prop_details'] = $this->Prop_detail_model->get_prop_detail($prop1['prop_id']);
+        }
+        $news = $this->News_model->get_all_news_main();
         
 
         $data = $this->data;
-        $data['defdata'] += array('home_prop' => $homeprops, 'news'=>$news);
+        $data['defdata'] += array('home_prop' => $homeprops, 'news'=>$news, 'home_prop1' => $homeprops1);
         $data += array(
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/index'
@@ -140,18 +146,22 @@ class Main extends CI_Controller
         if ($option == "n")
         {
             $all_property = $this->Property_model->get_prop_where('new_build','1');
+             $opt="New Properties";
         }
         if ($option == "b")
         {
         $all_property = $this->Property_model->get_prop_where('prop_type','bus');
+        $opt="Business Properties";
         }
         else if($option == "r")
         {
             $all_property = $this->Property_model->get_prop_where('prop_type','res');
+            $opt="Residential Properties";
         }
         else if($option == "c")
         {
             $all_property = $this->Property_model->get_prop_where('prop_type','com');
+            $opt="Commercial Properties";
         }
         $viewdata = array();
         $this->load->model('property_model');
@@ -173,7 +183,8 @@ class Main extends CI_Controller
             'avg'=> $avg,
             'assets' => base_url() . "resources/",
             '_view' => 'frontend/views/property_list',
-            'viewdata' => $viewdata
+            'viewdata' => $viewdata,
+            'opt' => $opt
 
         );
 
@@ -231,7 +242,7 @@ class Main extends CI_Controller
        $this->load->model('agent_model');
        
        $params = array();
-       $limit_per_page = 5;
+       $limit_per_page = 1000;
        $start_index = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
 
        $search_result = $this->property_model->mysearch($data,$limit_per_page, $start_index);
@@ -245,9 +256,17 @@ class Main extends CI_Controller
        $this->pagination->initialize($config);
        $params["links"] = $this->pagination->create_links();
 
-
-       $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
+      //  var_dump($search_result);
+        if (!empty($search_result)) {
+             $agdata = $this->Agent_model->get_agent($search_result[0]['agent_id']);
        $data = array('viewdata' =>$search_result , 'agdata' =>$agdata ,);
+     // list is empty.
+}
+else
+{
+    $agdata=0;
+}
+      
        
        $data = $this->data;
             $data += array(
@@ -578,6 +597,7 @@ class Main extends CI_Controller
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $success  = $this->User_model->login($username, $password); 
+        
         
         if ($success) {
             if ($success['usertype'] == 'agent') {

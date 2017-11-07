@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -6,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>Favourite Move</title>
 
-<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="resources/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="resources/css/reality-icon.css">
 <link rel="stylesheet" type="text/css" href="resources/css/bootsnav.css">
 <link rel="stylesheet" type="text/css" href="resources/css/jquery.fancybox.css">
@@ -172,7 +171,7 @@
 
                         <div class="item">
                           <div class="image bottom15">
-                            <a href="property_detail?id=<?= $prop['prop_id'] ?>"><img src="<?= $assets;?>img/properties/<?= $prop['prop_id'] ?>/latest.jpg" alt="Featured Property">
+                            <a href="property_detail?id=<?= $prop['prop_id'] ?>"><img src="<?= $assets;?>img/properties/<?= $prop['prop_id'] ?>/cover.jpg" alt="Featured Property">
                             <span class="nav_tag yellow text-uppercase">for rent</span></a>
                           </div>
                           <h4><a href="property_detail?id=<?= $prop['prop_id'] ?>"><?= $prop['title'] ?></a></h4>

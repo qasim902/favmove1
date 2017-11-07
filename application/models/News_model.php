@@ -25,10 +25,25 @@ class News_model extends CI_Model
     function get_all_news()
     {
        // $this->db->order_by('id', 'desc');
+      // return  $this->db->get('news')->order_by("name", "asc")->result_array();
+      
+
         return $this->db->get('news')->result_array();
         
     }
+            function get_all_news_main()
+    {
+       // $this->db->order_by('id', 'desc');
+      // return  $this->db->get('news')->order_by("name", "asc")->result_array();
+      
+      $this->db->from('news');
+$this->db->order_by("id", "desc");
+ $this->db->limit('3');
+$query = $this->db->get(); 
+return $query->result_array();
+       // return $this->db->get('news')->result_array();
         
+    }
     /*
      * function to add new news
      */

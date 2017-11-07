@@ -12,7 +12,9 @@ class Agent_model extends CI_Model
      */
     function get_agent($id)
     {
-        return $this->db->get_where('agents',array('id'=>$id))->row_array();
+       
+    return $this->db->get_where('agents',array('id'=>$id))->row_array();
+
     }
 
     function getinquiries($id)
@@ -24,6 +26,7 @@ class Agent_model extends CI_Model
     {
         return $this->db->get_where('agents',array($key=>$value))->row_array();
     }
+        
         
     /*
      * Get all agents

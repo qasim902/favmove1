@@ -4,7 +4,7 @@
 			<div class="box-header">
 				<h3 class="box-title">Packages Listing</h3>
 				<div class="box-tools">
-					<a href="<?php echo site_url('package/add'); ?>" class="btn btn-success btn-sm">Add Packages</a>
+					<a href="<?php echo site_url('package/showpkg'); ?>" class="btn btn-success btn-sm">Add Packages</a>
 				</div>
 			</div>
 			<div class="box-body">
@@ -62,8 +62,8 @@ echo "<script>
 								<?php echo $p['package_duration']; ?>
 							</td>
 							<td>
-								<a href="<?php echo site_url('package/edit/'.$p['packageid']); ?>" class="btn btn-info btn-xs">
-									<span class="fa fa-pencil"></span> Edit</a>
+								<!--<a href="<?php echo site_url('package/edit/'.$p['packageid']); ?>" class="btn btn-info btn-xs">
+									<span class="fa fa-pencil"></span> Edit</a>-->
 								<a href="<?php echo site_url('package/remove/'.$p['packageid']); ?>" class="btn btn-danger btn-xs" Onclick="confirm('Are you sure?')">
 									<span class="fa fa-trash"></span> Delete</a>
 							</td>

@@ -32,7 +32,7 @@
 						<td><?php echo $u['payment_details']; ?></td>
 <!--						<td>--><?php //echo $u['myfavorites']; ?><!--</td>-->
 						<td>
-                            <a href="<?php echo site_url('user/edit/'.$u['userid']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
+                            <!--<a href="<?php echo site_url('user/edit/'.$u['userid']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> -->
                             <a href="<?php echo site_url('user/remove/'.$u['userid']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
                         </td>
                     </tr>

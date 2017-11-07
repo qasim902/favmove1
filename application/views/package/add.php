@@ -35,7 +35,7 @@
 								<label for="package_name" class="control-label">Package Name</label>
 								<div class="form-group">
 									<input type="text" name="package_name" placeholder="Enter Name" autofocus value="<?php echo $this->input->post('package_name'); ?>"
-									 class="form-control" id="package_name" />
+									 class="form-control" id="package_name" required />
 									<span class="text-danger">
 										<?php echo form_error('package_name');?>
 									</span>

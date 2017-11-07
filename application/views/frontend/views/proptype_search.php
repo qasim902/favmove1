@@ -60,7 +60,7 @@
               <?php 
               if ($property['is_feat'] == "1")
               {?>
-                <img class="start_tag" src="http://localhost/favmove1/resources/img/favruite.png" alt="property">
+                <img class="start_tag" src="<?= $assets ?>img/favruite.png" alt="property">
               <?php }
 
 

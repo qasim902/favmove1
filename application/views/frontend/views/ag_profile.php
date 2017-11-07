@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1 class="text-uppercase">User Profile</h1>
+          <h1 class="text-uppercase">Agent Profile</h1>
           <ol class="breadcrumb text-center ">
             <li><a href="#">Home</a></li>
             <li><a href="#">Agent</a></li>
@@ -36,7 +36,7 @@
 
             <div class="agent_wrap">
               <div class="image user_img">
-                <img class="img-responsive" src="<?= $assets.'img/agents/'. $viewdata['agentdata']['id'].'/prof.jpg'?>" alt="User">
+                <img class="img-responsive" src="<?= $assets.'img/agents/'. $viewdata['agentdata']['userid'].'/prof.jpg'?>" alt="User">
               </div>
               <div class="usr_nam">
                 <h3><?= $viewdata['agentdata']['name']?></h3>
@@ -90,7 +90,7 @@
               <?php 
               if ($property['is_feat'] == "1")
               {?>
-                <img class="start_tag" src="http://localhost/favmove1/resources/img/favruite.png" alt="property">
+                <img class="start_tag" src="<?= $assets ?>img/favruite.png" alt="property">
               <?php }
 
 
@@ -211,7 +211,73 @@
 
 
           </div>
-          <div class="tab-pane" id="profile"></div>
+          <div class="tab-pane" id="profile">
+              
+              <div class="col-sm-8 bottom40">
+            <div class="agent_wrap">
+                <div class=" bottom10">
+                    <h3>
+                        Agent Name
+                        <!-- <?= $viewdata['agent']['fname'] ." ". $viewdata['agent']['lname'];?>  -->
+                    </h3>
+                </div>
+                <div class="agnt_pro image">
+                <!-- <img src="<?php echo base_url('resources/img/agents/'. $viewdata['agent']['image']); ?>" alt="Agents">  -->
+                    <img class="pull-left img-thumbnail" src="http://media.rightmove.co.uk/142k/141935/branch_photo_141935_0000.jpeg" alt="Agents">
+                    <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum consectetuer adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum consectetuer adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum consectetuer adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum consectetuer adipiscing. 
+                        <!-- <?= $viewdata['agent']['description'];?>  -->
+                    </p>
+                </div>
+                
+            </div>
+            </div>
+        
+      <div class="col-sm-4 bottom40 top30">
+            <div class="agent_wrap">
+              <table class="agent_contact agn_dtl table">
+                  <tbody>
+                    
+                    <tr class="bottom10">
+                      <td><strong>Username:</strong></td>
+                      <td class="text-right">
+                        <!-- <?= $viewdata['agent']['phone'];?>  -->
+                       username2527
+                      </td>
+                    </tr>
+                    <tr class="bottom10">
+                      <td><strong>Email:</strong></td>
+                      <td class="text-right">
+                        <!-- <?= $viewdata['agent']['phone'];?>  -->
+                        example@gmail.com
+                      </td>
+                    </tr>
+                    <tr class="bottom10">
+                      <td><strong>Phone:</strong></td>
+                      <td class="text-right">
+                          +44 90023 45678
+                          <!-- <?= $viewdata['agent']['phone'];?> -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="adre"><strong>Address:</strong></td>
+                      <td class="text-right">7-8 Regency Parade, Finchley Road, Hampstead, London, NW3 5EG</td>
+                    </tr>
+                  </tbody>
+                </table>
+                  
+                <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
+                <ul class="social_share">
+                  <li><a href="#" class="facebook"><i class="icon-facebook-1"></i></a></li>
+                  <li><a href="#" class="twitter"><i class="icon-twitter-1"></i></a></li>
+                  <li><a href="#" class="google"><i class="icon-google4"></i></a></li>
+                  <li><a href="#" class="linkden"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#" class="vimo"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+          </div>
+              
+          </div>
 
           <div class="tab-pane" id="messages">
             <?php  

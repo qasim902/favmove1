@@ -73,6 +73,7 @@ echo $this->session->flashdata('successsub');
                 <select name="town_id">
                   <option value="">Select Town</option>
                   <?php 
+                
                 foreach($defdata['all_uk_towns'] as $uk_town)
                 {
                   $selected = ($uk_town['postcode'] == $this->input->post('town_id')) ? ' selected="selected"' : "";
@@ -148,7 +149,7 @@ echo $this->session->flashdata('successsub');
 <span> -->
             <div class="col-md-6">
               
-              <i class="fa fa-plus-circle">&nbsp;&nbsp;Listing Image</i>
+              <i class="fa fa-plus-circle">&nbsp;&nbsp;Cover Image</i>
               <br>
               <br>
               <!-- <input type="file" multiple="multiple" name="listing" id="file">
@@ -157,7 +158,7 @@ echo $this->session->flashdata('successsub');
                 <div class="input-group agncy_btn">
                   <label class="input-group-btn">
                     <span class="btn btn-primary">
-                      Upload Images&hellip; <input type="file" multiple="multiple" name="listing" id="upload_image" style="display: none;" />
+                      Upload Images&hellip; <input type="file" name="listing" id="upload_image" style="display: none;" />
                     </span>
                   </label>
                   <input  type="text" name="listing"  id="upload_image_sho" class="form-control" readonly>
@@ -206,12 +207,10 @@ echo $this->session->flashdata('successsub');
 
               <div class="single-query form-group bottom20">
                 <label>Area in Sq. Ft</label>
-                <div class="intro">
-                  <input type="text" name="area" id="area" placeholder="5,543 sq ft." value="1">
+                  <input class="form-control" type="text" name="area" id="area" placeholder="5,543 sq ft." value="1">
                   <span class="text-warning">
 										<?php echo form_error('area');?>
 									</span>
-                </div>
               </div>
 
             </div>
@@ -241,7 +240,7 @@ echo $this->session->flashdata('successsub');
               </div>
 
             </div>
-            <div class="col-sm-12">
+            <div class="col-sm-6">
 
               <div class="single-query  form-group bottom20">
                 <label>Bathrooms</label>
@@ -268,7 +267,7 @@ echo $this->session->flashdata('successsub');
             </div>
 
 
-            <div class="col-sm-4">
+            <div class="col-sm-6">
 
               <div class="single-query form-group bottom20">
                 <label>TV Lounge</label>
@@ -293,7 +292,7 @@ echo $this->session->flashdata('successsub');
               </div>
 
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
 
               <div class="single-query form-group  bottom20">
                 <label>Garages</label>
@@ -319,7 +318,7 @@ echo $this->session->flashdata('successsub');
 
             </div>
             
-            <div class="col-sm-4 top30">
+            <div class="col-sm-6 top30">
               <div class="top20">
                 <div class="checkbox-inline">
                   <label>
@@ -460,7 +459,7 @@ echo $this->session->flashdata('successsub');
             </div>
             <div id="single_map"></div>
       </div> -->
-              <div class="col-md-4">
+              <div class="col-md-12">
                 <button type="submit" class="btn-blue border_radius margin40">submit property</button>
               </div>
 

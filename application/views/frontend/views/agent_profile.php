@@ -49,50 +49,50 @@
       }
       ?>
         </div>
-        <div class="col-sm-4 bottom40">
+      <div class="col-sm-3 bottom40">
           <div class="agent_wrap">
-            <div class="agency_logo image">
-              <img src="<?php echo base_url('resources/img/agents/'. $viewdata['agent']['image']); ?>" alt="Agents">
+              <div class="panel panel-primary">
+                  <div class="panel-heading">Contact Details</div>
+                  <div class="panel-body">
+            <div class=" main_ag_img bottom10 image">
+               <img src="resources/img/logo_sticky.jpg" alt="Agents"> 
+             <!-- <img src="https://st.zoocdn.com/zoopla_static_agent_logo_(156629).png" alt="Agents">-->
+              <div class="dtl_ag top10">
+                  <p><b>username2527</b></p>
+                <p>7-8 Regency Parade, Finchley Road, Hampstead, London, NW3 5EG</p>
+                <p>example@gmail.com</p>
+                <p><?= $viewdata['agent']['phone'];?></p>
+              </div>
+
             </div>
+              <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
+              <ul class="social_share">
+                <li><a href="<?= $viewdata['agent']['fblink'];?>" class="facebook"><i class="icon-facebook-1"></i></a></li>
+                <li><a href="<?= $viewdata['agent']['twiterlink'];?>" class="twitter"><i class="icon-twitter-1"></i></a></li>
+                <li><a href="<?= $viewdata['agent']['gpluslink'];?>" class="google"><i class="icon-google4"></i></a></li>
+                <li><a href="<?= $viewdata['agent']['linkedin'];?>" class="linkden"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="<?= $viewdata['agent']['instagramlink'];?>" class="vimo"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            </div>
+
           </div>
         </div>
-      <div class="col-sm-4 bottom40">
-        <div class="agent_wrap">
+      <div class="col-sm-6 bottom40">
+        <div class="agent_wrap main_ag">
           <h3><?= $viewdata['agent']['fname'] ." ". $viewdata['agent']['lname'];?> </h3>
-          <p class="bottom30"><?= $viewdata['agent']['description'];?> </p>
-          <table class="agent_contact table">
-            <tbody>
-              <tr class="bottom10">
-                <td><strong>Phone:</strong></td>
-                <td class="text-right"><?= $viewdata['agent']['phone'];?> </td>
-              </tr>
-              <!-- <tr class="bottom10">
-                <td><strong>Mobile:</strong></td>
-                <td class="text-right">(+033) 34 56 7890</td>
-              </tr> -->
-              <!-- <tr> // Add no of props counter to agent
-                <td><strong>No of Properties:</strong></td>
-                <td class="text-right"><a href="#."><?= $viewdata['agent']['nops'];?> </a></td>
-              </tr> -->
-              <!-- <tr>
-                <td><strong>Skype:</strong></td>
-                <td class="text-right"><a href="#.">bohdan.kononets</a></td>
-              </tr> -->
-            </tbody>
-          </table>
-          <div style="border-bottom:1px solid #d3d8dd;" class="bottom15"></div>
-          <ul class="social_share">
-            <li><a href="<?= $viewdata['agent']['fblink'];?>" class="facebook"><i class="icon-facebook-1"></i></a></li>
-            <li><a href="<?= $viewdata['agent']['twiterlink'];?>" class="twitter"><i class="icon-twitter-1"></i></a></li>
-            <li><a href="<?= $viewdata['agent']['gpluslink'];?>" class="google"><i class="icon-google4"></i></a></li>
-            <li><a href="<?= $viewdata['agent']['linkedin'];?>" class="linkden"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="<?= $viewdata['agent']['instagramlink'];?>" class="vimo"><i class="fa fa-instagram"></i></a></li>
-          </ul>
+          <p class="top10 bottom30">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum consectetuer adipiscing. 
+              <!-- <?= $viewdata['agent']['description'];?>  -->
+          </p>
+          
         </div>
       </div> 
-      
       <?php  ?>
-      <div class="col-sm-4 bottom40">
+      <div class="col-sm-3 bottom40">
+          <div class="bottom20">
+              <h3>Contact <?= $viewdata['agent']['fname'] ." ". $viewdata['agent']['lname'];?> </h3>
+          </div>
         <form class="callus" action="inboxagent?id=<?php $viewdata['agent']['id']?>" method="POST">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" name="name">

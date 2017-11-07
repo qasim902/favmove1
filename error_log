@@ -1,0 +1,25 @@
+[03-Nov-2017 19:24:46 UTC] PHP Fatal error:  Call to undefined method Agent_model::login() in /home/solsticesol/public_html/fmove/application/controllers/Main.php on line 581
+[04-Nov-2017 12:59:04 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 41
+[04-Nov-2017 12:59:54 UTC] PHP Parse error:  syntax error, unexpected 'item' (T_STRING), expecting ',' or ';' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 41
+[04-Nov-2017 13:03:41 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 39
+[04-Nov-2017 13:05:35 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 39
+[04-Nov-2017 13:05:41 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 39
+[04-Nov-2017 13:06:28 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 39
+[04-Nov-2017 13:07:55 UTC] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting ',' or ';' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 41
+[04-Nov-2017 13:20:01 UTC] PHP Parse error:  syntax error, unexpected '$filename' (T_VARIABLE) in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 31
+[04-Nov-2017 13:51:31 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 34
+[04-Nov-2017 13:54:15 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 40
+[04-Nov-2017 13:57:43 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 34
+[04-Nov-2017 13:59:10 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 34
+[04-Nov-2017 13:59:28 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/solsticesol/public_html/fmove/application/views/frontend/views/propdet2.php on line 40
+[06-Nov-2017 10:20:10 UTC] PHP Parse error:  syntax error, unexpected ''news'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/solsticesol/public_html/fmove/application/models/News_model.php on line 32
+[06-Nov-2017 10:21:25 UTC] PHP Parse error:  syntax error, unexpected ''news'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/solsticesol/public_html/fmove/application/models/News_model.php on line 32
+[06-Nov-2017 10:21:27 UTC] PHP Parse error:  syntax error, unexpected ''news'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/solsticesol/public_html/fmove/application/models/News_model.php on line 32
+[06-Nov-2017 10:54:24 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::order_by() in /home/solsticesol/public_html/fmove/application/models/News_model.php on line 28
+[06-Nov-2017 10:55:59 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/solsticesol/public_html/fmove/application/views/frontend/views/index.php on line 650
+[06-Nov-2017 13:40:17 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::result_array() in /home/solsticesol/public_html/fmove/application/models/Property_model.php on line 156
+[06-Nov-2017 13:44:04 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::result_array() in /home/solsticesol/public_html/fmove/application/models/Property_model.php on line 156
+[06-Nov-2017 13:47:51 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::result_array() in /home/solsticesol/public_html/fmove/application/models/Property_model.php on line 156
+[06-Nov-2017 13:49:43 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::result_array() in /home/solsticesol/public_html/fmove/application/models/Property_model.php on line 157
+[06-Nov-2017 15:29:45 UTC] PHP Fatal error:  Call to a member function num_rows() on null in /home/solsticesol/public_html/fmove/application/models/Agent_model.php on line 16
+[06-Nov-2017 15:30:48 UTC] PHP Fatal error:  Call to a member function num_rows() on null in /home/solsticesol/public_html/fmove/application/models/Agent_model.php on line 16

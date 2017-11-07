@@ -53,21 +53,20 @@ echo $this->session->flashdata('successsub');
 	<!--							<span class="text-danger">--><?php //echo form_error('created_on');?><!--</span>-->
 	<!--						</div>-->
 	<!--					</div>-->
-						<div class="col-md-6">
-							<label for="payment_details" class="control-label">Payment Details</label>
-							<div class="form-group">
-								<div class="single-query">
-									<div class="intro">
-										<select name="payment_details" class="form-control"  id="payment_details">
-											<option value="<?php echo $this->input->post('payment_details'); ?>" selected="" disabled="">Select Payment Type</option>
-											<option value="paypal">Paypal</option>
-											<option value="credit_card">Credit Card</option>
-										</select>
-									</div>
+	                        <div class="col-md-6">
+								<label for="agent_image" class="control-label">User Image</label>
+								<div class="input-group form-group agncy_btn">
+									<label class="input-group-btn">
+										<span class="btn btn-primary">
+											Upload Image… <input name="user_file" value="" class="form-control" id="upload_image" style="display: none;" type="file">
+										</span>
+									</label>
+									<input id="upload_image_sho" value="" class="form-control" readonly="" type="text">
+									<span class="text-danger">
+																	</span>
 								</div>
-								<!-- <textarea name="payment_details" placeholder="Make me a drop down of two types paypal and credit card" class="form-control" id="payment_details"><?php echo $this->input->post('payment_details'); ?></textarea> -->
 							</div>
-						</div>
+						
 	<!--					<div class="col-md-6">-->
 	<!--						<label for="myfavorites" class="control-label">Myfavorites</label>-->
 	<!--						<div class="form-group">-->

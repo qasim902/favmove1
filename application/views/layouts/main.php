@@ -37,9 +37,9 @@
                 <!-- Logo -->
                 <a href="" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">Favourite Move</span>
+                    <span class="logo-mini"><img src="<?php echo site_url('resources/img/fav_icon.png');?>" class="user-image" alt="User Image" width="50%"></span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">Favourite Move</span>
+                    <span class="logo-lg"> <img src="<?php echo site_url('resources/img/logo.png');?>" class="user-image" alt="User Image" width="50%"></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
@@ -56,16 +56,16 @@
                         <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Alexander Pierce</span>
+                                    <img src="<?php echo site_url('resources/img/user.png');?>" class="user-image" alt="User Image">
+                                    <span class="hidden-xs">Admin</span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header">
-                                        <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
+                                        <img src="<?php echo site_url('resources/img/user.png');?>" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Alexander Pierce - Web Developer
+                                        Admin - Web Developer
                                         <!-- <small>Member since Nov. 2012</small> -->
                                     </p>
                                     </li>
@@ -75,7 +75,7 @@
                                             <a href="#" class="btn btn-default btn-flat">Profile</a>
                                         </div> -->
                                         <div class="pull-right">
-                                            <a href="/favmove1/logout" class="btn btn-default btn-flat">Sign out</a>
+                                            <a href="/fmove/logout" class="btn btn-default btn-flat">Sign out</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -91,10 +91,10 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
+                            <img src="<?php echo site_url('resources/img/user.png');?>" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Alexander Pierce</p>
+                            <p>Admin</p>
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li class="active">
-                                    <a href="/favmove1/package/showpkg"><i class="fa fa-plus"></i> Add</a>
+                                    <a href="/fmove/package/showpkg"><i class="fa fa-plus"></i> Add</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo site_url('package/index');?>"><i class="fa fa-list-ul"></i> Listing</a>

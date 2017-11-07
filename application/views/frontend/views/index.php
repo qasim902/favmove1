@@ -431,7 +431,7 @@
              <p><?= $prop['address'] ?></p>
           </div>
           <div class="image proprties_images"> 
-            <a href="property_detail?id=<?= $prop['prop_id'] ?>"><img src="<?= $assets."img/properties/".$prop['prop_id'] ?>/latest.jpg" alt="property1" class="img-responsive"></a>
+            <a href="property_detail?id=<?= $prop['prop_id'] ?>"><img src="<?= $assets."img/properties/".$prop['prop_id'] ?>/cover.jpg" alt="property1" class="img-responsive"></a>
             <div class="price clearfix"> 
             <span class="tag pull-right"><?php
              if ($prop['status'] == "sale")
@@ -542,41 +542,41 @@
       <div id="two-col-slider" class="owl-carousel">
         <?php 
        
-        foreach ($defdata['home_prop'] as $prop){
+        foreach ($defdata['home_prop1'] as $prop1){
           ?>
         <div class="item">
           <div class="listing_full">
           <div class="image">
-            <img alt="image" src="<?= $assets?>img/b-d-property.jpg">
-              <?php if ($prop['is_feat'] == "1")
+            <img alt="image" src="<?= $assets."img/properties/".$prop1['prop_id'] ?>/cover.jpg" class="img-responsive">
+              <?php if ($prop1['is_feat'] == "1")
               { 
                 echo " <span class=\"tag_l\">Featured</span>";
               }
-              if ($prop['status'] == "sale")
+              if ($prop1['status'] == "sale")
               {
                  echo "<span class='tag_t'>For Sale</span>";
-              }else if ($prop['status'] == "rent")
+              }else if ($prop1['status'] == "rent")
               {
                echo " <span class=\"tag_t\">For Rent</span>";
               } 
-              else if ($prop['status'] == "rentd")
+              else if ($prop1['status'] == "rentd")
               {
                echo " <span class=\"tag_t\">Rented</span>";
               } 
               
-              else if ($prop['status'] == "sold")
+              else if ($prop1['status'] == "sold")
               {
                echo " <span class=\"tag_t\">Sold</span>";
               }
-              else if ($prop['status'] == "rentd")
+              else if ($prop1['status'] == "rentd")
               {
                echo " <span class=\"tag_t\">Rented</span>";
               }
-               else if ($prop['status'] == "salag")
+               else if ($prop1['status'] == "salag")
               {
                 echo " <span class=\"tag_t\">Sale Agreed</span>";
               }
-              else if ( $prop['status'] == "rentag")
+              else if ( $prop1['status'] == "rentag")
               {
                 echo " <span class=\"tag_t\">Letting Agreed</span>";
               }
@@ -589,12 +589,12 @@
             <div class="listing_inner_full">
               <span><a href="#"><i class="icon-like"></i></a></span>
               <a href="#.">
-                <h3><?= $prop['title'] ?></h3>
-                <p><?= $prop['address'] ?>, MR 21501</p>
+                <h3><?= $prop1['title'] ?></h3>
+                <p><?= $prop1['address'] ?>, MR 21501</p>
               </a>
               <div class="favroute clearfix">
-                <div class="property_meta"><span><i class="icon-select-an-objecto-tool"></i><?= $prop['prop_details']['area'] ?> sq ft</span><span><i class=" icon-bed"></i><?= $prop['prop_details']['bedrooms'] ?> Bedrooms</span><span><i class="icon-safety-shower"></i><?= $prop['prop_details']['bathrooms'] ?> Bathrooms</span><span class="border-l"><?= $prop['price'] ?>
-                  <?php if ($prop['status'] == 'rent' ||$prop['status'] == 'rentd' || $prop['status'] == 'rentag')
+                <div class="property_meta"><span><i class="icon-select-an-objecto-tool"></i><?= $prop1['prop_details']['area'] ?> sq ft</span><span><i class=" icon-bed"></i><?= $prop1['prop_details']['bedrooms'] ?> Bedrooms</span><span><i class="icon-safety-shower"></i><?= $prop1['prop_details']['bathrooms'] ?> Bathrooms</span><span class="border-l"><?= $prop1['price'] ?>
+                  <?php if ($prop1['status'] == 'rent' ||$prop1['status'] == 'rentd' || $prop1['status'] == 'rentag')
                   echo "pm"?>
                   
 
@@ -635,95 +635,40 @@
 <section id="news-section-1" class="property-details bg_light padding_top">
    <div class="container property-details">
       <div class="row">
-         <div class="col-md-9">
-            <div class="row">
-                <div class="col-sm-10 bottom20 news_pro">
-                  <h2 class="uppercase">Property news</h2>
-                </div>
+          <div class="col-md-12">
+          <div class="bottom20 news_pro">
+            <h2 class="uppercase">Latest News</h2>
+          </div>
+        </div>
+        <div class="latest_news">
+            <?php 
+            //var_dump($feature_prop);
+            
+            foreach ($defdata['news'] as $news){ ?>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="news_imgs la_im image-2">
+                  <a href="news_detail?id=<?= $news['id']?>"><img src="<?php echo base_url('resources/img/news/'.$news['image_path']);?>" alt="image" class="img-responsive"/></a>
+              <div class="clearfix"></div>
               </div>
-            <div class="row">
-              <?php 
-              //var_dump($feature_prop);
-              
-              foreach ($defdata['news'] as $news){ ?>
-               <div class="news-1-box clearfix">
-                  <div class="col-md-4 col-sm-4 col-xs-12">
-                     <div class="news_imgs image-2">
-                        <a href="news_detail?id=<?= $news['id']?>"><img src="<?php echo base_url('resources/img/news/'.$news['image_path']);?>" alt="image" class="img-responsive"/></a>
-                     </div>
-                  </div>
-                  <div class="col-md-7 col-sm-7 col-xs-12 padding-left-25">
-                     <h4><a href="news_detail?id=<?= $news['id']?>"><?= $news['title']?></a></h4>
-                     <div class="news-details padding-b-10 margin-t-5">
-                        <span><i class="icon-icons230"></i> by <?= $news['author']?></span>
-                        <span><i class="icon-icons228"></i> <?php date('m ([ .\t-])* dd [,.stndrh\t ]+ y',strtotime($news['added_on']))?></span>
-                     </div>
-                      <div class="hom_news">
-                          <p class="p-font-15"><?= $news['detail']?></p>
-                      </div>
-                  </div>
-               </div>
-               <?php }?>
-              
-               
-            </div>
-            
-         </div>
-         <aside class="col-md-3 col-xs-12">
-            <div class="row">
-              <div class="col-sm-12 bottom10 news_pro">
-                <h4 class="uppercase">Property guides & tools</h4>
+              <div class="news-details lat_ne_aut">
+                  <span>By <b><?= $news['author']?></b></span>
+                <span><?php date('m ([ .\t-])* dd [,.stndrh\t ]+ y',strtotime($news['added_on']))?></span>
               </div>
+              <div class="news_hdng">
+                  <h5><a href="news_detail?id=<?= $news['id']?>"><?= $news['title']?></a></h5>
+              </div>
+              <div class="hom_news">
+                  <p class="p-font-15"><?= $news['detail']?></p>
+              </div>
+          </div>
+          <?php }?>
+          <div class="col-md-12 text-center">
+            <div class="bottom20 ltst_news_btn">
+              <a href="news" class="btn btn-success">Read more</a>
             </div>
-            
-            
-            <div class="row">
-               <div class="news-1-box">
-                  <div class="col-md-12 news_pro col-sm-12 col-xs-12">
-                    <a href="#">
-                     <div class="image-2">
-                       <img src="<?= $assets ?>img/blog-6.jpg" alt="image" class="img-responsive"/>
-                     </div>
-                     <h4 class="top10 bottom10">Buying property guides</h4>
-                     <p>Get the latest advice and tips on buying property</p>
-                    </a>
-                    <a class="btn btn-success btn-block" href="#">Browse more guides and tools</a>
-                  </div>
-               </div>
-            </div>
-            
-            <div class="row">
-               <div class="col-md-12 news_pro">
-                  <h4 class="top20 bottom10">Featured Properties</h4>
-               </div>
-               <?php foreach($feature_prop as $fetpro): ?>
-               <div class="col-md-12 padding-t-30">
-                  <div id="agent-2-slider" class="owl-carousel">
-                     <div class="item">
-                        <div class="property_item heading_space">
-                           <div class="image">
-                              <a href="#."><img src="<?= $assets ?>img/slider-list2.jpg" alt="listin" class="img-responsive"></a>
-                              <div class="feature"><span class="tag-2">For Rent</span></div>
-                              <div class="price sid_b clearfix">
-                                <span class="tag fmly_hm pull-right">$8,600 Per Month - <small>Family Home</small></span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="property_item heading_space">
-                           <div class="image">
-                              <a href="#."><img src="<?= $assets ?>img/slider-list2.jpg" alt="listin" class="img-responsive"></a>
-                              <div class="feature"><span class="tag-2">For Rent</span></div>
-                              <div class="price clearfix"><span class="tag fmly_hm pull-right">$8,600 Per Month - <small>Family Home</small></span></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <?php endforeach; ?>
-            </div>
-         </aside>
+          </div>
+        </div>
+        
       </div>
    </div>
 </section>
