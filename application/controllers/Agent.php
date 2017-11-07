@@ -90,29 +90,30 @@ class Agent extends CI_Controller{
                     'address' => $this->input->post('address'),
                     'phone' => $this->input->post('ag_phone'),
                     'fblink' => $this->input->post('fblink'),
-                    'twiterlink' => $this->input->post('tgpluslinkwiterlink'),
-                    'gpluslink' => $this->input->post('gplus_link'),
+                    'twiterlink' => $this->input->post('twiterlink'),
+                    'gpluslink' => $this->input->post('gpluslink'),
                     'linkedin' => $this->input->post('linkedin'),
                     'youtubelink' => $this->input->post('youtubelink'),
                     'pintrestlink' => $this->input->post('pintrestlink'),
                     'instagramlink' => $this->input->post('instagramlink'),
                     'package' => $this->input->post('package'),
                 );
+                //var_dump($params); die();
                 $path = realpath(APPPATH. '../resources/img/agents/');
                 $config['upload_path'] = $path;
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['max_size']     = '5000';
                 $config['max_width'] = '5000';
                 $config['max_height'] = '5000';
-                $comfig['overwrite'] = FALSE;
+                $config['overwrite'] = TRUE;
         
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
                 if (!$this->upload->do_upload('image')) 
                 {
                     $error = $this->upload->display_errors(); 
-                   echo  $this->session->set_flashdata('successsub', $error);
-                   redirect('agent/index');
+                    echo  $this->session->set_flashdata('successsub', $error);
+                    redirect('agent/index');
 
                 }
                 else

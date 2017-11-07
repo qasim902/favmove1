@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row"> <?php var_dump($packages); ?>
 	<div class="col-md-12">
 		<div class="box box-info">
 			<div class="box-header with-border">
@@ -15,11 +15,7 @@
 								<div class="single-query ">
 									
 									<div class="intro">
-									<select name="title">
-										<option class="active">Title</option>
-										<option value="1">Mr</option>
-										<option value="2">Mrs</option>
-									</select>
+										<input type="text" placeholder="Mr or Mrs"name="title" value="<?php echo ($this->input->post('title') ? $this->input->post('title') : $agent['title']); ?>">
 									</div>
 								</div>
 								<span class="text-danger">
@@ -73,10 +69,10 @@
 								<div class="input-group form-group agncy_btn">
 									<label class="input-group-btn">
 										<span class="btn btn-primary">
-											Upload Image&hellip; <input type="file" name="image" value="<?php echo ($this->input->post('image') ? $this->input->post('image') : $agent['image']); ?>" class="form-control" id="upload_image" style="display: none;" />
+											Upload Image&hellip; <input type="file" name="image" value="<?php echo $agent['image']; ?>" class="form-control" id="upload_image" style="display: none;" />
 										</span>
 									</label>
-									<input  type="text" id="upload_image_sho" value="<?php echo $this->input->post('image'); ?>" class="form-control" readonly>
+									<input  type="text" id="upload_image_sho" value="<?php echo $agent['image']; ?>" class="form-control" readonly>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -134,7 +130,7 @@
 								<div class="form-group">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-google-plus" aria-hidden="true"></i></span>
-										<input type="text" name="gplus_link" value="<?php echo ($this->input->post('gpluslink') ? $this->input->post('gplus_link') : $agent['gpluslink']); ?>" class="form-control" id="gplus_link" />
+										<input type="text" name="gpluslink" value="<?php echo ($this->input->post('gpluslink') ? $this->input->post('gpluslink') : $agent['gpluslink']); ?>" class="form-control" id="gplus_link" />
 										<span class="text-danger"><?php echo form_error('gpluslink');?></span>
 									</div>
 								</div>
@@ -159,9 +155,9 @@
 							<div class="col-md-6">
 								<label for="address" class="control-label">Address</label>
 								<div class="form-group">
-									<textarea type="text" name="address" value="<?php echo ($this->input->post('address') ? $this->input->post('address') : $agent['address']); ?>"
+									<input type="text" name="address" value="<?php echo ($this->input->post('address') ? $this->input->post('address') : $agent['address']); ?>"
 									 class="form-control" id="address" />
-								</textarea>
+				
 							</div>
 						</div>
 						<div class="box-footer">
