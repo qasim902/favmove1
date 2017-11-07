@@ -211,7 +211,7 @@
                                                         </div>
                                                         <div class="col-md-8">
                                                             <label>
-                                                               <p>Email@gmail.com</p>
+                                                               <p><?php echo  $this->session->userdata['userData']['userData']['dataa']['email'];?></p>
                                                             </label>
                                                         </div>
                                                         <div class="clearfix"></div>
@@ -455,7 +455,7 @@
           </div>
         </div>
         <div class="col-md-6 col-sm-6">
-          <div class="row">
+          <div class="row ">
             <div class="col-md-6 col-sm-6">
               <div class="single-query form-group">
                 <div class="intro">

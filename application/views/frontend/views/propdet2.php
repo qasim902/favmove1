@@ -17,7 +17,17 @@
   </div>
 </section>
 <!-- Page Banner End -->
-
+<!-- <?php if (isset($curr_login)){ ?>
+  <div class="container-fluid">
+      <div class="row" style="margin-top: 25px">
+          <div class="col-md-12">
+          <div align="center">
+              <?php $this->load->view('frontend/layouts/usernav.php', $_view);?>
+          </div>
+          </div>
+      </div>  
+  </div>
+<?php } ?> -->
 
 <!-- Property Detail -->
 <section id="property" class="padding">
@@ -27,6 +37,7 @@
         <h3 class="text-uppercase"><?= $viewdata['property']['title'] ?></h3>
         <p class="bottom10"><?= $viewdata['property']['address'] ?></p>
         <div id="property-d-1" class="owl-carousel big single">
+<<<<<<< HEAD
          <?php
            
             if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg'))
@@ -72,7 +83,53 @@
             }
            
             ?>
+=======
+            <?php
 
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details0.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details1.jpg' ).'" alt="image"/></div>';
+            }
+
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details2.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details3.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details3.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details4.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details4.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details5.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details5.jpg' ).'" alt="image"/></div>';
+            }
+
+
+            if (file_exists('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg'))
+            {
+                echo '<div class="item"><img src="'. base_url('resources/img/properties/' . $viewdata['property']['prop_id'] . '/details6.jpg' ).'" alt="image"/></div>';
+            }
+>>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
+
+            ?>
         </div>
         <div id="property-d-1-2" class="owl-carousel small single">
           <?php
@@ -139,7 +196,7 @@
             <div class="agent_wrap">
                 <p><b>Property is marketed by:</b></p>
                 <div class="propert_des_logo text-center"> 
-                  <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"> 
+                  <a href="agent_detail?id=<?php echo $viewdata['agentdata']['userid'];?>"> 
                     <img src="<?php echo base_url('resources/img/agents/' . $viewdata['agentdata']['image']);?>" alt="agency" class="img-thumbnail">
                   </a>
                 </div>
@@ -152,7 +209,7 @@
             <div class="agent_wrap">
               <!-- <h3>Bohdan Kononets</h3> -->
               <div class="bottom10 agnt_dtl">
-                <a href="agent_detail?id=<?php echo $viewdata['agentdata']['id'];?>"><?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?></a>
+                <a href="agent_detail?id=<?php echo $viewdata['agentdata']['userid'];?>"><?= $viewdata['agentdata']['fname'] ." ". $viewdata['agentdata']['lname']?></a>
               </div>
               <p class="bottom10"><?= $viewdata['agentdata']['address'] ?></p>
               <div class="agnt_dtl">

@@ -12,9 +12,13 @@ class Agent_model extends CI_Model
      */
     function get_agent($id)
     {
+<<<<<<< HEAD
        
     return $this->db->get_where('agents',array('id'=>$id))->row_array();
 
+=======
+        return $this->db->get_where('agents',array('userid'=>$id))->row_array();
+>>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
     }
 
     function getinquiries($id)
@@ -33,7 +37,7 @@ class Agent_model extends CI_Model
      */
     function get_all_agents()
     {
-        $this->db->order_by('id', 'desc');
+        $this->db->order_by('userid', 'desc');
         return $this->db->get('agents')->result_array();
     }
         
@@ -51,7 +55,7 @@ class Agent_model extends CI_Model
      */
     function update_agent($id,$params)
     {
-        $this->db->where('id',$id);
+        $this->db->where('userid',$id);
         return $this->db->update('agents',$params);
     }
     
@@ -60,11 +64,11 @@ class Agent_model extends CI_Model
      */
     function delete_agent($id)
     {
-        return $this->db->delete('agents',array('id'=>$id));
+        return $this->db->delete('agents',array('userid'=>$id));
     }
     function showagquery($data)
     {
-        return $this->db->get_where('inquiries', array('id'=>$data))->result_array();
+        return $this->db->get_where('inquiries', array('agid'=>$data))->result_array();
     }
     function aginbox($id, $data)
     {
@@ -102,6 +106,28 @@ class Agent_model extends CI_Model
                                     AND address LIKE '%$town_id%' ;");
         return $query->result_array();
 
+    }
+
+    function login($uid, $password) //Danish
+    {
+
+        $this -> db -> select('*');
+        $this -> db -> from('agents');
+        $this -> db -> where('username', $uid);
+        $this -> db -> where('password', $password);
+        $this -> db -> limit(1);
+
+
+        $query = $this->db->get();
+
+        if($query->num_rows() == 1)
+        {
+            return $query->row_array();
+        }
+        else
+        {
+            return false;
+        }
     }
     
 }

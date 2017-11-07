@@ -44,7 +44,7 @@
         </div>";
       echo "<script>
           window.location.hash = '#alert-pop';
-          
+            
       </script>";
       }
       ?>
@@ -89,11 +89,16 @@
         </div>
       </div> 
       <?php  ?>
+<<<<<<< HEAD
       <div class="col-sm-3 bottom40">
           <div class="bottom20">
               <h3>Contact <?= $viewdata['agent']['fname'] ." ". $viewdata['agent']['lname'];?> </h3>
           </div>
         <form class="callus" action="inboxagent?id=<?php $viewdata['agent']['id']?>" method="POST">
+=======
+      <div class="col-sm-4 bottom40">
+        <form class="callus" action="inboxagent?id=<?php $viewdata['agent']['userid']?>" method="POST">
+>>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" name="name">
           </div>

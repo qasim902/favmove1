@@ -109,7 +109,7 @@ echo $this->session->flashdata('successsub');
           <div class="col-sm-6">
             <div class="single-query form-group bottom20">
               <label>Price</label>
-              <input type="number" name="price" min="0" step="0.01" class="keyword-input" placeholder="£ 45,000" value="40000">
+              <input type="number" name="price" min="0" step="10" class="keyword-input" placeholder="£ 45,000" value="40000">
               <span class="text-warning">
 										<?php echo form_error('price');?>
 									</span>
@@ -158,7 +158,11 @@ echo $this->session->flashdata('successsub');
                 <div class="input-group agncy_btn">
                   <label class="input-group-btn">
                     <span class="btn btn-primary">
+<<<<<<< HEAD
                       Upload Images&hellip; <input type="file" name="listing" id="upload_image" style="display: none;" />
+=======
+                      Upload Images&hellip; <input type="file"  name="listing" id="upload_image" style="display: none;" />
+>>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
                     </span>
                   </label>
                   <input  type="text" name="listing"  id="upload_image_sho" class="form-control" readonly>
@@ -169,7 +173,7 @@ echo $this->session->flashdata('successsub');
               </div>
             </div>
             <div class="col-md-6">
-              <i class="fa fa-plus-circle">&nbsp;&nbsp;Detailed Images</i>
+              <i class="fa fa-plus-circle">&nbsp;&nbsp;Listing Images</i>
               <br>
               <br>
               <div class="form-group">
@@ -341,7 +345,7 @@ echo $this->session->flashdata('successsub');
             </div>
             <div class="col-sm-12">
               <h3 class="bottom15 margin40">Property Description </h3>
-              <textarea id="txtEditor" style="width: 100%" name="description">it's zameen.com property for sale </textarea>
+              <textarea id="txtEditor" style="width: 100%" name="description" placeholder="Please add description"> </textarea>
             </div>
             <!--  <div class="col-sm-12">
         <h3 class="bottom15 margin40">Quick Summary</h3>

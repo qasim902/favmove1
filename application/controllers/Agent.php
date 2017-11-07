@@ -68,46 +68,65 @@ class Agent extends CI_Controller{
     /*
      * Editing a agent
      */
-    function edit()
+    function edit($id)
     {   
-        $id = $this->input->get('id');
+       // $data['agent'] = $this->Admin_model->get_agent($id);
         // check if the agent exists before trying to edit it
         $data['agent'] = $this->Agent_model->get_agent($id);
         
-        if(isset($data['agent']['id']))
+        if(isset($data['agent']['userid']))
         {
             if(isset($_POST) && count($_POST) > 0)     
             {   
                 $params = array(
-					'package_id' => $this->input->post('package_id'),
-					'agency_id' => $this->input->post('agency_id'),
-					'password' => $this->input->post('password'),
-					'name' => $this->input->post('name'),
-					'username' => $this->input->post('username'),
-					'email' => $this->input->post('email'),
-					'agent_image' => $this->input->post('agent_image'),
-					'property_list' => $this->input->post('property_list'),
-					'last_logintime' => $this->input->post('last_logintime'),
-					'added_date' => $this->input->post('added_date'),
-					'address' => $this->input->post('address'),
-					'activated' => $this->input->post('activated'),
-					'package_lastpayment' => $this->input->post('package_lastpayment'),
-					'last_editip' => $this->input->post('last_editip'),
-					'payment_details' => $this->input->post('payment_details'),
-					'description' => $this->input->post('description'),
+					'title' => $this->input->post('title'),
+                    'fname' => $this->input->post('fname'),
+                    'lname' => $this->input->post('lname'),
+                    'username' => $this->input->post('username'),
+                    'email' => $this->input->post('email'),
+                    'password' => $this->input->post('password'),
+                    'description' => $this->input->post('description'),
+                    'image' => $this->input->post('image'),
+                    'address' => $this->input->post('address'),
+                    'phone' => $this->input->post('ag_phone'),
+                    'fblink' => $this->input->post('fblink'),
+                    'twiterlink' => $this->input->post('twiterlink'),
+                    'gpluslink' => $this->input->post('gpluslink'),
+                    'linkedin' => $this->input->post('linkedin'),
+                    'youtubelink' => $this->input->post('youtubelink'),
+                    'pintrestlink' => $this->input->post('pintrestlink'),
+                    'instagramlink' => $this->input->post('instagramlink'),
+                    'package' => $this->input->post('package'),
                 );
+                //var_dump($params); die();
+                $path = realpath(APPPATH. '../resources/img/agents/');
+                $config['upload_path'] = $path;
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size']     = '5000';
+                $config['max_width'] = '5000';
+                $config['max_height'] = '5000';
+                $config['overwrite'] = TRUE;
+        
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                if (!$this->upload->do_upload('image')) 
+                {
+                    $error = $this->upload->display_errors(); 
+                    echo  $this->session->set_flashdata('successsub', $error);
+                    redirect('agent/index');
 
-                $this->Agent_model->update_agent($id,$params);            
-                redirect('agent/index');
+                }
+                else
+                {
+                    $filename = $this->upload->data();
+                    $params['image'] = $filename['file_name'];
+                    $this->load->model('agent_model');
+                    $this->Agent_model->update_agent($id,$params);            
+                    redirect('agent/index');
+                }
             }
             else
             {
-				$this->load->model('Package_model');
-				$data['all_packages'] = $this->Package_model->get_all_packages();
-
-				$this->load->model('Agency_model');
-				$data['all_agency'] = $this->Agency_model->get_all_agency();
-
                 $data['_view'] = 'agent/edit';
                 $this->load->view('layouts/main',$data);
             }
@@ -125,7 +144,7 @@ class Agent extends CI_Controller{
         $agent = $this->Agent_model->get_agent($id);
 
         // check if the agent exists before trying to delete it
-        if(isset($agent['id']))
+        if(isset($agent['userid']))
         {
             $this->Agent_model->delete_agent($id);
             redirect('agent/index');

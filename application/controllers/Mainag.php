@@ -147,7 +147,8 @@ class Mainag extends CI_Controller{
 
 
            
-            $agent = $this->session->userData('userData'); //var_dump($agent[ 'agentData']['UserData']['userid']); die();
+            $agent = $this->session->userData('userData');
+//            var_dump($agent[ 'agentData']['agentid']); die();
             $this->form_validation->set_rules('town_id','Town Id','required');
          $this->form_validation->set_rules('title','Title','required|max_length[255]');
         
@@ -218,7 +219,7 @@ class Mainag extends CI_Controller{
                 'status' => $this->input->post('status'),
                 'features' => $id,
                 'video_embed' => $this->input->post('video_embed'),              
-                'agent_id' => $agent['agentData']['UserData']['userid'],
+                'agent_id' => $agent[ 'agentData']['agentid'],
                 'is_feat' => $this->input->post('is_feat'),
                 'price' => $this->input->post('price'),
                 'prop_type' => $this->input->post('prop_type'),                             

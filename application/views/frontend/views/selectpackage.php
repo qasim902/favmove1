@@ -126,7 +126,7 @@ Array ( [id] => 3 [date_created] => 2017-10-19 00:00:00 [date_modified] => 2017-
       <!-- div class="col-sm-4 bottom40">
         <div class="agent_wrap">
           <div class="image">
-            <img src="<?= $assets."img/agents/".$agent['id']."/prof.jpg" ?>" alt="Agents">
+            <img src="<?= $assets."img/agents/".$agent['userid']."/prof.jpg" ?>" alt="Agents">
             <div class="img-info">
               <h3><?= $agent['agent']['name']?></h3>
               <span><?= $agent['agency']['name']?></span>

@@ -146,7 +146,11 @@ class Main extends CI_Controller
         if ($option == "n")
         {
             $all_property = $this->Property_model->get_prop_where('new_build','1');
+<<<<<<< HEAD
              $opt="New Properties";
+=======
+            $opt="New Properties";
+>>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
         }
         if ($option == "b")
         {
@@ -157,6 +161,10 @@ class Main extends CI_Controller
         {
             $all_property = $this->Property_model->get_prop_where('prop_type','res');
             $opt="Residential Properties";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 78933295e50600f9933014af4cfc3dea5dc72479
         }
         else if($option == "c")
         {
@@ -539,8 +547,8 @@ else
         foreach ($agents as $agent)
         {
 
-            $viewdata[$agent['id']-1] = array(
-                'id' =>$agent['id'],
+            $viewdata[$agent['userid']-1] = array(
+                'id' =>$agent['userid'],
                 'agent'=>$agent,
                 
             );
@@ -597,6 +605,7 @@ else
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $success  = $this->User_model->login($username, $password); 
+        $success1= $this->Agent_model->login($username, $password);
         
         
         if ($success) {
@@ -646,6 +655,36 @@ else
                 redirect('user_home');  
 
             }
+        }
+        else if($success1)
+        {
+            $agg = $this->Agent_model->get_agent_where('username',$success['username']);
+            $agentData = array(
+                'agentid' => $username,
+                'UserData' => $success,
+                'AgentData' => $agg
+            );
+
+
+
+
+
+            $data = $this->data;
+            $data += array(
+                'agentData' => $agentData,
+                'logged_in' => true,
+                'role' => 'agent'
+            );
+
+            $sdata = array(
+                'agentData' => $agentData,
+                'logged_in' => true,
+                'role' => 'agent'
+            );
+            $this->session->set_userdata('userData', $sdata);
+              var_dump($sdata['agentData']['UserData']); die();
+            redirect('agent_home');
+
         }
         else {
             
